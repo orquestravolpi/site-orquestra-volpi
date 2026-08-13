@@ -1407,3 +1407,25 @@ footer {
         margin-top: 55px;
     }
 }
+
+   /* CONCERTO DE NATAL */
+
+.show-natal {
+    margin-top: 55px;
+}
+
+.show-natal .show-texto {
+    border-bottom-color: #ff7510;
+}
+
+.show-natal .show-tipo {
+    color: #cb6ce6;
+}
+
+@media (max-width: 800px) {
+
+    .show-natal {
+        margin-top: 40px;
+    }
+
+}
