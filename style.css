@@ -1,361 +1,65 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f45f5f;
-    color: #222;
-    line-height: 1.5;
-}
-
-.container {
-    width: min(1100px, 92%);
-    margin: 0 auto;
-}
-
-
-/* =========================
-   CABEÇALHO
-========================= */
-
-.topo {
-    background: linear-gradient(135deg, #f05d5d, #ff6845);
-    color: white;
-    padding: 20px 0;
-    border-bottom: 1px solid rgba(255,255,255,.4);
-}
-
 .topo-conteudo {
     width: min(1100px, 92%);
-    margin: auto;
+    margin: 0 auto;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 40px;
 }
 
 .marca {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 18px;
 }
 
+/* Símbolo da Orquestra */
 .logo {
-    width: 55px;
-    height: 75px;
+    width: 105px;
+    height: 125px;
     object-fit: contain;
+    flex-shrink: 0;
 }
 
+/* Nome Orquestra Volpi de Viola Caipira */
 .titulo-logo {
-    width: 245px;
-    max-width: 100%;
+    width: 390px;
+    max-width: 42vw;
     height: auto;
     object-fit: contain;
 }
-}
 
-
-
+/* Redes sociais */
 .redes {
     display: flex;
-    gap: 15px;
+    gap: 18px;
+    flex-shrink: 0;
 }
 
-.redes a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
-}
+/* Ajuste para celular */
+@media (max-width: 700px) {
 
-.redes a:hover {
-    text-decoration: underline;
-}
+    .topo-conteudo {
+        width: 94%;
+        gap: 12px;
+    }
 
-
-/* =========================
-   APRESENTAÇÃO
-========================= */
-
-.apresentacao {
-    position: relative;
-    overflow: hidden;
-
-    background:
-        radial-gradient(circle at 10% 70%,
-            rgba(255,255,255,.10),
-            transparent 25%),
-        linear-gradient(145deg, #f36a5d, #ff6a3d);
-
-    padding: 28px 0 55px;
-}
-
-.apresentacao::after {
-    content: "♫";
-    position: absolute;
-    right: 4%;
-    top: 50px;
-
-    font-size: 180px;
-    color: rgba(255,255,255,.06);
-
-    transform: rotate(-12deg);
-}
-
-.titulo-principal {
-    text-align: center;
-    color: white;
-    margin-bottom: 28px;
-}
-
-.titulo-principal h1 {
-    font-size: clamp(26px, 4vw, 42px);
-    line-height: 1.1;
-}
-
-.titulo-principal p {
-    font-size: 14px;
-    margin-top: 5px;
-}
-
-.apresentacao-grid {
-    display: grid;
-    grid-template-columns: 1.15fr 1fr;
-    gap: 28px;
-    align-items: center;
-}
-
-.foto-orquestra img {
-    display: block;
-    width: 100%;
-    border: 7px solid white;
-    border-radius: 12px;
-    box-shadow: 0 8px 18px rgba(0,0,0,.20);
-}
-
-.card-historia {
-    background: #c94e2d;
-    color: white;
-
-    padding: 27px;
-    border-radius: 18px;
-
-    box-shadow: 0 8px 20px rgba(0,0,0,.12);
-}
-
-.card-historia > p {
-    margin-bottom: 22px;
-}
-
-.informacoes {
-    display: grid;
-    gap: 13px;
-}
-
-.informacoes p {
-    font-size: 13px;
-    padding-top: 10px;
-    border-top: 1px solid rgba(255,255,255,.25);
-}
-
-.informacoes strong {
-    font-size: 12px;
-}
-
-
-/* =========================
-   MAESTRO
-========================= */
-
-.maestro {
-    position: relative;
-    overflow: hidden;
-
-    background:
-        linear-gradient(150deg, #f06760, #ff7346);
-
-    padding: 60px 0;
-}
-
-.maestro::before {
-    content: "♪";
-    position: absolute;
-    left: -20px;
-    bottom: -45px;
-
-    color: rgba(255,255,255,.09);
-    font-size: 240px;
-}
-
-.maestro-grid {
-    display: grid;
-    grid-template-columns: 1.25fr .75fr;
-    gap: 45px;
-    align-items: center;
-}
-
-.card-maestro {
-    position: relative;
-    z-index: 2;
-
-    background: white;
-    padding: 35px;
-
-    border-radius: 22px;
-
-    box-shadow: 0 10px 25px rgba(0,0,0,.12);
-}
-
-.subtitulo {
-    display: block;
-    color: #e65930;
-    font-weight: bold;
-    margin-bottom: 3px;
-}
-
-.card-maestro h2 {
-    color: #e64d27;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 30px;
-    margin-bottom: 18px;
-}
-
-.card-maestro p {
-    margin-bottom: 14px;
-    text-align: justify;
-}
-
-.foto-maestro {
-    display: flex;
-    justify-content: center;
-}
-
-.foto-maestro img {
-    width: min(330px, 100%);
-    aspect-ratio: 1;
-    object-fit: cover;
-
-    border-radius: 50%;
-
-    border: 7px solid #ffc346;
-
-    outline: 3px solid rgba(255,255,255,.55);
-    outline-offset: 8px;
-
-    box-shadow: 0 10px 25px rgba(0,0,0,.20);
-}
-
-
-/* =========================
-   RODAPÉ
-========================= */
-
-footer {
-    background: #d94e4e;
-    color: white;
-
-    text-align: center;
-    padding: 25px 15px;
-
-    font-size: 13px;
-}
-
-
-/* =========================
-   CELULAR
-========================= */
-
-@media (max-width: 750px) {
-
-    .topo {
-        padding: 14px 0;
+    .marca {
+        gap: 8px;
     }
 
     .logo {
-        width: 38px;
-        height: 55px;
+        width: 58px;
+        height: 75px;
     }
 
-    .nome strong {
-        font-size: 17px;
+    .titulo-logo {
+        width: 220px;
+        max-width: 55vw;
     }
 
-    .nome span {
-        font-size: 14px;
+    .redes {
+        display: none;
     }
-
-    .redes a {
-        font-size: 0;
-    }
-
-    .redes a:first-child::after {
-        content: "IG";
-        font-size: 13px;
-    }
-
-    .redes a:last-child::after {
-        content: "YT";
-        font-size: 13px;
-    }
-
-    .apresentacao {
-        padding-top: 22px;
-    }
-
-    .apresentacao-grid {
-        grid-template-columns: 1fr;
-        gap: 18px;
-    }
-
-    .card-historia {
-        padding: 22px;
-    }
-
-    .maestro {
-        padding: 45px 0;
-    }
-
-    .maestro-grid {
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
-
-    .card-maestro {
-        padding: 26px;
-    }
-
-    .foto-maestro {
-        grid-row: 1;
-    }
-
-    .foto-maestro img {
-        width: 245px;
-    }
-
-}
-
-
-/* =========================
-   TELAS GRANDES
-========================= */
-
-@media (min-width: 1200px) {
-
-    body {
-        font-size: 17px;
-    }
-
-    .apresentacao,
-    .maestro {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
 }
