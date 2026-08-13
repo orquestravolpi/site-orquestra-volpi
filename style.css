@@ -915,3 +915,176 @@ footer {
         height: 105px;
     }
 }
+/* =================================
+   CONHEÇA NOSSOS SHOWS
+================================= */
+
+.shows {
+    padding: 75px 0 85px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f46c67 0%,
+            #ef646c 100%
+        );
+}
+
+
+/* TÍTULO */
+
+.titulo-shows {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.titulo-shows h2 {
+    color: #ffffff;
+
+    font-size: clamp(2.2rem, 4vw, 3.3rem);
+
+    line-height: 1.1;
+
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid
+        rgba(255, 255, 255, 0.55);
+}
+
+
+/* =================================
+   CARD DO SHOW
+================================= */
+
+.show-card {
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.15fr;
+
+    align-items: center;
+
+    gap: 35px;
+}
+
+
+/* FOTO */
+
+.show-foto {
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    border: 4px solid #ffffff;
+
+    box-shadow:
+        0 12px 30px
+        rgba(0, 0, 0, 0.18);
+}
+
+.show-foto img {
+    width: 100%;
+
+    height: 330px;
+
+    object-fit: cover;
+}
+
+
+/* TEXTO */
+
+.show-texto {
+    background: #ffffff;
+
+    border-radius: 26px;
+
+    padding: 38px;
+
+    border-bottom: 7px solid #ff7510;
+
+    box-shadow:
+        0 12px 30px
+        rgba(0, 0, 0, 0.12);
+}
+
+
+.show-tipo {
+    display: inline-block;
+
+    color: #cb6ce6;
+
+    font-size: 0.85rem;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.1em;
+
+    margin-bottom: 8px;
+}
+
+
+.show-texto h3 {
+    color: #302b29;
+
+    font-size: 2rem;
+
+    line-height: 1.15;
+
+    margin-bottom: 20px;
+}
+
+
+.show-texto h3 strong {
+    color: #ff7510;
+}
+
+
+.show-texto p {
+    color: #5f5754;
+
+    font-size: 1.04rem;
+
+    line-height: 1.65;
+
+    margin-bottom: 15px;
+}
+
+
+.show-texto p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =================================
+   SHOWS - CELULAR
+================================= */
+
+@media (max-width: 800px) {
+
+    .shows {
+        padding: 55px 0;
+    }
+
+    .show-card {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .show-foto img {
+        height: auto;
+    }
+
+    .show-texto {
+        padding: 27px 23px;
+    }
+
+    .show-texto h3 {
+        font-size: 1.7rem;
+    }
+
+    .show-texto p {
+        font-size: 1rem;
+    }
+}
