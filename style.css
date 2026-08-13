@@ -1088,3 +1088,59 @@ footer {
         font-size: 1rem;
     }
 }
+/* =================================
+   SHOWS TEMÁTICOS
+================================= */
+
+.titulo-tematico {
+    text-align: center;
+
+    margin-top: 75px;
+    margin-bottom: 40px;
+}
+
+.titulo-tematico h2 {
+    color: #ffffff;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+
+    line-height: 1.1;
+
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid
+        rgba(255, 255, 255, 0.55);
+}
+
+
+/* ESPAÇAMENTO ENTRE OS SHOWS */
+
+.show-card + .titulo-tematico {
+    margin-top: 80px;
+}
+
+
+/* SEGUNDO SHOW */
+
+.show-invertido .show-texto {
+    border-bottom-color: #cb6ce6;
+}
+
+.show-invertido .show-tipo {
+    color: #ff7510;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 800px) {
+
+    .titulo-tematico {
+        margin-top: 55px;
+        margin-bottom: 30px;
+    }
+
+    .show-card + .titulo-tematico {
+        margin-top: 55px;
+    }
+}
