@@ -1,6 +1,25 @@
-/* =========================
+/* =================================
+   PALETA ORQUESTRA VOLPI
+================================= */
+
+:root {
+    --salmao: #ff7510;
+    --magenta: #cb6ce6;
+
+    --branco: #ffffff;
+    --creme: #fff9f5;
+    --creme-escuro: #fff0e8;
+
+    --texto: #302b29;
+    --texto-claro: #706763;
+
+    --grafite: #292322;
+}
+
+
+/* =================================
    CONFIGURAÇÕES GERAIS
-========================= */
+================================= */
 
 * {
     margin: 0;
@@ -14,8 +33,8 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #fffaf7;
-    color: #302b29;
+    background: var(--branco);
+    color: var(--texto);
     line-height: 1.6;
 }
 
@@ -25,29 +44,30 @@ img {
 }
 
 .container {
-    width: min(1100px, 92%);
+    width: min(1120px, 92%);
     margin: 0 auto;
 }
 
 
-/* =========================
+/* =================================
    CABEÇALHO
-========================= */
+================================= */
 
 .topo {
-    background: #ffffff;
-    border-bottom: 1px solid #eee3de;
-    padding: 15px 0;
+    background: var(--branco);
+    border-bottom: 4px solid var(--salmao);
+    padding: 14px 0;
 }
 
 .topo-conteudo {
-    width: min(1100px, 92%);
+    width: min(1120px, 92%);
     margin: 0 auto;
 
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 40px;
+    justify-content: space-between;
+
+    gap: 35px;
 }
 
 .marca {
@@ -56,363 +76,421 @@ img {
     gap: 18px;
 }
 
-/* Símbolo */
+
+/* LOGO */
+
 .logo {
-    width: 105px;
+    width: 110px;
     height: 125px;
     object-fit: contain;
     flex-shrink: 0;
 }
 
-/* Nome da Orquestra */
+
+/* NOME DA ORQUESTRA */
+
 .titulo-logo {
-    width: 390px;
+    width: 410px;
     max-width: 42vw;
     height: auto;
     object-fit: contain;
 }
 
 
-/* =========================
+/* =================================
    REDES SOCIAIS
-========================= */
+================================= */
 
 .redes {
     display: flex;
-    gap: 12px;
-    flex-shrink: 0;
+    align-items: center;
+    gap: 10px;
 }
 
 .redes a {
     text-decoration: none;
-    color: #c34e36;
-    font-weight: 700;
-    border: 1px solid #c34e36;
-    padding: 9px 15px;
+
+    color: var(--salmao);
+
+    border: 2px solid var(--salmao);
+
     border-radius: 999px;
+
+    padding: 9px 17px;
+
+    font-weight: bold;
+
     transition: 0.2s;
 }
 
 .redes a:hover {
-    background: #c34e36;
-    color: white;
+    color: var(--branco);
+    background: var(--salmao);
 }
 
 
-/* =========================
+/* YOUTUBE EM MAGENTA */
+
+.redes a:last-child {
+    color: var(--magenta);
+    border-color: var(--magenta);
+}
+
+.redes a:last-child:hover {
+    color: var(--branco);
+    background: var(--magenta);
+}
+
+
+/* =================================
    APRESENTAÇÃO
-========================= */
+================================= */
 
 .apresentacao {
-    padding: 70px 0;
+    padding: 70px 0 85px;
+
     background:
         linear-gradient(
             135deg,
-            #fff8f4 0%,
-            #ffffff 55%,
-            #fff2ea 100%
+            var(--creme) 0%,
+            var(--branco) 50%,
+            #fff7fc 100%
         );
 }
 
+
+/* TÍTULO PRINCIPAL */
+
 .titulo-principal {
+    max-width: 900px;
+    margin: 0 auto 45px;
     text-align: center;
-    margin-bottom: 45px;
+}
+
+.destaque {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: var(--magenta);
+
+    font-size: 0.95rem;
+    font-weight: 800;
+
+    letter-spacing: 0.18em;
 }
 
 .titulo-principal h1 {
-    font-size: clamp(2.2rem, 5vw, 4.2rem);
+    font-size: clamp(2.4rem, 5vw, 4.5rem);
     line-height: 1.05;
-    color: #3c302c;
-    margin-bottom: 12px;
+
+    color: var(--texto);
+
+    margin-bottom: 15px;
 }
 
 .titulo-principal p {
-    color: #c45137;
-    font-size: 1.1rem;
-    font-weight: 600;
+    color: var(--salmao);
+
+    font-size: 1.15rem;
+    font-weight: 700;
 }
+
+
+/* =================================
+   FOTO + HISTÓRIA
+================================= */
 
 .apresentacao-grid {
     display: grid;
-    grid-template-columns: 1.4fr 1fr;
-    gap: 35px;
+
+    grid-template-columns: 1.35fr 1fr;
+
     align-items: stretch;
+
+    gap: 35px;
 }
 
 
-/* =========================
-   FOTO PRINCIPAL
-========================= */
+/* FOTO DA ORQUESTRA */
 
 .foto-orquestra {
-    border-radius: 24px;
     overflow: hidden;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 15px 45px
+        rgba(0, 0, 0, 0.13);
+
+    border-bottom: 7px solid var(--salmao);
 }
 
 .foto-orquestra img {
     width: 100%;
     height: 100%;
-    min-height: 480px;
+
+    min-height: 510px;
+
     object-fit: cover;
 }
 
 
-/* =========================
-   HISTÓRIA
-========================= */
+/* CARD DA HISTÓRIA */
 
 .card-historia {
-    background: #ffffff;
-    border-radius: 24px;
+    background: var(--branco);
+
     padding: 38px;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 12px 35px
+        rgba(0, 0, 0, 0.08);
+
+    border-top: 7px solid var(--magenta);
 
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
+.etiqueta {
+    display: inline-block;
+
+    align-self: flex-start;
+
+    color: var(--branco);
+    background: var(--salmao);
+
+    border-radius: 999px;
+
+    padding: 6px 14px;
+
+    margin-bottom: 18px;
+
+    font-size: 0.8rem;
+    font-weight: bold;
+
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.card-historia h2 {
+    font-size: clamp(1.7rem, 3vw, 2.3rem);
+
+    line-height: 1.15;
+
+    margin-bottom: 20px;
+
+    color: var(--texto);
+}
+
 .card-historia > p {
-    font-size: 1.15rem;
+    color: var(--texto-claro);
+
+    font-size: 1.08rem;
+
     margin-bottom: 30px;
 }
+
+
+/* =================================
+   INFORMAÇÕES
+================================= */
 
 .informacoes {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+
+    gap: 15px;
 }
 
 .info-item {
     display: flex;
     align-items: center;
+
     gap: 14px;
+
     padding-top: 15px;
-    border-top: 1px solid #eee5e0;
+
+    border-top: 1px solid #eee4df;
 }
 
 .info-icone {
-    width: 42px;
-    height: 42px;
+    width: 45px;
+    height: 45px;
+
+    flex-shrink: 0;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    flex-shrink: 0;
-
-    background: #f3d4c7;
-    color: #af432e;
+    color: var(--branco);
+    background: var(--magenta);
 
     border-radius: 50%;
-    font-size: 1.2rem;
+
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.info-item:nth-child(2) .info-icone {
+    background: var(--salmao);
 }
 
 .info-item strong {
-    color: #3b302d;
-    font-size: 0.9rem;
-    letter-spacing: 0.04em;
+    color: var(--texto);
+
+    font-size: 0.88rem;
+
+    letter-spacing: 0.05em;
 }
 
 .info-item p {
+    color: var(--texto-claro);
+
     margin-top: 2px;
-    color: #706561;
-    font-size: 0.95rem;
+
+    font-size: 0.94rem;
 }
 
 
-/* =========================
+/* =================================
    MAESTRO
-========================= */
+================================= */
 
 .maestro {
-    padding: 80px 0;
-    background: #392f2b;
+    padding: 85px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--grafite),
+            #3b3035
+        );
+
+    border-top: 7px solid var(--magenta);
 }
 
 .maestro-grid {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     align-items: center;
-    gap: 60px;
+
+    gap: 65px;
 }
 
 .card-maestro {
-    color: white;
+    color: var(--branco);
 }
 
 .subtitulo {
     display: inline-block;
-    color: #ef9c79;
-    font-weight: 700;
+
+    color: var(--salmao);
+
+    font-weight: 800;
+
     text-transform: uppercase;
-    letter-spacing: 0.12em;
-    margin-bottom: 8px;
+
+    letter-spacing: 0.15em;
+
+    margin-bottom: 10px;
 }
 
 .card-maestro h2 {
-    font-size: clamp(2.2rem, 4vw, 3.6rem);
-    line-height: 1.1;
+    font-size: clamp(2.4rem, 4vw, 3.8rem);
+
+    line-height: 1.05;
+
     margin-bottom: 25px;
+
+    color: var(--branco);
 }
 
 .card-maestro p {
-    font-size: 1.05rem;
-    color: #eee4df;
-    margin-bottom: 18px;
+    color: #f3e9e5;
+
+    font-size: 1.08rem;
 }
 
+
+/* FOTO DO MAESTRO */
+
 .foto-maestro {
-    border-radius: 24px;
     overflow: hidden;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 0, 0, 0.35);
+
+    border-bottom: 7px solid var(--salmao);
 }
 
 .foto-maestro img {
     width: 100%;
-    height: 520px;
+    height: 510px;
+
     object-fit: cover;
 }
 
 
-/* =========================
-   RODAPÉ
-========================= */
-
-footer {
-    background: #211c1a;
-    color: #d9cfca;
-    text-align: center;
-    padding: 25px 20px;
-    font-size: 0.9rem;
-}
-
-
-/* =========================
-   TABLET
-========================= */
-
-@media (max-width: 900px) {
-
-    .apresentacao-grid,
-    .maestro-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .foto-orquestra img {
-        min-height: auto;
-    }
-
-    .maestro-grid {
-        gap: 35px;
-    }
-
-    .foto-maestro img {
-        height: auto;
-    }
-}
-
-
-/* =========================
-   CELULAR
-========================= */
-
-@media (max-width: 700px) {
-
-    .topo {
-        padding: 8px 0;
-    }
-
-    .topo-conteudo {
-        width: 94%;
-        gap: 12px;
-    }
-
-    .marca {
-        gap: 8px;
-    }
-
-    .logo {
-        width: 58px;
-        height: 75px;
-    }
-
-    .titulo-logo {
-        width: 220px;
-        max-width: 55vw;
-    }
-
-    .redes {
-        display: none;
-    }
-
-    .apresentacao {
-        padding: 45px 0;
-    }
-
-    .titulo-principal {
-        margin-bottom: 30px;
-    }
-
-    .titulo-principal h1 {
-        font-size: 2.3rem;
-    }
-
-    .apresentacao-grid {
-        gap: 22px;
-    }
-
-    .card-historia {
-        padding: 27px 23px;
-    }
-
-    .card-historia > p {
-        font-size: 1rem;
-    }
-
-    .maestro {
-        padding: 55px 0;
-    }
-
-    .card-maestro h2 {
-        font-size: 2.4rem;
-    }
-}
 /* =================================
-   SEÇÃO MÚSICOS
+   MÚSICOS
 ================================= */
 
 .musicos {
     padding: 65px 0;
-    background: #ff7510;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--salmao),
+            #ff9450
+        );
 }
 
 .card-musicos {
-    background: #ffffff;
+    background: var(--branco);
+
     border-radius: 24px;
+
     padding: 38px 42px;
 
     display: grid;
+
     grid-template-columns: 1fr 1.3fr;
+
     gap: 40px;
+
     align-items: center;
 
     max-width: 1000px;
+
     margin: 0 auto;
 
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    box-shadow:
+        0 12px 30px
+        rgba(0, 0, 0, 0.12);
 }
 
 
-/* TÍTULO */
+/* TÍTULO MÚSICOS */
 
 .subtitulo-secao {
     display: block;
 
-    color: #ff7510;
+    color: var(--salmao);
 
     font-size: 2rem;
+
     font-weight: 800;
 
     margin-bottom: 8px;
@@ -420,9 +498,10 @@ footer {
 
 .linha-titulo {
     width: 100%;
+
     height: 2px;
 
-    background: #ff7510;
+    background: var(--salmao);
 
     opacity: 0.35;
 
@@ -430,27 +509,30 @@ footer {
 }
 
 
-/* NOMES */
+/* NOMES DOS MÚSICOS */
 
 .nomes-musicos {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
 
     column-gap: 35px;
+
     row-gap: 18px;
 }
 
 .nomes-musicos p {
-    color: #302b29;
+    color: var(--texto);
 
     font-size: 1.15rem;
+
     font-weight: 700;
 
     line-height: 1.2;
 }
 
 
-/* FOTOS */
+/* FOTOS DOS MÚSICOS */
 
 .fotos-musicos {
     display: grid;
@@ -470,13 +552,190 @@ footer {
 
     border-radius: 10px;
 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.16);
+    box-shadow:
+        0 4px 10px
+        rgba(0, 0, 0, 0.16);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.fotos-musicos img:hover {
+    transform: scale(1.04);
+
+    box-shadow:
+        0 7px 15px
+        rgba(0, 0, 0, 0.2);
 }
 
 
-/* TABLET */
+/* =================================
+   NOSSA TRAJETÓRIA DE RESISTÊNCIA
+================================= */
+
+.trajetoria {
+    padding: 75px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--magenta) 0%,
+            #b958d4 100%
+        );
+}
+
+
+/* TÍTULO TRAJETÓRIA */
+
+.titulo-trajetoria {
+    text-align: center;
+
+    margin-bottom: 42px;
+}
+
+.titulo-trajetoria span {
+    display: inline-block;
+
+    color: var(--branco);
+
+    font-size: 0.95rem;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.15em;
+
+    margin-bottom: 8px;
+}
+
+.titulo-trajetoria h2 {
+    color: var(--branco);
+
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+
+    line-height: 1.1;
+}
+
+
+/* CONTEÚDO TRAJETÓRIA */
+
+.trajetoria-conteudo {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.3fr;
+
+    align-items: center;
+
+    gap: 40px;
+}
+
+
+/* TEXTO TRAJETÓRIA */
+
+.trajetoria-texto {
+    background: var(--branco);
+
+    padding: 35px;
+
+    border-radius: 24px;
+
+    border-bottom: 7px solid var(--salmao);
+
+    box-shadow:
+        0 12px 30px
+        rgba(0, 0, 0, 0.15);
+}
+
+.trajetoria-texto p {
+    color: var(--texto);
+
+    font-size: 1.1rem;
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+.trajetoria-texto p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* DOCUMENTÁRIO */
+
+.trajetoria-video {
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    border: 5px solid var(--branco);
+
+    box-shadow:
+        0 15px 35px
+        rgba(0, 0, 0, 0.22);
+}
+
+.trajetoria-video iframe {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+}
+
+
+/* =================================
+   RODAPÉ
+================================= */
+
+footer {
+    background: #1c1817;
+
+    color: #e9dfdb;
+
+    text-align: center;
+
+    padding: 27px 20px;
+
+    border-top: 4px solid var(--salmao);
+
+    font-size: 0.9rem;
+}
+
+
+/* =================================
+   TABLET
+================================= */
 
 @media (max-width: 900px) {
+
+    .apresentacao-grid,
+    .maestro-grid,
+    .trajetoria-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .foto-orquestra img {
+        min-height: auto;
+    }
+
+    .maestro-grid {
+        gap: 35px;
+    }
+
+    .foto-maestro img {
+        height: auto;
+    }
+
+
+    /* MÚSICOS */
 
     .card-musicos {
         grid-template-columns: 1fr;
@@ -493,9 +752,89 @@ footer {
 }
 
 
-/* CELULAR */
+/* =================================
+   CELULAR
+================================= */
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
+
+    /* CABEÇALHO */
+
+    .topo {
+        padding: 8px 0;
+    }
+
+    .topo-conteudo {
+        width: 94%;
+        gap: 10px;
+    }
+
+    .marca {
+        gap: 8px;
+    }
+
+    .logo {
+        width: 62px;
+        height: 76px;
+    }
+
+    .titulo-logo {
+        width: 225px;
+        max-width: 62vw;
+    }
+
+    .redes {
+        display: none;
+    }
+
+
+    /* APRESENTAÇÃO */
+
+    .apresentacao {
+        padding: 45px 0 55px;
+    }
+
+    .titulo-principal {
+        margin-bottom: 30px;
+    }
+
+    .titulo-principal h1 {
+        font-size: 2.3rem;
+    }
+
+    .titulo-principal p {
+        font-size: 1rem;
+    }
+
+    .apresentacao-grid {
+        gap: 23px;
+    }
+
+    .card-historia {
+        padding: 27px 23px;
+    }
+
+    .card-historia h2 {
+        font-size: 1.8rem;
+    }
+
+    .card-historia > p {
+        font-size: 1rem;
+    }
+
+
+    /* MAESTRO */
+
+    .maestro {
+        padding: 55px 0;
+    }
+
+    .card-maestro h2 {
+        font-size: 2.4rem;
+    }
+
+
+    /* MÚSICOS */
 
     .musicos {
         padding: 45px 0;
@@ -503,6 +842,7 @@ footer {
 
     .card-musicos {
         padding: 26px 20px;
+
         gap: 30px;
     }
 
@@ -512,6 +852,7 @@ footer {
 
     .nomes-musicos {
         grid-template-columns: 1fr 1fr;
+
         gap: 16px;
     }
 
@@ -527,54 +868,50 @@ footer {
         width: 120px;
         height: 120px;
     }
+
+
+    /* TRAJETÓRIA */
+
+    .trajetoria {
+        padding: 55px 0;
+    }
+
+    .trajetoria-conteudo {
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+    }
+
+    .trajetoria-texto {
+        padding: 27px 23px;
+    }
+
+    .trajetoria-texto p {
+        font-size: 1rem;
+    }
+
+    .titulo-trajetoria h2 {
+        font-size: 2rem;
+    }
 }
-<!-- NOSSA TRAJETÓRIA DE RESISTÊNCIA -->
-<section class="trajetoria">
-
-    <div class="container">
-
-        <div class="titulo-trajetoria">
-
-            <span>Nossa história</span>
-
-            <h2>Nossa Trajetória de Resistência</h2>
-
-        </div>
 
 
-        <div class="trajetoria-conteudo">
+/* =================================
+   CELULARES PEQUENOS
+================================= */
 
-            <!-- TEXTO -->
-            <div class="trajetoria-texto">
+@media (max-width: 400px) {
 
-                <p>
-                    Em 2021, durante a pandemia, lançamos um documentário
-                    que registra a nossa formação, as percepções dos
-                    integrantes e a força de um grupo que não parou.
-                </p>
+    .nomes-musicos {
+        grid-template-columns: 1fr;
+    }
 
-                <p>
-                    Com fé, coragem e amor pela música, carregamos a
-                    memória e a tradição da Viola Caipira.
-                </p>
+    .fotos-musicos {
+        grid-template-columns: repeat(2, 105px);
+    }
 
-            </div>
-
-
-            <!-- DOCUMENTÁRIO -->
-            <div class="trajetoria-video">
-
-                <iframe
-                    src="https://www.youtube.com/embed/zib416g6E84"
-                    title="Documentário da Orquestra Volpi de Viola Caipira"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen>
-                </iframe>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
+    .fotos-musicos img {
+        width: 105px;
+        height: 105px;
+    }
+}
