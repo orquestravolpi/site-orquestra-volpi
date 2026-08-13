@@ -379,3 +379,152 @@ footer {
         font-size: 2.4rem;
     }
 }
+/* =================================
+   SEÇÃO MÚSICOS
+================================= */
+
+.musicos {
+    padding: 65px 0;
+    background: #ff7510;
+}
+
+.card-musicos {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 38px 42px;
+
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 40px;
+    align-items: center;
+
+    max-width: 1000px;
+    margin: 0 auto;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+/* TÍTULO */
+
+.subtitulo-secao {
+    display: block;
+
+    color: #ff7510;
+
+    font-size: 2rem;
+    font-weight: 800;
+
+    margin-bottom: 8px;
+}
+
+.linha-titulo {
+    width: 100%;
+    height: 2px;
+
+    background: #ff7510;
+
+    opacity: 0.35;
+
+    margin-bottom: 25px;
+}
+
+
+/* NOMES */
+
+.nomes-musicos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 35px;
+    row-gap: 18px;
+}
+
+.nomes-musicos p {
+    color: #302b29;
+
+    font-size: 1.15rem;
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+/* FOTOS */
+
+.fotos-musicos {
+    display: grid;
+
+    grid-template-columns: repeat(4, 110px);
+
+    justify-content: center;
+
+    gap: 12px;
+}
+
+.fotos-musicos img {
+    width: 110px;
+    height: 110px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.16);
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .card-musicos {
+        grid-template-columns: 1fr;
+    }
+
+    .fotos-musicos {
+        grid-template-columns: repeat(4, 100px);
+    }
+
+    .fotos-musicos img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .musicos {
+        padding: 45px 0;
+    }
+
+    .card-musicos {
+        padding: 26px 20px;
+        gap: 30px;
+    }
+
+    .subtitulo-secao {
+        font-size: 1.7rem;
+    }
+
+    .nomes-musicos {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    .nomes-musicos p {
+        font-size: 1rem;
+    }
+
+    .fotos-musicos {
+        grid-template-columns: repeat(2, 120px);
+    }
+
+    .fotos-musicos img {
+        width: 120px;
+        height: 120px;
+    }
+}
