@@ -1,3 +1,45 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fffaf7;
+    color: #302b29;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.topo {
+    background: #ffffff;
+    border-bottom: 1px solid #eee3de;
+    padding: 15px 0;
+}
+
 .topo-conteudo {
     width: min(1100px, 92%);
     margin: 0 auto;
@@ -14,7 +56,7 @@
     gap: 18px;
 }
 
-/* Símbolo da Orquestra */
+/* Símbolo */
 .logo {
     width: 105px;
     height: 125px;
@@ -22,7 +64,7 @@
     flex-shrink: 0;
 }
 
-/* Nome Orquestra Volpi de Viola Caipira */
+/* Nome da Orquestra */
 .titulo-logo {
     width: 390px;
     max-width: 42vw;
@@ -30,15 +72,257 @@
     object-fit: contain;
 }
 
-/* Redes sociais */
+
+/* =========================
+   REDES SOCIAIS
+========================= */
+
 .redes {
     display: flex;
-    gap: 18px;
+    gap: 12px;
     flex-shrink: 0;
 }
 
-/* Ajuste para celular */
+.redes a {
+    text-decoration: none;
+    color: #c34e36;
+    font-weight: 700;
+    border: 1px solid #c34e36;
+    padding: 9px 15px;
+    border-radius: 999px;
+    transition: 0.2s;
+}
+
+.redes a:hover {
+    background: #c34e36;
+    color: white;
+}
+
+
+/* =========================
+   APRESENTAÇÃO
+========================= */
+
+.apresentacao {
+    padding: 70px 0;
+    background:
+        linear-gradient(
+            135deg,
+            #fff8f4 0%,
+            #ffffff 55%,
+            #fff2ea 100%
+        );
+}
+
+.titulo-principal {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.titulo-principal h1 {
+    font-size: clamp(2.2rem, 5vw, 4.2rem);
+    line-height: 1.05;
+    color: #3c302c;
+    margin-bottom: 12px;
+}
+
+.titulo-principal p {
+    color: #c45137;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.apresentacao-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 35px;
+    align-items: stretch;
+}
+
+
+/* =========================
+   FOTO PRINCIPAL
+========================= */
+
+.foto-orquestra {
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.foto-orquestra img {
+    width: 100%;
+    height: 100%;
+    min-height: 480px;
+    object-fit: cover;
+}
+
+
+/* =========================
+   HISTÓRIA
+========================= */
+
+.card-historia {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 38px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-historia > p {
+    font-size: 1.15rem;
+    margin-bottom: 30px;
+}
+
+.informacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-top: 15px;
+    border-top: 1px solid #eee5e0;
+}
+
+.info-icone {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: #f3d4c7;
+    color: #af432e;
+
+    border-radius: 50%;
+    font-size: 1.2rem;
+}
+
+.info-item strong {
+    color: #3b302d;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+}
+
+.info-item p {
+    margin-top: 2px;
+    color: #706561;
+    font-size: 0.95rem;
+}
+
+
+/* =========================
+   MAESTRO
+========================= */
+
+.maestro {
+    padding: 80px 0;
+    background: #392f2b;
+}
+
+.maestro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.card-maestro {
+    color: white;
+}
+
+.subtitulo {
+    display: inline-block;
+    color: #ef9c79;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 8px;
+}
+
+.card-maestro h2 {
+    font-size: clamp(2.2rem, 4vw, 3.6rem);
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.card-maestro p {
+    font-size: 1.05rem;
+    color: #eee4df;
+    margin-bottom: 18px;
+}
+
+.foto-maestro {
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.foto-maestro img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    background: #211c1a;
+    color: #d9cfca;
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 0.9rem;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .apresentacao-grid,
+    .maestro-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .foto-orquestra img {
+        min-height: auto;
+    }
+
+    .maestro-grid {
+        gap: 35px;
+    }
+
+    .foto-maestro img {
+        height: auto;
+    }
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
 @media (max-width: 700px) {
+
+    .topo {
+        padding: 8px 0;
+    }
 
     .topo-conteudo {
         width: 94%;
@@ -61,5 +345,37 @@
 
     .redes {
         display: none;
+    }
+
+    .apresentacao {
+        padding: 45px 0;
+    }
+
+    .titulo-principal {
+        margin-bottom: 30px;
+    }
+
+    .titulo-principal h1 {
+        font-size: 2.3rem;
+    }
+
+    .apresentacao-grid {
+        gap: 22px;
+    }
+
+    .card-historia {
+        padding: 27px 23px;
+    }
+
+    .card-historia > p {
+        font-size: 1rem;
+    }
+
+    .maestro {
+        padding: 55px 0;
+    }
+
+    .card-maestro h2 {
+        font-size: 2.4rem;
     }
 }
