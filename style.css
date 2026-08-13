@@ -1618,3 +1618,389 @@ footer {
     }
 
 }
+
+   /* =================================
+   ORÇAMENTO / CONTATO
+================================= */
+
+.contato {
+    padding: 90px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff7510 0%,
+            #ff8940 55%,
+            #cb6ce6 160%
+        );
+
+    text-align: center;
+}
+
+.contato-conteudo {
+    max-width: 850px;
+}
+
+
+/* PEQUENO DESTAQUE */
+
+.contato-destaque {
+    display: inline-block;
+
+    color: #ffffff;
+
+    font-size: 0.9rem;
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.14em;
+
+    margin-bottom: 14px;
+}
+
+
+/* TÍTULO */
+
+.contato h2 {
+    color: #ffffff;
+
+    font-size: clamp(2.3rem, 5vw, 4rem);
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+
+/* TEXTO */
+
+.contato > .container > p {
+    max-width: 720px;
+
+    margin: 0 auto 35px;
+
+    color: #ffffff;
+
+    font-size: 1.2rem;
+
+    line-height: 1.6;
+}
+
+
+/* BOTÃO */
+
+.botao-orcamento {
+    display: inline-block;
+
+    background: #ffffff;
+
+    color: #ff7510;
+
+    text-decoration: none;
+
+    padding: 17px 30px;
+
+    border-radius: 12px;
+
+    font-size: 1rem;
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    box-shadow:
+        0 7px 0 #cb6ce6,
+        0 12px 25px rgba(0, 0, 0, 0.18);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.botao-orcamento:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 9px 0 #cb6ce6,
+        0 15px 30px rgba(0, 0, 0, 0.22);
+}
+
+
+/* REDES */
+
+.contato-redes {
+    margin-top: 45px;
+
+    color: #ffffff;
+}
+
+.contato-redes p {
+    font-size: 0.85rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.1em;
+
+    margin-bottom: 12px;
+}
+
+.contato-links {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 10px;
+}
+
+.contato-links a {
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+
+    border-radius: 999px;
+
+    padding: 7px 14px;
+}
+
+.contato-links a:hover {
+    background: #ffffff;
+
+    color: #ff7510;
+}
+
+.contato-redes strong {
+    color: #ffffff;
+
+    font-size: 1rem;
+}
+
+
+/* =================================
+   CONTATO - CELULAR
+================================= */
+
+@media (max-width: 600px) {
+
+    .contato {
+        padding: 60px 0;
+    }
+
+    .contato h2 {
+        font-size: 2.3rem;
+    }
+
+    .contato > .container > p {
+        font-size: 1.05rem;
+    }
+
+    .botao-orcamento {
+        width: 100%;
+
+        max-width: 340px;
+
+        padding: 16px 18px;
+    }
+
+    .contato-links {
+        flex-wrap: wrap;
+    }
+
+
+/* =================================
+   ORÇAMENTO / CONTATO
+================================= */
+
+.contato {
+    padding: 90px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff7510 0%,
+            #ff8940 55%,
+            #cb6ce6 160%
+        );
+
+    text-align: center;
+}
+
+.contato-conteudo {
+    max-width: 850px;
+}
+
+
+/* PEQUENO DESTAQUE */
+
+.contato-destaque {
+    display: inline-block;
+
+    color: #ffffff;
+
+    font-size: 0.9rem;
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.14em;
+
+    margin-bottom: 14px;
+}
+
+
+/* TÍTULO */
+
+.contato h2 {
+    color: #ffffff;
+
+    font-size: clamp(2.3rem, 5vw, 4rem);
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+
+/* TEXTO */
+
+.contato > .container > p {
+    max-width: 720px;
+
+    margin: 0 auto 35px;
+
+    color: #ffffff;
+
+    font-size: 1.2rem;
+
+    line-height: 1.6;
+}
+
+
+/* BOTÃO */
+
+.botao-orcamento {
+    display: inline-block;
+
+    background: #ffffff;
+
+    color: #ff7510;
+
+    text-decoration: none;
+
+    padding: 17px 30px;
+
+    border-radius: 12px;
+
+    font-size: 1rem;
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    box-shadow:
+        0 7px 0 #cb6ce6,
+        0 12px 25px rgba(0, 0, 0, 0.18);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.botao-orcamento:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 9px 0 #cb6ce6,
+        0 15px 30px rgba(0, 0, 0, 0.22);
+}
+
+
+/* REDES */
+
+.contato-redes {
+    margin-top: 45px;
+
+    color: #ffffff;
+}
+
+.contato-redes p {
+    font-size: 0.85rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.1em;
+
+    margin-bottom: 12px;
+}
+
+.contato-links {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 10px;
+}
+
+.contato-links a {
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+
+    border-radius: 999px;
+
+    padding: 7px 14px;
+}
+
+.contato-links a:hover {
+    background: #ffffff;
+
+    color: #ff7510;
+}
+
+.contato-redes strong {
+    color: #ffffff;
+
+    font-size: 1rem;
+}
+
+
+/* =================================
+   CONTATO - CELULAR
+================================= */
+
+@media (max-width: 600px) {
+
+    .contato {
+        padding: 60px 0;
+    }
+
+    .contato h2 {
+        font-size: 2.3rem;
+    }
+
+    .contato > .container > p {
+        font-size: 1.05rem;
+    }
+
+    .botao-orcamento {
+        width: 100%;
+
+        max-width: 340px;
+
+        padding: 16px 18px;
+    }
+
+    .contato-links {
+        flex-wrap: wrap;
+    }
+}
