@@ -48,27 +48,20 @@ body {
 }
 
 .logo {
-    width: 52px;
-    height: 72px;
+    width: 55px;
+    height: 75px;
     object-fit: contain;
-    border-radius: 8px;
 }
 
-.nome {
-    display: flex;
-    flex-direction: column;
-    font-family: Georgia, "Times New Roman", serif;
-    color: white;
+.titulo-logo {
+    width: 245px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
 }
 
-.nome strong {
-    font-size: 24px;
-    line-height: 1;
-}
 
-.nome span {
-    font-size: 19px;
-}
 
 .redes {
     display: flex;
