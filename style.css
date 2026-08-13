@@ -528,3 +528,53 @@ footer {
         height: 120px;
     }
 }
+<!-- NOSSA TRAJETÓRIA DE RESISTÊNCIA -->
+<section class="trajetoria">
+
+    <div class="container">
+
+        <div class="titulo-trajetoria">
+
+            <span>Nossa história</span>
+
+            <h2>Nossa Trajetória de Resistência</h2>
+
+        </div>
+
+
+        <div class="trajetoria-conteudo">
+
+            <!-- TEXTO -->
+            <div class="trajetoria-texto">
+
+                <p>
+                    Em 2021, durante a pandemia, lançamos um documentário
+                    que registra a nossa formação, as percepções dos
+                    integrantes e a força de um grupo que não parou.
+                </p>
+
+                <p>
+                    Com fé, coragem e amor pela música, carregamos a
+                    memória e a tradição da Viola Caipira.
+                </p>
+
+            </div>
+
+
+            <!-- DOCUMENTÁRIO -->
+            <div class="trajetoria-video">
+
+                <iframe
+                    src="https://www.youtube.com/embed/zib416g6E84"
+                    title="Documentário da Orquestra Volpi de Viola Caipira"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
