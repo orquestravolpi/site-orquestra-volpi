@@ -1783,3 +1783,67 @@ footer {
     }
 
 }
+
+
+/* =========================================================
+   ÍCONES DOS SHOWS
+   Pare e Ouça = viola
+   Bailão = chapéu
+   Natal = três reis magos
+========================================================= */
+
+.show-icone {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    min-height: 70px;
+
+    margin-bottom: 14px;
+}
+
+.show-icone img {
+    display: block;
+
+    width: auto;
+    height: 70px;
+
+    max-width: 150px;
+
+    object-fit: contain;
+    object-position: left center;
+}
+
+/* Bailão: pode ser um pouco mais largo */
+.show-invertido .show-icone img {
+    height: 66px;
+    max-width: 165px;
+}
+
+/* Três Reis Magos: normalmente a arte é mais horizontal */
+.show-natal .show-icone img {
+    height: 72px;
+    max-width: 190px;
+}
+
+@media (max-width: 700px) {
+    .show-icone {
+        min-height: 58px;
+        margin-bottom: 12px;
+    }
+
+    .show-icone img {
+        height: 58px;
+        max-width: 130px;
+    }
+
+    .show-invertido .show-icone img {
+        height: 56px;
+        max-width: 145px;
+    }
+
+    .show-natal .show-icone img {
+        height: 60px;
+        max-width: 165px;
+    }
+}
