@@ -1,56 +1,1818 @@
-/* PRIMEIRA SEÇÃO BRANCA */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap');
 
-.apresentacao {
+
+/* =========================================================
+   PALETA
+========================================================= */
+
+:root {
+
+    --salmao: #f46c67;
+    --salmao-escuro: #d95550;
+
+    --laranja: #ff7510;
+    --laranja-claro: #ff9851;
+
+    --magenta: #cb6ce6;
+    --magenta-escuro: #a84bc2;
+
+    --branco: #ffffff;
+    --creme: #fff9f5;
+    --creme-escuro: #fff0e8;
+
+    --texto: #302b29;
+    --texto-claro: #625a57;
+
+    --sombra:
+        0 14px 34px
+        rgba(75, 39, 34, 0.14);
+
+}
+
+
+/* =========================================================
+   GERAL
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family:
+        "Source Sans 3",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 18px;
+    line-height: 1.68;
+
     background: var(--branco);
+    color: var(--texto);
+
 }
 
-.titulo-principal .destaque {
+h1,
+h2,
+h3,
+.kicker,
+.destaque,
+.menu-principal,
+.redes-topo,
+.botao-orcamento {
+
+    font-family:
+        "Manrope",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+.container {
+
+    width: min(1180px, 92%);
+    margin: 0 auto;
+
+}
+
+
+/* =========================================================
+   CABEÇALHO
+========================================================= */
+
+.topo {
+
+    background:
+        radial-gradient(
+            circle at 84% 20%,
+            rgba(203, 108, 230, 0.78) 0%,
+            rgba(203, 108, 230, 0.28) 30%,
+            rgba(203, 108, 230, 0) 53%
+        ),
+        linear-gradient(
+            120deg,
+            var(--salmao) 0%,
+            #f75e74 48%,
+            var(--magenta) 118%
+        );
+
+    padding: 10px 0;
+
+}
+
+.topo-conteudo {
+
+    width: min(1250px, 95%);
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 24px;
+
+}
+
+.marca {
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    text-decoration: none;
+
+    min-width: 0;
+
+}
+
+.logo {
+
+    width: 165px;
+    height: 165px;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
+
+}
+
+.titulo-logo {
+
+    width: 400px;
+    max-width: 31vw;
+
+    height: auto;
+
+    object-fit: contain;
+
+}
+
+
+/* menu */
+
+.menu-principal {
+
+    display: flex;
+    align-items: center;
+
+    gap: 17px;
+
+    color: var(--branco);
+
+    font-size: 0.86rem;
+    font-weight: 700;
+
+}
+
+.menu-principal a {
+
+    text-decoration: none;
+
+    padding: 7px 0;
+
+    border-bottom:
+        2px solid
+        transparent;
+
+    transition:
+        border-color 0.2s ease;
+
+}
+
+.menu-principal a:hover {
+
+    border-bottom-color:
+        rgba(255, 255, 255, 0.9);
+
+}
+
+
+/* redes */
+
+.redes-topo {
+
+    display: flex;
+    gap: 8px;
+
+    flex-shrink: 0;
+
+}
+
+.redes-topo a {
+
+    color: var(--branco);
+
+    text-decoration: none;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.8);
+
+    border-radius: 999px;
+
+    padding: 8px 13px;
+
+    font-size: 0.82rem;
+    font-weight: 700;
+
+    transition: 0.2s ease;
+
+}
+
+.redes-topo a:hover {
+
+    background: var(--branco);
     color: var(--salmao-escuro);
+
 }
 
-.titulo-principal h1 {
+
+/* =========================================================
+   PADRÃO DE TÍTULOS
+========================================================= */
+
+.kicker {
+
+    display: inline-block;
+
+    color: var(--laranja);
+
+    font-size: 1.32rem;
+    font-weight: 800;
+
+    line-height: 1.2;
+
+    letter-spacing: 0.04em;
+
+    margin-bottom: 10px;
+
+}
+
+.kicker-claro {
+    color: var(--branco);
+}
+
+.titulo-secao {
+
+    text-align: center;
+
+    max-width: 820px;
+
+    margin:
+        0 auto
+        44px;
+
+}
+
+.titulo-secao h2 {
+
+    font-size:
+        clamp(
+            2.5rem,
+            5vw,
+            3.8rem
+        );
+
+    line-height: 1.08;
+
+    margin-bottom: 12px;
+
+}
+
+.titulo-secao p {
+
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    font-size: 1.14rem;
+    line-height: 1.65;
+
+}
+
+.titulo-secao-escuro h2 {
     color: var(--texto);
 }
 
-.titulo-principal p {
-    color: var(--laranja);
-    font-size: 21px;
+.titulo-secao-escuro p {
+    color: var(--texto-claro);
+}
+
+.titulo-secao-claro h2,
+.titulo-secao-claro p {
+    color: var(--branco);
+}
+
+
+/* =========================================================
+   APRESENTAÇÃO — FUNDO BRANCO
+========================================================= */
+
+.apresentacao {
+
+    padding:
+        54px 0
+        80px;
+
+    background: var(--branco);
+
+}
+
+.titulo-principal {
+
+    max-width: 900px;
+
+    margin:
+        0 auto
+        36px;
+
+    text-align: center;
+
+}
+
+/* ORQUESTRA VOLPI */
+
+.titulo-principal .destaque {
+
+    display: block;
+
+    color: var(--salmao-escuro);
+
+    font-size:
+        clamp(
+            40px,
+            5vw,
+            58px
+        );
+
+    font-weight: 800;
+
+    line-height: 1.05;
+
+    letter-spacing: 0;
+
+    margin-bottom: 7px;
+
+}
+
+/* O som autêntico da tradição */
+
+.titulo-principal h1 {
+
+    color: var(--texto);
+
+    font-size:
+        clamp(
+            22px,
+            2.4vw,
+            31px
+        );
+
     font-weight: 700;
+
+    line-height: 1.25;
+
+    margin-bottom: 8px;
+
+}
+
+/* Viola caipira · Música raiz · Cultura brasileira */
+
+.titulo-principal p {
+
+    color: var(--laranja);
+
+    font-size: 22px;
+    font-weight: 700;
+
+    line-height: 1.4;
+
 }
 
 
-/* MAESTRO MAIOR */
+/* foto + história */
 
-.subtitulo {
-    font-size: 1.35rem;
+.apresentacao-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1.35fr
+        1fr;
+
+    align-items: center;
+
+    gap: 28px;
+
+}
+
+.foto-orquestra {
+
+    background: var(--branco);
+
+    border:
+        5px solid
+        var(--branco);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: var(--sombra);
+
+}
+
+.foto-orquestra img {
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+
+}
+
+.card-historia {
+
+    padding: 36px;
+
+    color: var(--branco);
+
+    background:
+        linear-gradient(
+            145deg,
+            #ba4738,
+            #a83f3c
+        );
+
+    border-radius: 23px;
+
+    box-shadow: var(--sombra);
+
+}
+
+.card-historia h2 {
+
+    color: var(--branco);
+
+    font-size:
+        clamp(
+            2rem,
+            3.2vw,
+            2.7rem
+        );
+
+    line-height: 1.1;
+
+    margin-bottom: 18px;
+
+}
+
+.card-historia > p {
+
+    color: var(--branco);
+
+    font-size: 1.16rem;
+    line-height: 1.68;
+
+    margin-bottom: 27px;
+
+}
+
+
+/* informações */
+
+.informacoes {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+
+}
+
+.info-item {
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding-top: 14px;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.28);
+
+}
+
+.info-sinal {
+
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--branco);
+    color: var(--salmao-escuro);
+
+    font-size: 1.1rem;
     font-weight: 800;
-    letter-spacing: 0.04em;
-    margin-bottom: 10px;
+
+}
+
+.info-item strong {
+
+    display: block;
+
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+
+}
+
+.info-item p {
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.92
+        );
+
+    font-size: 0.98rem;
+    line-height: 1.35;
+
 }
 
 
-/* REGISTROS MAIOR */
+/* =========================================================
+   MAESTRO
+========================================================= */
 
-.titulo-galeria span {
-    font-size: 1.3rem;
+.maestro {
+
+    padding: 78px 0;
+
+    background:
+        radial-gradient(
+            circle at 8% 75%,
+            rgba(203, 108, 230, 0.20),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            var(--salmao) 0%,
+            #f36e5b 65%,
+            var(--laranja) 145%
+        );
+
+}
+
+.maestro-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1.28fr
+        0.72fr;
+
+    align-items: center;
+
+    gap: 52px;
+
+}
+
+.card-maestro {
+
+    height: auto;
+
+    overflow: visible;
+
+    background: var(--branco);
+
+    padding: 42px;
+
+    border-radius: 24px;
+
+    box-shadow: var(--sombra);
+
+}
+
+.card-maestro h2 {
+
+    color: var(--salmao-escuro);
+
+    font-size:
+        clamp(
+            2.6rem,
+            4vw,
+            3.6rem
+        );
+
+    line-height: 1.05;
+
+    margin-bottom: 22px;
+
+}
+
+.card-maestro p {
+
+    color: var(--texto);
+
+    font-size: 1.18rem;
+    line-height: 1.72;
+
+}
+
+.foto-maestro {
+
+    width:
+        min(
+            405px,
+            100%
+        );
+
+    aspect-ratio: 1 / 1;
+
+    justify-self: center;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+
+    border:
+        8px solid
+        rgba(255, 255, 255, 0.75);
+
+    outline:
+        4px solid
+        rgba(255, 181, 66, 0.72);
+
+    box-shadow:
+        0 18px 40px
+        rgba(85, 38, 38, 0.24);
+
+}
+
+.foto-maestro img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+/* =========================================================
+   MÚSICOS
+========================================================= */
+
+.musicos {
+
+    padding: 80px 0;
+
+    background:
+        radial-gradient(
+            circle at 92% 8%,
+            rgba(203, 108, 230, 0.09),
+            transparent 28%
+        ),
+        linear-gradient(
+            180deg,
+            var(--branco),
+            var(--creme)
+        );
+
+}
+
+.grade-musicos {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            4,
+            minmax(0, 1fr)
+        );
+
+    gap: 22px;
+
+}
+
+.musico-card {
+
+    background: var(--branco);
+
+    border-radius: 17px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 22px
+        rgba(70, 44, 39, 0.11);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+.musico-card:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 14px 28px
+        rgba(70, 44, 39, 0.15);
+
+}
+
+.musico-card img {
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.musico-card h3 {
+
+    color: var(--texto);
+
+    padding:
+        14px
+        12px
+        16px;
+
+    text-align: center;
+
+    font-size: 1.08rem;
+    font-weight: 700;
+
+    line-height: 1.25;
+
+}
+
+
+/* =========================================================
+   TRAJETÓRIA
+========================================================= */
+
+.trajetoria {
+
+    padding: 80px 0;
+
+    background:
+        radial-gradient(
+            circle at 12% 16%,
+            rgba(255, 117, 16, 0.22),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            var(--magenta),
+            #d55ba9 48%,
+            var(--salmao)
+        );
+
+}
+
+.trajetoria-conteudo {
+
+    display: grid;
+
+    grid-template-columns:
+        0.8fr
+        1.3fr;
+
+    gap: 38px;
+
+    align-items: center;
+
+}
+
+.trajetoria-texto {
+
+    background: var(--branco);
+
+    padding: 36px;
+
+    border-radius: 23px;
+
+    border-bottom:
+        7px solid
+        var(--laranja);
+
+    box-shadow: var(--sombra);
+
+}
+
+.trajetoria-texto p {
+
+    color: var(--texto);
+
+    font-size: 1.16rem;
+    line-height: 1.72;
+
+    margin-bottom: 18px;
+
+}
+
+.trajetoria-texto p:last-child {
+    margin-bottom: 0;
+}
+
+.trajetoria-video {
+
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+
+    background: #000;
+
+    border:
+        5px solid
+        var(--branco);
+
+    border-radius: 21px;
+
+    box-shadow:
+        0 16px 36px
+        rgba(0, 0, 0, 0.20);
+
+}
+
+.trajetoria-video iframe {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    border: 0;
+
+}
+
+
+/* =========================================================
+   SHOWS
+========================================================= */
+
+.shows {
+
+    background: var(--branco);
+
+    padding-top: 76px;
+
+}
+
+.titulo-shows {
+    margin-bottom: 36px;
+}
+
+.show-faixa {
+
+    padding:
+        64px 0
+        70px;
+
+}
+
+.show-pare {
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--salmao),
+            #ed6277
+        );
+
+}
+
+.show-bailao {
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--branco),
+            var(--creme-escuro)
+        );
+
+}
+
+.show-natal {
+
+    background:
+        radial-gradient(
+            circle at 88% 15%,
+            rgba(203, 108, 230, 0.44),
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            var(--salmao),
+            #e95d86 68%,
+            var(--magenta) 145%
+        );
+
+}
+
+.show-card {
+
+    display: grid;
+
+    grid-template-columns:
+        0.92fr
+        1.15fr;
+
+    align-items: center;
+
+    gap: 34px;
+
+}
+
+.show-card-invertido .show-foto {
+    order: 2;
+}
+
+.show-card-invertido .show-texto {
+    order: 1;
+}
+
+.show-foto {
+
+    overflow: hidden;
+
+    background: var(--branco);
+
+    border:
+        5px solid
+        var(--branco);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 13px 31px
+        rgba(0, 0, 0, 0.15);
+
+}
+
+/* não corta as fotos */
+
+.show-foto img {
+
+    width: 100%;
+    height: auto;
+
+    min-height: 0;
+
+    object-fit: contain;
+    object-position: center;
+
+}
+
+
+/* texto */
+
+.show-texto {
+
+    position: relative;
+
+    overflow: visible;
+
+    background: var(--branco);
+
+    padding:
+        43px
+        40px
+        38px;
+
+    border-radius: 24px;
+
+    border-bottom:
+        7px solid
+        var(--laranja);
+
+    box-shadow: var(--sombra);
+
+}
+
+.show-texto h3 {
+
+    color: var(--texto);
+
+    font-size:
+        clamp(
+            2rem,
+            3.3vw,
+            2.65rem
+        );
+
+    line-height: 1.1;
+
+    margin-bottom: 19px;
+
+}
+
+.show-texto h3 strong {
+    color: var(--salmao-escuro);
+}
+
+.show-texto p {
+
+    color: var(--texto-claro);
+
+    font-size: 1.16rem;
+    line-height: 1.72;
+
+    margin-bottom: 15px;
+
+}
+
+.show-texto p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ícones decorativos */
+
+.show-icone {
+
+    position: absolute;
+
+    top: -34px;
+    right: 26px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    pointer-events: none;
+
+}
+
+.show-icone img {
+
+    width: auto;
+    height: 78px;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 8px 7px
+            rgba(0, 0, 0, 0.15)
+        );
+
+}
+
+.show-icone-chapeu img {
+
+    height: 72px;
+    max-width: 175px;
+
+}
+
+.show-icone-reis img {
+
+    height: 92px;
+    max-width: 205px;
+
+}
+
+
+/* =========================================================
+   GALERIA
+========================================================= */
+
+.galeria {
+
+    padding: 82px 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--branco),
+            var(--creme)
+        );
+
+}
+
+.galeria-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+
+    gap: 16px;
+
+}
+
+.galeria-item {
+
+    aspect-ratio: 4 / 3;
+
+    overflow: hidden;
+
+    background: #eee;
+
+    border:
+        4px solid
+        var(--branco);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 22px
+        rgba(0, 0, 0, 0.11);
+
+}
+
+.galeria-item img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+.galeria-item:hover img {
+    transform: scale(1.04);
+}
+
+
+/* vídeo da galeria */
+
+.galeria-video-card {
+
+    max-width: 880px;
+
+    margin:
+        36px auto
+        0;
+
+    background: var(--branco);
+
+    border-radius: 20px;
+
+    padding: 20px;
+
+    box-shadow: var(--sombra);
+
+}
+
+.galeria-video-cabecalho {
+
+    margin-bottom: 16px;
+
+}
+
+.galeria-video-cabecalho .kicker {
+
+    margin-bottom: 4px;
+
+}
+
+.galeria-video-cabecalho h3 {
+
+    color: var(--texto);
+
+    font-size: 1.65rem;
+
+}
+
+.galeria-video-card video {
+
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    border-radius: 14px;
+
+    background: #000;
+
+}
+
+
+/* =========================================================
+   CONTATO
+========================================================= */
+
+.contato {
+
+    padding: 90px 0;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 10% 78%,
+            rgba(255, 117, 16, 0.34),
+            transparent 29%
+        ),
+        linear-gradient(
+            135deg,
+            var(--salmao),
+            #ed5d80 57%,
+            var(--magenta) 135%
+        );
+
+}
+
+.contato-conteudo {
+    max-width: 850px;
+}
+
+.contato h2 {
+
+    color: var(--branco);
+
+    font-size:
+        clamp(
+            2.5rem,
+            5vw,
+            4rem
+        );
+
+    line-height: 1.08;
+
+    margin-bottom: 19px;
+
+}
+
+.contato-conteudo > p {
+
+    color: var(--branco);
+
+    max-width: 730px;
+
+    margin:
+        0 auto
+        32px;
+
+    font-size: 1.22rem;
+    line-height: 1.65;
+
+}
+
+.botao-orcamento {
+
+    display: inline-flex;
+
+    flex-direction: column;
+    align-items: center;
+
+    min-width: 260px;
+
+    background: var(--laranja);
+    color: var(--branco);
+
+    text-decoration: none;
+
+    border-radius: 13px;
+
+    padding:
+        15px
+        28px;
+
     font-weight: 800;
-    letter-spacing: 0.08em;
-    margin-bottom: 10px;
+
+    box-shadow:
+        0 7px 0
+        rgba(151, 61, 37, 0.48),
+        0 13px 26px
+        rgba(0, 0, 0, 0.16);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease;
+
 }
 
+.botao-orcamento span {
+
+    font-size: 1.08rem;
+
+    text-transform: uppercase;
+
+}
+
+.botao-orcamento small {
+
+    margin-top: 2px;
+
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    opacity: 0.9;
+
+}
+
+.botao-orcamento:hover {
+
+    transform: translateY(-3px);
+
+    background: var(--branco);
+    color: var(--laranja);
+
+}
+
+
+/* =========================================================
+   RODAPÉ
+========================================================= */
+
+.rodape {
+
+    background: var(--branco);
+
+    border-top:
+        5px solid
+        var(--laranja);
+
+    padding: 26px 0;
+
+}
+
+.rodape-conteudo {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 24px;
+
+}
+
+.rodape-marca {
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+}
+
+.rodape-logo {
+
+    width: 72px;
+    height: 72px;
+
+    object-fit: contain;
+
+}
+
+.rodape-marca strong {
+
+    display: block;
+
+    color: var(--texto);
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 1rem;
+
+}
+
+.rodape-marca p {
+
+    color: var(--texto-claro);
+
+    font-size: 0.9rem;
+
+}
+
+.rodape-links {
+
+    display: flex;
+
+    gap: 16px;
+
+    flex-wrap: wrap;
+
+    justify-content: flex-end;
+
+}
+
+.rodape-links a {
+
+    color: var(--salmao-escuro);
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    font-size: 0.92rem;
+
+}
+
+.rodape-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .menu-principal {
+        display: none;
+    }
+
+    .titulo-logo {
+        max-width: 45vw;
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .logo {
+
+        width: 135px;
+        height: 135px;
+
+    }
+
+    .titulo-logo {
+
+        width: 380px;
+        max-width: 50vw;
+
+    }
+
+
+    .apresentacao-grid,
+    .maestro-grid,
+    .trajetoria-conteudo,
+    .show-card {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .foto-maestro {
+
+        width:
+            min(
+                360px,
+                78vw
+            );
+
+    }
+
+
+    .grade-musicos {
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+
+    }
+
+
+    .show-card-invertido .show-foto,
+    .show-card-invertido .show-texto {
+
+        order: initial;
+
+    }
+
+
+    .galeria-grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
 
 @media (max-width: 700px) {
 
+    body {
+        font-size: 17px;
+    }
+
+
+    .topo {
+
+        padding:
+            7px 0;
+
+    }
+
+    .topo-conteudo {
+
+        width: 95%;
+        gap: 8px;
+
+    }
+
+    .marca {
+        gap: 6px;
+    }
+
+    .logo {
+
+        width: 92px;
+        height: 92px;
+
+    }
+
+    .titulo-logo {
+
+        width: 250px;
+        max-width: 66vw;
+
+    }
+
+    .redes-topo {
+        display: none;
+    }
+
+
+    .apresentacao {
+
+        padding:
+            42px 0
+            58px;
+
+    }
+
+    .titulo-principal {
+
+        margin-bottom: 30px;
+
+    }
+
+    .titulo-principal .destaque {
+
+        font-size: 40px;
+
+    }
+
+    .titulo-principal h1 {
+
+        font-size: 21px;
+
+    }
+
     .titulo-principal p {
-        font-size: 18px;
+
+        font-size: 19px;
+
     }
 
-    .subtitulo {
-        font-size: 1.2rem;
+
+    .kicker {
+
+        font-size: 1.18rem;
+
     }
 
-    .titulo-galeria span {
-        font-size: 1.15rem;
+
+    .titulo-secao {
+
+        margin-bottom: 32px;
+
+    }
+
+    .titulo-secao h2 {
+
+        font-size: 2.35rem;
+
+    }
+
+
+    .card-historia,
+    .card-maestro,
+    .trajetoria-texto,
+    .show-texto {
+
+        padding:
+            29px
+            23px;
+
+    }
+
+
+    .card-historia > p,
+    .card-maestro p,
+    .trajetoria-texto p,
+    .show-texto p {
+
+        font-size: 1.08rem;
+
+    }
+
+
+    .maestro,
+    .musicos,
+    .trajetoria,
+    .galeria {
+
+        padding:
+            58px 0;
+
+    }
+
+
+    .grade-musicos {
+
+        gap: 14px;
+
+    }
+
+    .musico-card h3 {
+
+        font-size: 1rem;
+
+        padding:
+            12px
+            8px
+            14px;
+
+    }
+
+
+    .shows {
+
+        padding-top: 55px;
+
+    }
+
+    .show-faixa {
+
+        padding:
+            54px 0
+            58px;
+
+    }
+
+    .show-icone {
+
+        top: -28px;
+        right: 18px;
+
+    }
+
+    .show-icone img {
+
+        height: 62px;
+
+    }
+
+    .show-icone-chapeu img {
+
+        height: 58px;
+        max-width: 145px;
+
+    }
+
+    .show-icone-reis img {
+
+        height: 72px;
+        max-width: 165px;
+
+    }
+
+
+    .galeria-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .contato {
+
+        padding:
+            64px 0;
+
+    }
+
+    .contato-conteudo > p {
+
+        font-size: 1.08rem;
+
+    }
+
+
+    .rodape-conteudo {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+    .rodape-links {
+
+        justify-content: center;
+
+    }
+
+}
+
+
+/* =========================================================
+   CELULARES PEQUENOS
+========================================================= */
+
+@media (max-width: 430px) {
+
+    .logo {
+
+        width: 82px;
+        height: 82px;
+
+    }
+
+    .titulo-logo {
+
+        width: 225px;
+        max-width: 67vw;
+
+    }
+
+    .titulo-principal .destaque {
+
+        font-size: 35px;
+
+    }
+
+    .titulo-principal h1 {
+
+        font-size: 20px;
+
+    }
+
+    .titulo-principal p {
+
+        font-size: 17px;
+
+    }
+
+    .grade-musicos {
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 11px;
+
     }
 
 }
