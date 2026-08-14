@@ -155,7 +155,7 @@ a {
 }
 
 
-/* LOGO MAIOR */
+/* LOGO */
 
 .logo {
 
@@ -225,7 +225,7 @@ a {
 
 
 /* =========================================================
-   REDES DO TOPO
+   REDES SOCIAIS DO TOPO
 ========================================================= */
 
 .redes-topo {
@@ -269,7 +269,7 @@ a {
 
 
 /* =========================================================
-   PADRÃO DE TÍTULOS PEQUENOS
+   TÍTULOS PEQUENOS
 ========================================================= */
 
 .kicker {
@@ -298,7 +298,7 @@ a {
 
 
 /* =========================================================
-   TÍTULOS DE SEÇÃO
+   TÍTULOS DAS SEÇÕES
 ========================================================= */
 
 .titulo-secao {
@@ -453,7 +453,7 @@ a {
 
 
 /* =========================================================
-   FOTO + NOSSA HISTÓRIA
+   FOTO PRINCIPAL + HISTÓRIA
 ========================================================= */
 
 .apresentacao-grid {
@@ -1065,7 +1065,7 @@ a {
 }
 
 
-/* Bailão fica invertido */
+/* BAILÃO INVERTIDO */
 
 .show-card-invertido .show-foto {
 
@@ -1083,6 +1083,7 @@ a {
 
 /* =========================================================
    FOTOS DOS SHOWS
+   NÃO CORTA E NÃO ALTERA A PROPORÇÃO
 ========================================================= */
 
 .show-foto {
@@ -1106,10 +1107,14 @@ a {
 
 .show-foto img {
 
+    display: block;
+
     width: 100%;
     height: auto;
 
-    min-height: 0;
+    max-height: none;
+
+    aspect-ratio: auto;
 
     object-fit: contain;
     object-position: center;
@@ -1191,6 +1196,7 @@ a {
 
 /* =========================================================
    ÍCONES DOS SHOWS
+   SOMENTE OS ÍCONES FICAM MAIORES
 ========================================================= */
 
 .show-icone {
@@ -1215,6 +1221,8 @@ a {
 
     width: auto;
 
+    max-width: none;
+
     object-fit: contain;
 
     filter:
@@ -1230,18 +1238,18 @@ a {
 
 .show-icone-viola img {
 
-    height: 96px;
-    max-width: 190px;
+    width: auto;
+    height: 100px;
 
 }
 
 
-/* CHAPÉU — BAILÃO */
+/* CHAPÉUZINHOS — BAILÃO */
 
 .show-icone-chapeu img {
 
-    height: 86px;
-    max-width: 200px;
+    width: auto;
+    height: 92px;
 
 }
 
@@ -1250,8 +1258,8 @@ a {
 
 .show-icone-reis img {
 
-    height: 108px;
-    max-width: 230px;
+    width: auto;
+    height: 115px;
 
 }
 
@@ -1274,7 +1282,7 @@ a {
 }
 
 
-/* REGISTROS MAIOR */
+/* REGISTROS */
 
 .galeria .kicker {
 
@@ -1340,8 +1348,31 @@ a {
 
 
 /* =========================================================
-   VÍDEO DA GALERIA
+   VÍDEOS DA GALERIA
 ========================================================= */
+
+.galeria-video {
+
+    background: #000;
+
+}
+
+
+.galeria-video video {
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    background: #000;
+
+}
+
+
+/* compatibilidade caso ainda exista o card antigo */
 
 .galeria-video-card {
 
@@ -1467,7 +1498,7 @@ a {
 
 
 /* =========================================================
-   BOTÃO ORÇAMENTO
+   BOTÃO DE ORÇAMENTO
 ========================================================= */
 
 .botao-orcamento {
@@ -1775,7 +1806,7 @@ a {
     }
 
 
-    /* LOGO MAIOR NO CELULAR */
+    /* LOGO NO CELULAR */
 
     .logo {
 
@@ -1934,7 +1965,7 @@ a {
     }
 
 
-    /* ÍCONES NO CELULAR */
+    /* ÍCONES DOS SHOWS NO CELULAR */
 
     .show-icone {
 
@@ -1946,24 +1977,24 @@ a {
 
     .show-icone-viola img {
 
-        height: 76px;
-        max-width: 155px;
+        width: auto;
+        height: 78px;
 
     }
 
 
     .show-icone-chapeu img {
 
-        height: 70px;
-        max-width: 165px;
+        width: auto;
+        height: 72px;
 
     }
 
 
     .show-icone-reis img {
 
-        height: 84px;
-        max-width: 185px;
+        width: auto;
+        height: 88px;
 
     }
 
@@ -2064,21 +2095,21 @@ a {
 
     .show-icone-viola img {
 
-        height: 70px;
+        height: 74px;
 
     }
 
 
     .show-icone-chapeu img {
 
-        height: 65px;
+        height: 68px;
 
     }
 
 
     .show-icone-reis img {
 
-        height: 78px;
+        height: 82px;
 
     }
 
