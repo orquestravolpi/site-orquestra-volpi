@@ -3,17 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Orquestra Volpi de Viola Caipira</title>
 
     <meta
         name="description"
-        content="Orquestra Volpi de Viola Caipira, de Itaquera, São Paulo. Música caipira, viola brasileira, shows, eventos e apresentações temáticas."
+        content="Orquestra Volpi de Viola Caipira, de Itaquera, São Paulo. Música caipira, viola brasileira, shows, eventos e apresentações."
     >
 
     <link rel="stylesheet" href="style.css">
@@ -23,20 +19,19 @@
 <body>
 
 
-<!-- =====================================================
+<!-- =========================================================
      CABEÇALHO
-===================================================== -->
+========================================================= -->
 
 <header class="topo">
 
     <div class="topo-conteudo">
 
-
-        <div class="marca">
+        <a class="marca" href="#inicio" aria-label="Ir para o início">
 
             <img
                 src="logo-volpi.png"
-                alt="Símbolo da Orquestra Volpi de Viola Caipira"
+                alt=""
                 class="logo"
             >
 
@@ -46,13 +41,22 @@
                 class="titulo-logo"
             >
 
-        </div>
+        </a>
 
 
-        <nav
-            class="redes"
-            aria-label="Redes sociais"
-        >
+        <nav class="menu-principal" aria-label="Navegação principal">
+
+            <a href="#sobre">Sobre</a>
+            <a href="#maestro">Maestro</a>
+            <a href="#musicos">Músicos</a>
+            <a href="#shows">Shows</a>
+            <a href="#galeria">Galeria</a>
+            <a href="#contato">Contato</a>
+
+        </nav>
+
+
+        <div class="redes-topo">
 
             <a
                 href="https://www.instagram.com/orquestravolpi/"
@@ -70,8 +74,7 @@
                 YouTube
             </a>
 
-        </nav>
-
+        </div>
 
     </div>
 
@@ -79,14 +82,14 @@
 
 
 
-<main>
+<main id="inicio">
 
 
-<!-- =====================================================
+<!-- =========================================================
      APRESENTAÇÃO
-===================================================== -->
+========================================================= -->
 
-<section class="apresentacao">
+<section class="apresentacao" id="sobre">
 
     <div class="container">
 
@@ -112,8 +115,6 @@
         <div class="apresentacao-grid">
 
 
-            <!-- FOTO PRINCIPAL -->
-
             <div class="foto-orquestra">
 
                 <img
@@ -125,19 +126,15 @@
 
 
 
-            <!-- NOSSA HISTÓRIA -->
-
             <div class="card-historia">
 
-                <span class="etiqueta">
+                <span class="kicker kicker-claro">
                     Nossa história
                 </span>
-
 
                 <h2>
                     Orquestra Volpi de Viola Caipira
                 </h2>
-
 
                 <p>
                     Fundada em 2018, na Oficina Cultural Alfredo Volpi,
@@ -149,88 +146,40 @@
                 </p>
 
 
-
                 <div class="informacoes">
 
-
                     <div class="info-item">
-
-                        <div
-                            class="info-icone"
-                            aria-hidden="true"
-                        >
-                            ♪
-                        </div>
+                        <span class="info-sinal" aria-hidden="true">♪</span>
 
                         <div>
-
-                            <strong>
-                                MÚSICA RAIZ
-                            </strong>
-
-                            <p>
-                                O som autêntico da tradição caipira
-                            </p>
-
+                            <strong>MÚSICA RAIZ</strong>
+                            <p>O som autêntico da tradição caipira</p>
                         </div>
-
                     </div>
 
 
-
                     <div class="info-item">
-
-                        <div
-                            class="info-icone"
-                            aria-hidden="true"
-                        >
-                            ●
-                        </div>
+                        <span class="info-sinal" aria-hidden="true">●</span>
 
                         <div>
-
-                            <strong>
-                                ITAQUERA • SÃO PAULO
-                            </strong>
-
-                            <p>
-                                Apresentações em todo o Estado de São Paulo
-                            </p>
-
+                            <strong>ITAQUERA • SÃO PAULO</strong>
+                            <p>Apresentações em todo o Estado de São Paulo</p>
                         </div>
-
                     </div>
 
 
-
                     <div class="info-item">
-
-                        <div
-                            class="info-icone"
-                            aria-hidden="true"
-                        >
-                            ★
-                        </div>
+                        <span class="info-sinal" aria-hidden="true">★</span>
 
                         <div>
-
-                            <strong>
-                                EVENTOS E CERIMÔNIAS
-                            </strong>
-
-                            <p>
-                                Repertório personalizado
-                            </p>
-
+                            <strong>EVENTOS E CERIMÔNIAS</strong>
+                            <p>Repertório personalizado</p>
                         </div>
-
                     </div>
-
 
                 </div>
 
             </div>
-
 
         </div>
 
@@ -240,27 +189,24 @@
 
 
 
-
-<!-- =====================================================
+<!-- =========================================================
      MAESTRO
-===================================================== -->
+========================================================= -->
 
-<section class="maestro">
+<section class="maestro" id="maestro">
 
     <div class="container maestro-grid">
 
 
         <div class="card-maestro">
 
-            <span class="subtitulo">
+            <span class="kicker">
                 Maestro
             </span>
-
 
             <h2>
                 Renato de Sá
             </h2>
-
 
             <p>
                 Multi-instrumentista, compositor, arranjador e produtor musical,
@@ -276,7 +222,6 @@
         </div>
 
 
-
         <div class="foto-maestro">
 
             <img
@@ -286,110 +231,88 @@
 
         </div>
 
-
     </div>
 
 </section>
 
 
 
-
-<!-- =====================================================
+<!-- =========================================================
      MÚSICOS
-===================================================== -->
+========================================================= -->
 
-<section class="musicos">
+<section class="musicos" id="musicos">
 
     <div class="container">
 
 
-        <div class="card-musicos">
+        <div class="titulo-secao titulo-secao-escuro">
 
+            <span class="kicker">
+                Formação
+            </span>
 
-            <div class="musicos-texto">
+            <h2>
+                Músicos
+            </h2>
 
-                <span class="subtitulo-secao">
-                    Músicos
-                </span>
+            <p>
+                Conheça os integrantes da Orquestra Volpi de Viola Caipira.
+            </p>
 
-                <div class="linha-titulo"></div>
-
-
-                <div class="nomes-musicos">
-
-                    <p>Abrão Bispo</p>
-
-                    <p>Heber Rogério</p>
-
-                    <p>Ana Silva</p>
-
-                    <p>Laurival Telles</p>
-
-                    <p>Ângelo de Souza</p>
-
-                    <p>Régis Nascimento</p>
-
-                    <p>Domingo Testoni</p>
-
-                    <p>Wagner Ribeiro</p>
-
-                </div>
-
-            </div>
+        </div>
 
 
 
-            <!--
-                ATENÇÃO:
-                os arquivos no GitHub têm hífen:
-                musico-1.jpg
-                musico-2.jpg
-                etc.
-            -->
+        <div class="grade-musicos">
 
-            <div class="fotos-musicos">
 
-                <img
-                    src="musico-1.jpg"
-                    alt="Músico da Orquestra Volpi"
-                >
+            <article class="musico-card">
+                <img src="musico-1.jpg" alt="Altair Bispo">
+                <h3>Altair Bispo</h3>
+            </article>
 
-                <img
-                    src="musico-2.jpg"
-                    alt="Músico da Orquestra Volpi"
-                >
 
-                <img
-                    src="musico-3.jpg"
-                    alt="Músico da Orquestra Volpi"
-                >
+            <article class="musico-card">
+                <img src="musico-2.jpg" alt="Heber Rogério">
+                <h3>Heber Rogério</h3>
+            </article>
 
-                <img
-                    src="musico-4.jpg"
-                    alt="Músico da Orquestra Volpi"
-                >
 
-                <img
-                    src="musico-5.jpg"
-                    alt="Músico da Orquestra Volpi"
-                >
+            <article class="musico-card">
+                <img src="musico-3.jpg" alt="Ana Silva">
+                <h3>Ana Silva</h3>
+            </article>
 
-                <img
-                    src="musico-6.jpg"
-                    alt="Músico da Orquestra Volpi"
-                >
 
-                <img
-                    src="musico-7.jpg"
-                    alt="Músico da Orquestra Volpi"
-                >
+            <article class="musico-card">
+                <img src="musico-4.jpg" alt="Laurival Telles">
+                <h3>Laurival Telles</h3>
+            </article>
 
-                <img
-                    src="musico-8.jpg"
-                    alt="Músico da Orquestra Volpi"
-                >
 
-            </div>
+            <article class="musico-card">
+                <img src="musico-5.jpg" alt="Ângelo de Souza">
+                <h3>Ângelo de Souza</h3>
+            </article>
+
+
+            <article class="musico-card">
+                <img src="musico-6.jpg" alt="Régis Nascimento">
+                <h3>Régis Nascimento</h3>
+            </article>
+
+
+            <article class="musico-card">
+                <img src="musico-7.jpg" alt="Domingo Testoni">
+                <h3>Domingo Testoni</h3>
+            </article>
+
+
+            <article class="musico-card">
+                <img src="musico-8.jpg" alt="Wagner Ribeiro">
+                <h3>Wagner Ribeiro</h3>
+            </article>
 
 
         </div>
@@ -400,19 +323,18 @@
 
 
 
-
-<!-- =====================================================
+<!-- =========================================================
      TRAJETÓRIA
-===================================================== -->
+========================================================= -->
 
 <section class="trajetoria">
 
     <div class="container">
 
 
-        <div class="titulo-trajetoria">
+        <div class="titulo-secao titulo-secao-claro">
 
-            <span>
+            <span class="kicker kicker-claro">
                 Nossa história
             </span>
 
@@ -430,10 +352,9 @@
             <div class="trajetoria-texto">
 
                 <p>
-                    Em 2021, durante a pandemia, lançamos um
-                    documentário que registra a nossa formação,
-                    as percepções dos integrantes e a força de
-                    um grupo que não parou.
+                    Em 2021, durante a pandemia, lançamos um documentário
+                    que registra a nossa formação, as percepções dos
+                    integrantes e a força de um grupo que não parou.
                 </p>
 
                 <p>
@@ -466,17 +387,20 @@
 
 
 
-
-<!-- =====================================================
+<!-- =========================================================
      SHOWS
-===================================================== -->
+========================================================= -->
 
-<section class="shows">
+<section class="shows" id="shows">
+
 
     <div class="container">
 
+        <div class="titulo-secao titulo-secao-escuro titulo-shows">
 
-        <div class="titulo-shows">
+            <span class="kicker">
+                Repertório
+            </span>
 
             <h2>
                 Conheça Nossos Shows
@@ -484,372 +408,277 @@
 
         </div>
 
+    </div>
 
 
 
-        <!-- =================================================
-             PARE E OUÇA
-        ================================================= -->
+    <!-- PARE E OUÇA -->
 
-        <article class="show-card">
+    <div class="show-faixa show-pare">
 
+        <div class="container">
 
-            <div class="show-foto">
-
-                <img
-                    src="show-pare-ouca.jpg"
-                    alt="Orquestra Volpi durante apresentação do show Pare e Ouça"
-                >
-
-            </div>
+            <article class="show-card">
 
 
-
-            <div class="show-texto">
-
-
-                <!-- ÍCONE VIOLA -->
-
-                <div class="show-icone">
+                <div class="show-foto">
 
                     <img
-                        src="icone-viola.png"
-                        alt=""
-                        aria-hidden="true"
+                        src="show-pare-ouca.jpg"
+                        alt="Orquestra Volpi durante apresentação do show Pare e Ouça"
                     >
 
                 </div>
 
 
-                <span class="show-tipo">
-                    Show completo
-                </span>
+                <div class="show-texto">
+
+                    <div class="show-icone show-icone-viola">
+                        <img
+                            src="icone-viola.png"
+                            alt=""
+                            aria-hidden="true"
+                        >
+                    </div>
+
+                    <span class="kicker">
+                        Show completo
+                    </span>
+
+                    <h3>
+                        Pare e Ouça
+                        <strong>(75 min)</strong>
+                    </h3>
+
+                    <p>
+                        Apresentação com aproximadamente 75 minutos de duração,
+                        cujo repertório reúne, em sua maioria, canções da chamada
+                        Música Caipira Raiz, mescladas a músicas populares brasileiras
+                        e outras inéditas, compostas por integrantes da Orquestra Volpi.
+                    </p>
+
+                    <p>
+                        Entre as canções, constam clássicos como Luar do Sertão,
+                        As Andorinhas, Menino da Porteira, Chico Mineiro e
+                        Moreninha Linda.
+                    </p>
+
+                </div>
 
 
-                <h3>
-                    Pare e Ouça
-                    <strong>(75 min)</strong>
-                </h3>
-
-
-                <p>
-                    Apresentação com aproximadamente 75 minutos de duração,
-                    cujo repertório reúne, em sua maioria, canções da chamada
-                    Música Caipira Raiz, mescladas a algumas músicas populares
-                    brasileiras e outras inéditas, compostas por integrantes
-                    da Orquestra Volpi de Viola Caipira.
-                </p>
-
-
-                <p>
-                    Entre outras canções, constam clássicos como
-                    Luar do Sertão, As Andorinhas, Menino da Porteira,
-                    Chico Mineiro e Moreninha Linda.
-                </p>
-
-
-                <p>
-                    O repertório busca mostrar a versatilidade sonora
-                    da viola caipira e aproximar diferentes públicos
-                    desse importante instrumento da cultura brasileira.
-                </p>
-
-
-            </div>
-
-
-        </article>
-
-
-
-
-        <!-- =================================================
-             TEMÁTICOS
-        ================================================= -->
-
-        <div class="titulo-tematico">
-
-            <h2>
-                Temáticos
-            </h2>
+            </article>
 
         </div>
 
+    </div>
 
 
 
-        <!-- =================================================
-             BAILÃO
-        ================================================= -->
+    <!-- BAILÃO -->
 
-        <article class="show-card show-invertido">
+    <div class="show-faixa show-bailao">
 
+        <div class="container">
 
-            <div class="show-foto">
-
-                <img
-                    src="show-bailao.jpg"
-                    alt="Orquestra Volpi durante apresentação do Bailão da Roça ao Sertão"
-                >
-
-            </div>
+            <article class="show-card show-card-invertido">
 
 
-
-            <div class="show-texto">
-
-
-                <!-- ÍCONE CHAPÉU -->
-
-                <div class="show-icone">
+                <div class="show-foto">
 
                     <img
-                        src="icone-chapeu.png"
-                        alt=""
-                        aria-hidden="true"
+                        src="show-bailao.jpg"
+                        alt="Orquestra Volpi durante apresentação do Bailão da Roça ao Sertão"
                     >
 
                 </div>
 
 
-                <span class="show-tipo">
-                    Show temático
-                </span>
+                <div class="show-texto">
 
+                    <div class="show-icone show-icone-chapeu">
+                        <img
+                            src="icone-chapeu.png"
+                            alt=""
+                            aria-hidden="true"
+                        >
+                    </div>
 
-                <h3>
-                    Bailão – da Roça ao Sertão
-                </h3>
+                    <span class="kicker">
+                        Show temático
+                    </span>
 
+                    <h3>
+                        Bailão – da Roça ao Sertão
+                    </h3>
 
-                <p>
-                    Apresentação com aproximadamente 75 minutos de duração,
-                    cujo repertório é feito para dançar, com ritmos como
-                    Cururu, Arrasta-Pé, Baião, Xote e Xaxado.
-                </p>
+                    <p>
+                        Apresentação com aproximadamente 75 minutos de duração,
+                        cujo repertório é feito para dançar, com ritmos como
+                        Cururu, Arrasta-Pé, Baião, Xote e Xaxado.
+                    </p>
 
-
-                <p>
-                    O repertório percorre diferentes momentos da música
-                    caipira e sertaneja, apresentando clássicos conhecidos
-                    pelo público e valorizando a sonoridade da viola.
-                </p>
-
-
-                <p>
-                    Com caráter festivo e dançante, o espetáculo é indicado
-                    para festas, eventos culturais, encontros e celebrações.
-                </p>
-
-
-            </div>
-
-
-        </article>
-
-
-
-
-        <!-- =================================================
-             CONCERTO DE NATAL
-        ================================================= -->
-
-        <article class="show-card show-natal">
-
-
-            <div class="show-foto">
-
-                <img
-                    src="show-natal.jpg"
-                    alt="Orquestra Volpi durante apresentação do Concerto de Natal"
-                >
-
-            </div>
-
-
-
-            <div class="show-texto">
-
-
-                <!-- ÍCONE TRÊS REIS MAGOS -->
-
-                <div class="show-icone">
-
-                    <img
-                        src="icone-reis-magos.png"
-                        alt=""
-                        aria-hidden="true"
-                    >
+                    <p>
+                        Com caráter festivo e dançante, o espetáculo é indicado
+                        para festas, eventos culturais, encontros e celebrações.
+                    </p>
 
                 </div>
 
 
-                <span class="show-tipo">
-                    Especial de Natal
-                </span>
+            </article>
 
-
-                <h3>
-                    Concerto de Natal
-                    <strong>(60 min)</strong>
-                </h3>
-
-
-                <p>
-                    Apresentação com aproximadamente 60 minutos de duração,
-                    cujo repertório reúne clássicos da Música Caipira Raiz
-                    e canções natalinas interpretadas com a sonoridade
-                    característica da viola caipira.
-                </p>
-
-
-                <p>
-                    O espetáculo cria uma atmosfera acolhedora e festiva,
-                    sendo indicado para apresentações em igrejas,
-                    centros culturais, confraternizações, eventos
-                    institucionais e celebrações de fim de ano.
-                </p>
-
-
-            </div>
-
-
-        </article>
-
+        </div>
 
     </div>
+
+
+
+    <!-- NATAL -->
+
+    <div class="show-faixa show-natal">
+
+        <div class="container">
+
+            <article class="show-card">
+
+
+                <div class="show-foto">
+
+                    <img
+                        src="show-natal.jpg"
+                        alt="Orquestra Volpi durante apresentação do Concerto de Natal"
+                    >
+
+                </div>
+
+
+                <div class="show-texto">
+
+                    <div class="show-icone show-icone-reis">
+                        <img
+                            src="icone-reis-magos.png"
+                            alt=""
+                            aria-hidden="true"
+                        >
+                    </div>
+
+                    <span class="kicker">
+                        Especial de Natal
+                    </span>
+
+                    <h3>
+                        Concerto de Natal
+                        <strong>(60 min)</strong>
+                    </h3>
+
+                    <p>
+                        Apresentação com aproximadamente 60 minutos de duração,
+                        cujo repertório reúne clássicos da Música Caipira Raiz
+                        e canções natalinas interpretadas com a sonoridade
+                        característica da viola caipira.
+                    </p>
+
+                    <p>
+                        O espetáculo é indicado para igrejas, centros culturais,
+                        confraternizações, eventos institucionais e celebrações
+                        de fim de ano.
+                    </p>
+
+                </div>
+
+
+            </article>
+
+        </div>
+
+    </div>
+
 
 </section>
 
 
 
-
-<!-- =====================================================
+<!-- =========================================================
      GALERIA
-===================================================== -->
+========================================================= -->
 
-<section class="galeria">
+<section class="galeria" id="galeria">
 
     <div class="container">
 
 
-        <div class="titulo-galeria">
+        <div class="titulo-secao titulo-secao-escuro">
 
-            <span>
+            <span class="kicker">
                 Registros
             </span>
-
 
             <h2>
                 Galeria
             </h2>
 
-
             <p>
-                Alguns momentos da trajetória e das apresentações
-                da Orquestra Volpi de Viola Caipira.
+                Momentos da trajetória e das apresentações da
+                Orquestra Volpi de Viola Caipira.
             </p>
 
         </div>
 
 
 
-        <!--
-            Aqui usei apenas arquivos que aparecem
-            no seu repositório para não ficar imagem quebrada.
-        -->
-
         <div class="galeria-grid">
 
 
-            <div class="galeria-item galeria-destaque">
-
-                <img
-                    src="galeria-3.jpg"
-                    alt="Registro da Orquestra Volpi de Viola Caipira"
-                >
-
-            </div>
+            <figure class="galeria-item">
+                <img src="galeria-3.jpg" alt="Registro da Orquestra Volpi">
+            </figure>
 
 
-
-            <div class="galeria-item">
-
-                <img
-                    src="galeria-5.jpg"
-                    alt="Registro de apresentação da Orquestra Volpi"
-                >
-
-            </div>
+            <figure class="galeria-item">
+                <img src="galeria-5.jpg" alt="Registro de apresentação da Orquestra Volpi">
+            </figure>
 
 
-
-            <div class="galeria-item">
-
-                <img
-                    src="orquestra-principal.jpg"
-                    alt="Integrantes da Orquestra Volpi"
-                >
-
-            </div>
+            <figure class="galeria-item">
+                <img src="orquestra-principal.jpg" alt="Integrantes da Orquestra Volpi">
+            </figure>
 
 
-
-            <div class="galeria-item">
-
-                <img
-                    src="show-pare-ouca.jpg"
-                    alt="Apresentação da Orquestra Volpi"
-                >
-
-            </div>
+            <figure class="galeria-item">
+                <img src="show-pare-ouca.jpg" alt="Apresentação do show Pare e Ouça">
+            </figure>
 
 
-
-            <div class="galeria-item">
-
-                <img
-                    src="show-bailao.jpg"
-                    alt="Apresentação do Bailão da Roça ao Sertão"
-                >
-
-            </div>
+            <figure class="galeria-item">
+                <img src="show-bailao.jpg" alt="Apresentação do Bailão da Roça ao Sertão">
+            </figure>
 
 
-
-            <div class="galeria-item">
-
-                <img
-                    src="show-natal.jpg"
-                    alt="Apresentação do Concerto de Natal"
-                >
-
-            </div>
+            <figure class="galeria-item">
+                <img src="show-natal.jpg" alt="Apresentação do Concerto de Natal">
+            </figure>
 
 
         </div>
 
 
-        <!-- VÍDEO QUE ESTÁ NO GITHUB -->
 
-        <div
-            style="
-                max-width: 850px;
-                margin: 35px auto 0;
-                border-radius: 18px;
-                overflow: hidden;
-            "
-        >
+        <div class="galeria-video-card">
 
-            <video
-                controls
-                preload="metadata"
-                style="
-                    display: block;
-                    width: 100%;
-                    height: auto;
-                "
-            >
+            <div class="galeria-video-cabecalho">
+
+                <span class="kicker">
+                    Vídeo
+                </span>
+
+                <h3>
+                    Orquestra Volpi em cena
+                </h3>
+
+            </div>
+
+
+            <video controls preload="metadata">
 
                 <source
                     src="galeria-6.mp4"
@@ -869,20 +698,16 @@
 
 
 
+<!-- =========================================================
+     CONTATO
+========================================================= -->
 
-<!-- =====================================================
-     CONTATO / ORÇAMENTO
-===================================================== -->
-
-<section
-    class="contato"
-    id="contato"
->
+<section class="contato" id="contato">
 
     <div class="container contato-conteudo">
 
 
-        <span class="contato-destaque">
+        <span class="kicker kicker-claro">
             Leve a viola para o seu evento
         </span>
 
@@ -894,11 +719,10 @@
 
         <p>
             Temos o repertório certo para o seu evento.
-            Solicite um orçamento personalizado no botão abaixo
-            e descubra como a Orquestra Volpi pode transformar
-            a sua celebração em uma experiência inesquecível.
+            Solicite um orçamento personalizado e descubra como
+            a Orquestra Volpi pode transformar sua celebração
+            em uma experiência musical inesquecível.
         </p>
-
 
 
         <a
@@ -907,49 +731,9 @@
             target="_blank"
             rel="noopener noreferrer"
         >
-            Solicitar orçamento para evento
+            <span>Solicitar orçamento</span>
+            <small>WhatsApp</small>
         </a>
-
-
-
-        <div class="contato-redes">
-
-
-            <p>
-                Siga nossas redes sociais
-            </p>
-
-
-            <div class="contato-links">
-
-
-                <a
-                    href="https://www.instagram.com/orquestravolpi/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Instagram
-                </a>
-
-
-                <a
-                    href="https://www.youtube.com/@orquestravolpi"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    YouTube
-                </a>
-
-
-            </div>
-
-
-            <strong>
-                @orquestravolpi
-            </strong>
-
-
-        </div>
 
 
     </div>
@@ -961,20 +745,60 @@
 
 
 
-
-<!-- =====================================================
+<!-- =========================================================
      RODAPÉ
-===================================================== -->
+========================================================= -->
 
-<footer>
+<footer class="rodape">
 
-    <p>
-        Orquestra Volpi de Viola Caipira · Itaquera · São Paulo
-    </p>
+    <div class="container rodape-conteudo">
+
+
+        <div class="rodape-marca">
+
+            <img
+                src="logo-volpi.png"
+                alt=""
+                class="rodape-logo"
+            >
+
+            <div>
+                <strong>Orquestra Volpi de Viola Caipira</strong>
+                <p>Itaquera · São Paulo</p>
+            </div>
+
+        </div>
+
+
+        <div class="rodape-links">
+
+            <a
+                href="https://www.instagram.com/orquestravolpi/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Instagram
+            </a>
+
+            <a
+                href="https://www.youtube.com/@orquestravolpi"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                YouTube
+            </a>
+
+            <a href="https://orquestravolpi.com.br">
+                orquestravolpi.com.br
+            </a>
+
+        </div>
+
+
+    </div>
 
 </footer>
 
 
 </body>
-
 </html>
