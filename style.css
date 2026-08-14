@@ -1,27 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap');
 
-/* =================================
-   PALETA ORQUESTRA VOLPI
-================================= */
+/* =========================================================
+   ORQUESTRA VOLPI — STYLE.CSS
+   Manrope nos títulos + Source Sans 3 nos textos
+   Paleta: salmão, magenta, laranja e branco
+========================================================= */
 
 :root {
-    --salmao: #ff7510;
+    --salmao: #f46c67;
+    --salmao-claro: #ff7a72;
+    --salmao-escuro: #d95550;
+
+    --laranja: #ff7510;
+    --laranja-claro: #ff9851;
+
     --magenta: #cb6ce6;
+    --magenta-escuro: #aa4ec5;
 
     --branco: #ffffff;
     --creme: #fff9f5;
     --creme-escuro: #fff0e8;
 
     --texto: #302b29;
-    --texto-claro: #706763;
+    --texto-claro: #625a57;
 
-    --grafite: #292322;
+    --sombra:
+        0 14px 34px
+        rgba(77, 39, 34, 0.14);
 }
 
 
-/* =================================
-   CONFIGURAÇÕES GERAIS
-================================= */
+/* =========================================================
+   RESET / CONFIGURAÇÕES GERAIS
+========================================================= */
 
 * {
     margin: 0;
@@ -34,26 +45,36 @@ html {
 }
 
 body {
-    font-family: "Source Sans 3", Arial, Helvetica, sans-serif;
+    font-family:
+        "Source Sans 3",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 18px;
+    line-height: 1.68;
+
     background: var(--branco);
     color: var(--texto);
-    line-height: 1.6;
 }
 
-/* TÍTULOS E DESTAQUES */
 h1,
 h2,
 h3,
 .destaque,
 .subtitulo,
 .subtitulo-secao,
-.show-tipo,
 .etiqueta,
-.botao-orcamento,
+.show-tipo,
 .contato-destaque,
+.botao-orcamento,
 .titulo-trajetoria span,
 .titulo-galeria span {
-    font-family: "Manrope", Arial, Helvetica, sans-serif;
+    font-family:
+        "Manrope",
+        Arial,
+        Helvetica,
+        sans-serif;
 }
 
 img {
@@ -61,247 +82,322 @@ img {
     max-width: 100%;
 }
 
+a {
+    color: inherit;
+}
+
 .container {
-    width: min(1120px, 92%);
+    width: min(1180px, 92%);
     margin: 0 auto;
 }
 
 
-/* =================================
+/* =========================================================
    CABEÇALHO
-================================= */
+   Começa com salmão + esfumado magenta
+========================================================= */
 
 .topo {
-    background: var(--branco);
-    border-bottom: 4px solid var(--salmao);
-    padding: 14px 0;
+    background:
+        radial-gradient(
+            circle at 84% 25%,
+            rgba(203, 108, 230, 0.78) 0%,
+            rgba(203, 108, 230, 0.34) 27%,
+            rgba(203, 108, 230, 0) 52%
+        ),
+        linear-gradient(
+            120deg,
+            var(--salmao) 0%,
+            #f85f75 48%,
+            #e95a9a 100%
+        );
+
+    padding: 20px 0;
 }
 
 .topo-conteudo {
-    width: min(1120px, 92%);
+    width: min(1180px, 94%);
     margin: 0 auto;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    gap: 35px;
+    gap: 30px;
 }
 
 .marca {
     display: flex;
     align-items: center;
-    gap: 18px;
+
+    gap: 20px;
+
+    min-width: 0;
 }
 
+/* símbolo/logo maior */
 .logo {
-    width: 110px;
-    height: 125px;
+    width: 230px;
+    height: 230px;
+
     object-fit: contain;
     flex-shrink: 0;
 }
 
+/* nome da marca em imagem */
 .titulo-logo {
-    width: 410px;
-    max-width: 42vw;
+    width: 560px;
+    max-width: 52vw;
+
     height: auto;
+
     object-fit: contain;
 }
 
 
-/* =================================
-   REDES DO CABEÇALHO
-================================= */
+/* redes sociais */
 
 .redes {
     display: flex;
     align-items: center;
-    gap: 10px;
+
+    gap: 12px;
+
+    flex-shrink: 0;
 }
 
 .redes a {
     text-decoration: none;
 
-    color: var(--salmao);
+    color: var(--branco);
 
-    border: 2px solid var(--salmao);
+    border:
+        2px solid
+        rgba(255, 255, 255, 0.9);
+
     border-radius: 999px;
 
-    padding: 9px 17px;
+    padding: 10px 18px;
 
-    font-weight: bold;
+    font-family: "Manrope", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
 
-    transition: 0.2s;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
 }
 
 .redes a:hover {
-    background: var(--salmao);
-    color: var(--branco);
-}
+    background: var(--branco);
+    color: var(--salmao-escuro);
 
-.redes a:last-child {
-    color: var(--magenta);
-    border-color: var(--magenta);
-}
-
-.redes a:last-child:hover {
-    background: var(--magenta);
-    color: var(--branco);
+    transform: translateY(-2px);
 }
 
 
-/* =================================
+/* =========================================================
    APRESENTAÇÃO
-================================= */
+========================================================= */
 
 .apresentacao {
-    padding: 70px 0 85px;
+    padding: 60px 0 85px;
 
     background:
+        radial-gradient(
+            circle at 92% 18%,
+            rgba(203, 108, 230, 0.46) 0%,
+            rgba(203, 108, 230, 0) 30%
+        ),
+        radial-gradient(
+            circle at 8% 80%,
+            rgba(255, 117, 16, 0.20) 0%,
+            rgba(255, 117, 16, 0) 28%
+        ),
         linear-gradient(
             135deg,
-            var(--creme) 0%,
-            var(--branco) 50%,
-            #fff7fc 100%
+            var(--salmao) 0%,
+            #f56668 62%,
+            #e95a91 100%
         );
 }
 
-.titulo-principal {
-    max-width: 900px;
 
-    margin: 0 auto 45px;
+/* título principal */
+
+.titulo-principal {
+    max-width: 950px;
+
+    margin:
+        0 auto
+        45px;
 
     text-align: center;
 }
 
-.destaque {
-    display: inline-block;
+/* ORQUESTRA VOLPI */
+.titulo-principal .destaque {
+    display: block;
 
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 
-    color: var(--magenta);
-
-    font-size: 0.95rem;
-    font-weight: 800;
-
-    letter-spacing: 0.18em;
-}
-
-.titulo-principal h1 {
-    color: var(--texto);
+    color: var(--branco);
 
     font-size: 40px;
+    font-weight: 800;
+
     line-height: 1.05;
 
-    margin-bottom: 15px;
+    letter-spacing: 0.01em;
+
+    text-transform: none;
 }
 
-.titulo-principal p {
-    color: var(--salmao);
+/* O SOM AUTÊNTICO DA TRADIÇÃO */
+.titulo-principal h1 {
+    color: var(--branco);
 
     font-size: 20px;
     font-weight: 700;
+
+    line-height: 1.3;
+
+    margin-bottom: 7px;
+}
+
+/* linha menor */
+.titulo-principal p {
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.94
+        );
+
+    font-size: 16px;
+    font-weight: 600;
+
+    line-height: 1.4;
 }
 
 
-/* =================================
-   FOTO + HISTÓRIA
-================================= */
+/* foto + história */
 
 .apresentacao-grid {
     display: grid;
 
-    grid-template-columns: 1.35fr 1fr;
+    grid-template-columns:
+        1.35fr
+        1fr;
 
-    align-items: stretch;
+    align-items: center;
 
-    gap: 35px;
+    gap: 32px;
 }
 
 .foto-orquestra {
     overflow: hidden;
 
-    border-radius: 28px;
+    background: var(--branco);
 
-    border-bottom: 7px solid var(--salmao);
+    border:
+        5px solid
+        var(--branco);
 
-    box-shadow:
-        0 15px 45px
-        rgba(0, 0, 0, 0.13);
+    border-radius: 20px;
+
+    box-shadow: var(--sombra);
 }
 
+/* foto SEM cortar nenhum integrante */
 .foto-orquestra img {
     width: 100%;
+
     height: auto;
 
     min-height: 0;
 
     object-fit: contain;
+    object-position: center;
+
+    border-radius: 15px;
 }
 
 
-/* CARD HISTÓRIA */
+/* card da história */
 
 .card-historia {
-    background: var(--branco);
+    background:
+        linear-gradient(
+            145deg,
+            #be4837 0%,
+            #b73d39 100%
+        );
+
+    color: var(--branco);
 
     padding: 38px;
 
-    border-radius: 28px;
+    border-radius: 24px;
 
-    border-top: 7px solid var(--magenta);
-
-    box-shadow:
-        0 12px 35px
-        rgba(0, 0, 0, 0.08);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    box-shadow: var(--sombra);
 }
 
 .etiqueta {
     display: inline-block;
 
-    align-self: flex-start;
+    background:
+        linear-gradient(
+            90deg,
+            var(--salmao),
+            #ff5f78
+        );
 
     color: var(--branco);
-    background: var(--salmao);
 
     border-radius: 999px;
 
-    padding: 6px 14px;
+    padding: 7px 15px;
 
     margin-bottom: 18px;
 
-    font-size: 0.8rem;
-    font-weight: bold;
+    font-size: 0.82rem;
+    font-weight: 800;
 
     text-transform: uppercase;
+
     letter-spacing: 0.08em;
 }
 
 .card-historia h2 {
-    color: var(--texto);
+    color: var(--branco);
 
-    font-size: clamp(1.7rem, 3vw, 2.3rem);
-    line-height: 1.15;
+    font-size:
+        clamp(
+            2rem,
+            3vw,
+            2.65rem
+        );
+
+    line-height: 1.1;
 
     margin-bottom: 20px;
 }
 
 .card-historia > p {
-    color: var(--texto-claro);
+    color: var(--branco);
 
-    font-size: 1.08rem;
+    font-size: 1.15rem;
 
-    margin-bottom: 30px;
+    line-height: 1.7;
+
+    margin-bottom: 28px;
 }
 
 
-/* =================================
-   INFORMAÇÕES
-================================= */
+/* informações */
 
 .informacoes {
     display: flex;
@@ -318,12 +414,14 @@ img {
 
     padding-top: 15px;
 
-    border-top: 1px solid #eee4df;
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.28);
 }
 
 .info-icone {
-    width: 45px;
-    height: 45px;
+    width: 46px;
+    height: 46px;
 
     flex-shrink: 0;
 
@@ -331,161 +429,256 @@ img {
     align-items: center;
     justify-content: center;
 
-    background: var(--magenta);
-    color: var(--branco);
+    background: var(--branco);
+    color: var(--salmao-escuro);
 
     border-radius: 50%;
 
-    font-size: 1.25rem;
-    font-weight: bold;
+    font-size: 1.2rem;
+    font-weight: 800;
 }
 
 .info-item:nth-child(2) .info-icone {
-    background: var(--salmao);
+    color: var(--laranja);
+}
+
+.info-item:nth-child(3) .info-icone {
+    color: var(--magenta);
 }
 
 .info-item strong {
-    color: var(--texto);
+    display: block;
 
-    font-size: 0.88rem;
+    color: var(--branco);
+
+    font-size: 0.92rem;
+    font-weight: 800;
 
     letter-spacing: 0.05em;
 }
 
 .info-item p {
-    color: var(--texto-claro);
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.92
+        );
+
+    font-size: 1rem;
+
+    line-height: 1.35;
 
     margin-top: 2px;
-
-    font-size: 0.94rem;
 }
 
 
-/* =================================
+/* =========================================================
    MAESTRO
-================================= */
+   Salmão + laranja, card branco
+========================================================= */
 
 .maestro {
-    padding: 85px 0;
+    padding: 82px 0;
 
     background:
+        radial-gradient(
+            circle at 8% 72%,
+            rgba(203, 108, 230, 0.20) 0%,
+            rgba(203, 108, 230, 0) 28%
+        ),
         linear-gradient(
             135deg,
-            var(--grafite),
-            #3b3035
+            var(--salmao) 0%,
+            #f36d5b 64%,
+            var(--laranja) 145%
         );
-
-    border-top: 7px solid var(--magenta);
 }
 
 .maestro-grid {
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:
+        1.3fr
+        0.7fr;
 
     align-items: center;
 
-    gap: 65px;
+    gap: 55px;
 }
 
+/* o card cresce conforme o texto */
 .card-maestro {
-    color: var(--branco);
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+    min-height: 0;
+    max-height: none;
+
+    overflow: visible;
+
+    background: var(--branco);
+    color: var(--texto);
+
+    padding: 44px;
+
+    border-radius: 25px;
+
+    box-shadow: var(--sombra);
 }
 
 .subtitulo {
     display: inline-block;
 
-    color: var(--salmao);
+    color: var(--laranja);
 
+    font-size: 1rem;
     font-weight: 800;
 
-    text-transform: uppercase;
+    letter-spacing: 0.06em;
 
-    letter-spacing: 0.15em;
-
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .card-maestro h2 {
-    color: var(--branco);
+    color: var(--salmao-escuro);
 
-    font-size: clamp(2.4rem, 4vw, 3.8rem);
+    font-size:
+        clamp(
+            2.35rem,
+            4vw,
+            3.5rem
+        );
+
     line-height: 1.05;
 
-    margin-bottom: 25px;
+    margin-bottom: 22px;
 }
 
+/* descrição INTEIRA do maestro */
 .card-maestro p {
-    color: #f3e9e5;
+    display: block;
 
-    font-size: 1.08rem;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+
+    overflow: visible;
+
+    color: var(--texto);
+
+    font-size: 1.18rem;
+
+    line-height: 1.72;
+
+    white-space: normal;
+
+    margin: 0;
 }
+
+.card-maestro p strong {
+    font-weight: 700;
+}
+
+
+/* foto circular maestro */
 
 .foto-maestro {
+    width:
+        min(
+            400px,
+            100%
+        );
+
+    aspect-ratio: 1 / 1;
+
+    justify-self: center;
+
     overflow: hidden;
 
-    border-radius: 28px;
+    border-radius: 50%;
 
-    border-bottom: 7px solid var(--salmao);
+    border:
+        8px solid
+        rgba(255, 255, 255, 0.72);
+
+    outline:
+        4px solid
+        rgba(255, 183, 66, 0.72);
 
     box-shadow:
-        0 15px 40px
-        rgba(0, 0, 0, 0.35);
+        0 18px 40px
+        rgba(91, 39, 37, 0.25);
 }
 
 .foto-maestro img {
     width: 100%;
-    height: 510px;
+    height: 100%;
 
     object-fit: cover;
+
+    object-position: center;
 }
 
 
-/* =================================
+/* =========================================================
    MÚSICOS
-================================= */
+   Fundo branco para intercalar a paleta
+========================================================= */
 
 .musicos {
-    padding: 65px 0;
+    padding: 82px 0;
 
     background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(203, 108, 230, 0.09) 0%,
+            rgba(203, 108, 230, 0) 28%
+        ),
         linear-gradient(
-            135deg,
-            var(--salmao),
-            #ff9450
+            180deg,
+            var(--branco),
+            var(--creme)
         );
 }
 
 .card-musicos {
-    max-width: 1000px;
+    max-width: 1160px;
 
     margin: 0 auto;
 
     background: var(--branco);
 
-    border-radius: 24px;
+    border:
+        2px solid
+        rgba(244, 108, 103, 0.20);
 
-    padding: 38px 42px;
+    border-radius: 25px;
+
+    padding: 46px;
 
     display: grid;
 
-    grid-template-columns: 1fr 1.3fr;
+    grid-template-columns:
+        0.72fr
+        1.55fr;
 
-    gap: 40px;
+    gap: 48px;
 
     align-items: center;
 
-    box-shadow:
-        0 12px 30px
-        rgba(0, 0, 0, 0.12);
+    box-shadow: var(--sombra);
 }
 
 .subtitulo-secao {
     display: block;
 
-    color: var(--salmao);
+    color: var(--laranja);
 
-    font-size: 2rem;
+    font-size: 2.35rem;
     font-weight: 800;
 
     margin-bottom: 8px;
@@ -493,85 +686,108 @@ img {
 
 .linha-titulo {
     width: 100%;
-    height: 2px;
+    height: 3px;
 
-    background: var(--salmao);
+    background:
+        linear-gradient(
+            90deg,
+            var(--laranja),
+            var(--salmao),
+            var(--magenta)
+        );
 
-    opacity: 0.35;
+    opacity: 0.65;
 
-    margin-bottom: 25px;
+    margin-bottom: 28px;
 }
 
 .nomes-musicos {
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:
+        1fr
+        1fr;
 
-    column-gap: 35px;
+    column-gap: 30px;
     row-gap: 18px;
 }
 
 .nomes-musicos p {
     color: var(--texto);
 
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     font-weight: 700;
 
-    line-height: 1.2;
+    line-height: 1.25;
 }
 
 
-/* FOTOS DOS MÚSICOS */
+/* fotos dos músicos MAIORES */
 
 .fotos-musicos {
+    width: 100%;
+
     display: grid;
 
-    grid-template-columns: repeat(4, 110px);
+    grid-template-columns:
+        repeat(
+            4,
+            minmax(0, 1fr)
+        );
 
-    justify-content: center;
-
-    gap: 12px;
+    gap: 15px;
 }
 
 .fotos-musicos img {
-    width: 110px;
-    height: 110px;
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 1 / 1;
 
     object-fit: cover;
+    object-position: center;
 
-    border-radius: 10px;
+    border-radius: 13px;
 
     box-shadow:
-        0 4px 10px
-        rgba(0, 0, 0, 0.16);
+        0 7px 18px
+        rgba(0, 0, 0, 0.14);
 
-    transition: 0.2s;
+    transition:
+        transform 0.2s ease;
 }
 
 .fotos-musicos img:hover {
-    transform: scale(1.04);
+    transform: scale(1.035);
 }
 
 
-/* =================================
+/* =========================================================
    TRAJETÓRIA
-================================= */
+   Magenta + salmão
+========================================================= */
 
 .trajetoria {
-    padding: 75px 0;
+    padding: 82px 0;
 
     background:
+        radial-gradient(
+            circle at 12% 18%,
+            rgba(255, 117, 16, 0.22) 0%,
+            rgba(255, 117, 16, 0) 30%
+        ),
         linear-gradient(
             135deg,
-            var(--magenta),
-            #b958d4
+            var(--magenta) 0%,
+            #d65aaa 46%,
+            var(--salmao) 100%
         );
 }
 
 .titulo-trajetoria {
     text-align: center;
 
-    margin-bottom: 42px;
+    margin-bottom: 44px;
 }
 
 .titulo-trajetoria span {
@@ -592,7 +808,12 @@ img {
 .titulo-trajetoria h2 {
     color: var(--branco);
 
-    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    font-size:
+        clamp(
+            2.25rem,
+            4vw,
+            3.45rem
+        );
 
     line-height: 1.1;
 }
@@ -600,7 +821,9 @@ img {
 .trajetoria-conteudo {
     display: grid;
 
-    grid-template-columns: 0.8fr 1.3fr;
+    grid-template-columns:
+        0.8fr
+        1.3fr;
 
     align-items: center;
 
@@ -610,23 +833,23 @@ img {
 .trajetoria-texto {
     background: var(--branco);
 
-    padding: 35px;
+    padding: 38px;
 
     border-radius: 24px;
 
-    border-bottom: 7px solid var(--salmao);
+    border-bottom:
+        7px solid
+        var(--laranja);
 
-    box-shadow:
-        0 12px 30px
-        rgba(0, 0, 0, 0.15);
+    box-shadow: var(--sombra);
 }
 
 .trajetoria-texto p {
     color: var(--texto);
 
-    font-size: 1.1rem;
+    font-size: 1.15rem;
 
-    line-height: 1.7;
+    line-height: 1.72;
 
     margin-bottom: 20px;
 }
@@ -636,7 +859,7 @@ img {
 }
 
 
-/* DOCUMENTÁRIO */
+/* vídeo */
 
 .trajetoria-video {
     width: 100%;
@@ -645,13 +868,17 @@ img {
 
     overflow: hidden;
 
-    border-radius: 24px;
+    background: #000000;
 
-    border: 5px solid var(--branco);
+    border-radius: 22px;
+
+    border:
+        5px solid
+        var(--branco);
 
     box-shadow:
-        0 15px 35px
-        rgba(0, 0, 0, 0.22);
+        0 16px 38px
+        rgba(0, 0, 0, 0.20);
 }
 
 .trajetoria-video iframe {
@@ -664,31 +891,45 @@ img {
 }
 
 
-/* =================================
-   CONHEÇA NOSSOS SHOWS
-================================= */
+/* =========================================================
+   SHOWS
+   Laranja + salmão
+========================================================= */
 
 .shows {
-    padding: 75px 0 90px;
+    padding:
+        82px 0
+        95px;
 
     background:
+        radial-gradient(
+            circle at 90% 14%,
+            rgba(203, 108, 230, 0.30) 0%,
+            rgba(203, 108, 230, 0) 30%
+        ),
         linear-gradient(
             135deg,
-            #f46c67,
-            #ef646c
+            var(--laranja) 0%,
+            #ff795b 42%,
+            var(--salmao) 100%
         );
 }
 
 .titulo-shows {
     text-align: center;
 
-    margin-bottom: 45px;
+    margin-bottom: 46px;
 }
 
 .titulo-shows h2 {
     color: var(--branco);
 
-    font-size: clamp(2.2rem, 4vw, 3.3rem);
+    font-size:
+        clamp(
+            2.25rem,
+            4vw,
+            3.35rem
+        );
 
     line-height: 1.1;
 
@@ -696,53 +937,72 @@ img {
 
     border-bottom:
         1px solid
-        rgba(255, 255, 255, 0.55);
+        rgba(255, 255, 255, 0.58);
 }
 
 
-/* CARD DOS SHOWS */
+/* cards dos shows */
 
 .show-card {
     display: grid;
 
-    grid-template-columns: 0.9fr 1.15fr;
+    grid-template-columns:
+        0.92fr
+        1.15fr;
 
     align-items: center;
 
     gap: 35px;
 }
 
+
+/* IMAGENS DOS SHOWS SEM CORTAR */
+
 .show-foto {
     overflow: hidden;
 
-    border-radius: 22px;
+    background: var(--branco);
 
-    border: 4px solid var(--branco);
+    border:
+        5px solid
+        var(--branco);
+
+    border-radius: 20px;
 
     box-shadow:
-        0 12px 30px
+        0 14px 32px
         rgba(0, 0, 0, 0.18);
 }
 
-.show-foto img {
+.show-foto img,
+.show-invertido .show-foto img,
+.show-natal .show-foto img {
     width: 100%;
-    height: 330px;
 
-    object-fit: cover;
+    height: auto;
+
+    min-height: 0;
+    max-height: none;
+
+    object-fit: contain;
+    object-position: center;
 }
+
+
+/* texto dos shows */
 
 .show-texto {
     background: var(--branco);
 
-    border-radius: 26px;
+    border-radius: 25px;
 
-    padding: 38px;
+    padding: 40px;
 
-    border-bottom: 7px solid var(--salmao);
+    border-bottom:
+        7px solid
+        var(--salmao);
 
-    box-shadow:
-        0 12px 30px
-        rgba(0, 0, 0, 0.12);
+    box-shadow: var(--sombra);
 }
 
 .show-tipo {
@@ -750,7 +1010,7 @@ img {
 
     color: var(--magenta);
 
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     font-weight: 800;
 
     text-transform: uppercase;
@@ -763,7 +1023,7 @@ img {
 .show-texto h3 {
     color: var(--texto);
 
-    font-size: 2rem;
+    font-size: 2.15rem;
 
     line-height: 1.15;
 
@@ -771,17 +1031,17 @@ img {
 }
 
 .show-texto h3 strong {
-    color: var(--salmao);
+    color: var(--salmao-escuro);
 }
 
 .show-texto p {
-    color: #5f5754;
+    color: #4f4947;
 
-    font-size: 1.04rem;
+    font-size: 1.15rem;
 
-    line-height: 1.65;
+    line-height: 1.72;
 
-    margin-bottom: 15px;
+    margin-bottom: 16px;
 }
 
 .show-texto p:last-child {
@@ -789,21 +1049,19 @@ img {
 }
 
 
-/* =================================
-   SHOWS TEMÁTICOS
-================================= */
+/* títulos temáticos */
 
 .titulo-tematico {
     text-align: center;
 
-    margin-top: 75px;
-    margin-bottom: 40px;
+    margin-top: 78px;
+    margin-bottom: 42px;
 }
 
 .titulo-tematico h2 {
     color: var(--branco);
 
-    font-size: 2.5rem;
+    font-size: 2.65rem;
 
     line-height: 1.1;
 
@@ -811,7 +1069,7 @@ img {
 
     border-bottom:
         1px solid
-        rgba(255, 255, 255, 0.55);
+        rgba(255, 255, 255, 0.58);
 }
 
 .show-invertido .show-texto {
@@ -819,20 +1077,15 @@ img {
 }
 
 .show-invertido .show-tipo {
-    color: var(--salmao);
+    color: var(--laranja);
 }
 
-
-/* =================================
-   CONCERTO DE NATAL
-================================= */
-
 .show-natal {
-    margin-top: 55px;
+    margin-top: 58px;
 }
 
 .show-natal .show-texto {
-    border-bottom-color: var(--salmao);
+    border-bottom-color: var(--laranja);
 }
 
 .show-natal .show-tipo {
@@ -840,28 +1093,37 @@ img {
 }
 
 
-/* =================================
+/* =========================================================
    GALERIA
-================================= */
+   Branco / creme
+========================================================= */
 
 .galeria {
-    padding: 80px 0 90px;
+    padding:
+        82px 0
+        92px;
 
     background:
+        radial-gradient(
+            circle at 92% 10%,
+            rgba(203, 108, 230, 0.10) 0%,
+            rgba(203, 108, 230, 0) 28%
+        ),
         linear-gradient(
-            135deg,
-            #fff9f5 0%,
-            #ffffff 55%,
-            #fff7fc 100%
+            180deg,
+            var(--branco),
+            var(--creme)
         );
 }
 
 .titulo-galeria {
+    max-width: 780px;
+
+    margin:
+        0 auto
+        46px;
+
     text-align: center;
-
-    max-width: 750px;
-
-    margin: 0 auto 45px;
 }
 
 .titulo-galeria span {
@@ -869,20 +1131,25 @@ img {
 
     color: var(--magenta);
 
-    font-size: 0.9rem;
+    font-size: 0.92rem;
     font-weight: 800;
 
     text-transform: uppercase;
 
     letter-spacing: 0.15em;
 
-    margin-bottom: 7px;
+    margin-bottom: 8px;
 }
 
 .titulo-galeria h2 {
     color: var(--texto);
 
-    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    font-size:
+        clamp(
+            2.4rem,
+            5vw,
+            3.8rem
+        );
 
     line-height: 1.1;
 
@@ -892,18 +1159,22 @@ img {
 .titulo-galeria p {
     color: var(--texto-claro);
 
-    font-size: 1.05rem;
+    font-size: 1.15rem;
 
-    line-height: 1.6;
+    line-height: 1.65;
 }
 
 
-/* GRADE DA GALERIA */
+/* grade */
 
 .galeria-grid {
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
 
     grid-auto-rows: 240px;
 
@@ -913,12 +1184,16 @@ img {
 .galeria-item {
     overflow: hidden;
 
-    border-radius: 18px;
-
     background: #eeeeee;
 
+    border:
+        4px solid
+        var(--branco);
+
+    border-radius: 18px;
+
     box-shadow:
-        0 8px 22px
+        0 9px 24px
         rgba(0, 0, 0, 0.12);
 }
 
@@ -928,49 +1203,62 @@ img {
 
     object-fit: cover;
 
-    transition: transform 0.35s ease;
+    transition:
+        transform 0.35s ease;
 }
 
 .galeria-item:hover img {
-    transform: scale(1.06);
+    transform: scale(1.045);
 }
 
 .galeria-destaque {
     grid-column: span 2;
     grid-row: span 2;
 
-    border-bottom: 6px solid var(--salmao);
+    border-bottom:
+        6px solid
+        var(--laranja);
 }
 
 .galeria-item:nth-child(3) {
-    border-bottom: 5px solid var(--magenta);
+    border-bottom:
+        5px solid
+        var(--magenta);
 }
 
 .galeria-item:nth-child(5) {
-    border-bottom: 5px solid var(--salmao);
+    border-bottom:
+        5px solid
+        var(--salmao);
 }
 
 
-/* =================================
-   CONTATO / ORÇAMENTO
-================================= */
+/* =========================================================
+   CONTATO
+   Salmão + magenta
+========================================================= */
 
 .contato {
-    padding: 90px 0;
+    padding: 92px 0;
 
     text-align: center;
 
     background:
+        radial-gradient(
+            circle at 10% 78%,
+            rgba(255, 117, 16, 0.34) 0%,
+            rgba(255, 117, 16, 0) 29%
+        ),
         linear-gradient(
             135deg,
             var(--salmao) 0%,
-            #ff8940 55%,
-            var(--magenta) 160%
+            #ed5d80 57%,
+            var(--magenta) 135%
         );
 }
 
 .contato-conteudo {
-    max-width: 850px;
+    max-width: 860px;
 }
 
 .contato-destaque {
@@ -978,12 +1266,12 @@ img {
 
     color: var(--branco);
 
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     font-weight: 800;
 
     text-transform: uppercase;
 
-    letter-spacing: 0.14em;
+    letter-spacing: 0.13em;
 
     margin-bottom: 14px;
 }
@@ -991,7 +1279,12 @@ img {
 .contato h2 {
     color: var(--branco);
 
-    font-size: clamp(2.3rem, 5vw, 4rem);
+    font-size:
+        clamp(
+            2.35rem,
+            5vw,
+            4rem
+        );
 
     line-height: 1.1;
 
@@ -999,29 +1292,33 @@ img {
 }
 
 .contato-conteudo > p {
-    max-width: 720px;
+    max-width: 760px;
 
-    margin: 0 auto 35px;
+    margin:
+        0 auto
+        36px;
 
     color: var(--branco);
 
-    font-size: 1.2rem;
+    font-size: 1.23rem;
 
-    line-height: 1.6;
+    line-height: 1.65;
 }
 
 
-/* BOTÃO WHATSAPP */
+/* botão */
 
 .botao-orcamento {
     display: inline-block;
 
-    background: var(--branco);
-    color: var(--salmao);
+    background: var(--laranja);
+    color: var(--branco);
 
     text-decoration: none;
 
-    padding: 17px 30px;
+    padding:
+        17px
+        30px;
 
     border-radius: 12px;
 
@@ -1031,33 +1328,37 @@ img {
     text-transform: uppercase;
 
     box-shadow:
-        0 7px 0 var(--magenta),
-        0 12px 25px rgba(0, 0, 0, 0.18);
+        0 7px 0
+        rgba(154, 65, 38, 0.5),
+        0 13px 28px
+        rgba(0, 0, 0, 0.17);
 
-    transition: 0.2s;
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease;
 }
 
 .botao-orcamento:hover {
     transform: translateY(-3px);
 
-    box-shadow:
-        0 9px 0 var(--magenta),
-        0 15px 30px rgba(0, 0, 0, 0.22);
+    background: var(--branco);
+    color: var(--laranja);
 }
 
 
-/* REDES DO CONTATO */
+/* redes do contato */
 
 .contato-redes {
-    margin-top: 45px;
+    margin-top: 46px;
 
     color: var(--branco);
 }
 
-.contato-redes p {
-    margin-bottom: 12px;
+.contato-redes > p {
+    margin-bottom: 13px;
 
-    font-size: 0.85rem;
+    font-size: 0.88rem;
 
     text-transform: uppercase;
 
@@ -1071,7 +1372,7 @@ img {
 
     gap: 12px;
 
-    margin-bottom: 10px;
+    margin-bottom: 11px;
 }
 
 .contato-links a {
@@ -1083,16 +1384,22 @@ img {
 
     border:
         1px solid
-        rgba(255, 255, 255, 0.75);
+        rgba(255, 255, 255, 0.78);
 
     border-radius: 999px;
 
-    padding: 7px 14px;
+    padding:
+        8px
+        15px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
 }
 
 .contato-links a:hover {
     background: var(--branco);
-    color: var(--salmao);
+    color: var(--salmao-escuro);
 }
 
 .contato-redes strong {
@@ -1102,30 +1409,49 @@ img {
 }
 
 
-/* =================================
+/* =========================================================
    RODAPÉ
-================================= */
+========================================================= */
 
 footer {
-    background: #1c1817;
+    background: var(--branco);
 
-    color: #e9dfdb;
+    color: var(--texto-claro);
 
     text-align: center;
 
-    padding: 27px 20px;
+    padding:
+        28px
+        20px;
 
-    border-top: 4px solid var(--salmao);
+    border-top:
+        5px solid
+        var(--laranja);
 
-    font-size: 0.9rem;
+    font-size: 0.95rem;
 }
 
 
-/* =================================
+/* =========================================================
    TABLET
-================================= */
+========================================================= */
 
 @media (max-width: 900px) {
+
+    .topo-conteudo {
+        gap: 18px;
+    }
+
+    .logo {
+        width: 180px;
+        height: 180px;
+    }
+
+    .titulo-logo {
+        width: 470px;
+        max-width: 55vw;
+    }
+
 
     .apresentacao-grid,
     .maestro-grid,
@@ -1134,71 +1460,77 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .foto-orquestra img {
-        min-height: auto;
+    .apresentacao-grid {
+        gap: 28px;
     }
 
     .maestro-grid {
-        gap: 35px;
+        gap: 38px;
     }
 
-    .foto-maestro img {
-        height: auto;
+    .foto-maestro {
+        width:
+            min(
+                370px,
+                78vw
+            );
     }
 
-
-    /* MÚSICOS */
 
     .card-musicos {
         grid-template-columns: 1fr;
+
+        max-width: 800px;
     }
 
     .fotos-musicos {
-        grid-template-columns: repeat(4, 100px);
-    }
+        max-width: 700px;
 
-    .fotos-musicos img {
-        width: 100px;
-        height: 100px;
+        margin: 0 auto;
     }
 
 
-    /* SHOWS */
-
-    .show-foto img {
-        height: auto;
+    .show-card {
+        gap: 28px;
     }
 
-
-    /* GALERIA */
 
     .galeria-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
 
-        grid-auto-rows: 220px;
+        grid-auto-rows: 230px;
     }
+
 }
 
 
-/* =================================
+/* =========================================================
    CELULAR
-================================= */
+========================================================= */
 
 @media (max-width: 700px) {
+
+    body {
+        font-size: 17px;
+    }
 
     .container {
         width: 92%;
     }
 
 
-    /* CABEÇALHO */
+    /* cabeçalho */
 
     .topo {
-        padding: 8px 0;
+        padding: 12px 0;
     }
 
     .topo-conteudo {
-        width: 94%;
+        width: 95%;
 
         gap: 10px;
     }
@@ -1208,13 +1540,13 @@ footer {
     }
 
     .logo {
-        width: 62px;
-        height: 76px;
+        width: 125px;
+        height: 125px;
     }
 
     .titulo-logo {
-        width: 225px;
-        max-width: 62vw;
+        width: 315px;
+        max-width: 66vw;
     }
 
     .redes {
@@ -1222,686 +1554,38 @@ footer {
     }
 
 
-    /* APRESENTAÇÃO */
+    /* apresentação */
 
     .apresentacao {
-        padding: 45px 0 55px;
+        padding:
+            44px 0
+            58px;
     }
 
     .titulo-principal {
-        margin-bottom: 30px;
+        margin-bottom: 32px;
     }
 
-    .titulo-principal h1 {
+    .titulo-principal .destaque {
         font-size: 40px;
     }
 
-    .titulo-principal p {
-        font-size: 20px;
-    }
-
-    .apresentacao-grid {
-        gap: 23px;
-    }
-
-    .card-historia {
-        padding: 27px 23px;
-    }
-
-    .card-historia h2 {
-        font-size: 1.8rem;
-    }
-
-    .card-historia > p {
-        font-size: 1rem;
-    }
-
-
-    /* MAESTRO */
-
-    .maestro {
-        padding: 55px 0;
-    }
-
-    .card-maestro h2 {
-        font-size: 2.4rem;
-    }
-
-
-    /* MÚSICOS */
-
-    .musicos {
-        padding: 45px 0;
-    }
-
-    .card-musicos {
-        padding: 26px 20px;
-
-        gap: 30px;
-    }
-
-    .subtitulo-secao {
-        font-size: 1.7rem;
-    }
-
-    .nomes-musicos {
-        grid-template-columns: 1fr 1fr;
-
-        gap: 16px;
-    }
-
-    .nomes-musicos p {
-        font-size: 1rem;
-    }
-
-    .fotos-musicos {
-        grid-template-columns: repeat(2, 120px);
-    }
-
-    .fotos-musicos img {
-        width: 120px;
-        height: 120px;
-    }
-
-
-    /* TRAJETÓRIA */
-
-    .trajetoria {
-        padding: 55px 0;
-    }
-
-    .trajetoria-conteudo {
-        gap: 28px;
-    }
-
-    .trajetoria-texto {
-        padding: 27px 23px;
-    }
-
-    .trajetoria-texto p {
-        font-size: 1rem;
-    }
-
-    .titulo-trajetoria h2 {
-        font-size: 2rem;
-    }
-
-
-    /* SHOWS */
-
-    .shows {
-        padding: 55px 0;
-    }
-
-    .show-card {
-        gap: 25px;
-    }
-
-    .show-texto {
-        padding: 27px 23px;
-    }
-
-    .show-texto h3 {
-        font-size: 1.7rem;
-    }
-
-    .show-texto p {
-        font-size: 1rem;
-    }
-
-    .titulo-tematico {
-        margin-top: 55px;
-        margin-bottom: 30px;
-    }
-
-    .titulo-tematico h2 {
-        font-size: 2rem;
-    }
-
-    .show-natal {
-        margin-top: 40px;
-    }
-
-
-    /* GALERIA */
-
-    .galeria {
-        padding: 55px 0;
-    }
-
-    .titulo-galeria {
-        margin-bottom: 30px;
-    }
-
-    .galeria-grid {
-        grid-template-columns: 1fr;
-
-        grid-auto-rows: 240px;
-
-        gap: 13px;
-    }
-
-    .galeria-destaque {
-        grid-column: auto;
-        grid-row: auto;
-    }
-
-
-    /* CONTATO */
-
-    .contato {
-        padding: 60px 0;
-    }
-
-    .contato h2 {
-        font-size: 2.3rem;
-    }
-
-    .contato-conteudo > p {
-        font-size: 1.05rem;
-    }
-
-    .botao-orcamento {
-        width: 100%;
-
-        max-width: 340px;
-
-        padding: 16px 18px;
-    }
-
-    .contato-links {
-        flex-wrap: wrap;
-    }
-}
-
-
-/* =================================
-   CELULARES PEQUENOS
-================================= */
-
-@media (max-width: 400px) {
-
-    .nomes-musicos {
-        grid-template-columns: 1fr;
-    }
-
-    .fotos-musicos {
-        grid-template-columns: repeat(2, 105px);
-    }
-
-    .fotos-musicos img {
-        width: 105px;
-        height: 105px;
-    }
-
-}
-
-/* =============================================================
-   AJUSTES FINAIS — BASEADOS NA REFERÊNCIA VISUAL DA ORQUESTRA
-   Salmão + esfumado magenta, textos maiores e imagens sem corte
-============================================================= */
-
-:root {
-    --salmao: #f46c67;
-    --salmao-claro: #ff7b72;
-    --salmao-escuro: #dc5b55;
-    --magenta: #cb6ce6;
-    --magenta-esfumado: rgba(203, 108, 230, 0.34);
-
-    --fundo-volpi:
-        radial-gradient(circle at 88% 12%, rgba(203, 108, 230, 0.38) 0, rgba(203, 108, 230, 0) 31%),
-        radial-gradient(circle at 8% 78%, rgba(203, 108, 230, 0.22) 0, rgba(203, 108, 230, 0) 28%),
-        linear-gradient(135deg, #f46c67 0%, #f36a65 58%, #ec6170 100%);
-}
-
-/* ---------- TIPOGRAFIA / LEITURA ---------- */
-
-body {
-    font-family: "Source Sans 3", Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    line-height: 1.68;
-}
-
-p {
-    line-height: 1.68;
-}
-
-.container {
-    width: min(1180px, 92%);
-}
-
-/* ---------- CABEÇALHO / LOGO ---------- */
-
-.topo {
-    background: var(--fundo-volpi);
-    border-bottom: 0;
-    padding: 18px 0;
-}
-
-.topo-conteudo {
-    width: min(1180px, 94%);
-    gap: 30px;
-}
-
-.marca {
-    gap: 20px;
-}
-
-/* Ícone / símbolo da marca */
-.logo {
-    width: 145px;
-    height: 155px;
-    object-fit: contain;
-}
-
-/* Nome/assinatura da marca caso esteja em imagem separada */
-.titulo-logo {
-    width: 520px;
-    max-width: 48vw;
-    height: auto;
-    object-fit: contain;
-}
-
-.redes a {
-    color: var(--branco);
-    border-color: rgba(255, 255, 255, 0.88);
-    font-size: 1rem;
-}
-
-.redes a:last-child {
-    color: var(--branco);
-    border-color: rgba(255, 255, 255, 0.88);
-}
-
-.redes a:hover,
-.redes a:last-child:hover {
-    background: var(--branco);
-    color: var(--salmao-escuro);
-}
-
-/* ---------- APRESENTAÇÃO ---------- */
-
-.apresentacao {
-    padding: 58px 0 82px;
-    background: var(--fundo-volpi);
-}
-
-.titulo-principal {
-    max-width: 960px;
-    margin: 0 auto 42px;
-}
-
-/* ORQUESTRA VOLPI: maior que o subtítulo, como solicitado */
-.titulo-principal h1 {
-    color: var(--branco);
-    font-size: 40px;
-    font-weight: 800;
-    line-height: 1.08;
-    margin-bottom: 8px;
-}
-
-/* O som autêntico da tradição */
-.titulo-principal p {
-    color: var(--branco);
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 1.35;
-}
-
-.destaque {
-    color: var(--branco);
-}
-
-.apresentacao-grid {
-    grid-template-columns: 1.35fr 1fr;
-    align-items: center;
-    gap: 30px;
-}
-
-/* FOTO DA ORQUESTRA: sempre inteira */
-.foto-orquestra {
-    background: var(--branco);
-    border: 5px solid var(--branco);
-    border-bottom: 5px solid var(--branco);
-    border-radius: 18px;
-}
-
-.foto-orquestra img {
-    width: 100%;
-    height: auto;
-    min-height: 0;
-    object-fit: contain;
-}
-
-.card-historia {
-    padding: 36px;
-    border-top: 0;
-    border-radius: 22px;
-    background: rgba(157, 71, 53, 0.88);
-    color: var(--branco);
-    box-shadow: 0 14px 34px rgba(89, 35, 31, 0.20);
-}
-
-.card-historia h2,
-.card-historia > p,
-.info-item strong,
-.info-item p {
-    color: var(--branco);
-}
-
-.card-historia h2 {
-    font-size: clamp(2rem, 3vw, 2.5rem);
-}
-
-.card-historia > p {
-    font-size: 1.12rem;
-}
-
-.info-item {
-    border-top-color: rgba(255, 255, 255, 0.26);
-}
-
-.info-item p {
-    font-size: 1.02rem;
-}
-
-/* ---------- MAESTRO ---------- */
-
-.maestro {
-    padding: 78px 0;
-    background: var(--fundo-volpi);
-    border-top: 0;
-}
-
-.maestro-grid {
-    grid-template-columns: 1.25fr 0.75fr;
-    gap: 55px;
-}
-
-.card-maestro {
-    background: var(--branco);
-    color: var(--texto);
-    padding: 42px;
-    border-radius: 24px;
-    box-shadow: 0 14px 36px rgba(89, 35, 31, 0.16);
-}
-
-.subtitulo {
-    color: var(--salmao-escuro);
-    font-size: 1rem;
-}
-
-.card-maestro h2 {
-    color: var(--salmao-escuro);
-    font-size: clamp(2.3rem, 4vw, 3.4rem);
-    margin-bottom: 20px;
-}
-
-.card-maestro p {
-    color: var(--texto);
-    font-size: 1.14rem;
-    line-height: 1.72;
-}
-
-.foto-maestro {
-    width: min(390px, 100%);
-    aspect-ratio: 1 / 1;
-    justify-self: center;
-    overflow: hidden;
-    border-radius: 50%;
-    border: 8px solid rgba(255, 255, 255, 0.58);
-    outline: 4px solid rgba(255, 255, 255, 0.28);
-    box-shadow: 0 16px 38px rgba(83, 31, 48, 0.24);
-}
-
-.foto-maestro img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* ---------- MÚSICOS ---------- */
-
-.musicos {
-    padding: 78px 0;
-    background: var(--fundo-volpi);
-}
-
-.card-musicos {
-    max-width: 1120px;
-    padding: 44px 46px;
-    grid-template-columns: 0.78fr 1.55fr;
-    gap: 46px;
-    border-radius: 22px;
-}
-
-.subtitulo-secao {
-    color: var(--salmao-escuro);
-    font-size: 2.25rem;
-}
-
-.linha-titulo {
-    background: var(--salmao);
-}
-
-.nomes-musicos {
-    column-gap: 32px;
-    row-gap: 20px;
-}
-
-.nomes-musicos p {
-    font-size: 1.2rem;
-    line-height: 1.3;
-}
-
-/* Fotos dos músicos maiores, mantendo 4 por linha no desktop */
-.fotos-musicos {
-    width: 100%;
-    max-width: 680px;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-    justify-content: stretch;
-}
-
-.fotos-musicos img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-/* ---------- TRAJETÓRIA ---------- */
-
-.trajetoria {
-    padding: 78px 0;
-    background: var(--fundo-volpi);
-}
-
-.titulo-trajetoria h2,
-.titulo-trajetoria span {
-    color: var(--branco);
-}
-
-.trajetoria-texto {
-    padding: 38px;
-    border-bottom-color: var(--salmao-escuro);
-}
-
-.trajetoria-texto p {
-    font-size: 1.14rem;
-    line-height: 1.72;
-}
-
-/* ---------- SHOWS / TEMÁTICOS ---------- */
-
-.shows {
-    padding: 78px 0 92px;
-    background: var(--fundo-volpi);
-}
-
-.titulo-shows h2,
-.titulo-tematico h2 {
-    color: var(--branco);
-}
-
-.show-card {
-    grid-template-columns: 0.92fr 1.15fr;
-    gap: 34px;
-    align-items: center;
-}
-
-/* NÃO CORTAR AS FOTOS DOS SHOWS E DOS TEMÁTICOS */
-.show-foto {
-    background: var(--branco);
-    border: 4px solid var(--branco);
-    border-radius: 18px;
-}
-
-.show-foto img,
-.show-invertido .show-foto img,
-.show-natal .show-foto img {
-    width: 100%;
-    height: auto;
-    max-height: none;
-    object-fit: contain;
-    object-position: center;
-}
-
-.show-texto {
-    padding: 40px;
-    border-radius: 24px;
-}
-
-.show-texto h3 {
-    font-size: 2.1rem;
-}
-
-.show-texto p {
-    color: #4f4947;
-    font-size: 1.14rem;
-    line-height: 1.72;
-}
-
-.show-tipo {
-    font-size: 0.96rem;
-}
-
-.titulo-tematico h2 {
-    font-size: 2.6rem;
-}
-
-/* ---------- GALERIA ---------- */
-
-.galeria {
-    padding: 78px 0 90px;
-    background: var(--fundo-volpi);
-}
-
-.titulo-galeria span,
-.titulo-galeria h2,
-.titulo-galeria p {
-    color: var(--branco);
-}
-
-.titulo-galeria p {
-    font-size: 1.12rem;
-}
-
-.galeria-item {
-    border: 4px solid rgba(255, 255, 255, 0.88);
-}
-
-/* ---------- CONTATO ---------- */
-
-.contato {
-    background: var(--fundo-volpi);
-}
-
-.contato-conteudo > p {
-    font-size: 1.22rem;
-}
-
-/* =============================================================
-   RESPONSIVO DOS AJUSTES FINAIS
-============================================================= */
-
-@media (max-width: 900px) {
-    .topo-conteudo {
-        gap: 16px;
-    }
-
-    .logo {
-        width: 120px;
-        height: 132px;
-    }
-
-    .titulo-logo {
-        width: 430px;
-        max-width: 52vw;
-    }
-
-    .maestro-grid,
-    .card-musicos,
-    .show-card {
-        grid-template-columns: 1fr;
-    }
-
-    .card-musicos {
-        max-width: 760px;
-    }
-
-    .fotos-musicos {
-        max-width: 650px;
-        margin: 0 auto;
-    }
-
-    .foto-maestro {
-        width: min(360px, 78vw);
-    }
-}
-
-@media (max-width: 700px) {
-    body {
-        font-size: 17px;
-    }
-
-    .topo {
-        padding: 12px 0;
-    }
-
-    .topo-conteudo {
-        width: 95%;
-    }
-
-    .logo {
-        width: 82px;
-        height: 92px;
-    }
-
-    .titulo-logo {
-        width: 285px;
-        max-width: 68vw;
-    }
-
-    .apresentacao {
-        padding: 42px 0 55px;
-    }
-
     .titulo-principal h1 {
-        font-size: 40px;
-        margin-bottom: 8px;
+        font-size: 20px;
     }
 
     .titulo-principal p {
-        font-size: 20px;
+        font-size: 15px;
     }
+
 
     .card-historia,
     .card-maestro,
     .trajetoria-texto,
     .show-texto {
-        padding: 28px 24px;
+        padding:
+            29px
+            24px;
     }
 
     .card-historia > p,
@@ -1911,57 +1595,191 @@ p {
         font-size: 1.08rem;
     }
 
+
+    /* maestro */
+
+    .maestro {
+        padding: 58px 0;
+    }
+
+    .card-maestro h2 {
+        font-size: 2.45rem;
+    }
+
+
+    /* músicos */
+
+    .musicos {
+        padding: 58px 0;
+    }
+
+    .card-musicos {
+        padding:
+            30px
+            22px;
+
+        gap: 32px;
+    }
+
     .subtitulo-secao {
         font-size: 2rem;
     }
 
+    .nomes-musicos {
+        grid-template-columns:
+            1fr
+            1fr;
+
+        gap: 16px;
+    }
+
     .nomes-musicos p {
-        font-size: 1.12rem;
+        font-size: 1.1rem;
     }
 
     .fotos-musicos {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+
         max-width: 520px;
+
         gap: 14px;
     }
 
-    .show-foto img,
-    .show-invertido .show-foto img,
-    .show-natal .show-foto img {
-        height: auto;
-        object-fit: contain;
+
+    /* trajetória */
+
+    .trajetoria {
+        padding: 58px 0;
+    }
+
+    .titulo-trajetoria h2 {
+        font-size: 2.15rem;
+    }
+
+
+    /* shows */
+
+    .shows {
+        padding:
+            58px 0
+            66px;
     }
 
     .show-texto h3 {
-        font-size: 1.85rem;
+        font-size: 1.9rem;
+    }
+
+    .titulo-tematico {
+        margin-top: 58px;
+        margin-bottom: 32px;
     }
 
     .titulo-tematico h2 {
-        font-size: 2.1rem;
+        font-size: 2.15rem;
     }
+
+    .show-natal {
+        margin-top: 44px;
+    }
+
+
+    /* galeria */
+
+    .galeria {
+        padding: 58px 0;
+    }
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+
+        grid-auto-rows: 250px;
+
+        gap: 14px;
+    }
+
+    .galeria-destaque {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+
+    /* contato */
+
+    .contato {
+        padding: 64px 0;
+    }
+
+    .contato h2 {
+        font-size: 2.4rem;
+    }
+
+    .contato-conteudo > p {
+        font-size: 1.08rem;
+    }
+
+    .botao-orcamento {
+        width: 100%;
+
+        max-width: 360px;
+
+        padding:
+            16px
+            18px;
+    }
+
+    .contato-links {
+        flex-wrap: wrap;
+    }
+
 }
 
+
+/* =========================================================
+   CELULARES PEQUENOS
+========================================================= */
+
 @media (max-width: 400px) {
+
     .logo {
-        width: 74px;
-        height: 84px;
+        width: 105px;
+        height: 105px;
     }
 
     .titulo-logo {
-        width: 245px;
+        width: 285px;
         max-width: 68vw;
     }
 
-    .titulo-principal h1 {
-        font-size: 36px;
+
+    .titulo-principal .destaque {
+        font-size: 34px;
     }
 
-    .titulo-principal p {
+    .titulo-principal h1 {
         font-size: 19px;
     }
 
+    .titulo-principal p {
+        font-size: 14px;
+    }
+
+
+    .nomes-musicos {
+        grid-template-columns: 1fr;
+    }
+
     .fotos-musicos {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+
         gap: 12px;
     }
+
 }
