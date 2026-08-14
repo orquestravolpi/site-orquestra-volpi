@@ -232,11 +232,11 @@ img {
 
 .foto-orquestra img {
     width: 100%;
-    height: 100%;
+    height: auto;
 
-    min-height: 510px;
+    min-height: 0;
 
-    object-fit: cover;
+    object-fit: contain;
 }
 
 
@@ -1434,4 +1434,534 @@ footer {
         height: 105px;
     }
 
+}
+
+/* =============================================================
+   AJUSTES FINAIS — BASEADOS NA REFERÊNCIA VISUAL DA ORQUESTRA
+   Salmão + esfumado magenta, textos maiores e imagens sem corte
+============================================================= */
+
+:root {
+    --salmao: #f46c67;
+    --salmao-claro: #ff7b72;
+    --salmao-escuro: #dc5b55;
+    --magenta: #cb6ce6;
+    --magenta-esfumado: rgba(203, 108, 230, 0.34);
+
+    --fundo-volpi:
+        radial-gradient(circle at 88% 12%, rgba(203, 108, 230, 0.38) 0, rgba(203, 108, 230, 0) 31%),
+        radial-gradient(circle at 8% 78%, rgba(203, 108, 230, 0.22) 0, rgba(203, 108, 230, 0) 28%),
+        linear-gradient(135deg, #f46c67 0%, #f36a65 58%, #ec6170 100%);
+}
+
+/* ---------- TIPOGRAFIA / LEITURA ---------- */
+
+body {
+    font-family: "Source Sans 3", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.68;
+}
+
+p {
+    line-height: 1.68;
+}
+
+.container {
+    width: min(1180px, 92%);
+}
+
+/* ---------- CABEÇALHO / LOGO ---------- */
+
+.topo {
+    background: var(--fundo-volpi);
+    border-bottom: 0;
+    padding: 18px 0;
+}
+
+.topo-conteudo {
+    width: min(1180px, 94%);
+    gap: 30px;
+}
+
+.marca {
+    gap: 20px;
+}
+
+/* Ícone / símbolo da marca */
+.logo {
+    width: 145px;
+    height: 155px;
+    object-fit: contain;
+}
+
+/* Nome/assinatura da marca caso esteja em imagem separada */
+.titulo-logo {
+    width: 520px;
+    max-width: 48vw;
+    height: auto;
+    object-fit: contain;
+}
+
+.redes a {
+    color: var(--branco);
+    border-color: rgba(255, 255, 255, 0.88);
+    font-size: 1rem;
+}
+
+.redes a:last-child {
+    color: var(--branco);
+    border-color: rgba(255, 255, 255, 0.88);
+}
+
+.redes a:hover,
+.redes a:last-child:hover {
+    background: var(--branco);
+    color: var(--salmao-escuro);
+}
+
+/* ---------- APRESENTAÇÃO ---------- */
+
+.apresentacao {
+    padding: 58px 0 82px;
+    background: var(--fundo-volpi);
+}
+
+.titulo-principal {
+    max-width: 960px;
+    margin: 0 auto 42px;
+}
+
+/* ORQUESTRA VOLPI: maior que o subtítulo, como solicitado */
+.titulo-principal h1 {
+    color: var(--branco);
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1.08;
+    margin-bottom: 8px;
+}
+
+/* O som autêntico da tradição */
+.titulo-principal p {
+    color: var(--branco);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.destaque {
+    color: var(--branco);
+}
+
+.apresentacao-grid {
+    grid-template-columns: 1.35fr 1fr;
+    align-items: center;
+    gap: 30px;
+}
+
+/* FOTO DA ORQUESTRA: sempre inteira */
+.foto-orquestra {
+    background: var(--branco);
+    border: 5px solid var(--branco);
+    border-bottom: 5px solid var(--branco);
+    border-radius: 18px;
+}
+
+.foto-orquestra img {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    object-fit: contain;
+}
+
+.card-historia {
+    padding: 36px;
+    border-top: 0;
+    border-radius: 22px;
+    background: rgba(157, 71, 53, 0.88);
+    color: var(--branco);
+    box-shadow: 0 14px 34px rgba(89, 35, 31, 0.20);
+}
+
+.card-historia h2,
+.card-historia > p,
+.info-item strong,
+.info-item p {
+    color: var(--branco);
+}
+
+.card-historia h2 {
+    font-size: clamp(2rem, 3vw, 2.5rem);
+}
+
+.card-historia > p {
+    font-size: 1.12rem;
+}
+
+.info-item {
+    border-top-color: rgba(255, 255, 255, 0.26);
+}
+
+.info-item p {
+    font-size: 1.02rem;
+}
+
+/* ---------- MAESTRO ---------- */
+
+.maestro {
+    padding: 78px 0;
+    background: var(--fundo-volpi);
+    border-top: 0;
+}
+
+.maestro-grid {
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 55px;
+}
+
+.card-maestro {
+    background: var(--branco);
+    color: var(--texto);
+    padding: 42px;
+    border-radius: 24px;
+    box-shadow: 0 14px 36px rgba(89, 35, 31, 0.16);
+}
+
+.subtitulo {
+    color: var(--salmao-escuro);
+    font-size: 1rem;
+}
+
+.card-maestro h2 {
+    color: var(--salmao-escuro);
+    font-size: clamp(2.3rem, 4vw, 3.4rem);
+    margin-bottom: 20px;
+}
+
+.card-maestro p {
+    color: var(--texto);
+    font-size: 1.14rem;
+    line-height: 1.72;
+}
+
+.foto-maestro {
+    width: min(390px, 100%);
+    aspect-ratio: 1 / 1;
+    justify-self: center;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 8px solid rgba(255, 255, 255, 0.58);
+    outline: 4px solid rgba(255, 255, 255, 0.28);
+    box-shadow: 0 16px 38px rgba(83, 31, 48, 0.24);
+}
+
+.foto-maestro img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ---------- MÚSICOS ---------- */
+
+.musicos {
+    padding: 78px 0;
+    background: var(--fundo-volpi);
+}
+
+.card-musicos {
+    max-width: 1120px;
+    padding: 44px 46px;
+    grid-template-columns: 0.78fr 1.55fr;
+    gap: 46px;
+    border-radius: 22px;
+}
+
+.subtitulo-secao {
+    color: var(--salmao-escuro);
+    font-size: 2.25rem;
+}
+
+.linha-titulo {
+    background: var(--salmao);
+}
+
+.nomes-musicos {
+    column-gap: 32px;
+    row-gap: 20px;
+}
+
+.nomes-musicos p {
+    font-size: 1.2rem;
+    line-height: 1.3;
+}
+
+/* Fotos dos músicos maiores, mantendo 4 por linha no desktop */
+.fotos-musicos {
+    width: 100%;
+    max-width: 680px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    justify-content: stretch;
+}
+
+.fotos-musicos img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* ---------- TRAJETÓRIA ---------- */
+
+.trajetoria {
+    padding: 78px 0;
+    background: var(--fundo-volpi);
+}
+
+.titulo-trajetoria h2,
+.titulo-trajetoria span {
+    color: var(--branco);
+}
+
+.trajetoria-texto {
+    padding: 38px;
+    border-bottom-color: var(--salmao-escuro);
+}
+
+.trajetoria-texto p {
+    font-size: 1.14rem;
+    line-height: 1.72;
+}
+
+/* ---------- SHOWS / TEMÁTICOS ---------- */
+
+.shows {
+    padding: 78px 0 92px;
+    background: var(--fundo-volpi);
+}
+
+.titulo-shows h2,
+.titulo-tematico h2 {
+    color: var(--branco);
+}
+
+.show-card {
+    grid-template-columns: 0.92fr 1.15fr;
+    gap: 34px;
+    align-items: center;
+}
+
+/* NÃO CORTAR AS FOTOS DOS SHOWS E DOS TEMÁTICOS */
+.show-foto {
+    background: var(--branco);
+    border: 4px solid var(--branco);
+    border-radius: 18px;
+}
+
+.show-foto img,
+.show-invertido .show-foto img,
+.show-natal .show-foto img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    object-position: center;
+}
+
+.show-texto {
+    padding: 40px;
+    border-radius: 24px;
+}
+
+.show-texto h3 {
+    font-size: 2.1rem;
+}
+
+.show-texto p {
+    color: #4f4947;
+    font-size: 1.14rem;
+    line-height: 1.72;
+}
+
+.show-tipo {
+    font-size: 0.96rem;
+}
+
+.titulo-tematico h2 {
+    font-size: 2.6rem;
+}
+
+/* ---------- GALERIA ---------- */
+
+.galeria {
+    padding: 78px 0 90px;
+    background: var(--fundo-volpi);
+}
+
+.titulo-galeria span,
+.titulo-galeria h2,
+.titulo-galeria p {
+    color: var(--branco);
+}
+
+.titulo-galeria p {
+    font-size: 1.12rem;
+}
+
+.galeria-item {
+    border: 4px solid rgba(255, 255, 255, 0.88);
+}
+
+/* ---------- CONTATO ---------- */
+
+.contato {
+    background: var(--fundo-volpi);
+}
+
+.contato-conteudo > p {
+    font-size: 1.22rem;
+}
+
+/* =============================================================
+   RESPONSIVO DOS AJUSTES FINAIS
+============================================================= */
+
+@media (max-width: 900px) {
+    .topo-conteudo {
+        gap: 16px;
+    }
+
+    .logo {
+        width: 120px;
+        height: 132px;
+    }
+
+    .titulo-logo {
+        width: 430px;
+        max-width: 52vw;
+    }
+
+    .maestro-grid,
+    .card-musicos,
+    .show-card {
+        grid-template-columns: 1fr;
+    }
+
+    .card-musicos {
+        max-width: 760px;
+    }
+
+    .fotos-musicos {
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    .foto-maestro {
+        width: min(360px, 78vw);
+    }
+}
+
+@media (max-width: 700px) {
+    body {
+        font-size: 17px;
+    }
+
+    .topo {
+        padding: 12px 0;
+    }
+
+    .topo-conteudo {
+        width: 95%;
+    }
+
+    .logo {
+        width: 82px;
+        height: 92px;
+    }
+
+    .titulo-logo {
+        width: 285px;
+        max-width: 68vw;
+    }
+
+    .apresentacao {
+        padding: 42px 0 55px;
+    }
+
+    .titulo-principal h1 {
+        font-size: 40px;
+        margin-bottom: 8px;
+    }
+
+    .titulo-principal p {
+        font-size: 20px;
+    }
+
+    .card-historia,
+    .card-maestro,
+    .trajetoria-texto,
+    .show-texto {
+        padding: 28px 24px;
+    }
+
+    .card-historia > p,
+    .card-maestro p,
+    .trajetoria-texto p,
+    .show-texto p {
+        font-size: 1.08rem;
+    }
+
+    .subtitulo-secao {
+        font-size: 2rem;
+    }
+
+    .nomes-musicos p {
+        font-size: 1.12rem;
+    }
+
+    .fotos-musicos {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 520px;
+        gap: 14px;
+    }
+
+    .show-foto img,
+    .show-invertido .show-foto img,
+    .show-natal .show-foto img {
+        height: auto;
+        object-fit: contain;
+    }
+
+    .show-texto h3 {
+        font-size: 1.85rem;
+    }
+
+    .titulo-tematico h2 {
+        font-size: 2.1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .logo {
+        width: 74px;
+        height: 84px;
+    }
+
+    .titulo-logo {
+        width: 245px;
+        max-width: 68vw;
+    }
+
+    .titulo-principal h1 {
+        font-size: 36px;
+    }
+
+    .titulo-principal p {
+        font-size: 19px;
+    }
+
+    .fotos-musicos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
 }
