@@ -40,9 +40,11 @@
     box-sizing: border-box;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
+
 
 body {
 
@@ -59,6 +61,7 @@ body {
     color: var(--texto);
 
 }
+
 
 h1,
 h2,
@@ -77,14 +80,19 @@ h3,
 
 }
 
+
 img {
+
     display: block;
     max-width: 100%;
+
 }
+
 
 a {
     color: inherit;
 }
+
 
 .container {
 
@@ -114,22 +122,24 @@ a {
             var(--magenta) 118%
         );
 
-    padding: 10px 0;
+    padding: 8px 0;
 
 }
 
+
 .topo-conteudo {
 
-    width: min(1250px, 95%);
+    width: min(1280px, 96%);
     margin: 0 auto;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    gap: 24px;
+    gap: 22px;
 
 }
+
 
 .marca {
 
@@ -144,10 +154,13 @@ a {
 
 }
 
+
+/* LOGO MAIOR */
+
 .logo {
 
-    width: 165px;
-    height: 165px;
+    width: 185px;
+    height: 185px;
 
     object-fit: contain;
 
@@ -155,10 +168,11 @@ a {
 
 }
 
+
 .titulo-logo {
 
-    width: 400px;
-    max-width: 31vw;
+    width: 420px;
+    max-width: 32vw;
 
     height: auto;
 
@@ -167,7 +181,9 @@ a {
 }
 
 
-/* menu */
+/* =========================================================
+   MENU
+========================================================= */
 
 .menu-principal {
 
@@ -182,6 +198,7 @@ a {
     font-weight: 700;
 
 }
+
 
 .menu-principal a {
 
@@ -198,6 +215,7 @@ a {
 
 }
 
+
 .menu-principal a:hover {
 
     border-bottom-color:
@@ -206,7 +224,9 @@ a {
 }
 
 
-/* redes */
+/* =========================================================
+   REDES DO TOPO
+========================================================= */
 
 .redes-topo {
 
@@ -216,6 +236,7 @@ a {
     flex-shrink: 0;
 
 }
+
 
 .redes-topo a {
 
@@ -238,6 +259,7 @@ a {
 
 }
 
+
 .redes-topo a:hover {
 
     background: var(--branco);
@@ -247,7 +269,7 @@ a {
 
 
 /* =========================================================
-   PADRÃO DE TÍTULOS
+   PADRÃO DE TÍTULOS PEQUENOS
 ========================================================= */
 
 .kicker {
@@ -267,9 +289,17 @@ a {
 
 }
 
+
 .kicker-claro {
+
     color: var(--branco);
+
 }
+
+
+/* =========================================================
+   TÍTULOS DE SEÇÃO
+========================================================= */
 
 .titulo-secao {
 
@@ -282,6 +312,7 @@ a {
         44px;
 
 }
+
 
 .titulo-secao h2 {
 
@@ -298,6 +329,7 @@ a {
 
 }
 
+
 .titulo-secao p {
 
     max-width: 650px;
@@ -309,22 +341,31 @@ a {
 
 }
 
+
 .titulo-secao-escuro h2 {
+
     color: var(--texto);
+
 }
 
+
 .titulo-secao-escuro p {
+
     color: var(--texto-claro);
+
 }
+
 
 .titulo-secao-claro h2,
 .titulo-secao-claro p {
+
     color: var(--branco);
+
 }
 
 
 /* =========================================================
-   APRESENTAÇÃO
+   PRIMEIRA SEÇÃO
 ========================================================= */
 
 .apresentacao {
@@ -336,6 +377,7 @@ a {
     background: var(--branco);
 
 }
+
 
 .titulo-principal {
 
@@ -369,14 +411,12 @@ a {
 
     line-height: 1.05;
 
-    letter-spacing: 0;
-
     margin-bottom: 7px;
 
 }
 
 
-/* O som autêntico da tradição */
+/* O SOM AUTÊNTICO DA TRADIÇÃO */
 
 .titulo-principal h1 {
 
@@ -398,7 +438,7 @@ a {
 }
 
 
-/* Viola caipira · Música raiz · Cultura brasileira */
+/* VIOLA CAIPIRA · MÚSICA RAIZ · CULTURA BRASILEIRA */
 
 .titulo-principal p {
 
@@ -412,7 +452,9 @@ a {
 }
 
 
-/* foto + história */
+/* =========================================================
+   FOTO + NOSSA HISTÓRIA
+========================================================= */
 
 .apresentacao-grid {
 
@@ -427,6 +469,7 @@ a {
     gap: 28px;
 
 }
+
 
 .foto-orquestra {
 
@@ -444,6 +487,7 @@ a {
 
 }
 
+
 .foto-orquestra img {
 
     width: 100%;
@@ -452,6 +496,7 @@ a {
     object-fit: contain;
 
 }
+
 
 .card-historia {
 
@@ -472,6 +517,7 @@ a {
 
 }
 
+
 .card-historia h2 {
 
     color: var(--branco);
@@ -489,6 +535,7 @@ a {
 
 }
 
+
 .card-historia > p {
 
     color: var(--branco);
@@ -501,7 +548,9 @@ a {
 }
 
 
-/* informações */
+/* =========================================================
+   INFORMAÇÕES DA HISTÓRIA
+========================================================= */
 
 .informacoes {
 
@@ -511,6 +560,7 @@ a {
     gap: 14px;
 
 }
+
 
 .info-item {
 
@@ -526,6 +576,7 @@ a {
         rgba(255, 255, 255, 0.28);
 
 }
+
 
 .info-sinal {
 
@@ -548,6 +599,7 @@ a {
 
 }
 
+
 .info-item strong {
 
     display: block;
@@ -556,6 +608,7 @@ a {
     letter-spacing: 0.05em;
 
 }
+
 
 .info-item p {
 
@@ -596,6 +649,7 @@ a {
 
 }
 
+
 .maestro-grid {
 
     display: grid;
@@ -609,6 +663,7 @@ a {
     gap: 52px;
 
 }
+
 
 .card-maestro {
 
@@ -625,6 +680,14 @@ a {
     box-shadow: var(--sombra);
 
 }
+
+
+.card-maestro .kicker {
+
+    font-size: 1.4rem;
+
+}
+
 
 .card-maestro h2 {
 
@@ -643,6 +706,7 @@ a {
 
 }
 
+
 .card-maestro p {
 
     color: var(--texto);
@@ -651,6 +715,7 @@ a {
     line-height: 1.72;
 
 }
+
 
 .foto-maestro {
 
@@ -681,6 +746,7 @@ a {
         rgba(85, 38, 38, 0.24);
 
 }
+
 
 .foto-maestro img {
 
@@ -714,6 +780,7 @@ a {
 
 }
 
+
 .grade-musicos {
 
     display: grid;
@@ -727,6 +794,7 @@ a {
     gap: 22px;
 
 }
+
 
 .musico-card {
 
@@ -746,6 +814,7 @@ a {
 
 }
 
+
 .musico-card:hover {
 
     transform: translateY(-4px);
@@ -755,6 +824,7 @@ a {
         rgba(70, 44, 39, 0.15);
 
 }
+
 
 .musico-card img {
 
@@ -766,6 +836,7 @@ a {
     object-position: center;
 
 }
+
 
 .musico-card h3 {
 
@@ -809,6 +880,7 @@ a {
 
 }
 
+
 .trajetoria-conteudo {
 
     display: grid;
@@ -822,6 +894,7 @@ a {
     align-items: center;
 
 }
+
 
 .trajetoria-texto {
 
@@ -839,6 +912,7 @@ a {
 
 }
 
+
 .trajetoria-texto p {
 
     color: var(--texto);
@@ -850,9 +924,13 @@ a {
 
 }
 
+
 .trajetoria-texto p:last-child {
+
     margin-bottom: 0;
+
 }
+
 
 .trajetoria-video {
 
@@ -873,6 +951,7 @@ a {
         rgba(0, 0, 0, 0.20);
 
 }
+
 
 .trajetoria-video iframe {
 
@@ -898,12 +977,17 @@ a {
 
 }
 
+
 .titulo-shows {
+
     margin-bottom: 36px;
+
 }
 
 
-/* PARE E OUÇA */
+/* =========================================================
+   FAIXAS DOS SHOWS
+========================================================= */
 
 .show-faixa {
 
@@ -912,6 +996,9 @@ a {
         70px;
 
 }
+
+
+/* PARE E OUÇA */
 
 .show-pare {
 
@@ -958,6 +1045,11 @@ a {
 
 }
 
+
+/* =========================================================
+   CARDS DOS SHOWS
+========================================================= */
+
 .show-card {
 
     display: grid;
@@ -973,18 +1065,25 @@ a {
 }
 
 
-/* Bailão invertido */
+/* Bailão fica invertido */
 
 .show-card-invertido .show-foto {
+
     order: 2;
+
 }
+
 
 .show-card-invertido .show-texto {
+
     order: 1;
+
 }
 
 
-/* Fotos dos shows */
+/* =========================================================
+   FOTOS DOS SHOWS
+========================================================= */
 
 .show-foto {
 
@@ -1004,6 +1103,7 @@ a {
 
 }
 
+
 .show-foto img {
 
     width: 100%;
@@ -1017,7 +1117,9 @@ a {
 }
 
 
-/* Texto dos shows */
+/* =========================================================
+   TEXTO DOS SHOWS
+========================================================= */
 
 .show-texto {
 
@@ -1028,7 +1130,7 @@ a {
     background: var(--branco);
 
     padding:
-        43px
+        46px
         40px
         38px;
 
@@ -1041,6 +1143,7 @@ a {
     box-shadow: var(--sombra);
 
 }
+
 
 .show-texto h3 {
 
@@ -1059,9 +1162,13 @@ a {
 
 }
 
+
 .show-texto h3 strong {
+
     color: var(--salmao-escuro);
+
 }
+
 
 .show-texto p {
 
@@ -1074,8 +1181,11 @@ a {
 
 }
 
+
 .show-texto p:last-child {
+
     margin-bottom: 0;
+
 }
 
 
@@ -1087,8 +1197,8 @@ a {
 
     position: absolute;
 
-    top: -34px;
-    right: 26px;
+    top: -42px;
+    right: 24px;
 
     display: flex;
     align-items: center;
@@ -1098,10 +1208,12 @@ a {
 
 }
 
+
 .show-icone img {
 
+    display: block;
+
     width: auto;
-    height: 78px;
 
     object-fit: contain;
 
@@ -1114,32 +1226,32 @@ a {
 }
 
 
-/* Viola */
+/* VIOLA — PARE E OUÇA */
 
 .show-icone-viola img {
 
-    height: 82px;
-    max-width: 165px;
+    height: 96px;
+    max-width: 190px;
 
 }
 
 
-/* Chapéu */
+/* CHAPÉU — BAILÃO */
 
 .show-icone-chapeu img {
 
-    height: 72px;
-    max-width: 175px;
+    height: 86px;
+    max-width: 200px;
 
 }
 
 
-/* Reis Magos */
+/* TRÊS REIS MAGOS — NATAL */
 
 .show-icone-reis img {
 
-    height: 92px;
-    max-width: 205px;
+    height: 108px;
+    max-width: 230px;
 
 }
 
@@ -1161,6 +1273,16 @@ a {
 
 }
 
+
+/* REGISTROS MAIOR */
+
+.galeria .kicker {
+
+    font-size: 1.4rem;
+
+}
+
+
 .galeria-grid {
 
     display: grid;
@@ -1174,6 +1296,7 @@ a {
     gap: 16px;
 
 }
+
 
 .galeria-item {
 
@@ -1195,6 +1318,7 @@ a {
 
 }
 
+
 .galeria-item img {
 
     width: 100%;
@@ -1207,8 +1331,11 @@ a {
 
 }
 
+
 .galeria-item:hover img {
+
     transform: scale(1.04);
+
 }
 
 
@@ -1234,17 +1361,20 @@ a {
 
 }
 
+
 .galeria-video-cabecalho {
 
     margin-bottom: 16px;
 
 }
 
+
 .galeria-video-cabecalho .kicker {
 
     margin-bottom: 4px;
 
 }
+
 
 .galeria-video-cabecalho h3 {
 
@@ -1253,6 +1383,7 @@ a {
     font-size: 1.65rem;
 
 }
+
 
 .galeria-video-card video {
 
@@ -1293,9 +1424,13 @@ a {
 
 }
 
+
 .contato-conteudo {
+
     max-width: 850px;
+
 }
+
 
 .contato h2 {
 
@@ -1314,6 +1449,7 @@ a {
 
 }
 
+
 .contato-conteudo > p {
 
     color: var(--branco);
@@ -1328,6 +1464,11 @@ a {
     line-height: 1.65;
 
 }
+
+
+/* =========================================================
+   BOTÃO ORÇAMENTO
+========================================================= */
 
 .botao-orcamento {
 
@@ -1364,6 +1505,7 @@ a {
 
 }
 
+
 .botao-orcamento span {
 
     font-size: 1.08rem;
@@ -1371,6 +1513,7 @@ a {
     text-transform: uppercase;
 
 }
+
 
 .botao-orcamento small {
 
@@ -1382,6 +1525,7 @@ a {
     opacity: 0.9;
 
 }
+
 
 .botao-orcamento:hover {
 
@@ -1409,6 +1553,7 @@ a {
 
 }
 
+
 .rodape-conteudo {
 
     display: flex;
@@ -1419,6 +1564,7 @@ a {
 
 }
 
+
 .rodape-marca {
 
     display: flex;
@@ -1428,14 +1574,16 @@ a {
 
 }
 
+
 .rodape-logo {
 
-    width: 72px;
-    height: 72px;
+    width: 78px;
+    height: 78px;
 
     object-fit: contain;
 
 }
+
 
 .rodape-marca strong {
 
@@ -1443,11 +1591,14 @@ a {
 
     color: var(--texto);
 
-    font-family: "Manrope", sans-serif;
+    font-family:
+        "Manrope",
+        sans-serif;
 
     font-size: 1rem;
 
 }
+
 
 .rodape-marca p {
 
@@ -1456,6 +1607,7 @@ a {
     font-size: 0.9rem;
 
 }
+
 
 .rodape-links {
 
@@ -1469,6 +1621,7 @@ a {
 
 }
 
+
 .rodape-links a {
 
     color: var(--salmao-escuro);
@@ -1481,8 +1634,11 @@ a {
 
 }
 
+
 .rodape-links a:hover {
+
     text-decoration: underline;
+
 }
 
 
@@ -1493,28 +1649,38 @@ a {
 @media (max-width: 1050px) {
 
     .menu-principal {
+
         display: none;
+
     }
 
+
     .titulo-logo {
+
         max-width: 45vw;
+
     }
 
 }
 
 
+/* =========================================================
+   TABLET MENOR
+========================================================= */
+
 @media (max-width: 900px) {
 
     .logo {
 
-        width: 135px;
-        height: 135px;
+        width: 150px;
+        height: 150px;
 
     }
 
+
     .titulo-logo {
 
-        width: 380px;
+        width: 390px;
         max-width: 50vw;
 
     }
@@ -1580,44 +1746,57 @@ a {
 @media (max-width: 700px) {
 
     body {
+
         font-size: 17px;
+
     }
 
 
     .topo {
 
-        padding:
-            7px 0;
+        padding: 6px 0;
 
     }
+
 
     .topo-conteudo {
 
-        width: 95%;
-        gap: 8px;
+        width: 96%;
+
+        gap: 7px;
 
     }
+
 
     .marca {
-        gap: 6px;
+
+        gap: 5px;
+
     }
+
+
+    /* LOGO MAIOR NO CELULAR */
 
     .logo {
 
-        width: 92px;
-        height: 92px;
+        width: 105px;
+        height: 105px;
 
     }
 
+
     .titulo-logo {
 
-        width: 250px;
+        width: 260px;
         max-width: 66vw;
 
     }
 
+
     .redes-topo {
+
         display: none;
+
     }
 
 
@@ -1629,11 +1808,13 @@ a {
 
     }
 
+
     .titulo-principal {
 
         margin-bottom: 30px;
 
     }
+
 
     .titulo-principal .destaque {
 
@@ -1641,11 +1822,13 @@ a {
 
     }
 
+
     .titulo-principal h1 {
 
         font-size: 21px;
 
     }
+
 
     .titulo-principal p {
 
@@ -1661,11 +1844,20 @@ a {
     }
 
 
+    .card-maestro .kicker,
+    .galeria .kicker {
+
+        font-size: 1.26rem;
+
+    }
+
+
     .titulo-secao {
 
         margin-bottom: 32px;
 
     }
+
 
     .titulo-secao h2 {
 
@@ -1713,6 +1905,7 @@ a {
 
     }
 
+
     .musico-card h3 {
 
         font-size: 1rem;
@@ -1731,45 +1924,46 @@ a {
 
     }
 
+
     .show-faixa {
 
         padding:
-            54px 0
-            58px;
+            58px 0
+            62px;
 
     }
+
+
+    /* ÍCONES NO CELULAR */
 
     .show-icone {
 
-        top: -28px;
-        right: 18px;
+        top: -32px;
+        right: 16px;
 
     }
 
-    .show-icone img {
-
-        height: 62px;
-
-    }
 
     .show-icone-viola img {
 
-        height: 66px;
-        max-width: 140px;
+        height: 76px;
+        max-width: 155px;
 
     }
+
 
     .show-icone-chapeu img {
 
-        height: 58px;
-        max-width: 145px;
+        height: 70px;
+        max-width: 165px;
 
     }
 
+
     .show-icone-reis img {
 
-        height: 72px;
-        max-width: 165px;
+        height: 84px;
+        max-width: 185px;
 
     }
 
@@ -1788,6 +1982,7 @@ a {
 
     }
 
+
     .contato-conteudo > p {
 
         font-size: 1.08rem;
@@ -1802,6 +1997,7 @@ a {
         text-align: center;
 
     }
+
 
     .rodape-links {
 
@@ -1820,17 +2016,19 @@ a {
 
     .logo {
 
-        width: 82px;
-        height: 82px;
+        width: 92px;
+        height: 92px;
 
     }
+
 
     .titulo-logo {
 
-        width: 225px;
-        max-width: 67vw;
+        width: 230px;
+        max-width: 66vw;
 
     }
+
 
     .titulo-principal .destaque {
 
@@ -1838,11 +2036,13 @@ a {
 
     }
 
+
     .titulo-principal h1 {
 
         font-size: 20px;
 
     }
+
 
     .titulo-principal p {
 
@@ -1850,11 +2050,35 @@ a {
 
     }
 
+
     .grade-musicos {
 
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+            1fr
+            1fr;
 
         gap: 11px;
+
+    }
+
+
+    .show-icone-viola img {
+
+        height: 70px;
+
+    }
+
+
+    .show-icone-chapeu img {
+
+        height: 65px;
+
+    }
+
+
+    .show-icone-reis img {
+
+        height: 78px;
 
     }
 
