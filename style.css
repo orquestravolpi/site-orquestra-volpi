@@ -324,7 +324,7 @@ a {
 
 
 /* =========================================================
-   APRESENTAÇÃO — FUNDO BRANCO
+   APRESENTAÇÃO
 ========================================================= */
 
 .apresentacao {
@@ -348,6 +348,7 @@ a {
     text-align: center;
 
 }
+
 
 /* ORQUESTRA VOLPI */
 
@@ -374,6 +375,7 @@ a {
 
 }
 
+
 /* O som autêntico da tradição */
 
 .titulo-principal h1 {
@@ -394,6 +396,7 @@ a {
     margin-bottom: 8px;
 
 }
+
 
 /* Viola caipira · Música raiz · Cultura brasileira */
 
@@ -459,8 +462,8 @@ a {
     background:
         linear-gradient(
             145deg,
-            #ba4738,
-            #a83f3c
+            var(--laranja),
+            var(--salmao)
         );
 
     border-radius: 23px;
@@ -899,6 +902,9 @@ a {
     margin-bottom: 36px;
 }
 
+
+/* PARE E OUÇA */
+
 .show-faixa {
 
     padding:
@@ -918,6 +924,9 @@ a {
 
 }
 
+
+/* BAILÃO */
+
 .show-bailao {
 
     background:
@@ -928,6 +937,9 @@ a {
         );
 
 }
+
+
+/* NATAL */
 
 .show-natal {
 
@@ -960,6 +972,9 @@ a {
 
 }
 
+
+/* Bailão invertido */
+
 .show-card-invertido .show-foto {
     order: 2;
 }
@@ -967,6 +982,9 @@ a {
 .show-card-invertido .show-texto {
     order: 1;
 }
+
+
+/* Fotos dos shows */
 
 .show-foto {
 
@@ -986,8 +1004,6 @@ a {
 
 }
 
-/* não corta as fotos */
-
 .show-foto img {
 
     width: 100%;
@@ -1001,7 +1017,7 @@ a {
 }
 
 
-/* texto */
+/* Texto dos shows */
 
 .show-texto {
 
@@ -1063,7 +1079,9 @@ a {
 }
 
 
-/* ícones decorativos */
+/* =========================================================
+   ÍCONES DOS SHOWS
+========================================================= */
 
 .show-icone {
 
@@ -1095,12 +1113,28 @@ a {
 
 }
 
+
+/* Viola */
+
+.show-icone-viola img {
+
+    height: 82px;
+    max-width: 165px;
+
+}
+
+
+/* Chapéu */
+
 .show-icone-chapeu img {
 
     height: 72px;
     max-width: 175px;
 
 }
+
+
+/* Reis Magos */
 
 .show-icone-reis img {
 
@@ -1147,7 +1181,7 @@ a {
 
     overflow: hidden;
 
-    background: #eee;
+    background: #eeeeee;
 
     border:
         4px solid
@@ -1178,7 +1212,9 @@ a {
 }
 
 
-/* vídeo da galeria */
+/* =========================================================
+   VÍDEO DA GALERIA
+========================================================= */
 
 .galeria-video-card {
 
@@ -1713,6 +1749,13 @@ a {
     .show-icone img {
 
         height: 62px;
+
+    }
+
+    .show-icone-viola img {
+
+        height: 66px;
+        max-width: 140px;
 
     }
 
