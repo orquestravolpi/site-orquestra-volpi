@@ -159,8 +159,8 @@ a {
 
 .logo {
 
-    width: 185px;
-    height: 185px;
+    width: 200px;
+    height: 200px;
 
     object-fit: contain;
 
@@ -1083,18 +1083,25 @@ a {
 
 /* =========================================================
    FOTOS DOS SHOWS
-   NÃO CORTA E NÃO ALTERA A PROPORÇÃO
+   TODAS COM O MESMO TAMANHO
+   SEM CORTAR OU DEFORMAR
 ========================================================= */
 
 .show-foto {
 
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     overflow: hidden;
 
-    background: var(--branco);
+    background: #ffffff;
 
-    border:
-        5px solid
-        var(--branco);
+    border: 5px solid #ffffff;
 
     border-radius: 20px;
 
@@ -1110,13 +1117,10 @@ a {
     display: block;
 
     width: 100%;
-    height: auto;
-
-    max-height: none;
-
-    aspect-ratio: auto;
+    height: 100%;
 
     object-fit: contain;
+
     object-position: center;
 
 }
