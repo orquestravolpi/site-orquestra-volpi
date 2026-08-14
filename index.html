@@ -1,2286 +1,867 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap');
-
-/* =================================
-   PALETA ORQUESTRA VOLPI
-================================= */
-
-:root {
-    --salmao: #ff7510;
-    --magenta: #cb6ce6;
-
-    --branco: #ffffff;
-    --creme: #fff9f5;
-    --creme-escuro: #fff0e8;
-
-    --texto: #302b29;
-    --texto-claro: #706763;
-
-    --grafite: #292322;
-}
-
-
-/* =================================
-   CONFIGURAÇÕES GERAIS
-================================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: "Source Sans 3", Arial, Helvetica, sans-serif;
-    background: var(--branco);
-    color: var(--texto);
-    line-height: 1.6;
-}
-
-/* TÍTULOS E DESTAQUES */
-h1,
-h2,
-h3,
-.destaque,
-.subtitulo,
-.subtitulo-secao,
-.show-tipo,
-.etiqueta,
-.botao-orcamento,
-.contato-destaque,
-.titulo-trajetoria span,
-.titulo-galeria span {
-    font-family: "Manrope", Arial, Helvetica, sans-serif;
-}
-
-img {
-    display: block;
-    max-width: 100%;
-}
-
-.container {
-    width: min(1120px, 92%);
-    margin: 0 auto;
-}
-
-
-/* =================================
-   CABEÇALHO
-================================= */
-
-.topo {
-    background: var(--branco);
-    border-bottom: 4px solid var(--salmao);
-    padding: 14px 0;
-}
-
-.topo-conteudo {
-    width: min(1120px, 92%);
-    margin: 0 auto;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 35px;
-}
-
-.marca {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-.logo {
-    width: 110px;
-    height: 125px;
-    object-fit: contain;
-    flex-shrink: 0;
-}
+<head>
+    <meta charset="UTF-8">
 
-.titulo-logo {
-    width: 410px;
-    max-width: 42vw;
-    height: auto;
-    object-fit: contain;
-}
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
+    <title>Orquestra Volpi de Viola Caipira</title>
 
-/* =================================
-   REDES DO CABEÇALHO
-================================= */
+    <meta
+        name="description"
+        content="Orquestra Volpi de Viola Caipira, de Itaquera, São Paulo. Música caipira, viola brasileira, shows, eventos e apresentações temáticas."
+    >
 
-.redes {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
+    <link rel="stylesheet" href="style.css">
+</head>
 
-.redes a {
-    text-decoration: none;
 
-    color: var(--salmao);
+<body>
 
-    border: 2px solid var(--salmao);
-    border-radius: 999px;
 
-    padding: 9px 17px;
+<!-- ========================================
+     CABEÇALHO
+========================================= -->
 
-    font-weight: bold;
+<header class="topo">
 
-    transition: 0.2s;
-}
+    <div class="topo-conteudo">
 
-.redes a:hover {
-    background: var(--salmao);
-    color: var(--branco);
-}
+        <div class="marca">
 
-.redes a:last-child {
-    color: var(--magenta);
-    border-color: var(--magenta);
-}
+            <img
+                src="logo-volpi.png"
+                alt="Símbolo da Orquestra Volpi de Viola Caipira"
+                class="logo"
+            >
 
-.redes a:last-child:hover {
-    background: var(--magenta);
-    color: var(--branco);
-}
+            <img
+                src="titulo-volpi.png"
+                alt="Orquestra Volpi de Viola Caipira"
+                class="titulo-logo"
+            >
 
+        </div>
 
-/* =================================
-   APRESENTAÇÃO
-================================= */
 
-.apresentacao {
-    padding: 70px 0 85px;
+        <nav
+            class="redes"
+            aria-label="Redes sociais"
+        >
 
-    background:
-        linear-gradient(
-            135deg,
-            var(--creme) 0%,
-            var(--branco) 50%,
-            #fff7fc 100%
-        );
-}
+            <a
+                href="https://www.instagram.com/orquestravolpi/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Instagram
+            </a>
 
-.titulo-principal {
-    max-width: 900px;
+            <a
+                href="https://www.youtube.com/@orquestravolpi"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                YouTube
+            </a>
 
-    margin: 0 auto 45px;
+        </nav>
 
-    text-align: center;
-}
+    </div>
 
-.destaque {
-    display: inline-block;
+</header>
 
-    margin-bottom: 12px;
 
-    color: var(--magenta);
 
-    font-size: 0.95rem;
-    font-weight: 800;
+<main>
 
-    letter-spacing: 0.18em;
-}
 
-.titulo-principal h1 {
-    color: var(--texto);
+<!-- ========================================
+     APRESENTAÇÃO
+========================================= -->
 
-    font-size: 40px;
-    line-height: 1.05;
+<section class="apresentacao">
 
-    margin-bottom: 15px;
-}
+    <div class="container">
 
-.titulo-principal p {
-    color: var(--salmao);
 
-    font-size: 20px;
-    font-weight: 700;
-}
+        <div class="titulo-principal">
 
+            <span class="destaque">
+                Orquestra Volpi
+            </span>
 
-/* =================================
-   FOTO + HISTÓRIA
-================================= */
+            <h1>
+                O som autêntico da tradição
+            </h1>
 
-.apresentacao-grid {
-    display: grid;
+            <p>
+                Viola caipira · Música raiz · Cultura brasileira
+            </p>
 
-    grid-template-columns: 1.35fr 1fr;
+        </div>
 
-    align-items: stretch;
 
-    gap: 35px;
-}
 
-.foto-orquestra {
-    overflow: hidden;
+        <div class="apresentacao-grid">
 
-    border-radius: 28px;
 
-    border-bottom: 7px solid var(--salmao);
+            <!-- FOTO DA ORQUESTRA -->
 
-    box-shadow:
-        0 15px 45px
-        rgba(0, 0, 0, 0.13);
-}
+            <div class="foto-orquestra">
 
-.foto-orquestra img {
-    width: 100%;
-    height: auto;
+                <img
+                    src="orquestra-principal.jpg"
+                    alt="Integrantes da Orquestra Volpi de Viola Caipira reunidos com seus instrumentos"
+                >
 
-    min-height: 0;
+            </div>
 
-    object-fit: contain;
-}
 
 
-/* CARD HISTÓRIA */
+            <!-- HISTÓRIA -->
 
-.card-historia {
-    background: var(--branco);
+            <div class="card-historia">
 
-    padding: 38px;
+                <span class="etiqueta">
+                    Nossa história
+                </span>
 
-    border-radius: 28px;
 
-    border-top: 7px solid var(--magenta);
+                <h2>
+                    Orquestra Volpi de Viola Caipira
+                </h2>
 
-    box-shadow:
-        0 12px 35px
-        rgba(0, 0, 0, 0.08);
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+                <p>
+                    Fundada em 2018 na Oficina Cultural Alfredo Volpi,
+                    em Itaquera, São Paulo, a Orquestra Volpi de Viola
+                    Caipira nasceu com o propósito de valorizar e divulgar
+                    a cultura e a música caipira.
+                </p>
 
-.etiqueta {
-    display: inline-block;
 
-    align-self: flex-start;
 
-    color: var(--branco);
-    background: var(--salmao);
+                <div class="informacoes">
 
-    border-radius: 999px;
 
-    padding: 6px 14px;
+                    <div class="info-item">
 
-    margin-bottom: 18px;
+                        <div
+                            class="info-icone"
+                            aria-hidden="true"
+                        >
+                            ♪
+                        </div>
 
-    font-size: 0.8rem;
-    font-weight: bold;
+                        <div>
 
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-}
+                            <strong>
+                                MÚSICA RAIZ
+                            </strong>
 
-.card-historia h2 {
-    color: var(--texto);
+                            <p>
+                                Cultura caipira e viola brasileira
+                            </p>
 
-    font-size: clamp(1.7rem, 3vw, 2.3rem);
-    line-height: 1.15;
+                        </div>
 
-    margin-bottom: 20px;
-}
+                    </div>
 
-.card-historia > p {
-    color: var(--texto-claro);
 
-    font-size: 1.08rem;
 
-    margin-bottom: 30px;
-}
+                    <div class="info-item">
 
+                        <div
+                            class="info-icone"
+                            aria-hidden="true"
+                        >
+                            ●
+                        </div>
 
-/* =================================
-   INFORMAÇÕES
-================================= */
+                        <div>
 
-.informacoes {
-    display: flex;
-    flex-direction: column;
+                            <strong>
+                                ITAQUERA • SÃO PAULO
+                            </strong>
 
-    gap: 15px;
-}
+                            <p>
+                                Atuações em São Paulo e região
+                            </p>
 
-.info-item {
-    display: flex;
-    align-items: center;
+                        </div>
 
-    gap: 14px;
+                    </div>
 
-    padding-top: 15px;
 
-    border-top: 1px solid #eee4df;
-}
 
-.info-icone {
-    width: 45px;
-    height: 45px;
+                    <div class="info-item">
 
-    flex-shrink: 0;
+                        <div
+                            class="info-icone"
+                            aria-hidden="true"
+                        >
+                            ★
+                        </div>
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+                        <div>
 
-    background: var(--magenta);
-    color: var(--branco);
+                            <strong>
+                                EVENTOS E CERIMÔNIAS
+                            </strong>
 
-    border-radius: 50%;
+                            <p>
+                                Repertório personalizado
+                            </p>
 
-    font-size: 1.25rem;
-    font-weight: bold;
-}
+                        </div>
 
-.info-item:nth-child(2) .info-icone {
-    background: var(--salmao);
-}
+                    </div>
 
-.info-item strong {
-    color: var(--texto);
 
-    font-size: 0.88rem;
+                </div>
 
-    letter-spacing: 0.05em;
-}
+            </div>
 
-.info-item p {
-    color: var(--texto-claro);
 
-    margin-top: 2px;
+        </div>
 
-    font-size: 0.94rem;
-}
+    </div>
 
+</section>
 
-/* =================================
-   MAESTRO
-================================= */
 
-.maestro {
-    padding: 85px 0;
 
-    background:
-        linear-gradient(
-            135deg,
-            var(--grafite),
-            #3b3035
-        );
 
-    border-top: 7px solid var(--magenta);
-}
+<!-- ========================================
+     MAESTRO
+========================================= -->
 
-.maestro-grid {
-    display: grid;
+<section class="maestro">
 
-    grid-template-columns: 1fr 1fr;
+    <div class="container maestro-grid">
 
-    align-items: center;
 
-    gap: 65px;
-}
+        <div class="card-maestro">
 
-.card-maestro {
-    color: var(--branco);
-}
+            <span class="subtitulo">
+                Maestro
+            </span>
 
-.subtitulo {
-    display: inline-block;
 
-    color: var(--salmao);
+            <h2>
+                Renato de Sá
+            </h2>
 
-    font-weight: 800;
 
-    text-transform: uppercase;
+            <p>
+                Multi-instrumentista, compositor, arranjador e produtor musical,
+                formado pelo Conservatório Dramático e Musical Dr. Carlos de Campos
+                (Tatuí-SP). Atua há anos na área didática, com cursos ministrados por
+                todo o Estado de São Paulo. Autor de trilhas sonoras para Cinema e
+                Teatro, publicou o método <strong>211 Levadas Rítmicas</strong>
+                (Ed. Irmãos Vitale, 2002). Fundador, maestro e arranjador da
+                Orquestra Volpi de Viola Caipira desde 2018, atua também como
+                presidente do IBAC – Instituto Brasileiro Arte e Cultura.
+            </p>
 
-    letter-spacing: 0.15em;
+        </div>
 
-    margin-bottom: 10px;
-}
 
-.card-maestro h2 {
-    color: var(--branco);
 
-    font-size: clamp(2.4rem, 4vw, 3.8rem);
-    line-height: 1.05;
+        <div class="foto-maestro">
 
-    margin-bottom: 25px;
-}
+            <img
+                src="maestro-renato-novo.png"
+                alt="Maestro Renato de Sá tocando viola caipira"
+            >
 
-.card-maestro p {
-    color: #f3e9e5;
+        </div>
 
-    font-size: 1.08rem;
-}
 
-.foto-maestro {
-    overflow: hidden;
+    </div>
 
-    border-radius: 28px;
+</section>
 
-    border-bottom: 7px solid var(--salmao);
 
-    box-shadow:
-        0 15px 40px
-        rgba(0, 0, 0, 0.35);
-}
 
-.foto-maestro img {
-    width: 100%;
-    height: 510px;
 
-    object-fit: cover;
-}
+<!-- ========================================
+     MÚSICOS
+========================================= -->
 
+<section class="musicos">
 
-/* =================================
-   MÚSICOS
-================================= */
+    <div class="container">
 
-.musicos {
-    padding: 65px 0;
 
-    background:
-        linear-gradient(
-            135deg,
-            var(--salmao),
-            #ff9450
-        );
-}
+        <div class="card-musicos">
 
-.card-musicos {
-    max-width: 1000px;
 
-    margin: 0 auto;
+            <div>
 
-    background: var(--branco);
+                <span class="subtitulo-secao">
+                    Músicos
+                </span>
 
-    border-radius: 24px;
+                <div class="linha-titulo"></div>
 
-    padding: 38px 42px;
 
-    display: grid;
+                <div class="nomes-musicos">
 
-    grid-template-columns: 1fr 1.3fr;
+                    <p>Altair Bispo</p>
 
-    gap: 40px;
+                    <p>Heber Rogério</p>
 
-    align-items: center;
+                    <p>Ana Silva</p>
 
-    box-shadow:
-        0 12px 30px
-        rgba(0, 0, 0, 0.12);
-}
+                    <p>Laurival Telles</p>
 
-.subtitulo-secao {
-    display: block;
+                    <p>Ângelo de Souza</p>
 
-    color: var(--salmao);
+                    <p>Régis Nascimento</p>
 
-    font-size: 2rem;
-    font-weight: 800;
+                    <p>Domingo Testoni</p>
 
-    margin-bottom: 8px;
-}
+                    <p>Wagner Ribeiro</p>
 
-.linha-titulo {
-    width: 100%;
-    height: 2px;
+                </div>
 
-    background: var(--salmao);
+            </div>
 
-    opacity: 0.35;
 
-    margin-bottom: 25px;
-}
 
-.nomes-musicos {
-    display: grid;
+            <div class="fotos-musicos">
 
-    grid-template-columns: 1fr 1fr;
+                <img
+                    src="musico1.jpg"
+                    alt="Músico da Orquestra Volpi"
+                >
 
-    column-gap: 35px;
-    row-gap: 18px;
-}
+                <img
+                    src="musico2.jpg"
+                    alt="Músico da Orquestra Volpi"
+                >
 
-.nomes-musicos p {
-    color: var(--texto);
+                <img
+                    src="musico3.jpg"
+                    alt="Músico da Orquestra Volpi"
+                >
 
-    font-size: 1.15rem;
-    font-weight: 700;
+                <img
+                    src="musico4.jpg"
+                    alt="Músico da Orquestra Volpi"
+                >
 
-    line-height: 1.2;
-}
+                <img
+                    src="musico5.jpg"
+                    alt="Músico da Orquestra Volpi"
+                >
 
+                <img
+                    src="musico6.jpg"
+                    alt="Músico da Orquestra Volpi"
+                >
 
-/* FOTOS DOS MÚSICOS */
+                <img
+                    src="musico7.jpg"
+                    alt="Músico da Orquestra Volpi"
+                >
 
-.fotos-musicos {
-    display: grid;
+                <img
+                    src="musico8.jpg"
+                    alt="Músico da Orquestra Volpi"
+                >
 
-    grid-template-columns: repeat(4, 110px);
+            </div>
 
-    justify-content: center;
 
-    gap: 12px;
-}
+        </div>
 
-.fotos-musicos img {
-    width: 110px;
-    height: 110px;
+    </div>
 
-    object-fit: cover;
+</section>
 
-    border-radius: 10px;
 
-    box-shadow:
-        0 4px 10px
-        rgba(0, 0, 0, 0.16);
 
-    transition: 0.2s;
-}
 
-.fotos-musicos img:hover {
-    transform: scale(1.04);
-}
+<!-- ========================================
+     TRAJETÓRIA
+========================================= -->
 
+<section class="trajetoria">
 
-/* =================================
-   TRAJETÓRIA
-================================= */
+    <div class="container">
 
-.trajetoria {
-    padding: 75px 0;
 
-    background:
-        linear-gradient(
-            135deg,
-            var(--magenta),
-            #b958d4
-        );
-}
+        <div class="titulo-trajetoria">
 
-.titulo-trajetoria {
-    text-align: center;
+            <span>
+                Nossa história
+            </span>
 
-    margin-bottom: 42px;
-}
+            <h2>
+                Nossa Trajetória de Resistência
+            </h2>
 
-.titulo-trajetoria span {
-    display: inline-block;
+        </div>
 
-    color: var(--branco);
 
-    font-size: 0.95rem;
-    font-weight: 800;
 
-    text-transform: uppercase;
+        <div class="trajetoria-conteudo">
 
-    letter-spacing: 0.15em;
 
-    margin-bottom: 8px;
-}
+            <div class="trajetoria-texto">
 
-.titulo-trajetoria h2 {
-    color: var(--branco);
+                <p>
+                    Em 2021, durante a pandemia, foi lançado um
+                    documentário que registra a formação da Orquestra
+                    Volpi, as percepções de seus integrantes e a força
+                    da viola caipira como elo de memória, convivência
+                    e tradição.
+                </p>
 
-    font-size: clamp(2.2rem, 4vw, 3.4rem);
+                <p>
+                    A trajetória do grupo segue marcada pela valorização
+                    da cultura caipira e pelo encontro entre diferentes
+                    gerações por meio da música.
+                </p>
 
-    line-height: 1.1;
-}
+            </div>
 
-.trajetoria-conteudo {
-    display: grid;
 
-    grid-template-columns: 0.8fr 1.3fr;
 
-    align-items: center;
+            <div class="trajetoria-video">
 
-    gap: 40px;
-}
+                <iframe
+                    src="https://www.youtube.com/embed/5anjAdRJqy0"
+                    title="Orquestra Volpi de Viola Caipira"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                ></iframe>
 
-.trajetoria-texto {
-    background: var(--branco);
+            </div>
 
-    padding: 35px;
 
-    border-radius: 24px;
+        </div>
 
-    border-bottom: 7px solid var(--salmao);
+    </div>
 
-    box-shadow:
-        0 12px 30px
-        rgba(0, 0, 0, 0.15);
-}
+</section>
 
-.trajetoria-texto p {
-    color: var(--texto);
 
-    font-size: 1.1rem;
 
-    line-height: 1.7;
 
-    margin-bottom: 20px;
-}
+<!-- ========================================
+     SHOWS
+========================================= -->
 
-.trajetoria-texto p:last-child {
-    margin-bottom: 0;
-}
+<section class="shows">
 
+    <div class="container">
 
-/* DOCUMENTÁRIO */
 
-.trajetoria-video {
-    width: 100%;
+        <div class="titulo-shows">
 
-    aspect-ratio: 16 / 9;
+            <h2>
+                Conheça Nossos Shows
+            </h2>
 
-    overflow: hidden;
+        </div>
 
-    border-radius: 24px;
 
-    border: 5px solid var(--branco);
 
-    box-shadow:
-        0 15px 35px
-        rgba(0, 0, 0, 0.22);
-}
+        <!-- =================================
+             PARE E OUÇA
+        ================================== -->
 
-.trajetoria-video iframe {
-    display: block;
+        <article class="show-card">
 
-    width: 100%;
-    height: 100%;
 
-    border: 0;
-}
+            <div class="show-foto">
 
+                <img
+                    src="show-pare-ouca.jpg"
+                    alt="Orquestra Volpi durante apresentação do show Pare e Ouça"
+                >
 
-/* =================================
-   CONHEÇA NOSSOS SHOWS
-================================= */
+            </div>
 
-.shows {
-    padding: 75px 0 90px;
 
-    background:
-        linear-gradient(
-            135deg,
-            #f46c67,
-            #ef646c
-        );
-}
 
-.titulo-shows {
-    text-align: center;
+            <div class="show-texto">
 
-    margin-bottom: 45px;
-}
+                <span class="show-tipo">
+                    Show completo
+                </span>
 
-.titulo-shows h2 {
-    color: var(--branco);
 
-    font-size: clamp(2.2rem, 4vw, 3.3rem);
+                <h3>
+                    Pare e Ouça
+                    <strong>(75 min)</strong>
+                </h3>
 
-    line-height: 1.1;
 
-    padding-bottom: 18px;
+                <p>
+                    Apresentação com aproximadamente 75 minutos de duração,
+                    reunindo clássicos do universo caipira e arranjos para
+                    viola de canções da Música Popular Brasileira.
+                </p>
 
-    border-bottom:
-        1px solid
-        rgba(255, 255, 255, 0.55);
-}
 
+                <p>
+                    O repertório apresenta ao público diferentes possibilidades
+                    sonoras da viola caipira, preservando a tradição e aproximando
+                    o instrumento de novos ouvintes.
+                </p>
 
-/* CARD DOS SHOWS */
+            </div>
 
-.show-card {
-    display: grid;
 
-    grid-template-columns: 0.9fr 1.15fr;
+        </article>
 
-    align-items: center;
 
-    gap: 35px;
-}
 
-.show-foto {
-    overflow: hidden;
 
-    border-radius: 22px;
+        <!-- =================================
+             TEMÁTICOS
+        ================================== -->
 
-    border: 4px solid var(--branco);
+        <div class="titulo-tematico">
 
-    box-shadow:
-        0 12px 30px
-        rgba(0, 0, 0, 0.18);
-}
+            <h2>
+                Temáticos
+            </h2>
 
-.show-foto img {
-    width: 100%;
-    height: 330px;
+        </div>
 
-    object-fit: cover;
-}
 
-.show-texto {
-    background: var(--branco);
 
-    border-radius: 26px;
 
-    padding: 38px;
+        <!-- =================================
+             BAILÃO
+        ================================== -->
 
-    border-bottom: 7px solid var(--salmao);
+        <article class="show-card show-invertido">
 
-    box-shadow:
-        0 12px 30px
-        rgba(0, 0, 0, 0.12);
-}
 
-.show-tipo {
-    display: inline-block;
+            <div class="show-foto">
 
-    color: var(--magenta);
+                <img
+                    src="show-bailao.jpg"
+                    alt="Orquestra Volpi durante apresentação do Bailão da Roça ao Sertão"
+                >
 
-    font-size: 0.85rem;
-    font-weight: 800;
+            </div>
 
-    text-transform: uppercase;
 
-    letter-spacing: 0.1em;
 
-    margin-bottom: 8px;
-}
+            <div class="show-texto">
 
-.show-texto h3 {
-    color: var(--texto);
+                <span class="show-tipo">
+                    Show temático
+                </span>
 
-    font-size: 2rem;
 
-    line-height: 1.15;
+                <h3>
+                    Bailão – da Roça ao Sertão
+                </h3>
 
-    margin-bottom: 20px;
-}
 
-.show-texto h3 strong {
-    color: var(--salmao);
-}
+                <p>
+                    Apresentação com repertório voltado aos ritmos
+                    dançantes e às canções tradicionais do universo
+                    caipira e sertanejo, conduzidas pela sonoridade
+                    característica da viola.
+                </p>
 
-.show-texto p {
-    color: #5f5754;
 
-    font-size: 1.04rem;
+                <p>
+                    O programa percorre diferentes épocas e estilos,
+                    criando um espetáculo festivo para eventos,
+                    celebrações e encontros.
+                </p>
 
-    line-height: 1.65;
+            </div>
 
-    margin-bottom: 15px;
-}
 
-.show-texto p:last-child {
-    margin-bottom: 0;
-}
+        </article>
 
 
-/* =================================
-   SHOWS TEMÁTICOS
-================================= */
 
-.titulo-tematico {
-    text-align: center;
 
-    margin-top: 75px;
-    margin-bottom: 40px;
-}
+        <!-- =================================
+             CONCERTO DE NATAL
+        ================================== -->
 
-.titulo-tematico h2 {
-    color: var(--branco);
+        <article class="show-card show-natal">
 
-    font-size: 2.5rem;
 
-    line-height: 1.1;
+            <div class="show-foto">
 
-    padding-bottom: 18px;
+                <img
+                    src="show-natal.jpg"
+                    alt="Orquestra Volpi durante apresentação do Concerto de Natal"
+                >
 
-    border-bottom:
-        1px solid
-        rgba(255, 255, 255, 0.55);
-}
+            </div>
 
-.show-invertido .show-texto {
-    border-bottom-color: var(--magenta);
-}
 
-.show-invertido .show-tipo {
-    color: var(--salmao);
-}
 
+            <div class="show-texto">
 
-/* =================================
-   CONCERTO DE NATAL
-================================= */
+                <span class="show-tipo">
+                    Especial de Natal
+                </span>
 
-.show-natal {
-    margin-top: 55px;
-}
 
-.show-natal .show-texto {
-    border-bottom-color: var(--salmao);
-}
+                <h3>
+                    Concerto de Natal
+                    <strong>(60 min)</strong>
+                </h3>
 
-.show-natal .show-tipo {
-    color: var(--magenta);
-}
 
+                <p>
+                    Apresentação especial com repertório natalino
+                    adaptado para a sonoridade da viola caipira,
+                    combinando canções tradicionais de Natal com
+                    a identidade musical da Orquestra Volpi.
+                </p>
 
-/* =================================
-   GALERIA
-================================= */
 
-.galeria {
-    padding: 80px 0 90px;
+                <p>
+                    Um concerto pensado para igrejas, centros culturais,
+                    confraternizações e eventos de fim de ano.
+                </p>
 
-    background:
-        linear-gradient(
-            135deg,
-            #fff9f5 0%,
-            #ffffff 55%,
-            #fff7fc 100%
-        );
-}
+            </div>
 
-.titulo-galeria {
-    text-align: center;
 
-    max-width: 750px;
+        </article>
 
-    margin: 0 auto 45px;
-}
 
-.titulo-galeria span {
-    display: inline-block;
+    </div>
 
-    color: var(--magenta);
+</section>
 
-    font-size: 0.9rem;
-    font-weight: 800;
 
-    text-transform: uppercase;
 
-    letter-spacing: 0.15em;
 
-    margin-bottom: 7px;
-}
+<!-- ========================================
+     GALERIA
+========================================= -->
 
-.titulo-galeria h2 {
-    color: var(--texto);
+<section class="galeria">
 
-    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    <div class="container">
 
-    line-height: 1.1;
 
-    margin-bottom: 15px;
-}
+        <div class="titulo-galeria">
 
-.titulo-galeria p {
-    color: var(--texto-claro);
+            <span>
+                Registros
+            </span>
 
-    font-size: 1.05rem;
+            <h2>
+                Galeria
+            </h2>
 
-    line-height: 1.6;
-}
+            <p>
+                Alguns momentos da trajetória, dos encontros
+                e das apresentações da Orquestra Volpi
+                de Viola Caipira.
+            </p>
 
+        </div>
 
-/* GRADE DA GALERIA */
 
-.galeria-grid {
-    display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+        <div class="galeria-grid">
 
-    grid-auto-rows: 240px;
 
-    gap: 16px;
-}
+            <div class="galeria-item galeria-destaque">
 
-.galeria-item {
-    overflow: hidden;
+                <img
+                    src="galeria1.jpg"
+                    alt="Orquestra Volpi reunida em apresentação"
+                >
 
-    border-radius: 18px;
+            </div>
 
-    background: #eeeeee;
 
-    box-shadow:
-        0 8px 22px
-        rgba(0, 0, 0, 0.12);
-}
 
-.galeria-item img {
-    width: 100%;
-    height: 100%;
+            <div class="galeria-item">
 
-    object-fit: cover;
+                <img
+                    src="galeria2.jpg"
+                    alt="Músico tocando viola caipira"
+                >
 
-    transition: transform 0.35s ease;
-}
+            </div>
 
-.galeria-item:hover img {
-    transform: scale(1.06);
-}
 
-.galeria-destaque {
-    grid-column: span 2;
-    grid-row: span 2;
 
-    border-bottom: 6px solid var(--salmao);
-}
+            <div class="galeria-item">
 
-.galeria-item:nth-child(3) {
-    border-bottom: 5px solid var(--magenta);
-}
+                <img
+                    src="galeria3.jpg"
+                    alt="Apresentação da Orquestra Volpi"
+                >
 
-.galeria-item:nth-child(5) {
-    border-bottom: 5px solid var(--salmao);
-}
+            </div>
 
 
-/* =================================
-   CONTATO / ORÇAMENTO
-================================= */
 
-.contato {
-    padding: 90px 0;
+            <div class="galeria-item">
 
-    text-align: center;
+                <img
+                    src="galeria4.jpg"
+                    alt="Registro de apresentação musical"
+                >
 
-    background:
-        linear-gradient(
-            135deg,
-            var(--salmao) 0%,
-            #ff8940 55%,
-            var(--magenta) 160%
-        );
-}
+            </div>
 
-.contato-conteudo {
-    max-width: 850px;
-}
 
-.contato-destaque {
-    display: inline-block;
 
-    color: var(--branco);
+            <div class="galeria-item">
 
-    font-size: 0.9rem;
-    font-weight: 800;
+                <img
+                    src="galeria5.jpg"
+                    alt="Integrantes da Orquestra Volpi tocando viola"
+                >
 
-    text-transform: uppercase;
+            </div>
 
-    letter-spacing: 0.14em;
 
-    margin-bottom: 14px;
-}
 
-.contato h2 {
-    color: var(--branco);
+            <div class="galeria-item">
 
-    font-size: clamp(2.3rem, 5vw, 4rem);
+                <img
+                    src="galeria6.jpg"
+                    alt="Orquestra Volpi em evento"
+                >
 
-    line-height: 1.1;
+            </div>
 
-    margin-bottom: 20px;
-}
 
-.contato-conteudo > p {
-    max-width: 720px;
+        </div>
 
-    margin: 0 auto 35px;
+    </div>
 
-    color: var(--branco);
+</section>
 
-    font-size: 1.2rem;
 
-    line-height: 1.6;
-}
 
 
-/* BOTÃO WHATSAPP */
+<!-- ========================================
+     CONTATO / ORÇAMENTO
+========================================= -->
 
-.botao-orcamento {
-    display: inline-block;
+<section
+    class="contato"
+    id="contato"
+>
 
-    background: var(--branco);
-    color: var(--salmao);
+    <div class="container contato-conteudo">
 
-    text-decoration: none;
 
-    padding: 17px 30px;
+        <span class="contato-destaque">
+            Leve a viola para o seu evento
+        </span>
 
-    border-radius: 12px;
 
-    font-size: 1rem;
-    font-weight: 800;
+        <h2>
+            Solicite um orçamento
+        </h2>
 
-    text-transform: uppercase;
 
-    box-shadow:
-        0 7px 0 var(--magenta),
-        0 12px 25px rgba(0, 0, 0, 0.18);
+        <p>
+            Temos o repertório certo para o seu evento.
+            Solicite um orçamento personalizado e descubra
+            como a Orquestra Volpi pode transformar a sua
+            celebração em uma experiência inesquecível.
+        </p>
 
-    transition: 0.2s;
-}
 
-.botao-orcamento:hover {
-    transform: translateY(-3px);
 
-    box-shadow:
-        0 9px 0 var(--magenta),
-        0 15px 30px rgba(0, 0, 0, 0.22);
-}
+        <a
+            class="botao-orcamento"
+            href="https://wa.me/5511994070183"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Solicitar orçamento pelo WhatsApp
+        </a>
 
 
-/* REDES DO CONTATO */
 
-.contato-redes {
-    margin-top: 45px;
+        <div class="contato-redes">
 
-    color: var(--branco);
-}
 
-.contato-redes p {
-    margin-bottom: 12px;
+            <p>
+                Siga nossas redes sociais
+            </p>
 
-    font-size: 0.85rem;
 
-    text-transform: uppercase;
+            <div class="contato-links">
 
-    letter-spacing: 0.1em;
-}
 
-.contato-links {
-    display: flex;
+                <a
+                    href="https://www.instagram.com/orquestravolpi/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Instagram
+                </a>
 
-    justify-content: center;
 
-    gap: 12px;
+                <a
+                    href="https://www.youtube.com/@orquestravolpi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    YouTube
+                </a>
 
-    margin-bottom: 10px;
-}
 
-.contato-links a {
-    color: var(--branco);
+            </div>
 
-    text-decoration: none;
 
-    font-weight: 700;
+            <strong>
+                @orquestravolpi
+            </strong>
 
-    border:
-        1px solid
-        rgba(255, 255, 255, 0.75);
 
-    border-radius: 999px;
+        </div>
 
-    padding: 7px 14px;
-}
 
-.contato-links a:hover {
-    background: var(--branco);
-    color: var(--salmao);
-}
+    </div>
 
-.contato-redes strong {
-    color: var(--branco);
+</section>
 
-    font-size: 1rem;
-}
 
+</main>
 
-/* =================================
-   RODAPÉ
-================================= */
 
-footer {
-    background: #1c1817;
 
-    color: #e9dfdb;
 
-    text-align: center;
+<!-- ========================================
+     RODAPÉ
+========================================= -->
 
-    padding: 27px 20px;
+<footer>
 
-    border-top: 4px solid var(--salmao);
+    <p>
+        Orquestra Volpi de Viola Caipira · Itaquera · São Paulo
+    </p>
 
-    font-size: 0.9rem;
-}
+</footer>
 
 
-/* =================================
-   TABLET
-================================= */
+</body>
 
-@media (max-width: 900px) {
-
-    .apresentacao-grid,
-    .maestro-grid,
-    .trajetoria-conteudo,
-    .show-card {
-        grid-template-columns: 1fr;
-    }
-
-    .foto-orquestra img {
-        min-height: auto;
-    }
-
-    .maestro-grid {
-        gap: 35px;
-    }
-
-    .foto-maestro img {
-        height: auto;
-    }
-
-
-    /* MÚSICOS */
-
-    .card-musicos {
-        grid-template-columns: 1fr;
-    }
-
-    .fotos-musicos {
-        grid-template-columns: repeat(4, 100px);
-    }
-
-    .fotos-musicos img {
-        width: 100px;
-        height: 100px;
-    }
-
-
-    /* SHOWS */
-
-    .show-foto img {
-        height: auto;
-    }
-
-
-    /* GALERIA */
-
-    .galeria-grid {
-        grid-template-columns: repeat(2, 1fr);
-
-        grid-auto-rows: 220px;
-    }
-}
-
-
-/* =================================
-   CELULAR
-================================= */
-
-@media (max-width: 700px) {
-
-    .container {
-        width: 92%;
-    }
-
-
-    /* CABEÇALHO */
-
-    .topo {
-        padding: 8px 0;
-    }
-
-    .topo-conteudo {
-        width: 94%;
-
-        gap: 10px;
-    }
-
-    .marca {
-        gap: 8px;
-    }
-
-    .logo {
-        width: 62px;
-        height: 76px;
-    }
-
-    .titulo-logo {
-        width: 225px;
-        max-width: 62vw;
-    }
-
-    .redes {
-        display: none;
-    }
-
-
-    /* APRESENTAÇÃO */
-
-    .apresentacao {
-        padding: 45px 0 55px;
-    }
-
-    .titulo-principal {
-        margin-bottom: 30px;
-    }
-
-    .titulo-principal h1 {
-        font-size: 40px;
-    }
-
-    .titulo-principal p {
-        font-size: 20px;
-    }
-
-    .apresentacao-grid {
-        gap: 23px;
-    }
-
-    .card-historia {
-        padding: 27px 23px;
-    }
-
-    .card-historia h2 {
-        font-size: 1.8rem;
-    }
-
-    .card-historia > p {
-        font-size: 1rem;
-    }
-
-
-    /* MAESTRO */
-
-    .maestro {
-        padding: 55px 0;
-    }
-
-    .card-maestro h2 {
-        font-size: 2.4rem;
-    }
-
-
-    /* MÚSICOS */
-
-    .musicos {
-        padding: 45px 0;
-    }
-
-    .card-musicos {
-        padding: 26px 20px;
-
-        gap: 30px;
-    }
-
-    .subtitulo-secao {
-        font-size: 1.7rem;
-    }
-
-    .nomes-musicos {
-        grid-template-columns: 1fr 1fr;
-
-        gap: 16px;
-    }
-
-    .nomes-musicos p {
-        font-size: 1rem;
-    }
-
-    .fotos-musicos {
-        grid-template-columns: repeat(2, 120px);
-    }
-
-    .fotos-musicos img {
-        width: 120px;
-        height: 120px;
-    }
-
-
-    /* TRAJETÓRIA */
-
-    .trajetoria {
-        padding: 55px 0;
-    }
-
-    .trajetoria-conteudo {
-        gap: 28px;
-    }
-
-    .trajetoria-texto {
-        padding: 27px 23px;
-    }
-
-    .trajetoria-texto p {
-        font-size: 1rem;
-    }
-
-    .titulo-trajetoria h2 {
-        font-size: 2rem;
-    }
-
-
-    /* SHOWS */
-
-    .shows {
-        padding: 55px 0;
-    }
-
-    .show-card {
-        gap: 25px;
-    }
-
-    .show-texto {
-        padding: 27px 23px;
-    }
-
-    .show-texto h3 {
-        font-size: 1.7rem;
-    }
-
-    .show-texto p {
-        font-size: 1rem;
-    }
-
-    .titulo-tematico {
-        margin-top: 55px;
-        margin-bottom: 30px;
-    }
-
-    .titulo-tematico h2 {
-        font-size: 2rem;
-    }
-
-    .show-natal {
-        margin-top: 40px;
-    }
-
-
-    /* GALERIA */
-
-    .galeria {
-        padding: 55px 0;
-    }
-
-    .titulo-galeria {
-        margin-bottom: 30px;
-    }
-
-    .galeria-grid {
-        grid-template-columns: 1fr;
-
-        grid-auto-rows: 240px;
-
-        gap: 13px;
-    }
-
-    .galeria-destaque {
-        grid-column: auto;
-        grid-row: auto;
-    }
-
-
-    /* CONTATO */
-
-    .contato {
-        padding: 60px 0;
-    }
-
-    .contato h2 {
-        font-size: 2.3rem;
-    }
-
-    .contato-conteudo > p {
-        font-size: 1.05rem;
-    }
-
-    .botao-orcamento {
-        width: 100%;
-
-        max-width: 340px;
-
-        padding: 16px 18px;
-    }
-
-    .contato-links {
-        flex-wrap: wrap;
-    }
-}
-
-
-/* =================================
-   CELULARES PEQUENOS
-================================= */
-
-@media (max-width: 400px) {
-
-    .nomes-musicos {
-        grid-template-columns: 1fr;
-    }
-
-    .fotos-musicos {
-        grid-template-columns: repeat(2, 105px);
-    }
-
-    .fotos-musicos img {
-        width: 105px;
-        height: 105px;
-    }
-
-}
-
-/* =============================================================
-   AJUSTES FINAIS — BASEADOS NA REFERÊNCIA VISUAL DA ORQUESTRA
-   Salmão + esfumado magenta, textos maiores e imagens sem corte
-============================================================= */
-
-:root {
-    --salmao: #f46c67;
-    --salmao-claro: #ff7b72;
-    --salmao-escuro: #dc5b55;
-    --magenta: #cb6ce6;
-    --magenta-esfumado: rgba(203, 108, 230, 0.34);
-
-    --fundo-volpi:
-        radial-gradient(circle at 88% 12%, rgba(203, 108, 230, 0.38) 0, rgba(203, 108, 230, 0) 31%),
-        radial-gradient(circle at 8% 78%, rgba(203, 108, 230, 0.22) 0, rgba(203, 108, 230, 0) 28%),
-        linear-gradient(135deg, #f46c67 0%, #f36a65 58%, #ec6170 100%);
-}
-
-/* ---------- TIPOGRAFIA / LEITURA ---------- */
-
-body {
-    font-family: "Source Sans 3", Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    line-height: 1.68;
-}
-
-p {
-    line-height: 1.68;
-}
-
-.container {
-    width: min(1180px, 92%);
-}
-
-/* ---------- CABEÇALHO / LOGO ---------- */
-
-.topo {
-    background: var(--fundo-volpi);
-    border-bottom: 0;
-    padding: 18px 0;
-}
-
-.topo-conteudo {
-    width: min(1180px, 94%);
-    gap: 30px;
-}
-
-.marca {
-    gap: 20px;
-}
-
-/* Ícone / símbolo da marca */
-.logo {
-    width: 145px;
-    height: 155px;
-    object-fit: contain;
-}
-
-/* Nome/assinatura da marca caso esteja em imagem separada */
-.titulo-logo {
-    width: 520px;
-    max-width: 48vw;
-    height: auto;
-    object-fit: contain;
-}
-
-.redes a {
-    color: var(--branco);
-    border-color: rgba(255, 255, 255, 0.88);
-    font-size: 1rem;
-}
-
-.redes a:last-child {
-    color: var(--branco);
-    border-color: rgba(255, 255, 255, 0.88);
-}
-
-.redes a:hover,
-.redes a:last-child:hover {
-    background: var(--branco);
-    color: var(--salmao-escuro);
-}
-
-/* ---------- APRESENTAÇÃO ---------- */
-
-.apresentacao {
-    padding: 58px 0 82px;
-    background: var(--fundo-volpi);
-}
-
-.titulo-principal {
-    max-width: 960px;
-    margin: 0 auto 42px;
-}
-
-/* ORQUESTRA VOLPI: maior que o subtítulo, como solicitado */
-.titulo-principal h1 {
-    color: var(--branco);
-    font-size: 40px;
-    font-weight: 800;
-    line-height: 1.08;
-    margin-bottom: 8px;
-}
-
-/* O som autêntico da tradição */
-.titulo-principal p {
-    color: var(--branco);
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 1.35;
-}
-
-.destaque {
-    color: var(--branco);
-}
-
-.apresentacao-grid {
-    grid-template-columns: 1.35fr 1fr;
-    align-items: center;
-    gap: 30px;
-}
-
-/* FOTO DA ORQUESTRA: sempre inteira */
-.foto-orquestra {
-    background: var(--branco);
-    border: 5px solid var(--branco);
-    border-bottom: 5px solid var(--branco);
-    border-radius: 18px;
-}
-
-.foto-orquestra img {
-    width: 100%;
-    height: auto;
-    min-height: 0;
-    object-fit: contain;
-}
-
-.card-historia {
-    padding: 36px;
-    border-top: 0;
-    border-radius: 22px;
-    background: rgba(157, 71, 53, 0.88);
-    color: var(--branco);
-    box-shadow: 0 14px 34px rgba(89, 35, 31, 0.20);
-}
-
-.card-historia h2,
-.card-historia > p,
-.info-item strong,
-.info-item p {
-    color: var(--branco);
-}
-
-.card-historia h2 {
-    font-size: clamp(2rem, 3vw, 2.5rem);
-}
-
-.card-historia > p {
-    font-size: 1.12rem;
-}
-
-.info-item {
-    border-top-color: rgba(255, 255, 255, 0.26);
-}
-
-.info-item p {
-    font-size: 1.02rem;
-}
-
-/* ---------- MAESTRO ---------- */
-
-.maestro {
-    padding: 78px 0;
-    background: var(--fundo-volpi);
-    border-top: 0;
-}
-
-.maestro-grid {
-    grid-template-columns: 1.25fr 0.75fr;
-    gap: 55px;
-}
-
-.card-maestro {
-    background: var(--branco);
-    color: var(--texto);
-    padding: 42px;
-    border-radius: 24px;
-    box-shadow: 0 14px 36px rgba(89, 35, 31, 0.16);
-}
-
-.subtitulo {
-    color: var(--salmao-escuro);
-    font-size: 1rem;
-}
-
-.card-maestro h2 {
-    color: var(--salmao-escuro);
-    font-size: clamp(2.3rem, 4vw, 3.4rem);
-    margin-bottom: 20px;
-}
-
-.card-maestro p {
-    color: var(--texto);
-    font-size: 1.14rem;
-    line-height: 1.72;
-}
-
-.foto-maestro {
-    width: min(390px, 100%);
-    aspect-ratio: 1 / 1;
-    justify-self: center;
-    overflow: hidden;
-    border-radius: 50%;
-    border: 8px solid rgba(255, 255, 255, 0.58);
-    outline: 4px solid rgba(255, 255, 255, 0.28);
-    box-shadow: 0 16px 38px rgba(83, 31, 48, 0.24);
-}
-
-.foto-maestro img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* ---------- MÚSICOS ---------- */
-
-.musicos {
-    padding: 78px 0;
-    background: var(--fundo-volpi);
-}
-
-.card-musicos {
-    max-width: 1120px;
-    padding: 44px 46px;
-    grid-template-columns: 0.78fr 1.55fr;
-    gap: 46px;
-    border-radius: 22px;
-}
-
-.subtitulo-secao {
-    color: var(--salmao-escuro);
-    font-size: 2.25rem;
-}
-
-.linha-titulo {
-    background: var(--salmao);
-}
-
-.nomes-musicos {
-    column-gap: 32px;
-    row-gap: 20px;
-}
-
-.nomes-musicos p {
-    font-size: 1.2rem;
-    line-height: 1.3;
-}
-
-/* Fotos dos músicos maiores, mantendo 4 por linha no desktop */
-.fotos-musicos {
-    width: 100%;
-    max-width: 680px;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-    justify-content: stretch;
-}
-
-.fotos-musicos img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-/* ---------- TRAJETÓRIA ---------- */
-
-.trajetoria {
-    padding: 78px 0;
-    background: var(--fundo-volpi);
-}
-
-.titulo-trajetoria h2,
-.titulo-trajetoria span {
-    color: var(--branco);
-}
-
-.trajetoria-texto {
-    padding: 38px;
-    border-bottom-color: var(--salmao-escuro);
-}
-
-.trajetoria-texto p {
-    font-size: 1.14rem;
-    line-height: 1.72;
-}
-
-/* ---------- SHOWS / TEMÁTICOS ---------- */
-
-.shows {
-    padding: 78px 0 92px;
-    background: var(--fundo-volpi);
-}
-
-.titulo-shows h2,
-.titulo-tematico h2 {
-    color: var(--branco);
-}
-
-.show-card {
-    grid-template-columns: 0.92fr 1.15fr;
-    gap: 34px;
-    align-items: center;
-}
-
-/* NÃO CORTAR AS FOTOS DOS SHOWS E DOS TEMÁTICOS */
-.show-foto {
-    background: var(--branco);
-    border: 4px solid var(--branco);
-    border-radius: 18px;
-}
-
-.show-foto img,
-.show-invertido .show-foto img,
-.show-natal .show-foto img {
-    width: 100%;
-    height: auto;
-    max-height: none;
-    object-fit: contain;
-    object-position: center;
-}
-
-.show-texto {
-    padding: 40px;
-    border-radius: 24px;
-}
-
-.show-texto h3 {
-    font-size: 2.1rem;
-}
-
-.show-texto p {
-    color: #4f4947;
-    font-size: 1.14rem;
-    line-height: 1.72;
-}
-
-.show-tipo {
-    font-size: 0.96rem;
-}
-
-.titulo-tematico h2 {
-    font-size: 2.6rem;
-}
-
-/* ---------- GALERIA ---------- */
-
-.galeria {
-    padding: 78px 0 90px;
-    background: var(--fundo-volpi);
-}
-
-.titulo-galeria span,
-.titulo-galeria h2,
-.titulo-galeria p {
-    color: var(--branco);
-}
-
-.titulo-galeria p {
-    font-size: 1.12rem;
-}
-
-.galeria-item {
-    border: 4px solid rgba(255, 255, 255, 0.88);
-}
-
-/* ---------- CONTATO ---------- */
-
-.contato {
-    background: var(--fundo-volpi);
-}
-
-.contato-conteudo > p {
-    font-size: 1.22rem;
-}
-
-/* =============================================================
-   RESPONSIVO DOS AJUSTES FINAIS
-============================================================= */
-
-@media (max-width: 900px) {
-    .topo-conteudo {
-        gap: 16px;
-    }
-
-    .logo {
-        width: 120px;
-        height: 132px;
-    }
-
-    .titulo-logo {
-        width: 430px;
-        max-width: 52vw;
-    }
-
-    .maestro-grid,
-    .card-musicos,
-    .show-card {
-        grid-template-columns: 1fr;
-    }
-
-    .card-musicos {
-        max-width: 760px;
-    }
-
-    .fotos-musicos {
-        max-width: 650px;
-        margin: 0 auto;
-    }
-
-    .foto-maestro {
-        width: min(360px, 78vw);
-    }
-}
-
-@media (max-width: 700px) {
-    body {
-        font-size: 17px;
-    }
-
-    .topo {
-        padding: 12px 0;
-    }
-
-    .topo-conteudo {
-        width: 95%;
-    }
-
-    .logo {
-        width: 82px;
-        height: 92px;
-    }
-
-    .titulo-logo {
-        width: 285px;
-        max-width: 68vw;
-    }
-
-    .apresentacao {
-        padding: 42px 0 55px;
-    }
-
-    .titulo-principal h1 {
-        font-size: 40px;
-        margin-bottom: 8px;
-    }
-
-    .titulo-principal p {
-        font-size: 20px;
-    }
-
-    .card-historia,
-    .card-maestro,
-    .trajetoria-texto,
-    .show-texto {
-        padding: 28px 24px;
-    }
-
-    .card-historia > p,
-    .card-maestro p,
-    .trajetoria-texto p,
-    .show-texto p {
-        font-size: 1.08rem;
-    }
-
-    .subtitulo-secao {
-        font-size: 2rem;
-    }
-
-    .nomes-musicos p {
-        font-size: 1.12rem;
-    }
-
-    .fotos-musicos {
-        grid-template-columns: repeat(2, 1fr);
-        max-width: 520px;
-        gap: 14px;
-    }
-
-    .show-foto img,
-    .show-invertido .show-foto img,
-    .show-natal .show-foto img {
-        height: auto;
-        object-fit: contain;
-    }
-
-    .show-texto h3 {
-        font-size: 1.85rem;
-    }
-
-    .titulo-tematico h2 {
-        font-size: 2.1rem;
-    }
-}
-
-@media (max-width: 400px) {
-    .logo {
-        width: 74px;
-        height: 84px;
-    }
-
-    .titulo-logo {
-        width: 245px;
-        max-width: 68vw;
-    }
-
-    .titulo-principal h1 {
-        font-size: 36px;
-    }
-
-    .titulo-principal p {
-        font-size: 19px;
-    }
-
-    .fotos-musicos {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-    }
-}
-
-
-/* =============================================================
-   AJUSTE FINAL — HIERARQUIA DO TÍTULO + PALETA INTERCALADA
-   ORQUESTRA VOLPI = 40px
-   O som autêntico da tradição = 20px
-   Cores: branco, laranja, salmão e magenta
-============================================================= */
-
-:root {
-    --salmao: #f46c67;
-    --laranja: #ff7510;
-    --magenta: #cb6ce6;
-    --branco: #ffffff;
-    --creme: #fff9f5;
-    --texto: #302b29;
-    --texto-claro: #625a57;
-}
-
-/* ---------- TOPO ---------- */
-
-.topo {
-    background:
-        radial-gradient(circle at 88% 20%, rgba(203, 108, 230, 0.48) 0, rgba(203, 108, 230, 0) 32%),
-        linear-gradient(120deg, var(--salmao) 0%, #ff6268 58%, #ea5592 100%);
-    border-bottom: 0;
-}
-
-.logo {
-    width: 170px;
-    height: 170px;
-    object-fit: contain;
-}
-
-.titulo-logo {
-    width: 540px;
-    max-width: 50vw;
-}
-
-/* ---------- APRESENTAÇÃO ---------- */
-
-.apresentacao {
-    background:
-        radial-gradient(circle at 90% 18%, rgba(203, 108, 230, 0.45) 0, rgba(203, 108, 230, 0) 30%),
-        linear-gradient(135deg, var(--salmao) 0%, #ff6268 66%, #e85693 100%);
-}
-
-/* “ORQUESTRA VOLPI” — precisa ser o texto maior */
-.titulo-principal .destaque {
-    display: block;
-    color: var(--branco);
-    font-family: "Manrope", Arial, sans-serif;
-    font-size: 40px;
-    font-weight: 800;
-    line-height: 1.05;
-    letter-spacing: 0.01em;
-    text-transform: none;
-    margin-bottom: 10px;
-}
-
-/* “O som autêntico da tradição” */
-.titulo-principal h1 {
-    color: var(--branco);
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 1.25;
-    margin-bottom: 8px;
-}
-
-/* Linha menor: Viola caipira · Música raiz · Cultura brasileira */
-.titulo-principal p {
-    color: rgba(255, 255, 255, 0.94);
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 1.4;
-}
-
-.card-historia {
-    background: linear-gradient(145deg, var(--laranja), var(--salmao));
-    color: var(--branco);
-}
-
-.card-historia h2,
-.card-historia > p,
-.card-historia .info-item strong,
-.card-historia .info-item p {
-    color: var(--branco);
-}
-
-/* ---------- MAESTRO: SALMÃO + LARANJA ---------- */
-
-.maestro {
-    background:
-        radial-gradient(circle at 8% 72%, rgba(203, 108, 230, 0.18) 0, rgba(203, 108, 230, 0) 28%),
-        linear-gradient(135deg, var(--salmao) 0%, #f76a5c 64%, var(--laranja) 145%);
-    border-top: 0;
-}
-
-.card-maestro {
-    background: var(--branco);
-}
-
-/* ---------- MÚSICOS: FUNDO BRANCO ---------- */
-
-.musicos {
-    background: var(--branco);
-}
-
-.card-musicos {
-    background: var(--creme);
-    border: 2px solid rgba(244, 108, 103, 0.22);
-    box-shadow: 0 14px 36px rgba(86, 45, 39, 0.12);
-}
-
-.subtitulo-secao {
-    color: var(--laranja);
-}
-
-.linha-titulo {
-    background: linear-gradient(90deg, var(--laranja), var(--salmao), var(--magenta));
-    opacity: 0.55;
-}
-
-/* ---------- TRAJETÓRIA: MAGENTA + SALMÃO ---------- */
-
-.trajetoria {
-    background:
-        radial-gradient(circle at 12% 20%, rgba(255, 117, 16, 0.22) 0, rgba(255, 117, 16, 0) 28%),
-        linear-gradient(135deg, var(--magenta) 0%, #d45ba8 48%, var(--salmao) 100%);
-}
-
-/* ---------- SHOWS: LARANJA + SALMÃO ---------- */
-
-.shows {
-    background:
-        radial-gradient(circle at 88% 16%, rgba(203, 108, 230, 0.28) 0, rgba(203, 108, 230, 0) 30%),
-        linear-gradient(135deg, var(--laranja) 0%, #ff795b 42%, var(--salmao) 100%);
-}
-
-.show-texto {
-    background: var(--branco);
-}
-
-.show-texto h3 {
-    color: var(--texto);
-}
-
-/* ---------- GALERIA: FUNDO BRANCO ---------- */
-
-.galeria {
-    background:
-        radial-gradient(circle at 90% 8%, rgba(203, 108, 230, 0.10) 0, rgba(203, 108, 230, 0) 25%),
-        linear-gradient(180deg, var(--branco) 0%, var(--creme) 100%);
-}
-
-.titulo-galeria span {
-    color: var(--magenta);
-}
-
-.titulo-galeria h2 {
-    color: var(--texto);
-}
-
-.titulo-galeria p {
-    color: var(--texto-claro);
-}
-
-.galeria-item {
-    border-color: var(--branco);
-}
-
-/* ---------- CONTATO: SALMÃO + MAGENTA ---------- */
-
-.contato {
-    background:
-        radial-gradient(circle at 10% 78%, rgba(255, 117, 16, 0.32) 0, rgba(255, 117, 16, 0) 28%),
-        linear-gradient(135deg, var(--salmao) 0%, #ee5d7d 55%, var(--magenta) 130%);
-}
-
-.botao-orcamento {
-    background: var(--laranja);
-    color: var(--branco);
-    box-shadow:
-        0 7px 0 rgba(166, 66, 45, 0.55),
-        0 12px 25px rgba(0, 0, 0, 0.16);
-}
-
-.botao-orcamento:hover {
-    background: var(--branco);
-    color: var(--laranja);
-}
-
-/* ---------- RODAPÉ ---------- */
-
-footer {
-    background: var(--branco);
-    color: var(--texto-claro);
-    border-top: 5px solid var(--laranja);
-}
-
-/* ---------- RESPONSIVO ---------- */
-
-@media (max-width: 900px) {
-    .logo {
-        width: 140px;
-        height: 145px;
-    }
-
-    .titulo-logo {
-        width: 455px;
-        max-width: 54vw;
-    }
-}
-
-@media (max-width: 700px) {
-    .logo {
-        width: 92px;
-        height: 98px;
-    }
-
-    .titulo-logo {
-        width: 300px;
-        max-width: 68vw;
-    }
-
-    .titulo-principal .destaque {
-        font-size: 40px;
-        line-height: 1.08;
-    }
-
-    .titulo-principal h1 {
-        font-size: 20px;
-    }
-
-    .titulo-principal p {
-        font-size: 15px;
-    }
-}
-
-@media (max-width: 400px) {
-    .titulo-principal .destaque {
-        font-size: 34px;
-    }
-
-    .titulo-principal h1 {
-        font-size: 19px;
-    }
-}
-
-/* =============================================================
-   AJUSTE DO CABEÇALHO — LOGO MAIOR + SALMÃO/MAGENTA
-============================================================= */
-
-.topo {
-    background:
-        radial-gradient(circle at 82% 22%, rgba(203, 108, 230, 0.72) 0%, rgba(203, 108, 230, 0.28) 28%, rgba(203, 108, 230, 0) 52%),
-        linear-gradient(120deg, var(--salmao) 0%, #f85f74 45%, var(--magenta) 100%);
-    border-bottom: 0;
-    padding: 18px 0;
-}
-
-.logo {
-    width: 230px;
-    height: 230px;
-    object-fit: contain;
-    flex-shrink: 0;
-}
-
-.titulo-logo {
-    width: 560px;
-    max-width: 52vw;
-    height: auto;
-    object-fit: contain;
-}
-
-.topo-conteudo {
-    align-items: center;
-    gap: 28px;
-}
-
-@media (max-width: 900px) {
-    .logo {
-        width: 180px;
-        height: 180px;
-    }
-
-    .titulo-logo {
-        width: 470px;
-        max-width: 55vw;
-    }
-}
-
-@media (max-width: 700px) {
-    .topo {
-        padding: 10px 0;
-    }
-
-    .logo {
-        width: 125px;
-        height: 125px;
-    }
-
-    .titulo-logo {
-        width: 315px;
-        max-width: 66vw;
-    }
-}
-
-@media (max-width: 400px) {
-    .logo {
-        width: 105px;
-        height: 105px;
-    }
-
-    .titulo-logo {
-        width: 285px;
-        max-width: 68vw;
-    }
-}
+</html>
