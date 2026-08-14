@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
 /* =================================
    PALETA ORQUESTRA VOLPI
 ================================= */
@@ -32,7 +34,7 @@ html {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Manrope", Arial, Helvetica, sans-serif;
     background: var(--branco);
     color: var(--texto);
     line-height: 1.6;
@@ -172,7 +174,7 @@ img {
 .titulo-principal h1 {
     color: var(--texto);
 
-    font-size: clamp(2.4rem, 5vw, 4.5rem);
+    font-size: 40px;
     line-height: 1.05;
 
     margin-bottom: 15px;
@@ -1215,7 +1217,7 @@ footer {
     }
 
     .titulo-principal h1 {
-        font-size: 2.3rem;
+        font-size: 40px;
     }
 
     .titulo-principal p {
