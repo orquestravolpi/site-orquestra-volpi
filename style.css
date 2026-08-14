@@ -183,7 +183,7 @@ img {
 .titulo-principal p {
     color: var(--salmao);
 
-    font-size: 1.15rem;
+    font-size: 20px;
     font-weight: 700;
 }
 
@@ -1221,7 +1221,7 @@ footer {
     }
 
     .titulo-principal p {
-        font-size: 1rem;
+        font-size: 20px;
     }
 
     .apresentacao-grid {
