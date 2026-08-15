@@ -1,1378 +1,1896 @@
-body {
-    background: var(--cor-bg);
-    color: var(--cor-texto);
-}
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap");
 
-section {
-    background: var(--cor-bg);
-}
-
-.secao-alternada {
-    background: var(--cor-bg-suave);
-}
-
-h1, h2, h3 {
-    color: var(--cor-texto);
-}
-
-.kicker,
-.eyebrow,
-.subtitulo-secao {
-    color: var(--cor-magenta);
-}
-
-.botao-principal {
-    background: var(--cor-salmao);
-    color: var(--cor-branco);
-    border: none;
-}
-
-.botao-principal:hover {
-    background: var(--cor-magenta);
-}
-
-.botao-secundario {
-    background: transparent;
-    color: var(--cor-magenta);
-    border: 1px solid var(--cor-magenta);
-}
-
-.topo {
-    background: rgba(255, 255, 255, 0.92);
-    border-bottom: 1px solid var(--cor-borda);
-}
-
-.topo a {
-    color: var(--cor-texto);
-}
-
-.topo a:hover,
-.topo a.ativo {
-    color: var(--cor-magenta);
-}
-
-.hero-faixa,
-.cta,
-.rodape-destaque {
-    background: var(--gradiente-volpi);
-    color: var(--cor-branco);
-}
-
-.card,
-.info-item,
-.musico-card,
-.download-card {
-    background: var(--cor-branco);
-    border: 1px solid var(--cor-borda);
-    box-shadow: 0 10px 30px var(--cor-sombra);
-}
-
-.card h3,
-.info-item strong,
-.musico-card h3 {
-    color: var(--cor-texto);
-}
-
-.linha-destaque,
-.divisor,
-.titulo-secao::after {
-    background: var(--cor-salmao);
-}
 
 /* =========================================================
-   PALETA OFICIAL — ORQUESTRA VOLPI
-   Salmão + Magenta + Laranja + Lilás
-   ========================================================= */
+   PALETA
+========================================================= */
+
 
 :root {
-
-    /* CORES PRINCIPAIS */
-    --laranja: #ff7510;
-    --salmao: #f58c7c;
-    --salmao-claro: #f7b0a4;
-
-    /* TOM DE TRANSIÇÃO / COR PRINCIPAL DA IDENTIDADE */
-    --volpi: #d85c82;
-
-    --magenta: #b83280;
-    --magenta-escuro: #92245f;
-
-    --lilas: #cb6ce6;
-
-    /* NEUTROS */
     --branco: #ffffff;
-    --off-white: #fff9f5;
-    --texto: #39272f;
-    --texto-claro: #fff7f5;
+    --off-white: #fffaf8;
+    --creme: #fff4ef;
 
-    /* GRADIENTES */
-    --gradiente-volpi:
-        linear-gradient(
-            135deg,
-            #f58c7c 0%,
-            #e9737e 25%,
-            #d85c82 50%,
-            #c74681 72%,
-            #b83280 100%
-        );
-
-    --gradiente-volpi-suave:
-        linear-gradient(
-            135deg,
-            #f7a092 0%,
-            #e9828d 45%,
-            #d85c82 70%,
-            #c74681 100%
-        );
-
-    --gradiente-quente:
-        linear-gradient(
-            135deg,
-            #ff7510 0%,
-            #f58c7c 42%,
-            #d85c82 72%,
-            #b83280 100%
-        );
-}
-
-
-/* =========================================================
-   FUNDO GERAL
-   ========================================================= */
-
-body {
-    background: var(--off-white);
-    color: var(--texto);
-}
-
-
-/* =========================================================
-   CABEÇALHO
-   ========================================================= */
-
-header,
-.header,
-.site-header {
-    background: var(--gradiente-volpi);
-    color: var(--branco);
-}
-
-
-/* LINKS DO MENU */
-
-header a,
-.header a,
-.site-header a,
-nav a {
-    color: var(--branco);
-}
-
-nav a:hover {
-    color: #ffe3da;
-}
-
-
-/* =========================================================
-   PRIMEIRA SEÇÃO / HERO
-   Mantém fundo branco conforme o design que estávamos usando
-   ========================================================= */
-
-.hero,
-.inicio,
-.hero-section {
-    background: var(--branco);
-    color: var(--texto);
-}
-
-
-/* TÍTULO PRINCIPAL */
-
-.hero h1,
-.inicio h1,
-.hero-section h1 {
-    color: var(--magenta);
-}
-
-
-/* SUBTÍTULO */
-
-.hero h2,
-.hero p,
-.inicio h2,
-.hero-section h2 {
-    color: var(--texto);
-}
-
-
-/* =========================================================
-   TÍTULOS DAS SEÇÕES
-   ========================================================= */
-
-h2,
-.section-title,
-.titulo-secao {
-    color: var(--magenta);
-}
-
-h3 {
-    color: var(--volpi);
-}
-
-
-/* =========================================================
-   DESTAQUES
-   ========================================================= */
-
-strong,
-.destaque {
-    color: var(--magenta);
-}
-
-
-/* =========================================================
-   SEÇÕES COLORIDAS
-   ========================================================= */
-
-/* SALMÃO */
-
-.secao-salmao,
-.bg-salmao {
-    background: var(--salmao);
-    color: var(--texto);
-}
-
-
-/* GRADIENTE PRINCIPAL VOLPI */
-
-.secao-volpi,
-.bg-volpi,
-.gradient-section {
-    background: var(--gradiente-volpi);
-    color: var(--branco);
-}
-
-.secao-volpi h2,
-.secao-volpi h3,
-.bg-volpi h2,
-.bg-volpi h3,
-.gradient-section h2,
-.gradient-section h3 {
-    color: var(--branco);
-}
-
-
-/* FUNDO LARANJA */
-
-.secao-laranja,
-.bg-laranja {
-    background: var(--laranja);
-    color: var(--branco);
-}
-
-
-/* FUNDO BRANCO */
-
-.secao-branca,
-.bg-white {
-    background: var(--branco);
-    color: var(--texto);
-}
-
-
-/* =========================================================
-   MAESTRO
-   ========================================================= */
-
-.maestro,
-#maestro,
-.maestro-section {
-    background: var(--gradiente-volpi-suave);
-    color: var(--branco);
-}
-
-.maestro h2,
-.maestro h3,
-#maestro h2,
-#maestro h3,
-.maestro-section h2,
-.maestro-section h3 {
-    color: var(--branco);
-}
-
-
-/* =========================================================
-   MÚSICOS
-   ========================================================= */
-
-.musicos,
-#musicos,
-.musicos-section {
-    background: var(--off-white);
-}
-
-.musico-card,
-.card-musico {
-    background: var(--branco);
-    border: 1px solid rgba(184, 50, 128, 0.16);
-    box-shadow: 0 8px 28px rgba(146, 36, 95, 0.10);
-}
-
-.musico-card h3,
-.card-musico h3 {
-    color: var(--magenta);
-}
-
-
-/* =========================================================
-   BOTÕES
-   ========================================================= */
-
-.btn,
-button,
-.botao,
-.cta {
-    background: var(--magenta);
-    color: var(--branco);
-    border: none;
-
-    transition:
-        background 0.25s ease,
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-}
-
-.btn:hover,
-button:hover,
-.botao:hover,
-.cta:hover {
-    background: var(--laranja);
-    color: var(--branco);
-
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 8px 22px rgba(255, 117, 16, 0.25);
-}
-
-
-/* BOTÃO ALTERNATIVO */
-
-.btn-secundario {
-    background: transparent;
-    color: var(--magenta);
-
-    border: 2px solid var(--magenta);
-}
-
-.btn-secundario:hover {
-    background: var(--magenta);
-    color: var(--branco);
-}
-
-
-/* =========================================================
-   SHOWS TEMÁTICOS
-   ========================================================= */
-
-.shows-tematicos,
-.tematicos,
-#shows {
-    background: var(--gradiente-volpi);
-    color: var(--branco);
-}
-
-.titulo-tematico h2 {
-    color: var(--branco);
-
-    border-bottom:
-        1px solid rgba(255, 255, 255, 0.55);
-}
-
-
-/* CARDS DOS SHOWS */
-
-.show-card,
-.tematico-card {
-    background: rgba(255, 255, 255, 0.96);
-    color: var(--texto);
-
-    border:
-        1px solid rgba(255, 255, 255, 0.6);
-
-    box-shadow:
-        0 12px 35px rgba(85, 24, 55, 0.15);
-}
-
-.show-card h3,
-.tematico-card h3 {
-    color: var(--magenta);
-}
-
-
-/* =========================================================
-   ÍCONES DOS SHOWS
-   Apenas cor — NÃO altera tamanho
-   ========================================================= */
-
-.show-icon,
-.tematico-icon,
-.icone-show {
-    color: var(--laranja);
-}
-
-
-/* =========================================================
-   GALERIA
-   ========================================================= */
-
-.galeria,
-#galeria,
-.gallery-section {
-    background: var(--branco);
-}
-
-.galeria h2,
-#galeria h2,
-.gallery-section h2 {
-    color: var(--magenta);
-}
-
-
-/* =========================================================
-   VÍDEOS / REGISTROS
-   ========================================================= */
-
-.registros,
-#registros,
-.videos-section {
-    background: var(--off-white);
-}
-
-.registros h2,
-#registros h2,
-.videos-section h2 {
-    color: var(--magenta);
-}
-
-
-/* =========================================================
-   REDES SOCIAIS / CONTATO
-   ========================================================= */
-
-.contato,
-#contato,
-.redes,
-#redes {
-    background: var(--gradiente-quente);
-    color: var(--branco);
-}
-
-.contato h2,
-#contato h2,
-.redes h2,
-#redes h2 {
-    color: var(--branco);
-}
-
-
-/* =========================================================
-   LINKS
-   ========================================================= */
-
-a {
-    color: var(--magenta);
-}
-
-a:hover {
-    color: var(--laranja);
-}
-
-
-/* =========================================================
-   LINHAS E DETALHES DECORATIVOS
-   ========================================================= */
-
-.divisor,
-.section-divider,
-hr {
-    border: 0;
-    height: 2px;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            var(--salmao),
-            var(--magenta),
-            transparent
-        );
-}
-
-
-/* =========================================================
-   TAGS / ETIQUETAS
-   ========================================================= */
-
-.tag,
-.badge {
-    background: rgba(216, 92, 130, 0.12);
-    color: var(--magenta);
-
-    border:
-        1px solid rgba(184, 50, 128, 0.20);
-}
-
-
-/* =========================================================
-   CARDS GERAIS
-   ========================================================= */
-
-.card {
-    background: var(--branco);
-
-    border:
-        1px solid rgba(216, 92, 130, 0.15);
-
-    box-shadow:
-        0 10px 30px rgba(90, 35, 60, 0.08);
-}
-
-
-/* =========================================================
-   RODAPÉ
-   ========================================================= */
-
-footer,
-.footer,
-.site-footer {
-    background: var(--magenta-escuro);
-    color: var(--branco);
-}
-
-footer a,
-.footer a,
-.site-footer a {
-    color: var(--salmao-claro);
-}
-
-footer a:hover,
-.footer a:hover,
-.site-footer a:hover {
-    color: var(--laranja);
-}
-
-
-/* =========================================================
-   SELEÇÃO DE TEXTO
-   ========================================================= */
-
-::selection {
-    background: var(--salmao);
-    color: var(--texto);
-}
-
-/* =========================================================
-   PALETA OFICIAL — ORQUESTRA VOLPI
-   Cores oficiais:
-   #FF7510
-   #CB6CE6
-   ========================================================= */
-
-:root {
-    /* CORES OFICIAIS */
-    --volpi-laranja: #ff7510;
-    --volpi-magenta: #cb6ce6;
-
-    /* CORES DE TRANSIÇÃO
-       derivadas das duas cores oficiais */
-    --volpi-coral: #f27346;
-    --volpi-salmao: #e5707b;
-    --volpi-rosa: #d86eb0;
-
-    /* NEUTROS */
-    --volpi-branco: #ffffff;
-    --volpi-creme: #fff9f5;
-    --volpi-texto: #34252f;
-
-    /* GRADIENTE OFICIAL */
-    --gradiente-volpi:
-        linear-gradient(
-            135deg,
-            #ff7510 0%,
-            #f27346 25%,
-            #e5707b 50%,
-            #d86eb0 75%,
-            #cb6ce6 100%
-        );
-
-    /* versão mais salmão */
-    --gradiente-salmao:
-        linear-gradient(
-            135deg,
-            #ff7510 0%,
-            #f27346 32%,
-            #e5707b 68%,
-            #d86eb0 100%
-        );
-
-    /* versão mais magenta */
-    --gradiente-magenta:
-        linear-gradient(
-            135deg,
-            #e5707b 0%,
-            #d86eb0 48%,
-            #cb6ce6 100%
-        );
-}
-
-
-/* =========================================================
-   CABEÇALHO
-   ========================================================= */
-
-header,
-.header,
-.site-header {
-    background: var(--gradiente-volpi) !important;
-    color: #ffffff !important;
-}
-
-
-/* MENU */
-
-header nav a,
-.header nav a,
-.site-header nav a {
-    color: #ffffff !important;
-}
-
-header nav a:hover,
-.header nav a:hover,
-.site-header nav a:hover {
-    background: rgba(255, 255, 255, 0.15);
-    color: #ffffff !important;
-}
-
-
-/* BOTÕES INSTAGRAM E YOUTUBE */
-
-header .btn,
-header .social-link,
-header .social-button,
-.header .btn,
-.site-header .btn {
-    background: rgba(255, 255, 255, 0.08) !important;
-    border: 1px solid rgba(255, 255, 255, 0.65) !important;
-    color: #ffffff !important;
-}
-
-header .btn:hover,
-header .social-link:hover,
-header .social-button:hover {
-    background: #ffffff !important;
-    color: #cb6ce6 !important;
-}
-
-
-/* =========================================================
-   PRIMEIRA SEÇÃO
-   ========================================================= */
-
-.hero,
-.inicio,
-.hero-section {
-    background: #ffffff !important;
-    color: var(--volpi-texto) !important;
-}
-
-
-/* título principal */
-
-.hero h1,
-.inicio h1,
-.hero-section h1 {
-    color: #cb6ce6 !important;
-}
-
-
-/* pequenos destaques */
-
-.hero strong,
-.inicio strong {
-    color: #ff7510 !important;
-}
-
-
-/* =========================================================
-   TÍTULOS
-   ========================================================= */
-
-section h2,
-.section-title,
-.titulo-secao {
-    color: #cb6ce6;
-}
-
-section h3 {
-    color: #e5707b;
-}
-
-
-/* =========================================================
-   MAESTRO
-   ========================================================= */
-
-#maestro,
-.maestro,
-.maestro-section {
-    background: var(--gradiente-salmao) !important;
-    color: #ffffff !important;
-}
-
-#maestro h2,
-#maestro h3,
-.maestro h2,
-.maestro h3,
-.maestro-section h2,
-.maestro-section h3 {
-    color: #ffffff !important;
-}
-
-
-/* =========================================================
-   MÚSICOS
-   ========================================================= */
-
-#musicos,
-.musicos,
-.musicos-section {
-    background: #fff9f5 !important;
-}
-
-.musico-card,
-.card-musico {
-    background: #ffffff;
-    border: 1px solid rgba(203, 108, 230, 0.22);
-    box-shadow: 0 10px 28px rgba(203, 108, 230, 0.10);
-}
-
-.musico-card h3,
-.card-musico h3 {
-    color: #cb6ce6;
-}
-
-
-/* =========================================================
-   SHOWS TEMÁTICOS
-   ========================================================= */
-
-#shows,
-.shows-tematicos,
-.tematicos {
-    background: var(--gradiente-magenta) !important;
-    color: #ffffff !important;
-}
-
-#shows h2,
-.shows-tematicos h2,
-.tematicos h2 {
-    color: #ffffff !important;
-}
-
-
-/* cards dos shows */
-
-.show-card,
-.tematico-card {
-    background: #ffffff !important;
-    color: var(--volpi-texto) !important;
-    border: 1px solid rgba(203, 108, 230, 0.18);
-}
-
-.show-card h3,
-.tematico-card h3 {
-    color: #cb6ce6 !important;
-}
-
-
-/* =========================================================
-   GALERIA
-   ========================================================= */
-
-#galeria,
-.galeria,
-.gallery-section {
-    background: #ffffff !important;
-}
-
-#galeria h2,
-.galeria h2,
-.gallery-section h2 {
-    color: #cb6ce6 !important;
-}
-
-
-/* =========================================================
-   AGENDA
-   ========================================================= */
-
-#agenda,
-.agenda,
-.agenda-section {
-    background: #fff9f5 !important;
-}
-
-#agenda h2,
-.agenda h2 {
-    color: #ff7510 !important;
-}
-
-
-/* =========================================================
-   IMPRENSA
-   ========================================================= */
-
-#imprensa,
-.imprensa,
-.imprensa-section {
-    background: var(--gradiente-salmao) !important;
-    color: #ffffff !important;
-}
-
-#imprensa h2,
-.imprensa h2 {
-    color: #ffffff !important;
-}
-
-
-/* =========================================================
-   CONTATO
-   ========================================================= */
-
-#contato,
-.contato,
-.contato-section {
-    background: var(--gradiente-volpi) !important;
-    color: #ffffff !important;
-}
-
-#contato h2,
-.contato h2 {
-    color: #ffffff !important;
-}
-
-
-/* =========================================================
-   BOTÕES DO SITE
-   ========================================================= */
-
-.btn,
-.botao,
-.cta,
-button {
-    background: #ff7510;
-    color: #ffffff;
-    border: none;
-}
-
-.btn:hover,
-.botao:hover,
-.cta:hover,
-button:hover {
-    background: #cb6ce6;
-    color: #ffffff;
-}
-
-
-/* =========================================================
-   LINKS
-   ========================================================= */
-
-main a,
-section a {
-    color: #cb6ce6;
-}
-
-main a:hover,
-section a:hover {
-    color: #ff7510;
-}
-
-
-/* =========================================================
-   DETALHES DECORATIVOS
-   ========================================================= */
-
-hr,
-.divisor,
-.section-divider {
-    border: 0;
-    height: 2px;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent 0%,
-            #ff7510 25%,
-            #e5707b 50%,
-            #cb6ce6 75%,
-            transparent 100%
-        );
-}
-
-
-/* =========================================================
-   RODAPÉ
-   ========================================================= */
-
-footer,
-.footer,
-.site-footer {
-    background:
-        linear-gradient(
-            135deg,
-            #e5707b 0%,
-            #d86eb0 50%,
-            #cb6ce6 100%
-        ) !important;
-
-    color: #ffffff !important;
-}
-
-footer a,
-.footer a {
-    color: #ffffff !important;
-}
-
-
-/* seleção de texto */
-
-::selection {
-    background: #ff7510;
-    color: #ffffff;
-}
-
-/* =========================================================
-   ORQUESTRA VOLPI
-   PALETA OFICIAL DEFINITIVA
-
-   SALMÃO:  #FF7510
-   MAGENTA: #CB6CE6
-   ========================================================= */
-
-:root {
-
-    /* CORES OFICIAIS */
+    /* CORES OFICIAIS DO GRUPO */
     --salmao: #ff7510;
     --laranja: #ff7510;
-
     --magenta: #cb6ce6;
     --magenta-vivo: #cb6ce6;
 
-    /* impede as versões antigas de aparecerem */
+    /* VERSÕES CLARAS PARA FUNDOS */
+    --salmao-claro: #ffe2cc;
+    --salmao-muito-claro: #fff6ef;
+
+    /* Mantemos os destaques nas próprias cores oficiais */
     --salmao-escuro: #ff7510;
     --magenta-escuro: #cb6ce6;
 
-    /* neutros */
-    --branco: #ffffff;
-    --off-white: #fffaf8;
-    --creme: #fff6f1;
-    --salmao-claro: #fff1e8;
-    --salmao-muito-claro: #fff8f4;
+    /* TONALIDADES DE TRANSIÇÃO DO GRADIENTE */
+    --volpi-coral: #f5733b;
+    --volpi-salmao: #ed725b;
+    --volpi-rosa: #e5707b;
+    --volpi-rosa-magenta: #dd6f9b;
+    --volpi-magenta-suave: #d56ebb;
 
-    --texto: #302b2d;
-    --texto-suave: #665e61;
+    --gradiente-volpi: linear-gradient(
+        120deg,
+        #ff7510 0%,
+        #f5733b 20%,
+        #ed725b 35%,
+        #e5707b 50%,
+        #dd6f9b 65%,
+        #d56ebb 80%,
+        #cb6ce6 100%
+    );
 
-    --borda: rgba(203, 108, 230, 0.18);
+    --gradiente-volpi-invertido: linear-gradient(
+        120deg,
+        #cb6ce6 0%,
+        #d56ebb 20%,
+        #dd6f9b 35%,
+        #e5707b 50%,
+        #ed725b 65%,
+        #f5733b 80%,
+        #ff7510 100%
+    );
 
-    /*
-       GRADIENTE OFICIAL
-       Somente as DUAS cores oficiais.
-       O navegador cria naturalmente
-       os tons salmão/rosa entre elas.
-    */
+    --texto: #2f292c;
+    --texto-suave: #6a6165;
 
-    --gradiente-volpi:
-        linear-gradient(
-            125deg,
-            #ff7510 0%,
-            #ff7510 22%,
-            #cb6ce6 100%
-        );
+    --borda: rgba(203, 108, 230, 0.16);
 
-    --gradiente-volpi-invertido:
-        linear-gradient(
-            125deg,
-            #cb6ce6 0%,
-            #cb6ce6 22%,
-            #ff7510 100%
-        );
+    --sombra:
+        0 16px 42px rgba(84, 47, 66, 0.11);
+
+    --sombra-leve:
+        0 8px 24px rgba(84, 47, 66, 0.07);
+}
+
+
+
+/* =========================================================
+   RESET / GERAL
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--branco);
+    color: var(--texto);
+
+    font-family:
+        "Source Sans 3",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 18px;
+    line-height: 1.7;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+body,
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+.kicker,
+.destaque,
+.menu-principal,
+.redes-topo,
+.botao-orcamento,
+.download-card,
+.agenda-vazia {
+    font-family:
+        "Manrope",
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+section {
+    scroll-margin-top: 105px;
+}
+
+.container {
+    width: min(1180px, 92%);
+    margin: 0 auto;
 }
 
 
 /* =========================================================
    CABEÇALHO
-   ========================================================= */
+========================================================= */
 
 .topo {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+
     background:
         radial-gradient(
-            circle at 86% 15%,
-            rgba(203, 108, 230, 0.62) 0%,
-            rgba(203, 108, 230, 0) 35%
+            circle at 88% 12%,
+            rgba(203, 108, 230, 0.40),
+            transparent 34%
         ),
-        linear-gradient(
-            120deg,
-            #ff7510 0%,
-            #ff7510 28%,
-            #cb6ce6 100%
-        ) !important;
+        var(--gradiente-volpi);
 
     border-bottom:
-        1px solid rgba(255,255,255,0.28) !important;
+        1px solid
+        rgba(255, 255, 255, 0.24);
+
+    box-shadow:
+        0 5px 20px
+        rgba(84, 29, 50, 0.10);
+
+    backdrop-filter: blur(12px);
+}
+
+.topo-conteudo {
+    width: min(1260px, 94%);
+    min-height: 100px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 26px;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    text-decoration: none;
+
+    flex-shrink: 0;
+}
+
+.logo {
+    width: 105px;
+    height: 86px;
+
+    object-fit: contain;
+}
+
+.titulo-logo {
+    width: 255px;
+    height: auto;
+
+    object-fit: contain;
 }
 
 
-/* MENU */
+/* =========================================================
+   MENU
+========================================================= */
+
+.menu-principal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    flex: 1;
+
+    font-size: 0.78rem;
+    font-weight: 700;
+}
 
 .menu-principal a {
-    color: #ffffff !important;
-}
+    position: relative;
 
-.menu-principal a:hover {
-    color: #ffffff !important;
+    padding: 10px 0;
+
+    color: var(--branco);
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition:
+        color 0.2s ease;
 }
 
 .menu-principal a::after {
-    background: #ffffff !important;
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 4px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--branco);
+
+    transform: translateX(-50%);
+
+    transition:
+        width 0.2s ease;
+}
+
+.menu-principal a:hover {
+    color: var(--magenta);
+}
+
+.menu-principal a:hover::after {
+    width: 100%;
 }
 
 
-/* INSTAGRAM / YOUTUBE */
+/* =========================================================
+   REDES NO TOPO
+========================================================= */
+
+.redes-topo {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    flex-shrink: 0;
+}
 
 .redes-topo a {
-    color: #ffffff !important;
+    padding:
+        8px
+        12px;
 
-    border-color:
-        rgba(255,255,255,0.75) !important;
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.72);
+
+    border-radius: 999px;
+
+    color: var(--branco);
+
+    text-decoration: none;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
 }
 
 .redes-topo a:hover {
-    background: #ffffff !important;
-    color: #cb6ce6 !important;
+    background: var(--branco);
+    color: var(--magenta-escuro);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   PADRÃO DE TÍTULOS
+========================================================= */
+
+.kicker {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    color: var(--salmao-escuro);
+
+    font-size: 1rem;
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.kicker-claro {
+    color: rgba(255, 255, 255, 0.90);
+}
+
+.titulo-secao {
+    max-width: 800px;
+
+    margin:
+        0 auto
+        48px;
+
+    text-align: center;
+}
+
+.titulo-secao h2 {
+    margin-bottom: 14px;
+
+    color: var(--magenta-escuro);
+
+    font-size:
+        clamp(
+            2.5rem,
+            5vw,
+            4rem
+        );
+
+    line-height: 1.05;
+    letter-spacing: -0.045em;
+}
+
+.titulo-secao p {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    color: var(--texto-suave);
+
+    font-size: 1.12rem;
+}
+
+.titulo-secao-claro h2,
+.titulo-secao-claro p {
+    color: var(--branco);
 }
 
 
 /* =========================================================
    APRESENTAÇÃO
-   ========================================================= */
+========================================================= */
 
 .apresentacao {
+    position: relative;
+
+    padding:
+        72px 0
+        100px;
+
     background:
         radial-gradient(
-            circle at 92% 8%,
-            rgba(203,108,230,0.09),
-            transparent 28%
+            circle at 94% 8%,
+            rgba(244, 108, 103, 0.09),
+            transparent 24%
         ),
-        #ffffff !important;
+        var(--branco);
 }
 
+.titulo-principal {
+    max-width: 920px;
 
-/* ORQUESTRA VOLPI */
+    margin:
+        0 auto
+        58px;
+
+    text-align: center;
+}
 
 .titulo-principal .destaque {
-    color: #cb6ce6 !important;
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--magenta-escuro);
+
+    font-size:
+        clamp(
+            3rem,
+            6vw,
+            5.2rem
+        );
+
+    font-weight: 800;
+
+    line-height: 1;
+    letter-spacing: -0.055em;
 }
-
-
-/* SOM AUTÊNTICO */
 
 .titulo-principal h1 {
-    color: var(--texto) !important;
+    margin-bottom: 12px;
+
+    color: var(--texto);
+
+    font-size:
+        clamp(
+            1.45rem,
+            2.7vw,
+            2.15rem
+        );
+
+    font-weight: 650;
+
+    line-height: 1.25;
 }
 
-
-/* VIOLA CAIPIRA · MÚSICA RAIZ... */
-
 .titulo-principal p {
-    color: #ff7510 !important;
+    color: var(--salmao-escuro);
+
+    font-size:
+        clamp(
+            1.1rem,
+            2vw,
+            1.4rem
+        );
+
+    font-weight: 700;
+
+    letter-spacing: 0.015em;
 }
 
 
 /* =========================================================
-   TÍTULOS
-   ========================================================= */
+   FOTO + HISTÓRIA
+========================================================= */
 
+.apresentacao-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.35fr)
+        minmax(340px, 0.65fr);
+
+    align-items: center;
+
+    gap: 42px;
+}
+
+.foto-orquestra {
+    overflow: hidden;
+
+    background: var(--off-white);
+
+    border-radius: 24px;
+
+    box-shadow: var(--sombra);
+}
+
+.foto-orquestra img {
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+}
+
+.card-historia {
+    padding:
+        42px
+        38px;
+
+    background: var(--branco);
+
+    border:
+        1px solid
+        var(--borda);
+
+    border-radius: 22px;
+
+    box-shadow: var(--sombra-leve);
+}
+
+.card-historia h2 {
+    margin-bottom: 20px;
+
+    color: var(--magenta-escuro);
+
+    font-size:
+        clamp(
+            1.9rem,
+            3vw,
+            2.6rem
+        );
+
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+}
+
+.card-historia p {
+    color: var(--texto-suave);
+
+    font-size: 1.06rem;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   TRÊS INFORMAÇÕES
+========================================================= */
+
+.informacoes {
+    width: min(940px, 100%);
+
+    margin:
+        44px auto
+        0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.info-item {
+    min-width: 0;
+
+    padding:
+        28px
+        20px;
+
+    background: var(--branco);
+
+    border:
+        1px solid
+        var(--borda);
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    box-shadow: var(--sombra-leve);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.info-item:hover {
+    transform: translateY(-4px);
+
+    box-shadow: var(--sombra);
+}
+
+.info-icone {
+    width: 60px;
+    height: 60px;
+
+    margin:
+        0 auto
+        15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-icone img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+.info-item strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--magenta-escuro);
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 0.95rem;
+    font-weight: 800;
+
+    text-transform: uppercase;
+}
+
+.info-item p {
+    color: var(--texto-suave);
+
+    font-size: 0.96rem;
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   MAESTRO
+========================================================= */
+
+.maestro {
+    padding:
+        100px 0;
+
+    background: var(--salmao-muito-claro);
+}
+
+.maestro-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.15fr)
+        minmax(320px, 0.85fr);
+
+    align-items: center;
+
+    gap: 68px;
+}
+
+.card-maestro {
+    max-width: 700px;
+}
+
+.card-maestro .kicker {
+    font-size: 1.18rem;
+}
+
+.card-maestro h2 {
+    margin-bottom: 27px;
+
+    color: var(--magenta-escuro);
+
+    font-size:
+        clamp(
+            3rem,
+            5vw,
+            4.8rem
+        );
+
+    line-height: 1;
+    letter-spacing: -0.05em;
+}
+
+.card-maestro p {
+    color: #51484d;
+
+    font-size: 1.08rem;
+    line-height: 1.82;
+}
+
+.foto-maestro {
+    width:
+        min(
+            440px,
+            100%
+        );
+
+    justify-self: center;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    border:
+        7px solid
+        var(--branco);
+
+    box-shadow: var(--sombra);
+}
+
+.foto-maestro img {
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   MÚSICOS
+========================================================= */
+
+.musicos {
+    padding:
+        100px 0;
+
+    background: var(--branco);
+}
+
+.grade-musicos {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 24px;
+}
+
+.musico-card {
+    overflow: hidden;
+
+    background: var(--branco);
+
+    border:
+        1px solid
+        var(--borda);
+
+    border-radius: 18px;
+
+    box-shadow: var(--sombra-leve);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.musico-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: var(--sombra);
+}
+
+.musico-card img {
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.musico-card h3 {
+    padding:
+        17px
+        12px
+        19px;
+
+    color: var(--magenta-escuro);
+
+    text-align: center;
+
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   TRAJETÓRIA
+========================================================= */
+
+.trajetoria {
+    padding:
+        100px 0;
+
+    background:
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(255, 255, 255, 0.13),
+            transparent 28%
+        ),
+        var(--gradiente-volpi-invertido);
+}
+
+.trajetoria .titulo-secao {
+    margin-bottom: 50px;
+}
+
+.trajetoria-conteudo {
+    display: grid;
+
+    grid-template-columns:
+        minmax(280px, 0.75fr)
+        minmax(0, 1.25fr);
+
+    align-items: center;
+
+    gap: 45px;
+}
+
+.trajetoria-texto {
+    padding:
+        36px
+        34px;
+
+    background: var(--branco);
+
+    border-radius: 20px;
+
+    box-shadow: var(--sombra);
+}
+
+.trajetoria-texto p {
+    margin-bottom: 18px;
+
+    color: var(--texto);
+
+    font-size: 1.06rem;
+    line-height: 1.75;
+}
+
+.trajetoria-texto p:last-child {
+    margin-bottom: 0;
+}
+
+.trajetoria-video {
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+
+    background: #000;
+
+    border:
+        5px solid
+        rgba(255, 255, 255, 0.96);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 18px 42px
+        rgba(50, 20, 33, 0.25);
+}
+
+.trajetoria-video iframe {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+}
+
+
+/* =========================================================
+   SHOWS
+========================================================= */
+
+.shows {
+    padding-top:
+        100px;
+
+    background: var(--branco);
+}
+
+.titulo-shows {
+    margin-bottom: 50px;
+}
+
+.show-faixa {
+    padding:
+        70px 0;
+}
+
+.show-pare {
+    background: var(--gradiente-volpi);
+}
+
+.show-bailao {
+    background:
+        linear-gradient(
+            180deg,
+            var(--branco),
+            var(--salmao-muito-claro)
+        );
+}
+
+.show-natal {
+    background: var(--gradiente-volpi-invertido);
+}
+
+.show-card {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    align-items: stretch;
+
+    gap: 38px;
+}
+
+.show-card-invertido .show-foto {
+    order: 2;
+}
+
+.show-card-invertido .show-texto {
+    order: 1;
+}
+
+
+/* =========================================================
+   FOTOS DOS SHOWS
+   MESMA PROPORÇÃO NOS TRÊS
+========================================================= */
+
+.show-foto {
+    overflow: hidden;
+
+    background: var(--branco);
+
+    border:
+        5px solid
+        var(--branco);
+
+    border-radius: 22px;
+
+    box-shadow: var(--sombra);
+}
+
+.show-foto img {
+    width: 100%;
+    height: 100%;
+
+    min-height: 430px;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* =========================================================
+   TEXTO DOS SHOWS
+========================================================= */
+
+.show-texto {
+    position: relative;
+
+    padding:
+        52px
+        43px
+        42px;
+
+    background: var(--branco);
+
+    border-radius: 22px;
+
+    box-shadow: var(--sombra);
+}
+
+.show-texto h3 {
+    margin-bottom: 20px;
+
+    color: var(--magenta-escuro);
+
+    font-size:
+        clamp(
+            2rem,
+            3.5vw,
+            3rem
+        );
+
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+}
+
+.show-texto h3 strong {
+    color: var(--salmao-escuro);
+}
+
+.show-texto p {
+    margin-bottom: 16px;
+
+    color: var(--texto-suave);
+
+    font-size: 1.05rem;
+    line-height: 1.72;
+}
+
+.show-texto p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   ÍCONES DOS SHOWS
+========================================================= */
+
+.show-icone {
+    position: absolute;
+
+    top: -34px;
+    right: 28px;
+
+    height: 88px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    pointer-events: none;
+}
+
+.show-icone img {
+    width: auto !important;
+    height: 88px !important;
+
+    max-width: 170px !important;
+
+    object-fit: contain !important;
+
+    filter:
+        drop-shadow(
+            0 7px 8px
+            rgba(0, 0, 0, 0.14)
+        );
+}
+
+.show-icone-chapeu img {
+    height: 82px !important;
+    max-width: 180px !important;
+}
+
+.show-icone-reis img {
+    height: 98px !important;
+    max-width: 210px !important;
+}
+
+
+/* =========================================================
+   AGENDA
+========================================================= */
+
+.agenda {
+    padding:
+        100px 0;
+
+    background: var(--branco);
+}
+
+.agenda-vazia {
+    width: min(820px, 100%);
+
+    margin: 0 auto;
+
+    padding:
+        35px
+        40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    background: var(--salmao-muito-claro);
+
+    border:
+        1px solid
+        rgba(217, 85, 80, 0.18);
+
+    border-radius: 18px;
+}
+
+.agenda-vazia span {
+    color: var(--texto);
+
+    font-size: 1.04rem;
+    font-weight: 650;
+}
+
+.agenda-vazia a {
+    flex-shrink: 0;
+
+    padding:
+        11px
+        18px;
+
+    background: var(--magenta);
+
+    color: var(--branco);
+
+    border-radius: 999px;
+
+    text-decoration: none;
+
+    font-size: 0.86rem;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   GALERIA
+========================================================= */
+
+.galeria {
+    padding:
+        100px 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--off-white),
+            var(--branco)
+        );
+}
+
+.galeria-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.galeria-item {
+    margin: 0;
+
+    aspect-ratio: 4 / 3;
+
+    overflow: hidden;
+
+    background: #eee9e7;
+
+    border-radius: 18px;
+
+    box-shadow: var(--sombra-leve);
+}
+
+.galeria-item img,
+.galeria-item video {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.galeria-video video {
+    background: #000;
+}
+
+
+/* =========================================================
+   IMPRENSA
+========================================================= */
+
+.imprensa {
+    padding:
+        100px 0;
+
+    background: var(--salmao-muito-claro);
+}
+
+.downloads {
+    width: min(820px, 100%);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+.download-card {
+    padding:
+        26px
+        25px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    background: var(--branco);
+
+    border:
+        1px solid
+        var(--borda);
+
+    border-radius: 18px;
+
+    color: var(--texto);
+
+    text-decoration: none;
+
+    box-shadow: var(--sombra-leve);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.download-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: var(--sombra);
+}
+
+.download-card > span {
+    width: 56px;
+    height: 56px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--magenta);
+
+    color: var(--branco);
+
+    border-radius: 14px;
+
+    font-size: 0.78rem;
+    font-weight: 800;
+}
+
+.download-card strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: var(--magenta-escuro);
+
+    font-size: 1.1rem;
+}
+
+.download-card small {
+    display: block;
+
+    color: var(--texto-suave);
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   CONTATO
+========================================================= */
+
+.contato {
+    padding:
+        100px 0;
+
+    text-align: center;
+
+    background: var(--gradiente-volpi);
+}
+
+.contato-conteudo {
+    max-width: 850px;
+}
+
+.contato h2 {
+    margin-bottom: 20px;
+
+    color: var(--branco);
+
+    font-size:
+        clamp(
+            2.7rem,
+            5vw,
+            4.5rem
+        );
+
+    line-height: 1.05;
+    letter-spacing: -0.045em;
+}
+
+.contato p {
+    max-width: 700px;
+
+    margin:
+        0 auto
+        32px;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.88
+        );
+
+    font-size: 1.12rem;
+}
+
+.botao-orcamento {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 54px;
+
+    padding:
+        0
+        28px;
+
+    background: var(--branco);
+
+    color: var(--magenta-escuro);
+
+    border-radius: 999px;
+
+    text-decoration: none;
+
+    font-size: 0.92rem;
+    font-weight: 800;
+
+    box-shadow:
+        0 12px 30px
+        rgba(50, 15, 31, 0.18);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.botao-orcamento:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 16px 36px
+        rgba(50, 15, 31, 0.25);
+}
+
+
+/* =========================================================
+   RODAPÉ
+========================================================= */
+
+.rodape {
+    padding:
+        38px 0;
+
+    background: #2a2025;
+    border-top: 5px solid var(--salmao);
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.78
+        );
+}
+
+.rodape-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.rodape-marca {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+}
+
+.rodape-logo {
+    width: 68px;
+    height: 68px;
+
+    object-fit: contain;
+}
+
+.rodape-marca strong {
+    display: block;
+
+    color: var(--branco);
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 0.95rem;
+}
+
+.rodape-marca p {
+    margin-top: 2px;
+
+    font-size: 0.88rem;
+}
+
+.rodape-links {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.rodape-links a {
+    color: var(--branco);
+
+    text-decoration: none;
+
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.rodape-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1120px) {
+
+    .menu-principal {
+        display: none;
+    }
+
+    .topo-conteudo {
+        min-height: 92px;
+    }
+
+    .marca {
+        flex: 1;
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .apresentacao-grid,
+    .maestro-grid,
+    .trajetoria-conteudo,
+    .show-card {
+        grid-template-columns: 1fr;
+    }
+
+    .apresentacao-grid {
+        gap: 30px;
+    }
+
+    .card-historia {
+        width: 100%;
+    }
+
+    .maestro-grid {
+        gap: 45px;
+    }
+
+    .foto-maestro {
+        width:
+            min(
+                420px,
+                90%
+            );
+    }
+
+    .grade-musicos {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .show-card {
+        gap: 28px;
+    }
+
+    .show-card-invertido .show-foto,
+    .show-card-invertido .show-texto {
+        order: initial;
+    }
+
+    .show-foto {
+        aspect-ratio: 16 / 10;
+    }
+
+    .show-foto img {
+        min-height: 0;
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+    .galeria-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 700px) {
+
+    body {
+        font-size: 17px;
+    }
+
+    section {
+        scroll-margin-top: 85px;
+    }
+
+    .container {
+        width: min(92%, 600px);
+    }
+
+
+    /* topo */
+
+    .topo-conteudo {
+        width: 94%;
+
+        min-height: 82px;
+
+        gap: 8px;
+    }
+
+    .logo {
+        width: 77px;
+        height: 70px;
+    }
+
+    .titulo-logo {
+        width: 205px;
+        max-width: 52vw;
+    }
+
+    .redes-topo {
+        display: none;
+    }
+
+
+    /* apresentação */
+
+    .apresentacao {
+        padding:
+            58px 0
+            76px;
+    }
+
+    .titulo-principal {
+        margin-bottom: 38px;
+    }
+
+    .titulo-principal .destaque {
+        font-size:
+            clamp(
+                2.7rem,
+                13vw,
+                4rem
+            );
+    }
+
+    .titulo-principal h1 {
+        font-size: 1.35rem;
+    }
+
+    .titulo-principal p {
+        font-size: 1.08rem;
+    }
+
+    .card-historia {
+        padding:
+            30px
+            25px;
+    }
+
+
+    /* informações */
+
+    .informacoes {
+        grid-template-columns: 1fr;
+
+        gap: 13px;
+    }
+
+    .info-item {
+        padding:
+            23px
+            18px;
+    }
+
+
+    /* seções */
+
+    .maestro,
+    .musicos,
+    .trajetoria,
+    .agenda,
+    .galeria,
+    .imprensa,
+    .contato {
+        padding:
+            76px 0;
+    }
+
+    .titulo-secao {
+        margin-bottom: 36px;
+    }
+
+    .titulo-secao h2 {
+        font-size:
+            clamp(
+                2.25rem,
+                11vw,
+                3.2rem
+            );
+    }
+
+
+    /* maestro */
+
+    .card-maestro h2 {
+        font-size:
+            clamp(
+                2.8rem,
+                13vw,
+                4rem
+            );
+    }
+
+    .card-maestro p {
+        font-size: 1.04rem;
+    }
+
+
+    /* músicos */
+
+    .grade-musicos {
+        gap: 14px;
+    }
+
+    .musico-card h3 {
+        padding:
+            13px
+            8px
+            15px;
+
+        font-size: 0.92rem;
+    }
+
+
+    /* trajetória */
+
+    .trajetoria-texto {
+        padding:
+            27px
+            23px;
+    }
+
+
+    /* shows */
+
+    .shows {
+        padding-top: 75px;
+    }
+
+    .show-faixa {
+        padding:
+            58px 0;
+    }
+
+    .show-foto {
+        aspect-ratio: 4 / 3;
+    }
+
+    .show-texto {
+        padding:
+            42px
+            25px
+            31px;
+    }
+
+    .show-texto p {
+        font-size: 1.02rem;
+    }
+
+    .show-icone {
+        top: -27px;
+        right: 18px;
+
+        height: 68px;
+    }
+
+    .show-icone img {
+        height: 68px !important;
+        max-width: 145px !important;
+    }
+
+    .show-icone-chapeu img {
+        height: 64px !important;
+        max-width: 155px !important;
+    }
+
+    .show-icone-reis img {
+        height: 78px !important;
+        max-width: 175px !important;
+    }
+
+
+    /* agenda */
+
+    .agenda-vazia {
+        padding:
+            27px
+            22px;
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    /* galeria */
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* imprensa */
+
+    .downloads {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* contato */
+
+    .contato h2 {
+        font-size:
+            clamp(
+                2.5rem,
+                12vw,
+                3.7rem
+            );
+    }
+
+    .botao-orcamento {
+        width: 100%;
+
+        max-width: 380px;
+
+        min-height: 58px;
+
+        padding:
+            10px
+            20px;
+    }
+
+
+    /* rodapé */
+
+    .rodape-conteudo {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .rodape-marca {
+        flex-direction: column;
+    }
+
+    .rodape-links {
+        justify-content: center;
+    }
+
+}
+
+
+/* =========================================================
+   CELULARES PEQUENOS
+========================================================= */
+
+@media (max-width: 430px) {
+
+    .logo {
+        width: 68px;
+        height: 64px;
+    }
+
+    .titulo-logo {
+        width: 185px;
+        max-width: 57vw;
+    }
+
+    .grade-musicos {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .download-card {
+        padding:
+            22px
+            18px;
+    }
+
+}
+
+
+/* =========================================================
+   GARANTIA FINAL DA IDENTIDADE VISUAL
+   As áreas coloridas usam #FF7510 + #CB6CE6.
+========================================================= */
+
+.topo {
+    background:
+        radial-gradient(circle at 88% 12%, rgba(203,108,230,.38), transparent 34%),
+        var(--gradiente-volpi);
+}
+
+.titulo-principal .destaque,
 .titulo-secao h2,
 .card-historia h2,
 .card-maestro h2,
 .musico-card h3,
 .show-texto h3,
 .download-card strong {
-    color: #cb6ce6 !important;
+    color: var(--magenta);
 }
-
-
-/* TEXTOS PEQUENOS / KICKERS */
 
 .kicker,
-.card-maestro .kicker {
-    color: #ff7510 !important;
+.titulo-principal p,
+.show-texto h3 strong {
+    color: var(--salmao);
 }
-
-
-/* =========================================================
-   CARDS INICIAIS
-   ========================================================= */
-
-.card-historia {
-    background: #ffffff !important;
-
-    border:
-        1px solid rgba(203,108,230,0.18) !important;
-}
-
-.info-item {
-    background: #ffffff !important;
-
-    border:
-        1px solid rgba(203,108,230,0.16) !important;
-}
-
-
-/* =========================================================
-   MAESTRO
-   ========================================================= */
-
-.maestro {
-    background:
-        linear-gradient(
-            135deg,
-            #fff8f4 0%,
-            #ffffff 58%,
-            rgba(203,108,230,0.12) 100%
-        ) !important;
-}
-
-
-/* =========================================================
-   MÚSICOS
-   ========================================================= */
-
-.musicos {
-    background: #ffffff !important;
-}
-
-.musico-card {
-    border:
-        1px solid rgba(203,108,230,0.18) !important;
-}
-
-
-/* =========================================================
-   TRAJETÓRIA
-   MAGENTA → SALMÃO OFICIAL
-   ========================================================= */
 
 .trajetoria {
     background:
-        radial-gradient(
-            circle at 12% 15%,
-            rgba(255,255,255,0.16),
-            transparent 30%
-        ),
-        linear-gradient(
-            135deg,
-            #cb6ce6 0%,
-            #cb6ce6 25%,
-            #ff7510 100%
-        ) !important;
+        radial-gradient(circle at 10% 15%, rgba(255,255,255,.13), transparent 28%),
+        var(--gradiente-volpi-invertido);
 }
-
-.trajetoria .titulo-secao h2,
-.trajetoria .kicker {
-    color: #ffffff !important;
-}
-
-
-/* =========================================================
-   SHOWS
-   ========================================================= */
-
-.shows {
-    background: #ffffff !important;
-}
-
-
-/* PARE E OUÇA
-   SALMÃO → MAGENTA */
 
 .show-pare {
-    background:
-        linear-gradient(
-            125deg,
-            #ff7510 0%,
-            #ff7510 25%,
-            #cb6ce6 100%
-        ) !important;
+    background: var(--gradiente-volpi);
 }
-
-
-/* BAILÃO
-   CLARO PARA RESPIRAR */
-
-.show-bailao {
-    background:
-        linear-gradient(
-            180deg,
-            #ffffff 0%,
-            #fff8f4 100%
-        ) !important;
-}
-
-
-/* NATAL
-   MAGENTA → SALMÃO */
 
 .show-natal {
-    background:
-        linear-gradient(
-            125deg,
-            #cb6ce6 0%,
-            #cb6ce6 25%,
-            #ff7510 100%
-        ) !important;
+    background: var(--gradiente-volpi-invertido);
 }
-
-
-/* CARDS DOS SHOWS */
-
-.show-texto {
-    background: #ffffff !important;
-}
-
-
-/* TEMPO DO SHOW */
-
-.show-texto h3 strong {
-    color: #ff7510 !important;
-}
-
-
-/* =========================================================
-   AGENDA
-   ========================================================= */
-
-.agenda {
-    background: #ffffff !important;
-}
-
-.agenda-vazia {
-    background: #fff8f4 !important;
-
-    border:
-        1px solid rgba(255,117,16,0.20) !important;
-}
-
-.agenda-vazia a {
-    background: #cb6ce6 !important;
-    color: #ffffff !important;
-}
-
-.agenda-vazia a:hover {
-    background: #ff7510 !important;
-}
-
-
-/* =========================================================
-   GALERIA
-   ========================================================= */
-
-.galeria {
-    background:
-        linear-gradient(
-            180deg,
-            #fffaf8 0%,
-            #ffffff 100%
-        ) !important;
-}
-
-
-/* =========================================================
-   IMPRENSA
-   ========================================================= */
-
-.imprensa {
-    background:
-        linear-gradient(
-            135deg,
-            rgba(255,117,16,0.08) 0%,
-            #ffffff 50%,
-            rgba(203,108,230,0.10) 100%
-        ) !important;
-}
-
-.download-card > span {
-    background: #cb6ce6 !important;
-}
-
-
-/* =========================================================
-   CONTATO
-   AQUI O GRADIENTE OFICIAL APARECE NOVAMENTE
-   ========================================================= */
 
 .contato {
-    background:
-        radial-gradient(
-            circle at 88% 18%,
-            rgba(203,108,230,0.55),
-            transparent 34%
-        ),
-        linear-gradient(
-            125deg,
-            #ff7510 0%,
-            #ff7510 22%,
-            #cb6ce6 100%
-        ) !important;
+    background: var(--gradiente-volpi);
 }
 
-.contato h2,
-.contato p {
-    color: #ffffff !important;
+.agenda-vazia a,
+.download-card > span {
+    background: var(--magenta);
 }
-
-
-/* BOTÃO */
 
 .botao-orcamento {
-    background: #ffffff !important;
-    color: #cb6ce6 !important;
+    color: var(--magenta);
 }
 
 .botao-orcamento:hover {
-    background: #ff7510 !important;
-    color: #ffffff !important;
+    background: var(--salmao);
+    color: var(--branco);
 }
-
-
-/* =========================================================
-   RODAPÉ
-   ========================================================= */
-
-.rodape {
-    background: #302b2d !important;
-
-    border-top:
-        5px solid #ff7510 !important;
-}
-
-
-/* =========================================================
-   SELEÇÃO DE TEXTO
-   ========================================================= */
 
 ::selection {
-    background: #cb6ce6;
-    color: #ffffff;
+    background: var(--magenta);
+    color: var(--branco);
 }
