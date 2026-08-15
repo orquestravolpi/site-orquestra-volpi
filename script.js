@@ -9,153 +9,117 @@ document.addEventListener("DOMContentLoaded", () => {
        MENU MOBILE
     ====================================================== */
 
-    const botaoMenu =
-        document.querySelector(".botao-menu");
-
-    const menu =
-        document.querySelector(".menu-principal");
-
+    const botaoMenu = document.querySelector(".botao-menu");
+    const menu = document.querySelector(".menu-principal");
 
     function fecharMenu() {
-
-        if (!botaoMenu || !menu) {
-            return;
-        }
+        if (!botaoMenu || !menu) return;
 
         menu.classList.remove("aberto");
-
         botaoMenu.classList.remove("aberto");
 
-        botaoMenu.setAttribute(
-            "aria-expanded",
-            "false"
-        );
-
-        botaoMenu.setAttribute(
-            "aria-label",
-            "Abrir menu"
-        );
-
+        botaoMenu.setAttribute("aria-expanded", "false");
+        botaoMenu.setAttribute("aria-label", "Abrir menu");
     }
-
 
     if (botaoMenu && menu) {
 
-        botaoMenu.addEventListener(
-            "click",
-            (evento) => {
+        botaoMenu.addEventListener("click", (evento) => {
+            evento.stopPropagation();
 
-                evento.stopPropagation();
+            const aberto = menu.classList.toggle("aberto");
 
-                const aberto =
-                    menu.classList.toggle(
-                        "aberto"
-                    );
+            botaoMenu.classList.toggle("aberto", aberto);
 
-                botaoMenu.classList.toggle(
-                    "aberto",
-                    aberto
-                );
+            botaoMenu.setAttribute(
+                "aria-expanded",
+                aberto ? "true" : "false"
+            );
 
-                botaoMenu.setAttribute(
-                    "aria-expanded",
-                    aberto
-                        ? "true"
-                        : "false"
-                );
+            botaoMenu.setAttribute(
+                "aria-label",
+                aberto ? "Fechar menu" : "Abrir menu"
+            );
+        });
 
-                botaoMenu.setAttribute(
-                    "aria-label",
-                    aberto
-                        ? "Fechar menu"
-                        : "Abrir menu"
-                );
 
+        menu.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", fecharMenu);
+        });
+
+
+        document.addEventListener("click", (evento) => {
+            if (!menu.classList.contains("aberto")) return;
+
+            if (
+                menu.contains(evento.target) ||
+                botaoMenu.contains(evento.target)
+            ) {
+                return;
             }
-        );
+
+            fecharMenu();
+        });
 
 
-        menu.querySelectorAll("a")
-            .forEach((link) => {
-
-                link.addEventListener(
-                    "click",
-                    fecharMenu
-                );
-
-            });
-
-
-        document.addEventListener(
-            "click",
-            (evento) => {
-
-                if (
-                    !menu.classList.contains(
-                        "aberto"
-                    )
-                ) {
-                    return;
-                }
-
-                if (
-                    menu.contains(evento.target) ||
-                    botaoMenu.contains(
-                        evento.target
-                    )
-                ) {
-                    return;
-                }
-
+        window.addEventListener("resize", () => {
+            if (window.innerWidth > 1120) {
                 fecharMenu();
-
             }
-        );
-
-
-        window.addEventListener(
-            "resize",
-            () => {
-
-                if (
-                    window.innerWidth > 1120
-                ) {
-                    fecharMenu();
-                }
-
-            }
-        );
-
+        });
     }
 
 
     /* =====================================================
-       ANIMAÇÕES AO ROLAR
+       PROGRESSO DE LEITURA
+    ====================================================== */
+
+    const barraProgresso = document.querySelector(
+        ".progresso-scroll span"
+    );
+
+    function atualizarProgresso() {
+        if (!barraProgresso) return;
+
+        const documento = document.documentElement;
+
+        const maximo =
+            documento.scrollHeight -
+            documento.clientHeight;
+
+        const progresso =
+            maximo > 0
+                ? (window.scrollY / maximo) * 100
+                : 0;
+
+        barraProgresso.style.width =
+            `${Math.min(100, Math.max(0, progresso))}%`;
+    }
+
+    window.addEventListener(
+        "scroll",
+        atualizarProgresso,
+        { passive: true }
+    );
+
+    atualizarProgresso();
+
+
+    /* =====================================================
+       ANIMAÇÕES
     ====================================================== */
 
     const elementosReveal =
-        document.querySelectorAll(
-            ".reveal"
-        );
-
+        document.querySelectorAll(".reveal");
 
     if (
         reduzirMovimento ||
-        !(
-            "IntersectionObserver"
-            in window
-        )
+        !("IntersectionObserver" in window)
     ) {
 
-        elementosReveal.forEach(
-            (elemento) => {
-
-                elemento.classList.add(
-                    "visivel"
-                );
-
-            }
-        );
+        elementosReveal.forEach((elemento) => {
+            elemento.classList.add("visivel");
+        });
 
     } else {
 
@@ -163,46 +127,25 @@ document.addEventListener("DOMContentLoaded", () => {
             new IntersectionObserver(
                 (entradas, observer) => {
 
-                    entradas.forEach(
-                        (entrada) => {
+                    entradas.forEach((entrada) => {
 
-                            if (
-                                entrada.isIntersecting
-                            ) {
-
-                                entrada.target
-                                    .classList.add(
-                                        "visivel"
-                                    );
-
-                                observer.unobserve(
-                                    entrada.target
-                                );
-
-                            }
-
+                        if (entrada.isIntersecting) {
+                            entrada.target.classList.add("visivel");
+                            observer.unobserve(entrada.target);
                         }
-                    );
+
+                    });
 
                 },
                 {
-                    threshold: 0.12,
-                    rootMargin:
-                        "0px 0px -35px 0px"
+                    threshold: 0.10,
+                    rootMargin: "0px 0px -30px 0px"
                 }
             );
 
-
-        elementosReveal.forEach(
-            (elemento) => {
-
-                revealObserver.observe(
-                    elemento
-                );
-
-            }
-        );
-
+        elementosReveal.forEach((elemento) => {
+            revealObserver.observe(elemento);
+        });
     }
 
 
@@ -211,194 +154,190 @@ document.addEventListener("DOMContentLoaded", () => {
     ====================================================== */
 
     const voltarTopo =
-        document.querySelector(
-            ".voltar-topo"
-        );
-
+        document.querySelector(".voltar-topo");
 
     if (voltarTopo) {
 
-        const atualizarBotaoTopo =
-            () => {
-
-                voltarTopo.classList.toggle(
-                    "visivel",
-                    window.scrollY > 600
-                );
-
-            };
-
+        function atualizarBotaoTopo() {
+            voltarTopo.classList.toggle(
+                "visivel",
+                window.scrollY > 700
+            );
+        }
 
         window.addEventListener(
             "scroll",
             atualizarBotaoTopo,
-            {
-                passive: true
-            }
+            { passive: true }
         );
-
 
         atualizarBotaoTopo();
 
-
-        voltarTopo.addEventListener(
-            "click",
-            () => {
-
-                window.scrollTo({
-                    top: 0,
-                    behavior:
-                        reduzirMovimento
-                            ? "auto"
-                            : "smooth"
-                });
-
-            }
-        );
-
+        voltarTopo.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: reduzirMovimento ? "auto" : "smooth"
+            });
+        });
     }
 
 
     /* =====================================================
-       DESTACA A SEÇÃO ATUAL NO MENU
+       LINK ATIVO DO MENU
     ====================================================== */
 
-    const linksMenu =
-        Array.from(
-            document.querySelectorAll(
-                '.menu-principal a[href^="#"]'
-            )
-        );
+    const linksMenu = Array.from(
+        document.querySelectorAll(
+            '.menu-principal a[href^="#"]'
+        )
+    );
 
+    const secoes = linksMenu
+        .map((link) => {
 
-    const secoes =
-        linksMenu
-            .map((link) => {
+            const seletor =
+                link.getAttribute("href");
 
-                const seletor =
-                    link.getAttribute(
-                        "href"
-                    );
+            if (!seletor || seletor === "#") {
+                return null;
+            }
 
-                if (
-                    !seletor ||
-                    seletor === "#"
-                ) {
-                    return null;
-                }
+            return document.querySelector(seletor);
 
-                return document
-                    .querySelector(
-                        seletor
-                    );
-
-            })
-            .filter(Boolean);
+        })
+        .filter(Boolean);
 
 
     function marcarLinkAtivo(id) {
 
-        linksMenu.forEach(
-            (link) => {
+        linksMenu.forEach((link) => {
 
-                const ativo =
-                    link.getAttribute(
-                        "href"
-                    ) === `#${id}`;
+            const ativo =
+                link.getAttribute("href") === `#${id}`;
 
-                link.classList.toggle(
-                    "ativo",
-                    ativo
+            link.classList.toggle("ativo", ativo);
+
+            if (ativo) {
+                link.setAttribute(
+                    "aria-current",
+                    "location"
                 );
-
-                if (ativo) {
-
-                    link.setAttribute(
-                        "aria-current",
-                        "location"
-                    );
-
-                } else {
-
-                    link.removeAttribute(
-                        "aria-current"
-                    );
-
-                }
-
+            } else {
+                link.removeAttribute("aria-current");
             }
-        );
 
+        });
     }
 
 
     if (
-        "IntersectionObserver"
-        in window &&
+        "IntersectionObserver" in window &&
         secoes.length
     ) {
 
-        const secaoObserver =
+        const observerSecao =
             new IntersectionObserver(
                 (entradas) => {
 
-                    const visiveis =
-                        entradas
-                            .filter(
-                                (entrada) =>
-                                    entrada
-                                        .isIntersecting
-                            )
-                            .sort(
-                                (a, b) =>
-                                    b.intersectionRatio -
-                                    a.intersectionRatio
-                            );
+                    const visiveis = entradas
+                        .filter(
+                            (entrada) =>
+                                entrada.isIntersecting
+                        )
+                        .sort(
+                            (a, b) =>
+                                b.intersectionRatio -
+                                a.intersectionRatio
+                        );
 
-
-                    if (!visiveis.length) {
-                        return;
-                    }
-
+                    if (!visiveis.length) return;
 
                     marcarLinkAtivo(
-                        visiveis[0]
-                            .target
-                            .id
+                        visiveis[0].target.id
                     );
 
                 },
                 {
                     rootMargin:
-                        "-22% 0px -62% 0px",
+                        "-20% 0px -63% 0px",
 
                     threshold:
                         [0, 0.1, 0.25, 0.5]
                 }
             );
 
-
-        secoes.forEach(
-            (secao) => {
-
-                secaoObserver.observe(
-                    secao
-                );
-
-            }
-        );
-
+        secoes.forEach((secao) => {
+            observerSecao.observe(secao);
+        });
     }
 
 
     /* =====================================================
-       LIGHTBOX DA GALERIA
+       FALLBACK PARA IMAGENS QUE NÃO EXISTIREM
+    ====================================================== */
+
+    document
+        .querySelectorAll(
+            "img[data-media-fallback]"
+        )
+        .forEach((imagem) => {
+
+            imagem.addEventListener(
+                "error",
+                () => {
+
+                    const texto =
+                        imagem.dataset.mediaFallback ||
+                        "Imagem indisponível";
+
+                    const trigger =
+                        imagem.closest(
+                            ".lightbox-trigger"
+                        );
+
+                    const container =
+                        trigger ||
+                        imagem.parentElement;
+
+                    if (!container) return;
+
+                    if (trigger) {
+                        trigger.disabled = true;
+                        trigger.removeAttribute(
+                            "data-lightbox-src"
+                        );
+                    }
+
+                    imagem.remove();
+
+                    const fallback =
+                        document.createElement(
+                            "div"
+                        );
+
+                    fallback.className =
+                        "media-fallback";
+
+                    fallback.textContent =
+                        texto;
+
+                    container.appendChild(
+                        fallback
+                    );
+
+                },
+                { once: true }
+            );
+
+        });
+
+
+    /* =====================================================
+       LIGHTBOX
     ====================================================== */
 
     const lightbox =
-        document.querySelector(
-            ".lightbox"
-        );
+        document.querySelector(".lightbox");
 
     const lightboxImagem =
         lightbox?.querySelector(
@@ -425,21 +364,25 @@ document.addEventListener("DOMContentLoaded", () => {
             ".lightbox-proxima"
         );
 
-    const imagens =
-        Array.from(
+    let imagens = [];
+    let indiceAtual = 0;
+    let elementoAnteriorAoLightbox = null;
+
+
+    function atualizarListaLightbox() {
+        imagens = Array.from(
             document.querySelectorAll(
-                ".lightbox-trigger"
+                ".lightbox-trigger[data-lightbox-src]:not(:disabled)"
             )
         );
+    }
 
-
-    let indiceAtual = 0;
-
-    let elementoAnteriorAoLightbox =
-        null;
+    atualizarListaLightbox();
 
 
     function mostrarImagem(indice) {
+
+        atualizarListaLightbox();
 
         if (
             !imagens.length ||
@@ -448,154 +391,100 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-
         indiceAtual =
-            (
-                indice +
-                imagens.length
-            ) %
+            (indice + imagens.length) %
             imagens.length;
-
 
         const botao =
             imagens[indiceAtual];
 
-
         const src =
-            botao.dataset
-                .lightboxSrc;
-
+            botao.dataset.lightboxSrc;
 
         const alt =
-            botao.dataset
-                .lightboxAlt ||
+            botao.dataset.lightboxAlt ||
             "Imagem ampliada da Orquestra Volpi";
 
-
-        lightboxImagem.src =
-            src;
-
-        lightboxImagem.alt =
-            alt;
-
+        lightboxImagem.src = src;
+        lightboxImagem.alt = alt;
 
         if (lightboxLegenda) {
-
-            lightboxLegenda.textContent =
-                alt;
-
+            lightboxLegenda.textContent = alt;
         }
-
     }
 
 
     function abrirLightbox(indice) {
 
-        if (!lightbox) {
-            return;
-        }
-
+        if (!lightbox) return;
 
         elementoAnteriorAoLightbox =
             document.activeElement;
 
-
         mostrarImagem(indice);
 
-
-        lightbox.classList.add(
-            "aberto"
-        );
+        lightbox.classList.add("aberto");
 
         lightbox.setAttribute(
             "aria-hidden",
             "false"
         );
 
-        document.body
-            .classList.add(
-                "lightbox-aberto"
-            );
-
+        document.body.classList.add(
+            "lightbox-aberto"
+        );
 
         botaoFechar?.focus();
-
     }
 
 
     function fecharLightbox() {
 
-        if (!lightbox) {
-            return;
-        }
+        if (!lightbox) return;
 
-
-        lightbox.classList.remove(
-            "aberto"
-        );
+        lightbox.classList.remove("aberto");
 
         lightbox.setAttribute(
             "aria-hidden",
             "true"
         );
 
-        document.body
-            .classList.remove(
-                "lightbox-aberto"
-            );
-
+        document.body.classList.remove(
+            "lightbox-aberto"
+        );
 
         if (lightboxImagem) {
-
-            lightboxImagem
-                .removeAttribute(
-                    "src"
-                );
-
+            lightboxImagem.removeAttribute("src");
         }
-
 
         if (
             elementoAnteriorAoLightbox
             instanceof HTMLElement
         ) {
-
-            elementoAnteriorAoLightbox
-                .focus();
-
+            elementoAnteriorAoLightbox.focus();
         }
-
     }
 
 
-    function elementosFocaveisLightbox() {
+    document.addEventListener(
+        "click",
+        (evento) => {
 
-        if (!lightbox) {
-            return [];
-        }
+            const trigger =
+                evento.target.closest(
+                    ".lightbox-trigger[data-lightbox-src]"
+                );
 
-        return Array.from(
-            lightbox.querySelectorAll(
-                'button:not([disabled]), a[href], [tabindex]:not([tabindex="-1"])'
-            )
-        );
+            if (!trigger || trigger.disabled) return;
 
-    }
+            atualizarListaLightbox();
 
+            const indice =
+                imagens.indexOf(trigger);
 
-    imagens.forEach(
-        (botao, indice) => {
-
-            botao.addEventListener(
-                "click",
-                () => {
-
-                    abrirLightbox(
-                        indice
-                    );
-
-                }
-            );
+            if (indice >= 0) {
+                abrirLightbox(indice);
+            }
 
         }
     );
@@ -606,50 +495,42 @@ document.addEventListener("DOMContentLoaded", () => {
         fecharLightbox
     );
 
-
     botaoAnterior?.addEventListener(
         "click",
-        () => {
-
-            mostrarImagem(
-                indiceAtual - 1
-            );
-
-        }
+        () => mostrarImagem(indiceAtual - 1)
     );
-
 
     botaoProxima?.addEventListener(
         "click",
-        () => {
-
-            mostrarImagem(
-                indiceAtual + 1
-            );
-
-        }
+        () => mostrarImagem(indiceAtual + 1)
     );
-
 
     lightbox?.addEventListener(
         "click",
         (evento) => {
 
-            if (
-                evento.target ===
-                lightbox
-            ) {
-
+            if (evento.target === lightbox) {
                 fecharLightbox();
-
             }
 
         }
     );
 
 
+    function elementosFocaveisLightbox() {
+
+        if (!lightbox) return [];
+
+        return Array.from(
+            lightbox.querySelectorAll(
+                'button:not([disabled]), a[href], [tabindex]:not([tabindex="-1"])'
+            )
+        );
+    }
+
+
     /* =====================================================
-       COMPARTILHAR SITE
+       COMPARTILHAR
     ====================================================== */
 
     const botaoCompartilhar =
@@ -668,119 +549,76 @@ document.addEventListener("DOMContentLoaded", () => {
         const url =
             "https://orquestravolpi.com.br/";
 
-
         try {
 
-            await navigator.clipboard
-                .writeText(url);
+            await navigator.clipboard.writeText(url);
 
-            if (
-                mensagemCompartilhar
-            ) {
-
-                mensagemCompartilhar
-                    .textContent =
+            if (mensagemCompartilhar) {
+                mensagemCompartilhar.textContent =
                     "Link copiado!";
-
             }
 
         } catch {
 
             const campo =
-                document.createElement(
-                    "textarea"
-                );
+                document.createElement("textarea");
 
             campo.value = url;
+            campo.setAttribute("readonly", "");
+            campo.style.position = "fixed";
+            campo.style.opacity = "0";
 
-            campo.setAttribute(
-                "readonly",
-                ""
-            );
-
-            campo.style.position =
-                "fixed";
-
-            campo.style.opacity =
-                "0";
-
-            document.body
-                .appendChild(campo);
+            document.body.appendChild(campo);
 
             campo.select();
-
-            document.execCommand(
-                "copy"
-            );
-
+            document.execCommand("copy");
             campo.remove();
 
-
-            if (
-                mensagemCompartilhar
-            ) {
-
-                mensagemCompartilhar
-                    .textContent =
+            if (mensagemCompartilhar) {
+                mensagemCompartilhar.textContent =
                     "Link copiado!";
-
             }
-
         }
-
     }
 
 
     if (botaoCompartilhar) {
 
-        botaoCompartilhar
-            .addEventListener(
-                "click",
-                async () => {
+        botaoCompartilhar.addEventListener(
+            "click",
+            async () => {
 
-                    const dados = {
-                        title:
-                            "Orquestra Volpi de Viola Caipira",
+                const dados = {
+                    title:
+                        "Orquestra Volpi de Viola Caipira",
 
-                        text:
-                            "Conheça a Orquestra Volpi de Viola Caipira.",
+                    text:
+                        "Conheça a Orquestra Volpi de Viola Caipira.",
 
-                        url:
-                            "https://orquestravolpi.com.br/"
-                    };
+                    url:
+                        "https://orquestravolpi.com.br/"
+                };
 
+                if (navigator.share) {
 
-                    if (
-                        navigator.share
-                    ) {
+                    try {
+                        await navigator.share(dados);
+                    } catch (erro) {
 
-                        try {
-
-                            await navigator
-                                .share(dados);
-
-                        } catch (erro) {
-
-                            if (
-                                erro.name !==
-                                "AbortError"
-                            ) {
-
-                                await copiarLink();
-
-                            }
-
+                        if (
+                            erro.name !==
+                            "AbortError"
+                        ) {
+                            await copiarLink();
                         }
-
-                    } else {
-
-                        await copiarLink();
-
                     }
 
+                } else {
+                    await copiarLink();
                 }
-            );
 
+            }
+        );
     }
 
 
@@ -792,122 +630,71 @@ document.addEventListener("DOMContentLoaded", () => {
         "keydown",
         (evento) => {
 
-            /* ESC fecha menu */
-
-            if (
-                evento.key ===
-                "Escape"
-            ) {
+            if (evento.key === "Escape") {
 
                 if (
-                    menu?.classList
-                        .contains(
-                            "aberto"
-                        )
+                    menu?.classList.contains(
+                        "aberto"
+                    )
                 ) {
-
                     fecharMenu();
-
                     botaoMenu?.focus();
-
                 }
-
             }
 
-
-            /* atalhos do lightbox */
 
             if (
                 !lightbox ||
-                !lightbox.classList
-                    .contains(
-                        "aberto"
-                    )
+                !lightbox.classList.contains(
+                    "aberto"
+                )
             ) {
                 return;
             }
 
 
-            if (
-                evento.key ===
-                "Escape"
-            ) {
-
+            if (evento.key === "Escape") {
                 evento.preventDefault();
-
                 fecharLightbox();
-
                 return;
-
             }
 
 
-            if (
-                evento.key ===
-                "ArrowLeft"
-            ) {
-
+            if (evento.key === "ArrowLeft") {
                 evento.preventDefault();
-
-                mostrarImagem(
-                    indiceAtual - 1
-                );
-
+                mostrarImagem(indiceAtual - 1);
                 return;
-
             }
 
 
-            if (
-                evento.key ===
-                "ArrowRight"
-            ) {
-
+            if (evento.key === "ArrowRight") {
                 evento.preventDefault();
-
-                mostrarImagem(
-                    indiceAtual + 1
-                );
-
+                mostrarImagem(indiceAtual + 1);
                 return;
-
             }
 
 
-            /* mantém TAB dentro do lightbox */
-
-            if (
-                evento.key ===
-                "Tab"
-            ) {
+            if (evento.key === "Tab") {
 
                 const focaveis =
                     elementosFocaveisLightbox();
 
-
-                if (!focaveis.length) {
-                    return;
-                }
-
+                if (!focaveis.length) return;
 
                 const primeiro =
                     focaveis[0];
 
                 const ultimo =
                     focaveis[
-                        focaveis.length -
-                        1
+                        focaveis.length - 1
                     ];
-
 
                 if (
                     evento.shiftKey &&
                     document.activeElement ===
                         primeiro
                 ) {
-
                     evento.preventDefault();
-
                     ultimo.focus();
 
                 } else if (
@@ -915,13 +702,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     document.activeElement ===
                         ultimo
                 ) {
-
                     evento.preventDefault();
-
                     primeiro.focus();
-
                 }
-
             }
 
         }
