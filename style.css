@@ -5,67 +5,33 @@
    PALETA
 ========================================================= */
 
-
 :root {
     --branco: #ffffff;
     --off-white: #fffaf8;
     --creme: #fff4ef;
 
-    /* CORES OFICIAIS DO GRUPO */
     --salmao: #ff7510;
+    --salmao-claro: #fff0e5;
+    --salmao-muito-claro: #fff8f3;
+    --salmao-escuro: #ff7510;
+
     --laranja: #ff7510;
+
     --magenta: #cb6ce6;
     --magenta-vivo: #cb6ce6;
-
-    /* VERSÕES CLARAS PARA FUNDOS */
-    --salmao-claro: #ffe2cc;
-    --salmao-muito-claro: #fff6ef;
-
-    /* Mantemos os destaques nas próprias cores oficiais */
-    --salmao-escuro: #ff7510;
     --magenta-escuro: #cb6ce6;
-
-    /* TONALIDADES DE TRANSIÇÃO DO GRADIENTE */
-    --volpi-coral: #f5733b;
-    --volpi-salmao: #ed725b;
-    --volpi-rosa: #e5707b;
-    --volpi-rosa-magenta: #dd6f9b;
-    --volpi-magenta-suave: #d56ebb;
-
-    --gradiente-volpi: linear-gradient(
-        120deg,
-        #ff7510 0%,
-        #f5733b 20%,
-        #ed725b 35%,
-        #e5707b 50%,
-        #dd6f9b 65%,
-        #d56ebb 80%,
-        #cb6ce6 100%
-    );
-
-    --gradiente-volpi-invertido: linear-gradient(
-        120deg,
-        #cb6ce6 0%,
-        #d56ebb 20%,
-        #dd6f9b 35%,
-        #e5707b 50%,
-        #ed725b 65%,
-        #f5733b 80%,
-        #ff7510 100%
-    );
 
     --texto: #2f292c;
     --texto-suave: #6a6165;
 
-    --borda: rgba(203, 108, 230, 0.16);
+    --borda: rgba(203, 108, 230, 0.18);
 
     --sombra:
-        0 16px 42px rgba(84, 47, 66, 0.11);
+        0 16px 42px rgba(76, 42, 55, 0.11);
 
     --sombra-leve:
-        0 8px 24px rgba(84, 47, 66, 0.07);
+        0 8px 24px rgba(76, 42, 55, 0.07);
 }
-
 
 
 /* =========================================================
@@ -153,11 +119,16 @@ section {
 
     background:
         radial-gradient(
-            circle at 88% 12%,
-            rgba(203, 108, 230, 0.40),
-            transparent 34%
+            circle at 86% 15%,
+            rgba(203, 108, 230, 0.72),
+            transparent 35%
         ),
-        var(--gradiente-volpi);
+        linear-gradient(
+            120deg,
+            var(--salmao) 0%,
+            #e5727b 55%,
+            var(--magenta) 125%
+        );
 
     border-bottom:
         1px solid
@@ -392,7 +363,7 @@ section {
     background:
         radial-gradient(
             circle at 94% 8%,
-            rgba(244, 108, 103, 0.09),
+            rgba(255, 117, 16, 0.09),
             transparent 24%
         ),
         var(--branco);
@@ -787,10 +758,15 @@ section {
     background:
         radial-gradient(
             circle at 10% 15%,
-            rgba(255, 255, 255, 0.13),
+            rgba(255, 255, 255, 0.11),
             transparent 28%
         ),
-        var(--gradiente-volpi-invertido);
+        linear-gradient(
+            135deg,
+            var(--magenta-escuro),
+            #e5727b 55%,
+            var(--salmao)
+        );
 }
 
 .trajetoria .titulo-secao {
@@ -885,7 +861,12 @@ section {
 }
 
 .show-pare {
-    background: var(--gradiente-volpi);
+    background:
+        linear-gradient(
+            135deg,
+            var(--salmao),
+            #e5727b
+        );
 }
 
 .show-bailao {
@@ -898,7 +879,13 @@ section {
 }
 
 .show-natal {
-    background: var(--gradiente-volpi-invertido);
+    background:
+        linear-gradient(
+            135deg,
+            var(--magenta-escuro),
+            #e5727b 55%,
+            var(--salmao)
+        );
 }
 
 .show-card {
@@ -1080,7 +1067,7 @@ section {
 
     border:
         1px solid
-        rgba(217, 85, 80, 0.18);
+        rgba(255, 117, 16, 0.18);
 
     border-radius: 18px;
 }
@@ -1274,7 +1261,13 @@ section {
 
     text-align: center;
 
-    background: var(--gradiente-volpi);
+    background:
+        linear-gradient(
+            135deg,
+            var(--magenta-escuro),
+            #e5727b 60%,
+            var(--salmao)
+        );
 }
 
 .contato-conteudo {
@@ -1364,7 +1357,6 @@ section {
         38px 0;
 
     background: #2a2025;
-    border-top: 5px solid var(--salmao);
 
     color:
         rgba(
@@ -1828,69 +1820,4 @@ section {
             18px;
     }
 
-}
-
-
-/* =========================================================
-   GARANTIA FINAL DA IDENTIDADE VISUAL
-   As áreas coloridas usam #FF7510 + #CB6CE6.
-========================================================= */
-
-.topo {
-    background:
-        radial-gradient(circle at 88% 12%, rgba(203,108,230,.38), transparent 34%),
-        var(--gradiente-volpi);
-}
-
-.titulo-principal .destaque,
-.titulo-secao h2,
-.card-historia h2,
-.card-maestro h2,
-.musico-card h3,
-.show-texto h3,
-.download-card strong {
-    color: var(--magenta);
-}
-
-.kicker,
-.titulo-principal p,
-.show-texto h3 strong {
-    color: var(--salmao);
-}
-
-.trajetoria {
-    background:
-        radial-gradient(circle at 10% 15%, rgba(255,255,255,.13), transparent 28%),
-        var(--gradiente-volpi-invertido);
-}
-
-.show-pare {
-    background: var(--gradiente-volpi);
-}
-
-.show-natal {
-    background: var(--gradiente-volpi-invertido);
-}
-
-.contato {
-    background: var(--gradiente-volpi);
-}
-
-.agenda-vazia a,
-.download-card > span {
-    background: var(--magenta);
-}
-
-.botao-orcamento {
-    color: var(--magenta);
-}
-
-.botao-orcamento:hover {
-    background: var(--salmao);
-    color: var(--branco);
-}
-
-::selection {
-    background: var(--magenta);
-    color: var(--branco);
 }
