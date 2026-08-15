@@ -4,17 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Orquestra Volpi de Viola Caipira</title>
+    <title>Orquestra Volpi de Viola Caipira | Itaquera · São Paulo</title>
 
     <meta
         name="description"
-        content="Orquestra Volpi de Viola Caipira, de Itaquera, São Paulo. Música caipira, viola brasileira, shows, eventos e apresentações."
+        content="Orquestra Volpi de Viola Caipira, de Itaquera, São Paulo. Música caipira, viola brasileira, shows, eventos, cerimônias e apresentações."
     >
 
+    <meta name="theme-color" content="#b84776">
+
+    <link rel="canonical" href="https://orquestravolpi.com.br/">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="logo-volpi.png">
+    <link rel="apple-touch-icon" href="logo-volpi.png">
+
+    <!-- PREVIEW PARA WHATSAPP / FACEBOOK / LINKEDIN -->
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Orquestra Volpi de Viola Caipira">
+    <meta property="og:title" content="Orquestra Volpi de Viola Caipira">
+    <meta property="og:description" content="Viola caipira, música raiz e cultura brasileira. Conheça a Orquestra Volpi, seus músicos, shows, agenda e trajetória.">
+    <meta property="og:url" content="https://orquestravolpi.com.br/">
+    <meta property="og:image" content="https://orquestravolpi.com.br/orquestra-principal.jpg">
+    <meta property="og:image:alt" content="Integrantes da Orquestra Volpi de Viola Caipira">
+
+    <!-- PREVIEW PARA X / TWITTER -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Orquestra Volpi de Viola Caipira">
+    <meta name="twitter:description" content="Viola caipira, música raiz e cultura brasileira.">
+    <meta name="twitter:image" content="https://orquestravolpi.com.br/orquestra-principal.jpg">
+
+    <!-- SEO ESTRUTURADO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MusicGroup",
+        "@id": "https://orquestravolpi.com.br/#orquestra",
+        "name": "Orquestra Volpi de Viola Caipira",
+        "alternateName": "Orquestra Volpi",
+        "url": "https://orquestravolpi.com.br/",
+        "logo": "https://orquestravolpi.com.br/logo-volpi.png",
+        "image": "https://orquestravolpi.com.br/orquestra-principal.jpg",
+        "description": "Grupo musical de Itaquera, em São Paulo, dedicado à valorização e divulgação da viola caipira, da música raiz e da cultura popular brasileira.",
+        "foundingDate": "2018",
+        "founder": {
+            "@type": "Person",
+            "name": "Renato de Sá"
+        },
+        "genre": [
+            "Música caipira",
+            "Viola caipira",
+            "Música popular brasileira"
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "São Paulo",
+            "addressRegion": "SP",
+            "addressCountry": "BR"
+        },
+        "sameAs": [
+            "https://www.instagram.com/orquestravolpi/",
+            "https://www.youtube.com/@orquestravolpi"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+55-11-99407-0183",
+            "contactType": "Contratações",
+            "availableLanguage": "Portuguese"
+        }
+    }
+    </script>
+
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
+
+    <a class="pular-conteudo" href="#inicio">
+        Pular para o conteúdo
+    </a>
 
     <!-- =====================================================
          CABEÇALHO
@@ -36,7 +106,23 @@
                 >
             </a>
 
-            <nav class="menu-principal" aria-label="Navegação principal">
+            <button
+                class="botao-menu"
+                type="button"
+                aria-label="Abrir menu"
+                aria-expanded="false"
+                aria-controls="menu-principal"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav
+                class="menu-principal"
+                id="menu-principal"
+                aria-label="Navegação principal"
+            >
                 <a href="#sobre">Sobre</a>
                 <a href="#maestro">Maestro</a>
                 <a href="#musicos">Músicos</a>
@@ -77,7 +163,7 @@
         <section class="apresentacao" id="sobre">
             <div class="container">
 
-                <div class="titulo-principal">
+                <div class="titulo-principal reveal">
                     <span class="destaque">Orquestra Volpi</span>
 
                     <h1>O som autêntico da tradição</h1>
@@ -87,7 +173,7 @@
                     </p>
                 </div>
 
-                <div class="apresentacao-grid">
+                <div class="apresentacao-grid reveal">
 
                     <div class="foto-orquestra">
                         <img
@@ -112,11 +198,11 @@
 
                 </div>
 
-                <div class="informacoes">
+                <div class="informacoes reveal">
 
                     <article class="info-item">
                         <div class="info-icone">
-                            <img src="arquivo-1.png" alt="" aria-hidden="true">
+                            <img src="arquivo-1.png" alt="" aria-hidden="true" loading="lazy">
                         </div>
 
                         <strong>Música raiz</strong>
@@ -125,7 +211,7 @@
 
                     <article class="info-item">
                         <div class="info-icone">
-                            <img src="arquivo-2.png" alt="" aria-hidden="true">
+                            <img src="arquivo-2.png" alt="" aria-hidden="true" loading="lazy">
                         </div>
 
                         <strong>Itaquera · São Paulo</strong>
@@ -134,7 +220,7 @@
 
                     <article class="info-item">
                         <div class="info-icone">
-                            <img src="arquivo-3.png" alt="" aria-hidden="true">
+                            <img src="arquivo-3.png" alt="" aria-hidden="true" loading="lazy">
                         </div>
 
                         <strong>Eventos e cerimônias</strong>
@@ -151,7 +237,7 @@
              MAESTRO
         ================================================== -->
         <section class="maestro" id="maestro">
-            <div class="container maestro-grid">
+            <div class="container maestro-grid reveal">
 
                 <div class="card-maestro">
                     <span class="kicker">Maestro</span>
@@ -176,7 +262,7 @@
                     <img
                         src="maestro-renato-novo.png"
                         alt="Maestro Renato de Sá tocando viola caipira"
-                    >
+                     loading="lazy">
                 </div>
 
             </div>
@@ -199,45 +285,45 @@
                     </p>
                 </div>
 
-                <div class="grade-musicos">
+                <div class="grade-musicos reveal">
 
                     <article class="musico-card">
-                        <img src="musico-1.jpg" alt="Abrão Bispo">
+                        <img src="musico-1.jpg" alt="Abrão Bispo" loading="lazy">
                         <h3>Abrão Bispo</h3>
                     </article>
 
                     <article class="musico-card">
-                        <img src="musico-2.jpg" alt="Ana Silva">
+                        <img src="musico-2.jpg" alt="Ana Silva" loading="lazy">
                         <h3>Ana Silva</h3>
                     </article>
 
                     <article class="musico-card">
-                        <img src="musico-3.jpg" alt="Ângelo de Souza">
+                        <img src="musico-3.jpg" alt="Ângelo de Souza" loading="lazy">
                         <h3>Ângelo de Souza</h3>
                     </article>
 
                     <article class="musico-card">
-                        <img src="musico-4.jpg" alt="Domingo Testoni">
+                        <img src="musico-4.jpg" alt="Domingo Testoni" loading="lazy">
                         <h3>Domingo Testoni</h3>
                     </article>
 
                     <article class="musico-card">
-                        <img src="musico-5.jpg" alt="Heber Rogério">
+                        <img src="musico-5.jpg" alt="Heber Rogério" loading="lazy">
                         <h3>Heber Rogério</h3>
                     </article>
 
                     <article class="musico-card">
-                        <img src="musico-6.jpg" alt="Laurival Telles">
+                        <img src="musico-6.jpg" alt="Laurival Telles" loading="lazy">
                         <h3>Laurival Telles</h3>
                     </article>
 
                     <article class="musico-card">
-                        <img src="musico-7.jpg" alt="Régis Nascimento">
+                        <img src="musico-7.jpg" alt="Régis Nascimento" loading="lazy">
                         <h3>Régis Nascimento</h3>
                     </article>
 
                     <article class="musico-card">
-                        <img src="musico-8.jpg" alt="Wagner Ribeiro">
+                        <img src="musico-8.jpg" alt="Wagner Ribeiro" loading="lazy">
                         <h3>Wagner Ribeiro</h3>
                     </article>
 
@@ -258,7 +344,7 @@
                     <h2>Nossa Trajetória de Resistência</h2>
                 </div>
 
-                <div class="trajetoria-conteudo">
+                <div class="trajetoria-conteudo reveal">
 
                     <div class="trajetoria-texto">
                         <p>
@@ -306,13 +392,13 @@
             <div class="show-faixa show-pare">
                 <div class="container">
 
-                    <article class="show-card">
+                    <article class="show-card reveal">
 
                         <div class="show-foto">
                             <img
                                 src="show-pare-ouca.jpg"
                                 alt="Orquestra Volpi durante apresentação do show Pare e Ouça"
-                            >
+                             loading="lazy">
                         </div>
 
                         <div class="show-texto">
@@ -322,7 +408,7 @@
                                     src="icone-viola.png"
                                     alt=""
                                     aria-hidden="true"
-                                >
+                                 loading="lazy">
                             </div>
 
                             <span class="kicker">Show completo</span>
@@ -358,13 +444,13 @@
             <div class="show-faixa show-bailao">
                 <div class="container">
 
-                    <article class="show-card show-card-invertido">
+                    <article class="show-card show-card-invertido reveal">
 
                         <div class="show-foto">
                             <img
                                 src="show-bailao.jpg"
                                 alt="Orquestra Volpi durante apresentação do Bailão da Roça ao Sertão"
-                            >
+                             loading="lazy">
                         </div>
 
                         <div class="show-texto">
@@ -374,7 +460,7 @@
                                     src="icone-chapeu.png"
                                     alt=""
                                     aria-hidden="true"
-                                >
+                                 loading="lazy">
                             </div>
 
                             <span class="kicker">Show temático</span>
@@ -406,13 +492,13 @@
             <div class="show-faixa show-natal">
                 <div class="container">
 
-                    <article class="show-card">
+                    <article class="show-card reveal">
 
                         <div class="show-foto">
                             <img
                                 src="show-natal.jpg"
                                 alt="Orquestra Volpi durante apresentação do Concerto de Natal"
-                            >
+                             loading="lazy">
                         </div>
 
                         <div class="show-texto">
@@ -422,7 +508,7 @@
                                     src="icone-reis-magos.png"
                                     alt=""
                                     aria-hidden="true"
-                                >
+                                 loading="lazy">
                             </div>
 
                             <span class="kicker">Especial de Natal</span>
@@ -471,7 +557,7 @@
                     </p>
                 </div>
 
-                <div class="agenda-vazia">
+                <div class="agenda-vazia reveal">
                     <span>Novas datas serão divulgadas em breve.</span>
 
                     <a
@@ -505,42 +591,69 @@
 
                 <div class="galeria-grid">
 
-                    <figure class="galeria-item">
-                        <img
-                            src="galeria-1.jpg"
-                            alt="Registro da Orquestra Volpi"
+                    <figure class="galeria-item reveal">
+                        <button
+                            class="lightbox-trigger"
+                            type="button"
+                            data-lightbox-src="galeria-1.jpg"
+                            data-lightbox-alt="Registro da Orquestra Volpi"
+                            aria-label="Ampliar imagem: Registro da Orquestra Volpi"
                         >
+                            <img
+                                src="galeria-1.jpg"
+                                alt="Registro da Orquestra Volpi"
+                                loading="lazy"
+                            >
+                        </button>
                     </figure>
 
-                    <div class="galeria-item galeria-video">
+                    <div class="galeria-item galeria-video reveal">
                         <video controls preload="metadata">
                             <source src="galeria-2.mp4" type="video/mp4">
                             Seu navegador não suporta este vídeo.
                         </video>
                     </div>
 
-                    <figure class="galeria-item">
-                        <img
-                            src="galeria-3.jpg"
-                            alt="Registro de apresentação da Orquestra Volpi"
+                    <figure class="galeria-item reveal">
+                        <button
+                            class="lightbox-trigger"
+                            type="button"
+                            data-lightbox-src="galeria-3.jpg"
+                            data-lightbox-alt="Registro de apresentação da Orquestra Volpi"
+                            aria-label="Ampliar imagem: Registro de apresentação da Orquestra Volpi"
                         >
+                            <img
+                                src="galeria-3.jpg"
+                                alt="Registro de apresentação da Orquestra Volpi"
+                                loading="lazy"
+                            >
+                        </button>
                     </figure>
 
-                    <div class="galeria-item galeria-video">
+                    <div class="galeria-item galeria-video reveal">
                         <video controls preload="metadata">
                             <source src="galeria-4.mp4" type="video/mp4">
                             Seu navegador não suporta este vídeo.
                         </video>
                     </div>
 
-                    <figure class="galeria-item">
-                        <img
-                            src="galeria-5.jpg"
-                            alt="Registro de apresentação da Orquestra Volpi"
+                    <figure class="galeria-item reveal">
+                        <button
+                            class="lightbox-trigger"
+                            type="button"
+                            data-lightbox-src="galeria-5.jpg"
+                            data-lightbox-alt="Registro de apresentação da Orquestra Volpi"
+                            aria-label="Ampliar imagem: Registro de apresentação da Orquestra Volpi"
                         >
+                            <img
+                                src="galeria-5.jpg"
+                                alt="Registro de apresentação da Orquestra Volpi"
+                                loading="lazy"
+                            >
+                        </button>
                     </figure>
 
-                    <div class="galeria-item galeria-video">
+                    <div class="galeria-item galeria-video reveal">
                         <video controls preload="metadata">
                             <source src="galeria-6.mp4" type="video/mp4">
                             Seu navegador não suporta este vídeo.
@@ -569,7 +682,7 @@
                     </p>
                 </div>
 
-                <div class="downloads">
+                <div class="downloads reveal">
 
                     <a
                         class="download-card"
@@ -597,6 +710,37 @@
                         </div>
                     </a>
 
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <!-- =================================================
+             QR CODE
+        ================================================== -->
+        <section class="qr-site" id="qr-site">
+            <div class="container qr-site-conteudo reveal">
+
+                <div class="qr-site-texto">
+                    <span class="kicker">Compartilhe</span>
+                    <h2>Leve a Orquestra Volpi com você</h2>
+                    <p>
+                        Aponte a câmera do celular para o QR Code
+                        e acesse o site oficial.
+                    </p>
+                </div>
+
+                <div class="qr-site-card">
+                    <img
+                        src="qr-site.png"
+                        alt="QR Code para acessar o site oficial da Orquestra Volpi"
+                        width="220"
+                        height="220"
+                        loading="lazy"
+                    >
+                    <span>orquestravolpi.com.br</span>
                 </div>
 
             </div>
@@ -679,6 +823,67 @@
 
         </div>
     </footer>
+
+
+    <!-- WHATSAPP FLUTUANTE -->
+    <a
+        class="whatsapp-flutuante"
+        href="https://wa.me/5511994070183?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20informa%C3%A7%C3%B5es%20sobre%20a%20Orquestra%20Volpi%20de%20Viola%20Caipira."
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Falar com a Orquestra Volpi pelo WhatsApp"
+    >
+        <span class="wa-sigla" aria-hidden="true">WA</span>
+        <span class="wa-texto">WhatsApp</span>
+    </a>
+
+    <!-- VOLTAR AO TOPO -->
+    <button
+        class="voltar-topo"
+        type="button"
+        aria-label="Voltar ao topo da página"
+        title="Voltar ao topo"
+    >
+        ↑
+    </button>
+
+    <!-- LIGHTBOX DA GALERIA -->
+    <div
+        class="lightbox"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Visualização ampliada da imagem"
+        aria-hidden="true"
+    >
+        <button
+            class="lightbox-fechar"
+            type="button"
+            aria-label="Fechar imagem ampliada"
+        >
+            ×
+        </button>
+
+        <button
+            class="lightbox-anterior"
+            type="button"
+            aria-label="Imagem anterior"
+        >
+            ‹
+        </button>
+
+        <figure class="lightbox-conteudo">
+            <img src="" alt="" loading="lazy">
+            <figcaption></figcaption>
+        </figure>
+
+        <button
+            class="lightbox-proxima"
+            type="button"
+            aria-label="Próxima imagem"
+        >
+            ›
+        </button>
+    </div>
 
 </body>
 </html>
