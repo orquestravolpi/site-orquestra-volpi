@@ -10,24 +10,17 @@
         name="description"
         content="Orquestra Volpi de Viola Caipira, de Itaquera, São Paulo. Viola caipira, música raiz, shows, eventos, cerimônias e apresentações."
     >
+
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#7a1d47">
+    <meta name="theme-color" content="#ff7510">
 
     <link rel="canonical" href="https://orquestravolpi.com.br/">
 
-    <!-- Favicon -->
+    <!-- FAVICON -->
     <link rel="icon" type="image/png" href="logo-volpi.png">
     <link rel="apple-touch-icon" href="logo-volpi.png">
 
-    <!-- Fontes -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
-
-    <!-- Open Graph -->
+    <!-- PREVIEW PARA WHATSAPP / FACEBOOK / LINKEDIN -->
     <meta property="og:locale" content="pt_BR">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Orquestra Volpi de Viola Caipira">
@@ -46,7 +39,7 @@
         content="Integrantes da Orquestra Volpi de Viola Caipira"
     >
 
-    <!-- X / Twitter -->
+    <!-- PREVIEW PARA X / TWITTER -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Orquestra Volpi de Viola Caipira">
     <meta
@@ -58,7 +51,7 @@
         content="https://orquestravolpi.com.br/orquestra-principal.jpg"
     >
 
-    <!-- SEO estruturado -->
+    <!-- SEO ESTRUTURADO -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -99,3630 +92,37 @@
     }
     </script>
 
-    <style>
-/* =========================================================
-   ORQUESTRA VOLPI — DESIGN SYSTEM
-   UI / UX / TIPOGRAFIA / DIAGRAMAÇÃO
-========================================================= */
-
-:root {
-    /* Cores */
-    --vinho-950: #32101f;
-    --vinho-900: #48152c;
-    --magenta-800: #7a1d47;
-    --magenta-700: #922558;
-    --magenta-600: #b84776;
-
-    --salmao-700: #c14663;
-    --salmao-500: #f46c67;
-    --salmao-200: #fde1dc;
-    --salmao-100: #fff0ec;
-
-    --laranja-500: #ff7510;
-
-    --neutro-950: #271c22;
-    --neutro-800: #3d3237;
-    --neutro-650: #655960;
-    --neutro-500: #81757b;
-    --neutro-300: #d9d1d4;
-    --neutro-200: #ece6e8;
-    --neutro-100: #f7f3f4;
-
-    --branco: #ffffff;
-    --off-white: #fffaf8;
-
-    /* Tipografia */
-    --fonte-display: "Manrope", Arial, Helvetica, sans-serif;
-    --fonte-texto: "Source Sans 3", Arial, Helvetica, sans-serif;
-
-    --texto-xs: 0.82rem;
-    --texto-sm: 0.94rem;
-    --texto-base: clamp(1rem, 0.97rem + 0.12vw, 1.08rem);
-    --texto-lg: clamp(1.08rem, 1.01rem + 0.3vw, 1.22rem);
-
-    --h3: clamp(1.45rem, 1.22rem + 0.9vw, 2rem);
-    --h2: clamp(2.25rem, 1.65rem + 2.35vw, 3.65rem);
-    --h1: clamp(3.35rem, 2.1rem + 5vw, 6.8rem);
-
-    /* Espaçamento: escala previsível */
-    --espaco-1: 0.5rem;
-    --espaco-2: 0.75rem;
-    --espaco-3: 1rem;
-    --espaco-4: 1.5rem;
-    --espaco-5: 2rem;
-    --espaco-6: 3rem;
-    --espaco-7: 4rem;
-    --espaco-8: 6rem;
-    --espaco-9: 8rem;
-
-    /* Bordas e sombras */
-    --raio-sm: 12px;
-    --raio-md: 20px;
-    --raio-lg: 30px;
-    --raio-pill: 999px;
-
-    --borda-suave: 1px solid rgba(72, 21, 44, 0.11);
-
-    --sombra-sm:
-        0 8px 24px rgba(50, 16, 31, 0.07);
-
-    --sombra-md:
-        0 18px 50px rgba(50, 16, 31, 0.11);
-
-    --sombra-lg:
-        0 28px 70px rgba(50, 16, 31, 0.16);
-
-    --largura: 1180px;
-    --largura-texto: 68ch;
-
-    --altura-topo: 96px;
-
-    --ease: cubic-bezier(.2, .7, .2, 1);
-}
-
-
-/* =========================================================
-   RESET E BASE
-========================================================= */
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: calc(var(--altura-topo) + 18px);
-}
-
-body {
-    margin: 0;
-    padding-top: var(--altura-topo);
-
-    background: var(--off-white);
-    color: var(--neutro-950);
-
-    font-family: var(--fonte-texto);
-    font-size: var(--texto-base);
-    line-height: 1.68;
-
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-}
-
-body,
-html {
-    width: 100%;
-    overflow-x: hidden;
-}
-
-img,
-video,
-svg {
-    display: block;
-    max-width: 100%;
-}
-
-img,
-video {
-    height: auto;
-}
-
-button,
-input,
-textarea,
-select {
-    font: inherit;
-}
-
-button,
-a {
-    -webkit-tap-highlight-color: transparent;
-}
-
-a {
-    color: inherit;
-}
-
-h1,
-h2,
-h3,
-p,
-figure {
-    margin-top: 0;
-}
-
-h1,
-h2,
-h3 {
-    margin-bottom: 0;
-
-    font-family: var(--fonte-display);
-    font-weight: 800;
-    line-height: 1.06;
-
-    letter-spacing: -0.045em;
-    text-wrap: balance;
-}
-
-p {
-    text-wrap: pretty;
-}
-
-::selection {
-    background: var(--salmao-200);
-    color: var(--vinho-950);
-}
-
-.container {
-    width: min(var(--largura), 92%);
-    margin-inline: auto;
-}
-
-.secao {
-    padding-block: var(--espaco-9);
-}
-
-section {
-    scroll-margin-top: calc(var(--altura-topo) + 18px);
-}
-
-
-/* =========================================================
-   ACESSIBILIDADE
-========================================================= */
-
-.pular-conteudo {
-    position: fixed;
-    top: 12px;
-    left: 12px;
-    z-index: 9999;
-
-    padding: 12px 16px;
-
-    background: var(--branco);
-    color: var(--magenta-800);
-
-    border: 2px solid var(--magenta-800);
-    border-radius: var(--raio-sm);
-
-    font-family: var(--fonte-display);
-    font-weight: 800;
-    text-decoration: none;
-
-    transform: translateY(-160%);
-    transition: transform 180ms var(--ease);
-}
-
-.pular-conteudo:focus {
-    transform: translateY(0);
-}
-
-a:focus-visible,
-button:focus-visible {
-    outline: 3px solid #ffb640;
-    outline-offset: 4px;
-}
-
-@media (prefers-contrast: more) {
-    a:focus-visible,
-    button:focus-visible {
-        outline-width: 4px;
-    }
-}
-
-
-/* =========================================================
-   CABEÇALHO
-========================================================= */
-
-.topo {
-    position: fixed;
-    inset: 0 0 auto 0;
-
-    z-index: 3000;
-
-    background:
-        linear-gradient(
-            110deg,
-            var(--magenta-800) 0%,
-            var(--magenta-700) 48%,
-            var(--salmao-700) 100%
-        );
-
-    border-bottom:
-        1px solid rgba(255, 255, 255, 0.16);
-
-    box-shadow:
-        0 8px 28px rgba(50, 16, 31, 0.13);
-}
-
-.progresso-scroll {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-
-    width: 100%;
-    height: 3px;
-
-    background: rgba(255, 255, 255, 0.10);
-}
-
-.progresso-scroll span {
-    display: block;
-    width: 0;
-    height: 100%;
-
-    background: var(--branco);
-
-    transform-origin: left center;
-}
-
-.topo-conteudo {
-    width: min(1260px, 94%);
-    height: var(--altura-topo);
-
-    margin-inline: auto;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: var(--espaco-4);
-}
-
-.marca {
-    min-width: 0;
-
-    display: inline-flex;
-    align-items: center;
-
-    gap: 12px;
-
-    text-decoration: none;
-
-    flex-shrink: 0;
-}
-
-.logo {
-    width: 84px;
-    height: 72px;
-
-    object-fit: contain;
-}
-
-.titulo-logo {
-    width: 220px;
-    max-width: 20vw;
-    height: auto;
-
-    object-fit: contain;
-}
-
-.menu-principal {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 4px;
-
-    flex: 1;
-
-    font-family: var(--fonte-display);
-    font-size: 0.79rem;
-    font-weight: 700;
-}
-
-.menu-principal a {
-    position: relative;
-
-    min-height: 44px;
-
-    padding-inline: 9px;
-
-    display: inline-flex;
-    align-items: center;
-
-    color: var(--branco);
-    text-decoration: none;
-
-    border-radius: 10px;
-
-    white-space: nowrap;
-
-    transition:
-        background 180ms ease,
-        opacity 180ms ease;
-}
-
-.menu-principal a:hover {
-    background: rgba(255, 255, 255, 0.11);
-}
-
-.menu-principal a.ativo {
-    background: rgba(255, 255, 255, 0.16);
-}
-
-.menu-principal a::after {
-    content: "";
-
-    position: absolute;
-    left: 12px;
-    right: 12px;
-    bottom: 5px;
-
-    height: 2px;
-
-    background: var(--branco);
-
-    border-radius: 99px;
-
-    transform: scaleX(0);
-    transform-origin: center;
-
-    transition: transform 180ms ease;
-}
-
-.menu-principal a.ativo::after {
-    transform: scaleX(1);
-}
-
-.redes-topo {
-    display: flex;
-    align-items: center;
-
-    gap: 7px;
-
-    flex-shrink: 0;
-}
-
-.redes-topo a {
-    min-height: 42px;
-
-    padding-inline: 13px;
-
-    display: inline-flex;
-    align-items: center;
-
-    border: 1px solid rgba(255, 255, 255, 0.55);
-    border-radius: var(--raio-pill);
-
-    color: var(--branco);
-
-    font-family: var(--fonte-display);
-    font-size: 0.76rem;
-    font-weight: 700;
-    text-decoration: none;
-
-    transition:
-        background 180ms ease,
-        color 180ms ease,
-        transform 180ms ease;
-}
-
-.redes-topo a:hover {
-    background: var(--branco);
-    color: var(--magenta-800);
-
-    transform: translateY(-2px);
-}
-
-.botao-menu {
-    display: none;
-
-    width: 46px;
-    height: 46px;
-
-    padding: 10px;
-
-    border: 1px solid rgba(255, 255, 255, 0.55);
-    border-radius: 12px;
-
-    background: rgba(255, 255, 255, 0.10);
-
-    cursor: pointer;
-}
-
-.botao-menu span {
-    width: 100%;
-    height: 2px;
-
-    margin-block: 5px;
-
-    display: block;
-
-    background: var(--branco);
-
-    border-radius: 10px;
-
-    transition:
-        transform 200ms ease,
-        opacity 200ms ease;
-}
-
-.botao-menu.aberto span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
-}
-
-.botao-menu.aberto span:nth-child(2) {
-    opacity: 0;
-}
-
-.botao-menu.aberto span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
-}
-
-
-/* =========================================================
-   ELEMENTOS REUTILIZÁVEIS
-========================================================= */
-
-.eyebrow {
-    display: inline-block;
-
-    margin-bottom: 12px;
-
-    color: var(--magenta-800);
-
-    font-family: var(--fonte-display);
-    font-size: var(--texto-xs);
-    font-weight: 800;
-
-    letter-spacing: 0.13em;
-    text-transform: uppercase;
-}
-
-.cabecalho-secao {
-    max-width: 780px;
-
-    margin:
-        0 auto
-        var(--espaco-7);
-
-    text-align: center;
-}
-
-.cabecalho-secao h2 {
-    color: var(--vinho-900);
-    font-size: var(--h2);
-}
-
-.cabecalho-secao p {
-    max-width: 58ch;
-
-    margin:
-        var(--espaco-3)
-        auto
-        0;
-
-    color: var(--neutro-650);
-
-    font-size: var(--texto-lg);
-}
-
-.cabecalho-claro h2,
-.cabecalho-claro p,
-.cabecalho-claro .eyebrow {
-    color: var(--branco);
-}
-
-.botao {
-    min-height: 48px;
-
-    padding:
-        0
-        20px;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 8px;
-
-    border: 1px solid transparent;
-    border-radius: var(--raio-pill);
-
-    font-family: var(--fonte-display);
-    font-size: 0.9rem;
-    font-weight: 800;
-
-    text-decoration: none;
-
-    cursor: pointer;
-
-    transition:
-        transform 180ms var(--ease),
-        box-shadow 180ms ease,
-        background 180ms ease,
-        color 180ms ease,
-        border-color 180ms ease;
-}
-
-.botao:hover {
-    transform: translateY(-2px);
-}
-
-.botao-primario {
-    background: var(--magenta-800);
-    color: var(--branco);
-
-    box-shadow:
-        0 10px 24px rgba(122, 29, 71, 0.18);
-}
-
-.botao-primario:hover {
-    background: var(--vinho-900);
-
-    box-shadow:
-        0 14px 32px rgba(72, 21, 44, 0.24);
-}
-
-.botao-secundario {
-    background: transparent;
-    color: var(--magenta-800);
-
-    border-color: rgba(122, 29, 71, 0.34);
-}
-
-.botao-secundario:hover {
-    background: var(--salmao-100);
-    border-color: var(--magenta-800);
-}
-
-.botao-claro {
-    background: var(--branco);
-    color: var(--magenta-800);
-
-    box-shadow:
-        0 12px 30px rgba(35, 10, 22, 0.18);
-}
-
-
-/* =========================================================
-   HERO
-========================================================= */
-
-.hero {
-    position: relative;
-
-    padding:
-        clamp(74px, 8vw, 112px)
-        0
-        var(--espaco-8);
-
-    overflow: hidden;
-
-    background:
-        radial-gradient(
-            circle at 91% 8%,
-            rgba(244, 108, 103, 0.20),
-            transparent 31%
-        ),
-        radial-gradient(
-            circle at 8% 60%,
-            rgba(184, 71, 118, 0.08),
-            transparent 31%
-        ),
-        var(--off-white);
-}
-
-.hero::after {
-    content: "";
-
-    position: absolute;
-
-    width: 520px;
-    height: 520px;
-
-    top: 50px;
-    right: -260px;
-
-    border: 72px solid rgba(244, 108, 103, 0.08);
-    border-radius: 50%;
-
-    pointer-events: none;
-}
-
-.hero-grid {
-    position: relative;
-    z-index: 1;
-
-    display: grid;
-
-    grid-template-columns:
-        minmax(0, 0.88fr)
-        minmax(480px, 1.12fr);
-
-    align-items: center;
-
-    gap:
-        clamp(
-            42px,
-            6vw,
-            84px
-        );
-}
-
-.hero-copy {
-    max-width: 620px;
-}
-
-.hero-copy h1 {
-    color: var(--vinho-900);
-    font-size: var(--h1);
-}
-
-.hero-copy h1 span {
-    color: var(--magenta-800);
-}
-
-.hero-subtitulo {
-    margin:
-        16px 0
-        8px;
-
-    color: var(--salmao-700);
-
-    font-family: var(--fonte-display);
-    font-size:
-        clamp(
-            1.3rem,
-            1.05rem + 1vw,
-            1.9rem
-        );
-
-    font-weight: 800;
-    line-height: 1.24;
-}
-
-.hero-texto {
-    max-width: 54ch;
-
-    margin:
-        0 0
-        var(--espaco-5);
-
-    color: var(--neutro-650);
-
-    font-size: var(--texto-lg);
-    line-height: 1.62;
-}
-
-.hero-acoes {
-    display: flex;
-    align-items: center;
-
-    gap: 12px;
-
-    flex-wrap: wrap;
-}
-
-.hero-visual {
-    position: relative;
-}
-
-.hero-foto {
-    margin: 0;
-
-    aspect-ratio: 3 / 2;
-
-    overflow: hidden;
-
-    background: var(--neutro-100);
-
-    border:
-        7px solid
-        var(--branco);
-
-    border-radius:
-        var(--raio-lg);
-
-    box-shadow: var(--sombra-lg);
-}
-
-.hero-foto img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    object-position: center;
-}
-
-.hero-selo {
-    position: absolute;
-
-    right: -18px;
-    bottom: -23px;
-
-    min-width: 195px;
-
-    padding:
-        16px
-        20px;
-
-    background: var(--magenta-800);
-    color: var(--branco);
-
-    border:
-        4px solid
-        var(--off-white);
-
-    border-radius: 18px;
-
-    box-shadow: var(--sombra-md);
-}
-
-.hero-selo strong {
-    display: block;
-
-    font-family: var(--fonte-display);
-    font-size: 1.15rem;
-    font-weight: 800;
-}
-
-.hero-selo span {
-    display: block;
-
-    margin-top: 2px;
-
-    font-size: 0.79rem;
-    opacity: 0.86;
-}
-
-
-/* =========================================================
-   HISTÓRIA
-========================================================= */
-
-.historia-card {
-    position: relative;
-    z-index: 1;
-
-    margin-top:
-        clamp(
-            72px,
-            8vw,
-            110px
-        );
-
-    padding:
-        clamp(
-            30px,
-            4vw,
-            48px
-        );
-
-    display: grid;
-
-    grid-template-columns:
-        minmax(260px, 0.75fr)
-        minmax(0, 1.25fr);
-
-    align-items: start;
-
-    gap:
-        clamp(
-            28px,
-            5vw,
-            70px
-        );
-
-    background: var(--branco);
-
-    border: var(--borda-suave);
-    border-radius: var(--raio-lg);
-
-    box-shadow: var(--sombra-sm);
-}
-
-.historia-card h2 {
-    max-width: 16ch;
-
-    color: var(--vinho-900);
-    font-size:
-        clamp(
-            1.8rem,
-            1.35rem + 1.4vw,
-            2.7rem
-        );
-}
-
-.historia-card > p {
-    max-width: var(--largura-texto);
-
-    margin: 6px 0 0;
-
-    color: var(--neutro-650);
-
-    font-size: var(--texto-lg);
-    line-height: 1.72;
-}
-
-.informacoes {
-    margin-top: var(--espaco-4);
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
-
-    gap: var(--espaco-3);
-}
-
-.info-item {
-    min-height: 138px;
-
-    padding:
-        22px
-        22px;
-
-    display: grid;
-
-    grid-template-columns:
-        auto 1fr;
-
-    align-items: center;
-
-    gap: 17px;
-
-    background: rgba(255, 255, 255, 0.82);
-
-    border: var(--borda-suave);
-    border-radius: var(--raio-md);
-
-    box-shadow: var(--sombra-sm);
-}
-
-.info-icone {
-    width: 52px;
-    height: 52px;
-
-    display: grid;
-    place-items: center;
-
-    flex-shrink: 0;
-
-    background: var(--salmao-100);
-    color: var(--magenta-800);
-
-    border-radius: 16px;
-}
-
-.info-icone svg {
-    width: 27px;
-    height: 27px;
-
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 1.8;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-}
-
-.info-item strong {
-    display: block;
-
-    color: var(--vinho-900);
-
-    font-family: var(--fonte-display);
-    font-size: 0.94rem;
-    font-weight: 800;
-}
-
-.info-item p {
-    margin:
-        4px 0
-        0;
-
-    color: var(--neutro-650);
-
-    font-size: 0.94rem;
-    line-height: 1.45;
-}
-
-
-/* =========================================================
-   MAESTRO
-========================================================= */
-
-.maestro {
-    background:
-        linear-gradient(
-            135deg,
-            var(--salmao-100),
-            #fff7f4 70%
-        );
-}
-
-.maestro-grid {
-    display: grid;
-
-    grid-template-columns:
-        minmax(340px, 0.82fr)
-        minmax(0, 1.18fr);
-
-    align-items: center;
-
-    gap:
-        clamp(
-            48px,
-            8vw,
-            100px
-        );
-}
-
-.foto-maestro {
-    max-width: 480px;
-
-    justify-self: center;
-}
-
-.moldura-foto {
-    position: relative;
-
-    aspect-ratio: 4 / 3;
-
-    overflow: hidden;
-
-    background: var(--branco);
-
-    border:
-        7px solid
-        var(--branco);
-
-    border-radius: var(--raio-lg);
-
-    box-shadow: var(--sombra-md);
-}
-
-.moldura-foto::after {
-    content: "";
-
-    position: absolute;
-    inset: 0;
-
-    border:
-        1px solid
-        rgba(72, 21, 44, 0.08);
-
-    border-radius:
-        calc(var(--raio-lg) - 7px);
-
-    pointer-events: none;
-}
-
-.moldura-foto img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    object-position: center;
-}
-
-.card-maestro {
-    max-width: 720px;
-}
-
-.card-maestro h2 {
-    color: var(--vinho-900);
-    font-size: var(--h2);
-}
-
-.card-maestro p {
-    max-width: var(--largura-texto);
-
-    margin:
-        var(--espaco-4)
-        0
-        0;
-
-    color: var(--neutro-650);
-
-    font-size: var(--texto-lg);
-    line-height: 1.78;
-}
-
-
-/* =========================================================
-   MÚSICOS
-========================================================= */
-
-.musicos {
-    background: var(--branco);
-}
-
-.grade-musicos {
-    display: grid;
-
-    grid-template-columns:
-        repeat(
-            4,
-            minmax(0, 1fr)
-        );
-
-    gap:
-        clamp(
-            16px,
-            2vw,
-            24px
-        );
-}
-
-.musico-card {
-    overflow: hidden;
-
-    background: var(--off-white);
-
-    border: var(--borda-suave);
-    border-radius: var(--raio-md);
-
-    box-shadow: var(--sombra-sm);
-
-    transition:
-        transform 220ms var(--ease),
-        box-shadow 220ms ease;
-}
-
-.musico-foto {
-    aspect-ratio: 1 / 1;
-
-    overflow: hidden;
-
-    background: var(--neutro-100);
-}
-
-.musico-card img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    object-position: center;
-
-    transition:
-        transform 420ms var(--ease);
-}
-
-.musico-card h3 {
-    margin: 0;
-
-    padding:
-        16px
-        14px
-        18px;
-
-    color: var(--vinho-900);
-
-    font-size:
-        clamp(
-            0.91rem,
-            0.84rem + 0.25vw,
-            1.04rem
-        );
-
-    font-weight: 750;
-
-    text-align: center;
-
-    letter-spacing: -0.02em;
-}
-
-@media (hover: hover) and (pointer: fine) {
-
-    .musico-card:hover {
-        transform:
-            translateY(-5px);
-
-        box-shadow: var(--sombra-md);
-    }
-
-    .musico-card:hover img {
-        transform: scale(1.035);
-    }
-
-}
-
-
-/* =========================================================
-   TRAJETÓRIA
-========================================================= */
-
-.trajetoria {
-    position: relative;
-
-    overflow: hidden;
-
-    background:
-        radial-gradient(
-            circle at 16% 0%,
-            rgba(244, 108, 103, 0.34),
-            transparent 26%
-        ),
-        linear-gradient(
-            130deg,
-            var(--vinho-950),
-            var(--magenta-800) 62%,
-            var(--salmao-700)
-        );
-}
-
-.trajetoria::after {
-    content: "";
-
-    position: absolute;
-
-    width: 440px;
-    height: 440px;
-
-    right: -210px;
-    bottom: -220px;
-
-    border:
-        55px solid
-        rgba(255, 255, 255, 0.07);
-
-    border-radius: 50%;
-}
-
-.trajetoria .container {
-    position: relative;
-    z-index: 1;
-}
-
-.trajetoria-grid {
-    display: grid;
-
-    grid-template-columns:
-        minmax(280px, 0.72fr)
-        minmax(0, 1.28fr);
-
-    align-items: center;
-
-    gap:
-        clamp(
-            30px,
-            5vw,
-            60px
-        );
-}
-
-.trajetoria-texto {
-    padding:
-        clamp(
-            28px,
-            3vw,
-            40px
-        );
-
-    background:
-        rgba(
-            255,
-            255,
-            255,
-            0.96
-        );
-
-    border:
-        1px solid
-        rgba(255, 255, 255, 0.28);
-
-    border-radius: var(--raio-md);
-
-    box-shadow:
-        0 20px 52px
-        rgba(30, 7, 20, 0.17);
-}
-
-.trajetoria-texto p {
-    margin:
-        0 0
-        var(--espaco-3);
-
-    color: var(--neutro-800);
-
-    line-height: 1.72;
-}
-
-.trajetoria-texto p:last-child {
-    margin-bottom: 0;
-}
-
-.trajetoria-video {
-    aspect-ratio: 16 / 9;
-
-    overflow: hidden;
-
-    background: #000;
-
-    border:
-        6px solid
-        rgba(255, 255, 255, 0.95);
-
-    border-radius: var(--raio-md);
-
-    box-shadow:
-        0 24px 62px
-        rgba(30, 7, 20, 0.27);
-}
-
-.trajetoria-video iframe {
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    border: 0;
-}
-
-
-/* =========================================================
-   SHOWS — LAYOUT EDITORIAL
-========================================================= */
-
-.shows {
-    background: var(--off-white);
-}
-
-.shows-lista {
-    display: grid;
-
-    gap: var(--espaco-7);
-}
-
-.show-card {
-    min-height: 430px;
-
-    display: grid;
-
-    grid-template-columns:
-        minmax(0, 1.08fr)
-        minmax(390px, 0.92fr);
-
-    overflow: hidden;
-
-    background: var(--branco);
-
-    border: var(--borda-suave);
-    border-radius: var(--raio-lg);
-
-    box-shadow: var(--sombra-md);
-}
-
-.show-card-invertido {
-    grid-template-columns:
-        minmax(390px, 0.92fr)
-        minmax(0, 1.08fr);
-}
-
-.show-card-invertido .show-foto {
-    order: 2;
-}
-
-.show-card-invertido .show-conteudo {
-    order: 1;
-}
-
-.show-foto {
-    min-height: 430px;
-
-    overflow: hidden;
-
-    background: var(--neutro-100);
-}
-
-.show-foto img {
-    width: 100%;
-    height: 100%;
-
-    min-height: 430px;
-
-    object-fit: cover;
-    object-position: center;
-}
-
-.show-conteudo {
-    padding:
-        clamp(
-            32px,
-            5vw,
-            58px
-        );
-
-    align-self: center;
-}
-
-.show-meta {
-    margin-bottom: var(--espaco-4);
-
-    display: flex;
-    align-items: center;
-
-    gap: 12px;
-
-    flex-wrap: wrap;
-}
-
-.show-numero {
-    width: 42px;
-    height: 42px;
-
-    display: grid;
-    place-items: center;
-
-    background: var(--salmao-100);
-    color: var(--magenta-800);
-
-    border-radius: 50%;
-
-    font-family: var(--fonte-display);
-    font-size: 0.78rem;
-    font-weight: 800;
-}
-
-.show-tag {
-    min-height: 34px;
-
-    padding-inline: 12px;
-
-    display: inline-flex;
-    align-items: center;
-
-    background: var(--neutro-100);
-    color: var(--neutro-650);
-
-    border-radius: var(--raio-pill);
-
-    font-family: var(--fonte-display);
-    font-size: 0.78rem;
-    font-weight: 700;
-}
-
-.show-conteudo h3 {
-    color: var(--vinho-900);
-    font-size:
-        clamp(
-            2rem,
-            1.55rem + 1.6vw,
-            3.15rem
-        );
-}
-
-.show-conteudo > p {
-    max-width: 53ch;
-
-    margin:
-        var(--espaco-4)
-        0
-        0;
-
-    color: var(--neutro-650);
-
-    line-height: 1.7;
-}
-
-.show-conteudo .show-detalhe {
-    padding-top: var(--espaco-3);
-
-    border-top:
-        1px solid
-        var(--neutro-200);
-
-    color: var(--neutro-500);
-
-    font-size: var(--texto-sm);
-}
-
-
-/* =========================================================
-   AGENDA
-========================================================= */
-
-.agenda {
-    background: var(--branco);
-}
-
-.agenda-card {
-    width: min(900px, 100%);
-
-    margin-inline: auto;
-
-    padding:
-        clamp(
-            28px,
-            4vw,
-            44px
-        );
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: var(--espaco-5);
-
-    background:
-        linear-gradient(
-            135deg,
-            var(--salmao-100),
-            #fff8f6
-        );
-
-    border:
-        1px solid
-        rgba(193, 70, 99, 0.18);
-
-    border-radius: var(--raio-lg);
-}
-
-.agenda-status {
-    display: inline-block;
-
-    margin-bottom: 8px;
-
-    color: var(--salmao-700);
-
-    font-family: var(--fonte-display);
-    font-size: var(--texto-xs);
-    font-weight: 800;
-
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-}
-
-.agenda-card h3 {
-    max-width: 22ch;
-
-    color: var(--vinho-900);
-
-    font-size:
-        clamp(
-            1.35rem,
-            1.15rem + 0.7vw,
-            1.8rem
-        );
-
-    letter-spacing: -0.03em;
-}
-
-
-/* =========================================================
-   GALERIA
-========================================================= */
-
-.galeria {
-    background:
-        linear-gradient(
-            180deg,
-            var(--neutro-100),
-            var(--off-white)
-        );
-}
-
-.galeria-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(
-            3,
-            minmax(0, 1fr)
-        );
-
-    gap: var(--espaco-3);
-}
-
-.galeria-item {
-    margin: 0;
-
-    aspect-ratio: 4 / 3;
-
-    overflow: hidden;
-
-    background:
-        linear-gradient(
-            135deg,
-            var(--salmao-100),
-            var(--neutro-100)
-        );
-
-    border:
-        1px solid
-        rgba(72, 21, 44, 0.08);
-
-    border-radius: var(--raio-md);
-
-    box-shadow: var(--sombra-sm);
-}
-
-.galeria-destaque {
-    grid-column: span 2;
-    grid-row: span 2;
-
-    aspect-ratio: auto;
-    min-height: 420px;
-}
-
-.galeria-item img,
-.galeria-item video {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-}
-
-.galeria-video video {
-    background: #161014;
-}
-
-.lightbox-trigger {
-    width: 100%;
-    height: 100%;
-
-    padding: 0;
-
-    border: 0;
-
-    background: transparent;
-
-    cursor: zoom-in;
-}
-
-.lightbox-trigger img {
-    transition:
-        transform 420ms var(--ease),
-        filter 250ms ease;
-}
-
-@media (hover: hover) and (pointer: fine) {
-
-    .lightbox-trigger:hover img {
-        transform: scale(1.035);
-        filter: brightness(0.93);
-    }
-
-}
-
-.media-fallback {
-    width: 100%;
-    height: 100%;
-
-    display: grid;
-    place-items: center;
-
-    padding: 20px;
-
-    background:
-        linear-gradient(
-            135deg,
-            var(--salmao-100),
-            var(--neutro-100)
-        );
-
-    color: var(--neutro-650);
-
-    font-family: var(--fonte-display);
-    font-size: var(--texto-sm);
-    font-weight: 700;
-
-    text-align: center;
-}
-
-
-/* =========================================================
-   IMPRENSA
-========================================================= */
-
-.imprensa {
-    background: var(--salmao-100);
-}
-
-.downloads {
-    width: min(900px, 100%);
-
-    margin-inline: auto;
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(
-            2,
-            minmax(0, 1fr)
-        );
-
-    gap: var(--espaco-3);
-}
-
-.download-card {
-    min-height: 112px;
-
-    padding:
-        22px
-        24px;
-
-    display: grid;
-
-    grid-template-columns:
-        auto 1fr auto;
-
-    align-items: center;
-
-    gap: 17px;
-
-    background: var(--branco);
-    color: var(--neutro-950);
-
-    border: var(--borda-suave);
-    border-radius: var(--raio-md);
-
-    text-decoration: none;
-
-    box-shadow: var(--sombra-sm);
-
-    transition:
-        transform 180ms var(--ease),
-        box-shadow 180ms ease;
-}
-
-.download-card:hover {
-    transform: translateY(-3px);
-
-    box-shadow: var(--sombra-md);
-}
-
-.download-icone {
-    width: 52px;
-    height: 52px;
-
-    display: grid;
-    place-items: center;
-
-    background: var(--magenta-800);
-    color: var(--branco);
-
-    border-radius: 15px;
-
-    font-family: var(--fonte-display);
-    font-size: 0.75rem;
-    font-weight: 800;
-}
-
-.download-card strong {
-    display: block;
-
-    color: var(--vinho-900);
-
-    font-family: var(--fonte-display);
-    font-size: 1.05rem;
-    font-weight: 800;
-}
-
-.download-card small {
-    display: block;
-
-    margin-top: 3px;
-
-    color: var(--neutro-650);
-
-    font-size: 0.88rem;
-}
-
-.download-seta {
-    color: var(--magenta-800);
-
-    font-family: var(--fonte-display);
-    font-size: 1.35rem;
-    font-weight: 800;
-}
-
-
-/* =========================================================
-   COMPARTILHAR
-========================================================= */
-
-.compartilhar {
-    background: var(--branco);
-}
-
-.compartilhar-grid {
-    display: grid;
-
-    grid-template-columns:
-        minmax(0, 1fr)
-        minmax(240px, 0.4fr);
-
-    align-items: center;
-
-    gap:
-        clamp(
-            40px,
-            7vw,
-            90px
-        );
-}
-
-.compartilhar-copy {
-    max-width: 660px;
-}
-
-.compartilhar-copy h2 {
-    color: var(--vinho-900);
-    font-size: var(--h2);
-}
-
-.compartilhar-copy > p {
-    max-width: 56ch;
-
-    margin:
-        var(--espaco-3)
-        0
-        var(--espaco-5);
-
-    color: var(--neutro-650);
-
-    font-size: var(--texto-lg);
-}
-
-.mensagem-compartilhar {
-    min-height: 1.4em;
-
-    margin:
-        9px 0
-        0 !important;
-
-    color: var(--magenta-800) !important;
-
-    font-size: var(--texto-sm) !important;
-}
-
-.qr-card {
-    width: min(270px, 100%);
-
-    margin: 0;
-
-    justify-self: center;
-
-    padding: 22px;
-
-    background: var(--off-white);
-
-    border: var(--borda-suave);
-    border-radius: var(--raio-lg);
-
-    box-shadow: var(--sombra-md);
-
-    text-align: center;
-}
-
-.qr-card img {
-    width: 100%;
-    height: auto;
-
-    border-radius: 10px;
-}
-
-.qr-card figcaption {
-    margin-top: 10px;
-
-    color: var(--magenta-800);
-
-    font-family: var(--fonte-display);
-    font-size: 0.82rem;
-    font-weight: 800;
-}
-
-
-/* =========================================================
-   CONTATO
-========================================================= */
-
-.contato {
-    padding-top: 0;
-
-    background: var(--branco);
-}
-
-.contato-card {
-    padding:
-        clamp(
-            38px,
-            6vw,
-            68px
-        );
-
-    display: grid;
-
-    grid-template-columns:
-        minmax(0, 1fr)
-        auto;
-
-    align-items: center;
-
-    gap: var(--espaco-6);
-
-    background:
-        radial-gradient(
-            circle at 90% 0%,
-            rgba(244, 108, 103, 0.42),
-            transparent 32%
-        ),
-        linear-gradient(
-            120deg,
-            var(--vinho-950),
-            var(--magenta-800)
-        );
-
-    border-radius: var(--raio-lg);
-
-    box-shadow:
-        0 26px 68px
-        rgba(50, 16, 31, 0.19);
-}
-
-.contato-card .eyebrow {
-    color: var(--salmao-200);
-}
-
-.contato-card h2 {
-    max-width: 18ch;
-
-    color: var(--branco);
-    font-size: var(--h2);
-}
-
-.contato-card p {
-    max-width: 58ch;
-
-    margin:
-        var(--espaco-3)
-        0
-        0;
-
-    color:
-        rgba(
-            255,
-            255,
-            255,
-            0.84
-        );
-
-    font-size: var(--texto-lg);
-}
-
-
-/* =========================================================
-   RODAPÉ
-========================================================= */
-
-.rodape {
-    margin-top: var(--espaco-8);
-
-    padding:
-        36px 0;
-
-    background: var(--neutro-950);
-    color:
-        rgba(
-            255,
-            255,
-            255,
-            0.76
-        );
-}
-
-.rodape-grid {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: var(--espaco-5);
-}
-
-.rodape-marca {
-    display: flex;
-    align-items: center;
-
-    gap: 13px;
-}
-
-.rodape-logo {
-    width: 58px;
-    height: 58px;
-
-    object-fit: contain;
-}
-
-.rodape-marca strong {
-    display: block;
-
-    color: var(--branco);
-
-    font-family: var(--fonte-display);
-    font-size: 0.9rem;
-    font-weight: 800;
-}
-
-.rodape-marca p {
-    margin: 2px 0 0;
-
-    font-size: 0.84rem;
-}
-
-.rodape-links {
-    display: flex;
-    align-items: center;
-
-    gap: 8px;
-
-    flex-wrap: wrap;
-}
-
-.rodape-links a {
-    min-height: 40px;
-
-    padding-inline: 10px;
-
-    display: inline-flex;
-    align-items: center;
-
-    color: var(--branco);
-
-    border-radius: 8px;
-
-    font-family: var(--fonte-display);
-    font-size: 0.82rem;
-    font-weight: 700;
-
-    text-decoration: none;
-}
-
-.rodape-links a:hover {
-    background:
-        rgba(
-            255,
-            255,
-            255,
-            0.08
-        );
-}
-
-
-/* =========================================================
-   WHATSAPP / VOLTAR AO TOPO
-========================================================= */
-
-.whatsapp-flutuante {
-    position: fixed;
-
-    right: 22px;
-    bottom: 22px;
-
-    z-index: 2200;
-
-    min-height: 54px;
-
-    padding:
-        8px
-        17px
-        8px
-        10px;
-
-    display: inline-flex;
-    align-items: center;
-
-    gap: 8px;
-
-    background: #176b44;
-    color: var(--branco);
-
-    border:
-        1px solid
-        rgba(255, 255, 255, 0.16);
-
-    border-radius: var(--raio-pill);
-
-    font-family: var(--fonte-display);
-    font-size: 0.82rem;
-    font-weight: 800;
-
-    text-decoration: none;
-
-    box-shadow:
-        0 14px 34px
-        rgba(13, 66, 41, 0.25);
-
-    transition:
-        transform 180ms var(--ease),
-        box-shadow 180ms ease;
-}
-
-.whatsapp-flutuante:hover {
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 18px 40px
-        rgba(13, 66, 41, 0.30);
-}
-
-.icone-whatsapp {
-    width: 35px !important;
-    height: 35px !important;
-
-    flex: 0 0 35px;
-}
-
-.voltar-topo {
-    position: fixed;
-
-    right: 25px;
-    bottom: 88px;
-
-    z-index: 2100;
-
-    width: 46px;
-    height: 46px;
-
-    border:
-        1px solid
-        rgba(72, 21, 44, 0.14);
-
-    border-radius: 50%;
-
-    background: var(--branco);
-    color: var(--magenta-800);
-
-    font-family: var(--fonte-display);
-    font-size: 1.2rem;
-    font-weight: 800;
-
-    cursor: pointer;
-
-    box-shadow: var(--sombra-sm);
-
-    opacity: 0;
-    visibility: hidden;
-
-    transform: translateY(8px);
-
-    transition:
-        opacity 180ms ease,
-        visibility 180ms ease,
-        transform 180ms var(--ease);
-}
-
-.voltar-topo.visivel {
-    opacity: 1;
-    visibility: visible;
-
-    transform: translateY(0);
-}
-
-
-/* =========================================================
-   LIGHTBOX
-========================================================= */
-
-body.lightbox-aberto {
-    overflow: hidden;
-}
-
-.lightbox {
-    position: fixed;
-    inset: 0;
-
-    z-index: 5000;
-
-    padding:
-        65px
-        90px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background:
-        rgba(
-            25,
-            14,
-            19,
-            0.95
-        );
-
-    opacity: 0;
-    visibility: hidden;
-
-    transition:
-        opacity 220ms ease,
-        visibility 220ms ease;
-}
-
-.lightbox.aberto {
-    opacity: 1;
-    visibility: visible;
-}
-
-.lightbox-conteudo {
-    width: min(1100px, 84vw);
-    max-height: 82vh;
-
-    margin: 0;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    gap: 12px;
-}
-
-.lightbox-conteudo img {
-    max-width: 100%;
-    max-height: 74vh;
-
-    object-fit: contain;
-
-    border-radius: 14px;
-
-    box-shadow:
-        0 26px 72px
-        rgba(0, 0, 0, 0.42);
-}
-
-.lightbox-conteudo figcaption {
-    color:
-        rgba(
-            255,
-            255,
-            255,
-            0.84
-        );
-
-    font-size: 0.94rem;
-
-    text-align: center;
-}
-
-.lightbox-fechar,
-.lightbox-anterior,
-.lightbox-proxima {
-    position: absolute;
-
-    display: grid;
-    place-items: center;
-
-    border:
-        1px solid
-        rgba(255, 255, 255, 0.28);
-
-    background:
-        rgba(
-            255,
-            255,
-            255,
-            0.10
-        );
-
-    color: var(--branco);
-
-    cursor: pointer;
-
-    transition:
-        background 180ms ease;
-}
-
-.lightbox-fechar:hover,
-.lightbox-anterior:hover,
-.lightbox-proxima:hover {
-    background:
-        rgba(
-            255,
-            255,
-            255,
-            0.20
-        );
-}
-
-.lightbox-fechar {
-    top: 22px;
-    right: 24px;
-
-    width: 48px;
-    height: 48px;
-
-    border-radius: 50%;
-
-    font-size: 2rem;
-}
-
-.lightbox-anterior,
-.lightbox-proxima {
-    top: 50%;
-
-    width: 52px;
-    height: 70px;
-
-    border-radius: 14px;
-
-    font-size: 2.4rem;
-
-    transform: translateY(-50%);
-}
-
-.lightbox-anterior {
-    left: 22px;
-}
-
-.lightbox-proxima {
-    right: 22px;
-}
-
-
-/* =========================================================
-   ANIMAÇÕES
-========================================================= */
-
-.reveal {
-    opacity: 0;
-
-    transform:
-        translateY(22px);
-
-    transition:
-        opacity 620ms var(--ease),
-        transform 620ms var(--ease);
-}
-
-.reveal.visivel {
-    opacity: 1;
-
-    transform:
-        translateY(0);
-}
-
-
-/* =========================================================
-   RESPONSIVO — 1120
-========================================================= */
-
-@media (max-width: 1120px) {
-
-    :root {
-        --altura-topo: 88px;
-    }
-
-    .titulo-logo {
-        max-width: 31vw;
-    }
-
-    .botao-menu {
-        display: block;
-    }
-
-    .redes-topo {
-        display: none;
-    }
-
-    .menu-principal {
-        position: fixed;
-
-        top: var(--altura-topo);
-        left: 0;
-        right: 0;
-
-        width: 100%;
-
-        padding:
-            14px
-            5%
-            20px;
-
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-
-        gap: 2px;
-
-        background:
-            linear-gradient(
-                135deg,
-                var(--vinho-900),
-                var(--magenta-800)
-            );
-
-        box-shadow:
-            0 18px 34px
-            rgba(50, 16, 31, 0.20);
-
-        opacity: 0;
-        visibility: hidden;
-
-        transform:
-            translateY(-10px);
-
-        pointer-events: none;
-
-        transition:
-            opacity 180ms ease,
-            visibility 180ms ease,
-            transform 180ms var(--ease);
-    }
-
-    .menu-principal.aberto {
-        opacity: 1;
-        visibility: visible;
-
-        transform: translateY(0);
-
-        pointer-events: auto;
-    }
-
-    .menu-principal a {
-        width: 100%;
-
-        justify-content: flex-start;
-
-        padding-inline: 8px;
-
-        font-size: 0.94rem;
-    }
-
-    .hero-grid {
-        grid-template-columns:
-            minmax(0, 0.9fr)
-            minmax(400px, 1.1fr);
-    }
-
-}
-
-
-/* =========================================================
-   RESPONSIVO — 920
-========================================================= */
-
-@media (max-width: 920px) {
-
-    .secao {
-        padding-block: var(--espaco-8);
-    }
-
-    .hero-grid,
-    .historia-card,
-    .maestro-grid,
-    .trajetoria-grid,
-    .show-card,
-    .show-card-invertido,
-    .compartilhar-grid,
-    .contato-card {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-grid {
-        gap: var(--espaco-6);
-    }
-
-    .hero-copy {
-        max-width: 720px;
-    }
-
-    .hero-foto {
-        max-width: 760px;
-
-        margin-inline: auto;
-    }
-
-    .hero-selo {
-        right: 16px;
-    }
-
-    .historia-card h2 {
-        max-width: 22ch;
-    }
-
-    .maestro-grid {
-        gap: var(--espaco-6);
-    }
-
-    .foto-maestro {
-        width: min(560px, 100%);
-    }
-
-    .grade-musicos {
-        grid-template-columns:
-            repeat(
-                2,
-                minmax(0, 1fr)
-            );
-    }
-
-    .show-card-invertido .show-foto,
-    .show-card-invertido .show-conteudo {
-        order: initial;
-    }
-
-    .show-foto,
-    .show-foto img {
-        min-height: 0;
-    }
-
-    .show-foto {
-        aspect-ratio: 16 / 10;
-    }
-
-    .galeria-grid {
-        grid-template-columns:
-            repeat(
-                2,
-                minmax(0, 1fr)
-            );
-    }
-
-    .galeria-destaque {
-        grid-column: span 2;
-
-        min-height: 390px;
-    }
-
-    .contato-card .botao {
-        justify-self: start;
-    }
-
-}
-
-
-/* =========================================================
-   RESPONSIVO — 700
-========================================================= */
-
-@media (max-width: 700px) {
-
-    :root {
-        --altura-topo: 78px;
-    }
-
-    .container {
-        width: min(92%, 620px);
-    }
-
-    .secao {
-        padding-block: 72px;
-    }
-
-    .topo-conteudo {
-        width: 94%;
-    }
-
-    .logo {
-        width: 66px;
-        height: 60px;
-    }
-
-    .titulo-logo {
-        width: 188px;
-        max-width: 48vw;
-    }
-
-    .hero {
-        padding:
-            58px 0
-            72px;
-    }
-
-    .hero::after {
-        width: 300px;
-        height: 300px;
-
-        right: -185px;
-
-        border-width: 42px;
-    }
-
-    .hero-copy h1 {
-        max-width: 8ch;
-    }
-
-    .hero-acoes {
-        align-items: stretch;
-        flex-direction: column;
-    }
-
-    .hero-acoes .botao {
-        width: 100%;
-    }
-
-    .hero-selo {
-        position: static;
-
-        width: max-content;
-        max-width: 100%;
-
-        margin:
-            -18px
-            14px
-            0
-            auto;
-    }
-
-    .historia-card {
-        margin-top: 62px;
-
-        padding:
-            28px
-            24px;
-    }
-
-    .informacoes {
-        grid-template-columns: 1fr;
-    }
-
-    .info-item {
-        min-height: auto;
-    }
-
-    .cabecalho-secao {
-        margin-bottom: 38px;
-    }
-
-    .moldura-foto {
-        aspect-ratio: auto;
-    }
-
-    .moldura-foto img {
-        height: auto;
-        object-fit: contain;
-    }
-
-    .trajetoria-texto {
-        padding:
-            26px
-            22px;
-    }
-
-    .show-card {
-        border-radius: 22px;
-    }
-
-    .show-foto {
-        aspect-ratio: 4 / 3;
-    }
-
-    .show-conteudo {
-        padding:
-            30px
-            24px
-            34px;
-    }
-
-    .agenda-card {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    .agenda-card .botao {
-        width: 100%;
-    }
-
-    .galeria-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .galeria-destaque {
-        grid-column: span 1;
-
-        min-height: 0;
-
-        aspect-ratio: 4 / 3;
-    }
-
-    .downloads {
-        grid-template-columns: 1fr;
-    }
-
-    .compartilhar-grid {
-        text-align: center;
-    }
-
-    .compartilhar-copy {
-        margin-inline: auto;
-    }
-
-    .compartilhar-copy > p {
-        margin-inline: auto;
-    }
-
-    .qr-card {
-        width: min(250px, 80%);
-    }
-
-    .contato-card {
-        padding:
-            36px
-            26px;
-
-        border-radius: 24px;
-    }
-
-    .contato-card .botao {
-        width: 100%;
-    }
-
-    .rodape {
-        margin-top: 72px;
-    }
-
-    .rodape-grid {
-        align-items: center;
-        flex-direction: column;
-
-        text-align: center;
-    }
-
-    .rodape-marca {
-        flex-direction: column;
-    }
-
-    .rodape-links {
-        justify-content: center;
-    }
-
-    .whatsapp-flutuante {
-        right: 14px;
-        bottom: 14px;
-
-        width: 54px;
-        height: 54px;
-
-        padding: 8px;
-
-        justify-content: center;
-    }
-
-    .whatsapp-flutuante > span {
-        display: none;
-    }
-
-    .icone-whatsapp {
-        width: 36px !important;
-        height: 36px !important;
-        flex-basis: 36px;
-    }
-
-    .voltar-topo {
-        right: 18px;
-        bottom: 78px;
-    }
-
-    .lightbox {
-        padding:
-            68px
-            14px
-            78px;
-    }
-
-    .lightbox-conteudo {
-        width: 100%;
-    }
-
-    .lightbox-anterior,
-    .lightbox-proxima {
-        top: auto;
-        bottom: 16px;
-
-        width: 48px;
-        height: 48px;
-
-        border-radius: 50%;
-
-        transform: none;
-    }
-
-    .lightbox-anterior {
-        left: calc(50% - 58px);
-    }
-
-    .lightbox-proxima {
-        right: calc(50% - 58px);
-    }
-
-}
-
-
-/* =========================================================
-   RESPONSIVO — 430
-========================================================= */
-
-@media (max-width: 430px) {
-
-    .logo {
-        width: 58px;
-        height: 54px;
-    }
-
-    .titulo-logo {
-        width: 166px;
-        max-width: 50vw;
-    }
-
-    .botao-menu {
-        width: 43px;
-        height: 43px;
-    }
-
-    .grade-musicos {
-        gap: 12px;
-    }
-
-    .musico-card h3 {
-        padding:
-            13px
-            8px
-            15px;
-
-        font-size: 0.88rem;
-    }
-
-    .download-card {
-        grid-template-columns:
-            auto 1fr;
-
-        padding:
-            20px
-            17px;
-    }
-
-    .download-seta {
-        display: none;
-    }
-
-}
-
-
-/* =========================================================
-   REDUÇÃO DE MOVIMENTO
-========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-    html {
-        scroll-behavior: auto;
-    }
-
-    *,
-    *::before,
-    *::after {
-        scroll-behavior: auto !important;
-
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-
-        transition-duration: 0.01ms !important;
-    }
-
-    .reveal {
-        opacity: 1;
-
-        transform: none;
-    }
-
-}
-
-
-/* =========================================================
-   IMPRESSÃO
-========================================================= */
-
-@media print {
-
-    .topo,
-    .whatsapp-flutuante,
-    .voltar-topo,
-    .lightbox,
-    .botao-menu,
-    .hero-acoes,
-    .botao-compartilhar {
-        display: none !important;
-    }
-
-    body {
-        padding-top: 0;
-
-        background: var(--branco);
-        color: #000;
-    }
-
-    .secao {
-        padding-block: 32px;
-    }
-
-    .reveal {
-        opacity: 1 !important;
-        transform: none !important;
-    }
-
-}
-
-</style>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-
-    const reduzirMovimento = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-    ).matches;
-
-
-    /* =====================================================
-       MENU MOBILE
-    ====================================================== */
-
-    const botaoMenu = document.querySelector(".botao-menu");
-    const menu = document.querySelector(".menu-principal");
-
-    function fecharMenu() {
-        if (!botaoMenu || !menu) return;
-
-        menu.classList.remove("aberto");
-        botaoMenu.classList.remove("aberto");
-
-        botaoMenu.setAttribute("aria-expanded", "false");
-        botaoMenu.setAttribute("aria-label", "Abrir menu");
-    }
-
-    if (botaoMenu && menu) {
-
-        botaoMenu.addEventListener("click", (evento) => {
-            evento.stopPropagation();
-
-            const aberto = menu.classList.toggle("aberto");
-
-            botaoMenu.classList.toggle("aberto", aberto);
-
-            botaoMenu.setAttribute(
-                "aria-expanded",
-                aberto ? "true" : "false"
-            );
-
-            botaoMenu.setAttribute(
-                "aria-label",
-                aberto ? "Fechar menu" : "Abrir menu"
-            );
-        });
-
-
-        menu.querySelectorAll("a").forEach((link) => {
-            link.addEventListener("click", fecharMenu);
-        });
-
-
-        document.addEventListener("click", (evento) => {
-            if (!menu.classList.contains("aberto")) return;
-
-            if (
-                menu.contains(evento.target) ||
-                botaoMenu.contains(evento.target)
-            ) {
-                return;
-            }
-
-            fecharMenu();
-        });
-
-
-        window.addEventListener("resize", () => {
-            if (window.innerWidth > 1120) {
-                fecharMenu();
-            }
-        });
-    }
-
-
-    /* =====================================================
-       PROGRESSO DE LEITURA
-    ====================================================== */
-
-    const barraProgresso = document.querySelector(
-        ".progresso-scroll span"
-    );
-
-    function atualizarProgresso() {
-        if (!barraProgresso) return;
-
-        const documento = document.documentElement;
-
-        const maximo =
-            documento.scrollHeight -
-            documento.clientHeight;
-
-        const progresso =
-            maximo > 0
-                ? (window.scrollY / maximo) * 100
-                : 0;
-
-        barraProgresso.style.width =
-            `${Math.min(100, Math.max(0, progresso))}%`;
-    }
-
-    window.addEventListener(
-        "scroll",
-        atualizarProgresso,
-        { passive: true }
-    );
-
-    atualizarProgresso();
-
-
-    /* =====================================================
-       ANIMAÇÕES
-    ====================================================== */
-
-    const elementosReveal =
-        document.querySelectorAll(".reveal");
-
-    if (
-        reduzirMovimento ||
-        !("IntersectionObserver" in window)
-    ) {
-
-        elementosReveal.forEach((elemento) => {
-            elemento.classList.add("visivel");
-        });
-
-    } else {
-
-        const revealObserver =
-            new IntersectionObserver(
-                (entradas, observer) => {
-
-                    entradas.forEach((entrada) => {
-
-                        if (entrada.isIntersecting) {
-                            entrada.target.classList.add("visivel");
-                            observer.unobserve(entrada.target);
-                        }
-
-                    });
-
-                },
-                {
-                    threshold: 0.10,
-                    rootMargin: "0px 0px -30px 0px"
-                }
-            );
-
-        elementosReveal.forEach((elemento) => {
-            revealObserver.observe(elemento);
-        });
-    }
-
-
-    /* =====================================================
-       VOLTAR AO TOPO
-    ====================================================== */
-
-    const voltarTopo =
-        document.querySelector(".voltar-topo");
-
-    if (voltarTopo) {
-
-        function atualizarBotaoTopo() {
-            voltarTopo.classList.toggle(
-                "visivel",
-                window.scrollY > 700
-            );
-        }
-
-        window.addEventListener(
-            "scroll",
-            atualizarBotaoTopo,
-            { passive: true }
-        );
-
-        atualizarBotaoTopo();
-
-        voltarTopo.addEventListener("click", () => {
-            window.scrollTo({
-                top: 0,
-                behavior: reduzirMovimento ? "auto" : "smooth"
-            });
-        });
-    }
-
-
-    /* =====================================================
-       LINK ATIVO DO MENU
-    ====================================================== */
-
-    const linksMenu = Array.from(
-        document.querySelectorAll(
-            '.menu-principal a[href^="#"]'
-        )
-    );
-
-    const secoes = linksMenu
-        .map((link) => {
-
-            const seletor =
-                link.getAttribute("href");
-
-            if (!seletor || seletor === "#") {
-                return null;
-            }
-
-            return document.querySelector(seletor);
-
-        })
-        .filter(Boolean);
-
-
-    function marcarLinkAtivo(id) {
-
-        linksMenu.forEach((link) => {
-
-            const ativo =
-                link.getAttribute("href") === `#${id}`;
-
-            link.classList.toggle("ativo", ativo);
-
-            if (ativo) {
-                link.setAttribute(
-                    "aria-current",
-                    "location"
-                );
-            } else {
-                link.removeAttribute("aria-current");
-            }
-
-        });
-    }
-
-
-    if (
-        "IntersectionObserver" in window &&
-        secoes.length
-    ) {
-
-        const observerSecao =
-            new IntersectionObserver(
-                (entradas) => {
-
-                    const visiveis = entradas
-                        .filter(
-                            (entrada) =>
-                                entrada.isIntersecting
-                        )
-                        .sort(
-                            (a, b) =>
-                                b.intersectionRatio -
-                                a.intersectionRatio
-                        );
-
-                    if (!visiveis.length) return;
-
-                    marcarLinkAtivo(
-                        visiveis[0].target.id
-                    );
-
-                },
-                {
-                    rootMargin:
-                        "-20% 0px -63% 0px",
-
-                    threshold:
-                        [0, 0.1, 0.25, 0.5]
-                }
-            );
-
-        secoes.forEach((secao) => {
-            observerSecao.observe(secao);
-        });
-    }
-
-
-    /* =====================================================
-       FALLBACK PARA IMAGENS QUE NÃO EXISTIREM
-    ====================================================== */
-
-    document
-        .querySelectorAll(
-            "img[data-media-fallback]"
-        )
-        .forEach((imagem) => {
-
-            imagem.addEventListener(
-                "error",
-                () => {
-
-                    const texto =
-                        imagem.dataset.mediaFallback ||
-                        "Imagem indisponível";
-
-                    const trigger =
-                        imagem.closest(
-                            ".lightbox-trigger"
-                        );
-
-                    const container =
-                        trigger ||
-                        imagem.parentElement;
-
-                    if (!container) return;
-
-                    if (trigger) {
-                        trigger.disabled = true;
-                        trigger.removeAttribute(
-                            "data-lightbox-src"
-                        );
-                    }
-
-                    imagem.remove();
-
-                    const fallback =
-                        document.createElement(
-                            "div"
-                        );
-
-                    fallback.className =
-                        "media-fallback";
-
-                    fallback.textContent =
-                        texto;
-
-                    container.appendChild(
-                        fallback
-                    );
-
-                },
-                { once: true }
-            );
-
-        });
-
-
-    /* =====================================================
-       LIGHTBOX
-    ====================================================== */
-
-    const lightbox =
-        document.querySelector(".lightbox");
-
-    const lightboxImagem =
-        lightbox?.querySelector(
-            ".lightbox-conteudo img"
-        );
-
-    const lightboxLegenda =
-        lightbox?.querySelector(
-            ".lightbox-conteudo figcaption"
-        );
-
-    const botaoFechar =
-        lightbox?.querySelector(
-            ".lightbox-fechar"
-        );
-
-    const botaoAnterior =
-        lightbox?.querySelector(
-            ".lightbox-anterior"
-        );
-
-    const botaoProxima =
-        lightbox?.querySelector(
-            ".lightbox-proxima"
-        );
-
-    let imagens = [];
-    let indiceAtual = 0;
-    let elementoAnteriorAoLightbox = null;
-
-
-    function atualizarListaLightbox() {
-        imagens = Array.from(
-            document.querySelectorAll(
-                ".lightbox-trigger[data-lightbox-src]:not(:disabled)"
-            )
-        );
-    }
-
-    atualizarListaLightbox();
-
-
-    function mostrarImagem(indice) {
-
-        atualizarListaLightbox();
-
-        if (
-            !imagens.length ||
-            !lightboxImagem
-        ) {
-            return;
-        }
-
-        indiceAtual =
-            (indice + imagens.length) %
-            imagens.length;
-
-        const botao =
-            imagens[indiceAtual];
-
-        const src =
-            botao.dataset.lightboxSrc;
-
-        const alt =
-            botao.dataset.lightboxAlt ||
-            "Imagem ampliada da Orquestra Volpi";
-
-        lightboxImagem.src = src;
-        lightboxImagem.alt = alt;
-
-        if (lightboxLegenda) {
-            lightboxLegenda.textContent = alt;
-        }
-    }
-
-
-    function abrirLightbox(indice) {
-
-        if (!lightbox) return;
-
-        elementoAnteriorAoLightbox =
-            document.activeElement;
-
-        mostrarImagem(indice);
-
-        lightbox.classList.add("aberto");
-
-        lightbox.setAttribute(
-            "aria-hidden",
-            "false"
-        );
-
-        document.body.classList.add(
-            "lightbox-aberto"
-        );
-
-        botaoFechar?.focus();
-    }
-
-
-    function fecharLightbox() {
-
-        if (!lightbox) return;
-
-        lightbox.classList.remove("aberto");
-
-        lightbox.setAttribute(
-            "aria-hidden",
-            "true"
-        );
-
-        document.body.classList.remove(
-            "lightbox-aberto"
-        );
-
-        if (lightboxImagem) {
-            lightboxImagem.removeAttribute("src");
-        }
-
-        if (
-            elementoAnteriorAoLightbox
-            instanceof HTMLElement
-        ) {
-            elementoAnteriorAoLightbox.focus();
-        }
-    }
-
-
-    document.addEventListener(
-        "click",
-        (evento) => {
-
-            const trigger =
-                evento.target.closest(
-                    ".lightbox-trigger[data-lightbox-src]"
-                );
-
-            if (!trigger || trigger.disabled) return;
-
-            atualizarListaLightbox();
-
-            const indice =
-                imagens.indexOf(trigger);
-
-            if (indice >= 0) {
-                abrirLightbox(indice);
-            }
-
-        }
-    );
-
-
-    botaoFechar?.addEventListener(
-        "click",
-        fecharLightbox
-    );
-
-    botaoAnterior?.addEventListener(
-        "click",
-        () => mostrarImagem(indiceAtual - 1)
-    );
-
-    botaoProxima?.addEventListener(
-        "click",
-        () => mostrarImagem(indiceAtual + 1)
-    );
-
-    lightbox?.addEventListener(
-        "click",
-        (evento) => {
-
-            if (evento.target === lightbox) {
-                fecharLightbox();
-            }
-
-        }
-    );
-
-
-    function elementosFocaveisLightbox() {
-
-        if (!lightbox) return [];
-
-        return Array.from(
-            lightbox.querySelectorAll(
-                'button:not([disabled]), a[href], [tabindex]:not([tabindex="-1"])'
-            )
-        );
-    }
-
-
-    /* =====================================================
-       COMPARTILHAR
-    ====================================================== */
-
-    const botaoCompartilhar =
-        document.querySelector(
-            ".botao-compartilhar"
-        );
-
-    const mensagemCompartilhar =
-        document.querySelector(
-            ".mensagem-compartilhar"
-        );
-
-
-    async function copiarLink() {
-
-        const url =
-            "https://orquestravolpi.com.br/";
-
-        try {
-
-            await navigator.clipboard.writeText(url);
-
-            if (mensagemCompartilhar) {
-                mensagemCompartilhar.textContent =
-                    "Link copiado!";
-            }
-
-        } catch {
-
-            const campo =
-                document.createElement("textarea");
-
-            campo.value = url;
-            campo.setAttribute("readonly", "");
-            campo.style.position = "fixed";
-            campo.style.opacity = "0";
-
-            document.body.appendChild(campo);
-
-            campo.select();
-            document.execCommand("copy");
-            campo.remove();
-
-            if (mensagemCompartilhar) {
-                mensagemCompartilhar.textContent =
-                    "Link copiado!";
-            }
-        }
-    }
-
-
-    if (botaoCompartilhar) {
-
-        botaoCompartilhar.addEventListener(
-            "click",
-            async () => {
-
-                const dados = {
-                    title:
-                        "Orquestra Volpi de Viola Caipira",
-
-                    text:
-                        "Conheça a Orquestra Volpi de Viola Caipira.",
-
-                    url:
-                        "https://orquestravolpi.com.br/"
-                };
-
-                if (navigator.share) {
-
-                    try {
-                        await navigator.share(dados);
-                    } catch (erro) {
-
-                        if (
-                            erro.name !==
-                            "AbortError"
-                        ) {
-                            await copiarLink();
-                        }
-                    }
-
-                } else {
-                    await copiarLink();
-                }
-
-            }
-        );
-    }
-
-
-    /* =====================================================
-       TECLADO
-    ====================================================== */
-
-    document.addEventListener(
-        "keydown",
-        (evento) => {
-
-            if (evento.key === "Escape") {
-
-                if (
-                    menu?.classList.contains(
-                        "aberto"
-                    )
-                ) {
-                    fecharMenu();
-                    botaoMenu?.focus();
-                }
-            }
-
-
-            if (
-                !lightbox ||
-                !lightbox.classList.contains(
-                    "aberto"
-                )
-            ) {
-                return;
-            }
-
-
-            if (evento.key === "Escape") {
-                evento.preventDefault();
-                fecharLightbox();
-                return;
-            }
-
-
-            if (evento.key === "ArrowLeft") {
-                evento.preventDefault();
-                mostrarImagem(indiceAtual - 1);
-                return;
-            }
-
-
-            if (evento.key === "ArrowRight") {
-                evento.preventDefault();
-                mostrarImagem(indiceAtual + 1);
-                return;
-            }
-
-
-            if (evento.key === "Tab") {
-
-                const focaveis =
-                    elementosFocaveisLightbox();
-
-                if (!focaveis.length) return;
-
-                const primeiro =
-                    focaveis[0];
-
-                const ultimo =
-                    focaveis[
-                        focaveis.length - 1
-                    ];
-
-                if (
-                    evento.shiftKey &&
-                    document.activeElement ===
-                        primeiro
-                ) {
-                    evento.preventDefault();
-                    ultimo.focus();
-
-                } else if (
-                    !evento.shiftKey &&
-                    document.activeElement ===
-                        ultimo
-                ) {
-                    evento.preventDefault();
-                    primeiro.focus();
-                }
-            }
-
-        }
-    );
-
-});
-
-</script>
-
-<style>
-/* TRAVA FINAL DE SEGURANÇA */
-.whatsapp-flutuante {
-    width: auto !important;
-    max-width: 180px !important;
-    height: 54px !important;
-    min-height: 54px !important;
-    max-height: 54px !important;
-}
-.whatsapp-flutuante svg,
-.whatsapp-flutuante .icone-whatsapp {
-    width: 35px !important;
-    height: 35px !important;
-    min-width: 35px !important;
-    max-width: 35px !important;
-    min-height: 35px !important;
-    max-height: 35px !important;
-    flex: 0 0 35px !important;
-}
-@media (max-width: 700px) {
-    .whatsapp-flutuante {
-        width: 54px !important;
-        max-width: 54px !important;
-        padding: 8px !important;
-    }
-}
-</style>
-
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-    <a class="pular-conteudo" href="#inicio">Pular para o conteúdo</a>
 
-    <!-- CABEÇALHO -->
-    <header class="topo" id="topo">
-        <div class="progresso-scroll" aria-hidden="true">
-            <span></span>
-        </div>
+    <a class="pular-conteudo" href="#inicio">
+        Pular para o conteúdo
+    </a>
 
+
+    <!-- =====================================================
+         CABEÇALHO FIXO
+    ====================================================== -->
+    <header class="topo">
         <div class="topo-conteudo">
-            <a class="marca" href="#inicio" aria-label="Orquestra Volpi — início">
-                <img src="logo-volpi.png" alt="" class="logo">
+
+            <a class="marca" href="#inicio" aria-label="Ir para o início">
+                <img
+                    src="logo-volpi.png"
+                    alt=""
+                    class="logo"
+                >
+
                 <img
                     src="titulo-volpi.png"
                     alt="Orquestra Volpi de Viola Caipira"
                     class="titulo-logo"
                 >
             </a>
+
 
             <button
                 class="botao-menu"
@@ -3735,6 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <span></span>
                 <span></span>
             </button>
+
 
             <nav
                 class="menu-principal"
@@ -3751,7 +152,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 <a href="#contato">Contato</a>
             </nav>
 
-            <div class="redes-topo" aria-label="Redes sociais">
+
+            <div class="redes-topo">
                 <a
                     href="https://www.instagram.com/orquestravolpi/"
                     target="_blank"
@@ -3768,152 +170,118 @@ document.addEventListener("DOMContentLoaded", () => {
                     YouTube
                 </a>
             </div>
+
         </div>
     </header>
 
 
     <main id="inicio">
 
-        <!-- HERO / SOBRE -->
-        <section class="hero" id="sobre">
-            <div class="container hero-grid">
+        <!-- =================================================
+             APRESENTAÇÃO
+        ================================================== -->
+        <section class="apresentacao" id="sobre">
+            <div class="container">
 
-                <div class="hero-copy reveal">
-                    <span class="eyebrow">
-                        Desde 2018 · Itaquera · São Paulo
-                    </span>
+                <div class="titulo-principal reveal">
+                    <span class="destaque">Orquestra Volpi</span>
 
-                    <h1>
-                        Orquestra <span>Volpi</span>
-                    </h1>
+                    <h1>O som autêntico da tradição</h1>
 
-                    <p class="hero-subtitulo">
-                        O som autêntico da tradição
+                    <p>
+                        Viola caipira · Música raiz · Cultura brasileira
                     </p>
-
-                    <p class="hero-texto">
-                        Viola caipira, música raiz e cultura brasileira
-                        em apresentações que aproximam gerações e
-                        mantêm viva a sonoridade do interior.
-                    </p>
-
-                    <div class="hero-acoes">
-                        <a class="botao botao-primario" href="#shows">
-                            Conheça os shows
-                        </a>
-
-                        <a
-                            class="botao botao-secundario"
-                            href="#contato"
-                        >
-                            Contrate a Orquestra
-                        </a>
-                    </div>
                 </div>
 
-                <div class="hero-visual reveal">
-                    <figure class="hero-foto">
+
+                <div class="apresentacao-grid reveal">
+
+                    <div class="foto-orquestra">
                         <img
                             src="orquestra-principal.jpg"
                             alt="Integrantes da Orquestra Volpi de Viola Caipira reunidos com seus instrumentos"
                             fetchpriority="high"
                         >
-                    </figure>
-
-                    <div class="hero-selo" aria-hidden="true">
-                        <strong>Viola</strong>
-                        <span>música · memória · tradição</span>
-                    </div>
-                </div>
-
-            </div>
-
-
-            <div class="container">
-                <div class="historia-card reveal">
-                    <div>
-                        <span class="eyebrow">Nossa história</span>
-                        <h2>Raiz, repertório e presença cultural</h2>
                     </div>
 
-                    <p>
-                        Fundada em 2018, na Oficina Cultural Alfredo Volpi,
-                        em Itaquera, São Paulo, a Orquestra Volpi de Viola
-                        Caipira tem como missão preservar e difundir a música
-                        raiz, levando sua riqueza e autenticidade a eventos,
-                        cerimônias e palcos do Estado de São Paulo.
-                    </p>
+
+                    <div class="card-historia">
+                        <span class="kicker">Nossa história</span>
+
+                        <h2>Orquestra Volpi de Viola Caipira</h2>
+
+                        <p>
+                            Fundada em 2018, na Oficina Cultural Alfredo Volpi,
+                            em Itaquera, São Paulo, a Orquestra Volpi de Viola
+                            Caipira tem como missão preservar e difundir a
+                            música raiz, levando sua riqueza e autenticidade
+                            a eventos, cerimônias e palcos do Estado de São Paulo.
+                        </p>
+                    </div>
+
                 </div>
 
 
                 <div class="informacoes reveal">
 
                     <article class="info-item">
-                        <span class="info-icone" aria-hidden="true">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M9 18V5l10-2v13" />
-                                <circle cx="6" cy="18" r="3" />
-                                <circle cx="16" cy="16" r="3" />
-                            </svg>
-                        </span>
-
-                        <div>
-                            <strong>Música raiz</strong>
-                            <p>O som autêntico da tradição caipira.</p>
+                        <div class="info-icone">
+                            <img
+                                src="arquivo-1.png"
+                                alt=""
+                                aria-hidden="true"
+                                loading="lazy"
+                            >
                         </div>
+
+                        <strong>Música raiz</strong>
+                        <p>O som autêntico da tradição caipira</p>
                     </article>
 
 
                     <article class="info-item">
-                        <span class="info-icone" aria-hidden="true">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" />
-                                <circle cx="12" cy="10" r="2.5" />
-                            </svg>
-                        </span>
-
-                        <div>
-                            <strong>Itaquera · São Paulo</strong>
-                            <p>Apresentações em todo o Estado de São Paulo.</p>
+                        <div class="info-icone">
+                            <img
+                                src="arquivo-2.png"
+                                alt=""
+                                aria-hidden="true"
+                                loading="lazy"
+                            >
                         </div>
+
+                        <strong>Itaquera · São Paulo</strong>
+                        <p>Apresentações em todo o Estado de São Paulo</p>
                     </article>
 
 
                     <article class="info-item">
-                        <span class="info-icone" aria-hidden="true">
-                            <svg viewBox="0 0 24 24">
-                                <path d="m12 3 2.2 4.8 5.3.6-3.9 3.6 1.1 5.2-4.7-2.6-4.7 2.6 1.1-5.2-3.9-3.6 5.3-.6L12 3Z" />
-                            </svg>
-                        </span>
-
-                        <div>
-                            <strong>Eventos e cerimônias</strong>
-                            <p>Repertório pensado para diferentes ocasiões.</p>
+                        <div class="info-icone">
+                            <img
+                                src="arquivo-3.png"
+                                alt=""
+                                aria-hidden="true"
+                                loading="lazy"
+                            >
                         </div>
+
+                        <strong>Eventos e cerimônias</strong>
+                        <p>Repertório personalizado</p>
                     </article>
 
                 </div>
+
             </div>
         </section>
 
 
-        <!-- MAESTRO -->
-        <section class="maestro secao" id="maestro">
-            <div class="container maestro-grid">
+        <!-- =================================================
+             MAESTRO
+        ================================================== -->
+        <section class="maestro" id="maestro">
+            <div class="container maestro-grid reveal">
 
-                <div class="foto-maestro reveal">
-                    <div class="moldura-foto">
-                        <img
-                            src="maestro-renato-novo.png"
-                            alt="Maestro Renato de Sá tocando viola caipira"
-                            loading="lazy"
-                        >
-                    </div>
-                </div>
-
-
-                <div class="card-maestro reveal">
-                    <span class="eyebrow">Maestro</span>
+                <div class="card-maestro">
+                    <span class="kicker">Maestro</span>
 
                     <h2>Renato de Sá</h2>
 
@@ -3931,104 +299,99 @@ document.addEventListener("DOMContentLoaded", () => {
                     </p>
                 </div>
 
+
+                <div class="foto-maestro">
+                    <img
+                        src="maestro-renato-novo.png"
+                        alt="Maestro Renato de Sá tocando viola caipira"
+                        loading="lazy"
+                    >
+                </div>
+
             </div>
         </section>
 
 
-        <!-- MÚSICOS -->
-        <section class="musicos secao" id="musicos">
+        <!-- =================================================
+             MÚSICOS
+        ================================================== -->
+        <section class="musicos" id="musicos">
             <div class="container">
 
-                <header class="cabecalho-secao reveal">
-                    <span class="eyebrow">Formação</span>
-                    <h2>Quem faz a Orquestra</h2>
+                <div class="titulo-secao">
+                    <span class="kicker">Formação</span>
+
+                    <h2>Músicos</h2>
+
                     <p>
-                        Os músicos que dão corpo à sonoridade da
-                        Orquestra Volpi de Viola Caipira.
+                        Conheça os integrantes da Orquestra Volpi de Viola Caipira.
                     </p>
-                </header>
+                </div>
 
 
-                <div class="grade-musicos">
+                <div class="grade-musicos reveal">
 
-                    <article class="musico-card reveal">
-                        <div class="musico-foto">
-                            <img src="musico-1.jpg" alt="Abrão Bispo" loading="lazy">
-                        </div>
+                    <article class="musico-card">
+                        <img src="musico-1.jpg" alt="Abrão Bispo" loading="lazy">
                         <h3>Abrão Bispo</h3>
                     </article>
 
-                    <article class="musico-card reveal">
-                        <div class="musico-foto">
-                            <img src="musico-2.jpg" alt="Ana Silva" loading="lazy">
-                        </div>
+                    <article class="musico-card">
+                        <img src="musico-2.jpg" alt="Ana Silva" loading="lazy">
                         <h3>Ana Silva</h3>
                     </article>
 
-                    <article class="musico-card reveal">
-                        <div class="musico-foto">
-                            <img src="musico-3.jpg" alt="Ângelo de Souza" loading="lazy">
-                        </div>
+                    <article class="musico-card">
+                        <img src="musico-3.jpg" alt="Ângelo de Souza" loading="lazy">
                         <h3>Ângelo de Souza</h3>
                     </article>
 
-                    <article class="musico-card reveal">
-                        <div class="musico-foto">
-                            <img src="musico-4.jpg" alt="Domingo Testoni" loading="lazy">
-                        </div>
+                    <article class="musico-card">
+                        <img src="musico-4.jpg" alt="Domingo Testoni" loading="lazy">
                         <h3>Domingo Testoni</h3>
                     </article>
 
-                    <article class="musico-card reveal">
-                        <div class="musico-foto">
-                            <img src="musico-5.jpg" alt="Heber Rogério" loading="lazy">
-                        </div>
+                    <article class="musico-card">
+                        <img src="musico-5.jpg" alt="Heber Rogério" loading="lazy">
                         <h3>Heber Rogério</h3>
                     </article>
 
-                    <article class="musico-card reveal">
-                        <div class="musico-foto">
-                            <img src="musico-6.jpg" alt="Laurival Telles" loading="lazy">
-                        </div>
+                    <article class="musico-card">
+                        <img src="musico-6.jpg" alt="Laurival Telles" loading="lazy">
                         <h3>Laurival Telles</h3>
                     </article>
 
-                    <article class="musico-card reveal">
-                        <div class="musico-foto">
-                            <img src="musico-7.jpg" alt="Régis Nascimento" loading="lazy">
-                        </div>
+                    <article class="musico-card">
+                        <img src="musico-7.jpg" alt="Régis Nascimento" loading="lazy">
                         <h3>Régis Nascimento</h3>
                     </article>
 
-                    <article class="musico-card reveal">
-                        <div class="musico-foto">
-                            <img src="musico-8.jpg" alt="Wagner Ribeiro" loading="lazy">
-                        </div>
+                    <article class="musico-card">
+                        <img src="musico-8.jpg" alt="Wagner Ribeiro" loading="lazy">
                         <h3>Wagner Ribeiro</h3>
                     </article>
 
                 </div>
+
             </div>
         </section>
 
 
-        <!-- TRAJETÓRIA -->
-        <section class="trajetoria secao">
+        <!-- =================================================
+             TRAJETÓRIA
+        ================================================== -->
+        <section class="trajetoria">
             <div class="container">
 
-                <header class="cabecalho-secao cabecalho-claro reveal">
-                    <span class="eyebrow">Registros</span>
-                    <h2>Nossa trajetória de resistência</h2>
-                    <p>
-                        Um registro da formação, das experiências e da
-                        continuidade do grupo em um período excepcional.
-                    </p>
-                </header>
+                <div class="titulo-secao titulo-secao-claro">
+                    <span class="kicker kicker-claro">Registros</span>
+                    <h2>Nossa Trajetória de Resistência</h2>
+                </div>
 
 
-                <div class="trajetoria-grid">
+                <div class="trajetoria-conteudo reveal">
 
-                    <div class="trajetoria-texto reveal">
+                    <div class="trajetoria-texto">
                         <p>
                             Em 2021, durante a pandemia, lançamos um documentário
                             que registra a nossa formação, as percepções dos
@@ -4043,7 +406,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     </div>
 
 
-                    <div class="trajetoria-video reveal">
+                    <div class="trajetoria-video">
                         <iframe
                             src="https://www.youtube.com/embed/zib416g6E84"
                             title="Orquestra Volpi de Viola Caipira - Documentário"
@@ -4054,27 +417,30 @@ document.addEventListener("DOMContentLoaded", () => {
                     </div>
 
                 </div>
+
             </div>
         </section>
 
 
-        <!-- SHOWS -->
-        <section class="shows secao" id="shows">
+        <!-- =================================================
+             SHOWS
+        ================================================== -->
+        <section class="shows" id="shows">
+
             <div class="container">
-
-                <header class="cabecalho-secao reveal">
-                    <span class="eyebrow">Repertório</span>
-                    <h2>Shows para diferentes ocasiões</h2>
-                    <p>
-                        Três propostas com identidade própria e a viola
-                        caipira como fio condutor.
-                    </p>
-                </header>
+                <div class="titulo-secao titulo-shows">
+                    <span class="kicker">Repertório</span>
+                    <h2>Conheça nossos shows</h2>
+                </div>
+            </div>
 
 
-                <div class="shows-lista">
+            <!-- PARE E OUÇA -->
+            <div class="show-faixa show-pare">
+                <div class="container">
 
                     <article class="show-card reveal">
+
                         <div class="show-foto">
                             <img
                                 src="show-pare-ouca.jpg"
@@ -4083,30 +449,53 @@ document.addEventListener("DOMContentLoaded", () => {
                             >
                         </div>
 
-                        <div class="show-conteudo">
-                            <div class="show-meta">
-                                <span class="show-numero">01</span>
-                                <span class="show-tag">Show completo · 75 min</span>
+
+                        <div class="show-texto">
+
+                            <div class="show-icone">
+                                <img
+                                    src="icone-viola.png"
+                                    alt=""
+                                    aria-hidden="true"
+                                    loading="lazy"
+                                >
                             </div>
 
-                            <h3>Pare e Ouça</h3>
+                            <span class="kicker">Show completo</span>
+
+                            <h3>
+                                Pare e Ouça
+                                <strong>(75 min)</strong>
+                            </h3>
 
                             <p>
-                                Reúne principalmente canções da música caipira
-                                raiz, mescladas a músicas populares brasileiras
-                                e composições inéditas de integrantes da Orquestra.
+                                Apresentação com aproximadamente 75 minutos de
+                                duração, cujo repertório reúne, em sua maioria,
+                                canções da música caipira raiz, mescladas a músicas
+                                populares brasileiras e outras inéditas, compostas
+                                por integrantes da Orquestra Volpi.
                             </p>
 
-                            <p class="show-detalhe">
-                                Entre as canções estão clássicos como Luar do Sertão,
-                                As Andorinhas, Menino da Porteira, Chico Mineiro e
-                                Moreninha Linda.
+                            <p>
+                                Entre as canções, constam clássicos como
+                                Luar do Sertão, As Andorinhas, Menino da Porteira,
+                                Chico Mineiro e Moreninha Linda.
                             </p>
+
                         </div>
+
                     </article>
 
+                </div>
+            </div>
+
+
+            <!-- BAILÃO -->
+            <div class="show-faixa show-bailao">
+                <div class="container">
 
                     <article class="show-card show-card-invertido reveal">
+
                         <div class="show-foto">
                             <img
                                 src="show-bailao.jpg"
@@ -4115,28 +504,49 @@ document.addEventListener("DOMContentLoaded", () => {
                             >
                         </div>
 
-                        <div class="show-conteudo">
-                            <div class="show-meta">
-                                <span class="show-numero">02</span>
-                                <span class="show-tag">Show temático · 75 min</span>
+
+                        <div class="show-texto">
+
+                            <div class="show-icone show-icone-chapeu">
+                                <img
+                                    src="icone-chapeu.png"
+                                    alt=""
+                                    aria-hidden="true"
+                                    loading="lazy"
+                                >
                             </div>
+
+                            <span class="kicker">Show temático</span>
 
                             <h3>Bailão – da Roça ao Sertão</h3>
 
                             <p>
-                                Um repertório feito para dançar, com ritmos como
-                                Cururu, Arrasta-Pé, Baião, Xote e Xaxado.
+                                Apresentação com aproximadamente 75 minutos de
+                                duração, cujo repertório é feito para dançar,
+                                com ritmos como Cururu, Arrasta-Pé, Baião,
+                                Xote e Xaxado.
                             </p>
 
-                            <p class="show-detalhe">
-                                Uma proposta festiva para eventos culturais,
+                            <p>
+                                Com caráter festivo e dançante, o espetáculo
+                                é indicado para festas, eventos culturais,
                                 encontros e celebrações.
                             </p>
+
                         </div>
+
                     </article>
 
+                </div>
+            </div>
+
+
+            <!-- NATAL -->
+            <div class="show-faixa show-natal">
+                <div class="container">
 
                     <article class="show-card reveal">
+
                         <div class="show-foto">
                             <img
                                 src="show-natal.jpg"
@@ -4145,53 +555,70 @@ document.addEventListener("DOMContentLoaded", () => {
                             >
                         </div>
 
-                        <div class="show-conteudo">
-                            <div class="show-meta">
-                                <span class="show-numero">03</span>
-                                <span class="show-tag">Especial de Natal · 60 min</span>
+
+                        <div class="show-texto">
+
+                            <div class="show-icone show-icone-reis">
+                                <img
+                                    src="icone-reis-magos.png"
+                                    alt=""
+                                    aria-hidden="true"
+                                    loading="lazy"
+                                >
                             </div>
 
-                            <h3>Concerto de Natal</h3>
+                            <span class="kicker">Especial de Natal</span>
+
+                            <h3>
+                                Concerto de Natal
+                                <strong>(60 min)</strong>
+                            </h3>
 
                             <p>
-                                Clássicos da música caipira raiz e canções
-                                natalinas interpretadas com a sonoridade
-                                característica da viola caipira.
+                                Apresentação com aproximadamente 60 minutos
+                                de duração, cujo repertório reúne clássicos
+                                da música caipira raiz e canções natalinas
+                                interpretadas com a sonoridade característica
+                                da viola caipira.
                             </p>
 
-                            <p class="show-detalhe">
-                                Indicado para igrejas, centros culturais,
-                                confraternizações e celebrações de fim de ano.
+                            <p>
+                                O espetáculo é indicado para igrejas,
+                                centros culturais, confraternizações,
+                                eventos institucionais e celebrações
+                                de fim de ano.
                             </p>
+
                         </div>
+
                     </article>
 
                 </div>
             </div>
+
         </section>
 
 
-        <!-- AGENDA -->
-        <section class="agenda secao" id="agenda">
+        <!-- =================================================
+             AGENDA
+        ================================================== -->
+        <section class="agenda" id="agenda">
             <div class="container">
 
-                <header class="cabecalho-secao reveal">
-                    <span class="eyebrow">Próximas apresentações</span>
+                <div class="titulo-secao">
+                    <span class="kicker">Próximas apresentações</span>
                     <h2>Agenda</h2>
+
                     <p>
                         Acompanhe as próximas apresentações da Orquestra Volpi.
                     </p>
-                </header>
+                </div>
 
 
-                <div class="agenda-card reveal">
-                    <div>
-                        <span class="agenda-status">Agenda em atualização</span>
-                        <h3>Novas datas serão divulgadas em breve.</h3>
-                    </div>
+                <div class="agenda-vazia reveal">
+                    <span>Novas datas serão divulgadas em breve.</span>
 
                     <a
-                        class="botao botao-primario"
                         href="https://www.instagram.com/orquestravolpi/"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -4204,33 +631,36 @@ document.addEventListener("DOMContentLoaded", () => {
         </section>
 
 
-        <!-- GALERIA -->
-        <section class="galeria secao" id="galeria">
+        <!-- =================================================
+             GALERIA
+        ================================================== -->
+        <section class="galeria" id="galeria">
             <div class="container">
 
-                <header class="cabecalho-secao reveal">
-                    <span class="eyebrow">Registros</span>
+                <div class="titulo-secao">
+                    <span class="kicker">Registros</span>
                     <h2>Galeria</h2>
+
                     <p>
                         Momentos da trajetória e das apresentações da
                         Orquestra Volpi de Viola Caipira.
                     </p>
-                </header>
+                </div>
 
 
                 <div class="galeria-grid">
 
-                    <figure class="galeria-item galeria-destaque reveal">
+                    <figure class="galeria-item reveal">
                         <button
                             class="lightbox-trigger"
                             type="button"
-                            data-lightbox-src="orquestra-principal.jpg"
-                            data-lightbox-alt="Orquestra Volpi de Viola Caipira"
-                            aria-label="Ampliar foto da Orquestra Volpi"
+                            data-lightbox-src="galeria-1.jpg"
+                            data-lightbox-alt="Registro da Orquestra Volpi"
+                            aria-label="Ampliar imagem: Registro da Orquestra Volpi"
                         >
                             <img
-                                src="orquestra-principal.jpg"
-                                alt="Orquestra Volpi de Viola Caipira"
+                                src="galeria-1.jpg"
+                                alt="Registro da Orquestra Volpi"
                                 loading="lazy"
                             >
                         </button>
@@ -4251,13 +681,12 @@ document.addEventListener("DOMContentLoaded", () => {
                             type="button"
                             data-lightbox-src="galeria-3.jpg"
                             data-lightbox-alt="Registro de apresentação da Orquestra Volpi"
-                            aria-label="Ampliar registro de apresentação da Orquestra Volpi"
+                            aria-label="Ampliar imagem: Registro de apresentação da Orquestra Volpi"
                         >
                             <img
                                 src="galeria-3.jpg"
                                 alt="Registro de apresentação da Orquestra Volpi"
                                 loading="lazy"
-                                data-media-fallback="Registro fotográfico"
                             >
                         </button>
                     </figure>
@@ -4277,13 +706,12 @@ document.addEventListener("DOMContentLoaded", () => {
                             type="button"
                             data-lightbox-src="galeria-5.jpg"
                             data-lightbox-alt="Registro de apresentação da Orquestra Volpi"
-                            aria-label="Ampliar registro de apresentação da Orquestra Volpi"
+                            aria-label="Ampliar imagem: Registro de apresentação da Orquestra Volpi"
                         >
                             <img
                                 src="galeria-5.jpg"
                                 alt="Registro de apresentação da Orquestra Volpi"
                                 loading="lazy"
-                                data-media-fallback="Registro fotográfico"
                             >
                         </button>
                     </figure>
@@ -4297,78 +725,81 @@ document.addEventListener("DOMContentLoaded", () => {
                     </div>
 
                 </div>
+
             </div>
         </section>
 
 
-        <!-- IMPRENSA -->
-        <section class="imprensa secao" id="imprensa">
+        <!-- =================================================
+             IMPRENSA
+        ================================================== -->
+        <section class="imprensa" id="imprensa">
             <div class="container">
 
-                <header class="cabecalho-secao reveal">
-                    <span class="eyebrow">Imprensa e mídia</span>
-                    <h2>Materiais institucionais</h2>
+                <div class="titulo-secao">
+                    <span class="kicker">Imprensa e mídia</span>
+                    <h2>Material para imprensa</h2>
+
                     <p>
-                        Arquivos para imprensa, produtores, espaços culturais
-                        e instituições interessadas no trabalho da Orquestra.
+                        Informações e materiais institucionais da
+                        Orquestra Volpi de Viola Caipira.
                     </p>
-                </header>
+                </div>
 
 
-                <div class="downloads">
+                <div class="downloads reveal">
 
                     <a
-                        class="download-card reveal"
+                        class="download-card"
                         href="release-orquestra-volpi.pdf"
                         download
                     >
-                        <span class="download-icone" aria-hidden="true">PDF</span>
+                        <span>PDF</span>
 
                         <div>
                             <strong>Release</strong>
-                            <small>Apresentação institucional da Orquestra</small>
+                            <small>Baixar apresentação institucional</small>
                         </div>
-
-                        <span class="download-seta" aria-hidden="true">↓</span>
                     </a>
 
 
                     <a
-                        class="download-card reveal"
+                        class="download-card"
                         href="midia-kit-orquestra-volpi.pdf"
                         download
                     >
-                        <span class="download-icone" aria-hidden="true">PDF</span>
+                        <span>PDF</span>
 
                         <div>
                             <strong>Mídia Kit</strong>
-                            <small>Material completo para divulgação</small>
+                            <small>Baixar material de divulgação</small>
                         </div>
-
-                        <span class="download-seta" aria-hidden="true">↓</span>
                     </a>
 
                 </div>
+
             </div>
         </section>
 
 
-        <!-- COMPARTILHAR -->
-        <section class="compartilhar secao">
-            <div class="container compartilhar-grid reveal">
+        <!-- =================================================
+             QR CODE / COMPARTILHAMENTO
+        ================================================== -->
+        <section class="qr-site" id="qr-site">
+            <div class="container qr-site-conteudo reveal">
 
-                <div class="compartilhar-copy">
-                    <span class="eyebrow">Compartilhe</span>
+                <div class="qr-site-texto">
+                    <span class="kicker">Compartilhe</span>
 
-                    <h2>Leve o site da Orquestra com você</h2>
+                    <h2>Leve a Orquestra Volpi com você</h2>
 
                     <p>
                         Aponte a câmera para o QR Code ou compartilhe
-                        o endereço diretamente pelo celular.
+                        o site diretamente pelo celular.
                     </p>
 
                     <button
-                        class="botao botao-primario botao-compartilhar"
+                        class="botao-compartilhar"
                         type="button"
                     >
                         Compartilhar site
@@ -4382,44 +813,47 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
 
 
-                <figure class="qr-card">
+                <div class="qr-site-card">
                     <img
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXIAAAFyAQAAAADAX2ykAAACk0lEQVR4nO2bTWrkMBBGX40FWcqQA/RRpBvMkUKOlBtYR+kDBOzlgETNQpKTSU8yCeM47VC1MLT1Fh8U5fpTi/IRSz8+hIPxxhtvvPHGG/8aL80cJHGQxv4uLv0s7qjH+I35oKqqM0j0Gbk7ixBmAAZVVdU/+c/WY/zG/NIiVCeKkMZBgaF6tQb2vnqM34Z3L1+Es0NTLKIsoCz76jF+W/6lfwWGLGG+zUCRi+742vQb/7Z1/3qFFrC3kE4Z8LmePnfytek3/l18EhGRESRC/UhLXG5UIqWWz/vqMX4jHn1hk8/o1Euri9Nr02/8e3iJi6uPamEuopNvXZFEisXvMXl61KqCVyVohjC3A2Bop8Hi94B8d6NXbV6dAfzqc6juNv8eku8Zdobu1QxBMzpBH2xp7nF+bfqNfxefRiCcRaAm4UEl+lwL6zqOjnvqMf4z+B66pLEIYR60PtZJ5ZXrN/7CasUsQYtTlhHSz0cID62SVpYi4EuvrK9Nv/H/sJ5/W5ms+ixgh1ZzTd7y76F5iYDcnR1Akdb/1k1SAyXuqMf4bXm9P2X0/vRLSKe1K1Lt+Xe5sfx7TL71v62W6u+mZ/3vUPsj638Pya/zq0wfPdP73zrTypZ/D8z3+nkuSP3lH53CoIIHWBwSZuz7fGRep37Nqi4Z0tgXCkFVn27vXKt+41+zFr/t15AVipNwdsAiwHKbSads/e+h+fX+JEkcej8ObeeAz1+hx/iN+LV+hqdZ5NO6oTLB9gvfhdfJZ0RG0GlxfXto/e934esQK/QL7SJjEdIpI/FL9Bj/f/xf7k+20lnwjwIMKmEqTvfRY/y2/HoNB1jXgHXJD6yp1+ZXB+Uvb7C/afb/buONN954443fgP8NEYC8fjsA0DAAAAAASUVORK5CYII="
-                        alt="QR Code para acessar orquestravolpi.com.br"
+                        src="qr-site.png"
+                        alt="QR Code para acessar o site oficial da Orquestra Volpi"
                         width="220"
                         height="220"
+                        loading="lazy"
                     >
-                    <figcaption>orquestravolpi.com.br</figcaption>
-                </figure>
+
+                    <span>orquestravolpi.com.br</span>
+                </div>
 
             </div>
         </section>
 
 
-        <!-- CONTATO -->
-        <section class="contato secao" id="contato">
-            <div class="container contato-card reveal">
+        <!-- =================================================
+             CONTATO
+        ================================================== -->
+        <section class="contato" id="contato">
+            <div class="container contato-conteudo">
 
-                <div>
-                    <span class="eyebrow">Apresentações e eventos</span>
+                <span class="kicker kicker-claro">
+                    Leve a viola para o seu evento
+                </span>
 
-                    <h2>Leve a Orquestra Volpi para o seu evento</h2>
+                <h2>Contrate a Orquestra</h2>
 
-                    <p>
-                        Entre em contato para informações sobre apresentações,
-                        festivais, cerimônias, eventos culturais e programações
-                        especiais.
-                    </p>
-                </div>
-
+                <p>
+                    Entre em contato para informações sobre apresentações,
+                    eventos culturais, festivais, cerimônias e programações
+                    especiais.
+                </p>
 
                 <a
-                    class="botao botao-claro"
+                    class="botao-orcamento"
                     href="https://wa.me/5511994070183?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20informa%C3%A7%C3%B5es%20sobre%20a%20contrata%C3%A7%C3%A3o%20da%20Orquestra%20Volpi%20de%20Viola%20Caipira."
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    Solicitar informações
+                    Solicitar informações pelo WhatsApp
                 </a>
 
             </div>
@@ -4428,12 +862,19 @@ document.addEventListener("DOMContentLoaded", () => {
     </main>
 
 
-    <!-- RODAPÉ -->
+    <!-- =====================================================
+         RODAPÉ
+    ====================================================== -->
     <footer class="rodape">
-        <div class="container rodape-grid">
+        <div class="container rodape-conteudo">
 
             <div class="rodape-marca">
-                <img src="logo-volpi.png" alt="" class="rodape-logo">
+                <img
+                    src="logo-volpi.png"
+                    alt=""
+                    class="rodape-logo"
+                    loading="lazy"
+                >
 
                 <div>
                     <strong>Orquestra Volpi de Viola Caipira</strong>
@@ -4442,7 +883,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
 
 
-            <nav class="rodape-links" aria-label="Links do rodapé">
+            <div class="rodape-links">
                 <a
                     href="https://www.instagram.com/orquestravolpi/"
                     target="_blank"
@@ -4459,8 +900,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     YouTube
                 </a>
 
-                <a href="#contato">Contato</a>
-            </nav>
+                <a href="https://orquestravolpi.com.br">
+                    orquestravolpi.com.br
+                </a>
+            </div>
 
         </div>
     </footer>
@@ -4474,7 +917,11 @@ document.addEventListener("DOMContentLoaded", () => {
         rel="noopener noreferrer"
         aria-label="Falar com a Orquestra Volpi pelo WhatsApp"
     >
-        <svg class="icone-whatsapp" viewBox="0 0 24 24" aria-hidden="true">
+        <svg
+            class="icone-whatsapp"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+        >
             <path
                 d="M20 11.7a8 8 0 0 1-11.8 7L4 20l1.3-4A8 8 0 1 1 20 11.7Z"
                 fill="none"
@@ -4489,7 +936,7 @@ document.addEventListener("DOMContentLoaded", () => {
             />
         </svg>
 
-        <span>WhatsApp</span>
+        <span class="wa-texto">WhatsApp</span>
     </a>
 
 
@@ -4497,7 +944,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <button
         class="voltar-topo"
         type="button"
-        aria-label="Voltar ao topo"
+        aria-label="Voltar ao topo da página"
         title="Voltar ao topo"
     >
         ↑
@@ -4544,4 +991,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </body>
 </html>
-
