@@ -49,6 +49,8 @@ html {
 }
 
 body {
+    padding-top: 100px;
+
     background: var(--branco);
     color: var(--texto);
 
@@ -97,7 +99,7 @@ h3,
 }
 
 section {
-    scroll-margin-top: 105px;
+    scroll-margin-top: 120px;
 }
 
 .container {
@@ -107,12 +109,15 @@ section {
 
 
 /* =========================================================
-   CABEÇALHO
+   CABEÇALHO FIXO
 ========================================================= */
 
 .topo {
-    position: sticky;
+    position: fixed;
+
     top: 0;
+    left: 0;
+
     z-index: 1000;
 
     width: 100%;
@@ -143,6 +148,7 @@ section {
 
 .topo-conteudo {
     width: min(1260px, 94%);
+
     min-height: 100px;
 
     margin: 0 auto;
@@ -153,6 +159,11 @@ section {
 
     gap: 26px;
 }
+
+
+/* =========================================================
+   LOGO
+========================================================= */
 
 .marca {
     display: flex;
@@ -209,7 +220,8 @@ section {
     white-space: nowrap;
 
     transition:
-        color 0.2s ease;
+        color 0.2s ease,
+        opacity 0.2s ease;
 }
 
 .menu-principal a::after {
@@ -232,7 +244,8 @@ section {
 }
 
 .menu-principal a:hover {
-    color: var(--magenta);
+    color: var(--branco);
+    opacity: 0.82;
 }
 
 .menu-principal a:hover::after {
@@ -330,6 +343,7 @@ section {
         );
 
     line-height: 1.05;
+
     letter-spacing: -0.045em;
 }
 
@@ -396,6 +410,7 @@ section {
     font-weight: 800;
 
     line-height: 1;
+
     letter-spacing: -0.055em;
 }
 
@@ -494,6 +509,7 @@ section {
         );
 
     line-height: 1.08;
+
     letter-spacing: -0.035em;
 }
 
@@ -501,6 +517,7 @@ section {
     color: var(--texto-suave);
 
     font-size: 1.06rem;
+
     line-height: 1.75;
 }
 
@@ -584,6 +601,7 @@ section {
     font-family: "Manrope", sans-serif;
 
     font-size: 0.95rem;
+
     font-weight: 800;
 
     text-transform: uppercase;
@@ -593,6 +611,7 @@ section {
     color: var(--texto-suave);
 
     font-size: 0.96rem;
+
     line-height: 1.4;
 }
 
@@ -641,6 +660,7 @@ section {
         );
 
     line-height: 1;
+
     letter-spacing: -0.05em;
 }
 
@@ -648,6 +668,7 @@ section {
     color: #51484d;
 
     font-size: 1.08rem;
+
     line-height: 1.82;
 }
 
@@ -729,6 +750,7 @@ section {
     aspect-ratio: 1 / 1;
 
     object-fit: cover;
+
     object-position: center;
 }
 
@@ -743,6 +765,7 @@ section {
     text-align: center;
 
     font-size: 1rem;
+
     font-weight: 700;
 }
 
@@ -803,6 +826,7 @@ section {
     color: var(--texto);
 
     font-size: 1.06rem;
+
     line-height: 1.75;
 }
 
@@ -845,8 +869,7 @@ section {
 ========================================================= */
 
 .shows {
-    padding-top:
-        100px;
+    padding-top: 100px;
 
     background: var(--branco);
 }
@@ -911,7 +934,6 @@ section {
 
 /* =========================================================
    FOTOS DOS SHOWS
-   MESMA PROPORÇÃO NOS TRÊS
 ========================================================= */
 
 .show-foto {
@@ -935,6 +957,7 @@ section {
     min-height: 430px;
 
     object-fit: cover;
+
     object-position: center;
 }
 
@@ -971,6 +994,7 @@ section {
         );
 
     line-height: 1.08;
+
     letter-spacing: -0.035em;
 }
 
@@ -984,6 +1008,7 @@ section {
     color: var(--texto-suave);
 
     font-size: 1.05rem;
+
     line-height: 1.72;
 }
 
@@ -1013,6 +1038,7 @@ section {
 
 .show-icone img {
     width: auto !important;
+
     height: 88px !important;
 
     max-width: 170px !important;
@@ -1028,11 +1054,13 @@ section {
 
 .show-icone-chapeu img {
     height: 82px !important;
+
     max-width: 180px !important;
 }
 
 .show-icone-reis img {
     height: 98px !important;
+
     max-width: 210px !important;
 }
 
@@ -1076,6 +1104,7 @@ section {
     color: var(--texto);
 
     font-size: 1.04rem;
+
     font-weight: 650;
 }
 
@@ -1095,6 +1124,7 @@ section {
     text-decoration: none;
 
     font-size: 0.86rem;
+
     font-weight: 700;
 }
 
@@ -1229,6 +1259,7 @@ section {
     border-radius: 14px;
 
     font-size: 0.78rem;
+
     font-weight: 800;
 }
 
@@ -1287,6 +1318,7 @@ section {
         );
 
     line-height: 1.05;
+
     letter-spacing: -0.045em;
 }
 
@@ -1310,6 +1342,7 @@ section {
 
 .botao-orcamento {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
 
@@ -1328,6 +1361,7 @@ section {
     text-decoration: none;
 
     font-size: 0.92rem;
+
     font-weight: 800;
 
     box-shadow:
@@ -1369,6 +1403,7 @@ section {
 
 .rodape-conteudo {
     display: flex;
+
     align-items: center;
     justify-content: space-between;
 
@@ -1377,6 +1412,7 @@ section {
 
 .rodape-marca {
     display: flex;
+
     align-items: center;
 
     gap: 14px;
@@ -1407,11 +1443,13 @@ section {
 
 .rodape-links {
     display: flex;
+
     align-items: center;
 
     gap: 18px;
 
     flex-wrap: wrap;
+
     justify-content: flex-end;
 }
 
@@ -1421,6 +1459,7 @@ section {
     text-decoration: none;
 
     font-size: 0.88rem;
+
     font-weight: 600;
 }
 
@@ -1481,7 +1520,10 @@ section {
 
     .grade-musicos {
         grid-template-columns:
-            repeat(2, minmax(0, 1fr));
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
     }
 
     .show-card {
@@ -1499,6 +1541,7 @@ section {
 
     .show-foto img {
         min-height: 0;
+
         height: 100%;
 
         object-fit: cover;
@@ -1506,7 +1549,10 @@ section {
 
     .galeria-grid {
         grid-template-columns:
-            repeat(2, minmax(0, 1fr));
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
     }
 
 }
@@ -1519,11 +1565,13 @@ section {
 @media (max-width: 700px) {
 
     body {
+        padding-top: 82px;
+
         font-size: 17px;
     }
 
     section {
-        scroll-margin-top: 85px;
+        scroll-margin-top: 95px;
     }
 
     .container {
@@ -1531,7 +1579,7 @@ section {
     }
 
 
-    /* topo */
+    /* CABEÇALHO */
 
     .topo-conteudo {
         width: 94%;
@@ -1548,6 +1596,7 @@ section {
 
     .titulo-logo {
         width: 205px;
+
         max-width: 52vw;
     }
 
@@ -1556,7 +1605,7 @@ section {
     }
 
 
-    /* apresentação */
+    /* APRESENTAÇÃO */
 
     .apresentacao {
         padding:
@@ -1592,7 +1641,7 @@ section {
     }
 
 
-    /* informações */
+    /* INFORMAÇÕES */
 
     .informacoes {
         grid-template-columns: 1fr;
@@ -1607,7 +1656,7 @@ section {
     }
 
 
-    /* seções */
+    /* SEÇÕES */
 
     .maestro,
     .musicos,
@@ -1634,7 +1683,7 @@ section {
     }
 
 
-    /* maestro */
+    /* MAESTRO */
 
     .card-maestro h2 {
         font-size:
@@ -1650,7 +1699,7 @@ section {
     }
 
 
-    /* músicos */
+    /* MÚSICOS */
 
     .grade-musicos {
         gap: 14px;
@@ -1666,7 +1715,7 @@ section {
     }
 
 
-    /* trajetória */
+    /* TRAJETÓRIA */
 
     .trajetoria-texto {
         padding:
@@ -1675,7 +1724,7 @@ section {
     }
 
 
-    /* shows */
+    /* SHOWS */
 
     .shows {
         padding-top: 75px;
@@ -1710,21 +1759,24 @@ section {
 
     .show-icone img {
         height: 68px !important;
+
         max-width: 145px !important;
     }
 
     .show-icone-chapeu img {
         height: 64px !important;
+
         max-width: 155px !important;
     }
 
     .show-icone-reis img {
         height: 78px !important;
+
         max-width: 175px !important;
     }
 
 
-    /* agenda */
+    /* AGENDA */
 
     .agenda-vazia {
         padding:
@@ -1737,21 +1789,21 @@ section {
     }
 
 
-    /* galeria */
+    /* GALERIA */
 
     .galeria-grid {
         grid-template-columns: 1fr;
     }
 
 
-    /* imprensa */
+    /* IMPRENSA */
 
     .downloads {
         grid-template-columns: 1fr;
     }
 
 
-    /* contato */
+    /* CONTATO */
 
     .contato h2 {
         font-size:
@@ -1775,7 +1827,7 @@ section {
     }
 
 
-    /* rodapé */
+    /* RODAPÉ */
 
     .rodape-conteudo {
         flex-direction: column;
@@ -1802,16 +1854,20 @@ section {
 
     .logo {
         width: 68px;
+
         height: 64px;
     }
 
     .titulo-logo {
         width: 185px;
+
         max-width: 57vw;
     }
 
     .grade-musicos {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+            1fr
+            1fr;
     }
 
     .download-card {
