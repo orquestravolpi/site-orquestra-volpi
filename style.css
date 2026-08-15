@@ -764,11 +764,11 @@ button:focus-visible {
     right: -18px;
     bottom: -23px;
 
-    min-width: 195px;
+    min-width: 220px;
 
     padding:
-        16px
-        20px;
+        18px
+        22px;
 
     background: var(--magenta-800);
     color: var(--branco);
@@ -786,7 +786,7 @@ button:focus-visible {
     display: block;
 
     font-family: var(--fonte-display);
-    font-size: 1.15rem;
+    font-size: 1.3rem;
     font-weight: 800;
 }
 
