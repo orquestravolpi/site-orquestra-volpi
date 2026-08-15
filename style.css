@@ -951,3 +951,428 @@ footer a,
     background: #ff7510;
     color: #ffffff;
 }
+
+/* =========================================================
+   ORQUESTRA VOLPI
+   PALETA OFICIAL DEFINITIVA
+
+   SALMÃO:  #FF7510
+   MAGENTA: #CB6CE6
+   ========================================================= */
+
+:root {
+
+    /* CORES OFICIAIS */
+    --salmao: #ff7510;
+    --laranja: #ff7510;
+
+    --magenta: #cb6ce6;
+    --magenta-vivo: #cb6ce6;
+
+    /* impede as versões antigas de aparecerem */
+    --salmao-escuro: #ff7510;
+    --magenta-escuro: #cb6ce6;
+
+    /* neutros */
+    --branco: #ffffff;
+    --off-white: #fffaf8;
+    --creme: #fff6f1;
+    --salmao-claro: #fff1e8;
+    --salmao-muito-claro: #fff8f4;
+
+    --texto: #302b2d;
+    --texto-suave: #665e61;
+
+    --borda: rgba(203, 108, 230, 0.18);
+
+    /*
+       GRADIENTE OFICIAL
+       Somente as DUAS cores oficiais.
+       O navegador cria naturalmente
+       os tons salmão/rosa entre elas.
+    */
+
+    --gradiente-volpi:
+        linear-gradient(
+            125deg,
+            #ff7510 0%,
+            #ff7510 22%,
+            #cb6ce6 100%
+        );
+
+    --gradiente-volpi-invertido:
+        linear-gradient(
+            125deg,
+            #cb6ce6 0%,
+            #cb6ce6 22%,
+            #ff7510 100%
+        );
+}
+
+
+/* =========================================================
+   CABEÇALHO
+   ========================================================= */
+
+.topo {
+    background:
+        radial-gradient(
+            circle at 86% 15%,
+            rgba(203, 108, 230, 0.62) 0%,
+            rgba(203, 108, 230, 0) 35%
+        ),
+        linear-gradient(
+            120deg,
+            #ff7510 0%,
+            #ff7510 28%,
+            #cb6ce6 100%
+        ) !important;
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.28) !important;
+}
+
+
+/* MENU */
+
+.menu-principal a {
+    color: #ffffff !important;
+}
+
+.menu-principal a:hover {
+    color: #ffffff !important;
+}
+
+.menu-principal a::after {
+    background: #ffffff !important;
+}
+
+
+/* INSTAGRAM / YOUTUBE */
+
+.redes-topo a {
+    color: #ffffff !important;
+
+    border-color:
+        rgba(255,255,255,0.75) !important;
+}
+
+.redes-topo a:hover {
+    background: #ffffff !important;
+    color: #cb6ce6 !important;
+}
+
+
+/* =========================================================
+   APRESENTAÇÃO
+   ========================================================= */
+
+.apresentacao {
+    background:
+        radial-gradient(
+            circle at 92% 8%,
+            rgba(203,108,230,0.09),
+            transparent 28%
+        ),
+        #ffffff !important;
+}
+
+
+/* ORQUESTRA VOLPI */
+
+.titulo-principal .destaque {
+    color: #cb6ce6 !important;
+}
+
+
+/* SOM AUTÊNTICO */
+
+.titulo-principal h1 {
+    color: var(--texto) !important;
+}
+
+
+/* VIOLA CAIPIRA · MÚSICA RAIZ... */
+
+.titulo-principal p {
+    color: #ff7510 !important;
+}
+
+
+/* =========================================================
+   TÍTULOS
+   ========================================================= */
+
+.titulo-secao h2,
+.card-historia h2,
+.card-maestro h2,
+.musico-card h3,
+.show-texto h3,
+.download-card strong {
+    color: #cb6ce6 !important;
+}
+
+
+/* TEXTOS PEQUENOS / KICKERS */
+
+.kicker,
+.card-maestro .kicker {
+    color: #ff7510 !important;
+}
+
+
+/* =========================================================
+   CARDS INICIAIS
+   ========================================================= */
+
+.card-historia {
+    background: #ffffff !important;
+
+    border:
+        1px solid rgba(203,108,230,0.18) !important;
+}
+
+.info-item {
+    background: #ffffff !important;
+
+    border:
+        1px solid rgba(203,108,230,0.16) !important;
+}
+
+
+/* =========================================================
+   MAESTRO
+   ========================================================= */
+
+.maestro {
+    background:
+        linear-gradient(
+            135deg,
+            #fff8f4 0%,
+            #ffffff 58%,
+            rgba(203,108,230,0.12) 100%
+        ) !important;
+}
+
+
+/* =========================================================
+   MÚSICOS
+   ========================================================= */
+
+.musicos {
+    background: #ffffff !important;
+}
+
+.musico-card {
+    border:
+        1px solid rgba(203,108,230,0.18) !important;
+}
+
+
+/* =========================================================
+   TRAJETÓRIA
+   MAGENTA → SALMÃO OFICIAL
+   ========================================================= */
+
+.trajetoria {
+    background:
+        radial-gradient(
+            circle at 12% 15%,
+            rgba(255,255,255,0.16),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #cb6ce6 0%,
+            #cb6ce6 25%,
+            #ff7510 100%
+        ) !important;
+}
+
+.trajetoria .titulo-secao h2,
+.trajetoria .kicker {
+    color: #ffffff !important;
+}
+
+
+/* =========================================================
+   SHOWS
+   ========================================================= */
+
+.shows {
+    background: #ffffff !important;
+}
+
+
+/* PARE E OUÇA
+   SALMÃO → MAGENTA */
+
+.show-pare {
+    background:
+        linear-gradient(
+            125deg,
+            #ff7510 0%,
+            #ff7510 25%,
+            #cb6ce6 100%
+        ) !important;
+}
+
+
+/* BAILÃO
+   CLARO PARA RESPIRAR */
+
+.show-bailao {
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #fff8f4 100%
+        ) !important;
+}
+
+
+/* NATAL
+   MAGENTA → SALMÃO */
+
+.show-natal {
+    background:
+        linear-gradient(
+            125deg,
+            #cb6ce6 0%,
+            #cb6ce6 25%,
+            #ff7510 100%
+        ) !important;
+}
+
+
+/* CARDS DOS SHOWS */
+
+.show-texto {
+    background: #ffffff !important;
+}
+
+
+/* TEMPO DO SHOW */
+
+.show-texto h3 strong {
+    color: #ff7510 !important;
+}
+
+
+/* =========================================================
+   AGENDA
+   ========================================================= */
+
+.agenda {
+    background: #ffffff !important;
+}
+
+.agenda-vazia {
+    background: #fff8f4 !important;
+
+    border:
+        1px solid rgba(255,117,16,0.20) !important;
+}
+
+.agenda-vazia a {
+    background: #cb6ce6 !important;
+    color: #ffffff !important;
+}
+
+.agenda-vazia a:hover {
+    background: #ff7510 !important;
+}
+
+
+/* =========================================================
+   GALERIA
+   ========================================================= */
+
+.galeria {
+    background:
+        linear-gradient(
+            180deg,
+            #fffaf8 0%,
+            #ffffff 100%
+        ) !important;
+}
+
+
+/* =========================================================
+   IMPRENSA
+   ========================================================= */
+
+.imprensa {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,117,16,0.08) 0%,
+            #ffffff 50%,
+            rgba(203,108,230,0.10) 100%
+        ) !important;
+}
+
+.download-card > span {
+    background: #cb6ce6 !important;
+}
+
+
+/* =========================================================
+   CONTATO
+   AQUI O GRADIENTE OFICIAL APARECE NOVAMENTE
+   ========================================================= */
+
+.contato {
+    background:
+        radial-gradient(
+            circle at 88% 18%,
+            rgba(203,108,230,0.55),
+            transparent 34%
+        ),
+        linear-gradient(
+            125deg,
+            #ff7510 0%,
+            #ff7510 22%,
+            #cb6ce6 100%
+        ) !important;
+}
+
+.contato h2,
+.contato p {
+    color: #ffffff !important;
+}
+
+
+/* BOTÃO */
+
+.botao-orcamento {
+    background: #ffffff !important;
+    color: #cb6ce6 !important;
+}
+
+.botao-orcamento:hover {
+    background: #ff7510 !important;
+    color: #ffffff !important;
+}
+
+
+/* =========================================================
+   RODAPÉ
+   ========================================================= */
+
+.rodape {
+    background: #302b2d !important;
+
+    border-top:
+        5px solid #ff7510 !important;
+}
+
+
+/* =========================================================
+   SELEÇÃO DE TEXTO
+   ========================================================= */
+
+::selection {
+    background: #cb6ce6;
+    color: #ffffff;
+}
