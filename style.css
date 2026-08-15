@@ -322,8 +322,8 @@ button:focus-visible {
 }
 
 .titulo-logo {
-    width: 220px;
-    max-width: 20vw;
+    width: 300px;
+    max-width: 300vw;
     height: auto;
 
     object-fit: contain;
