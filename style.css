@@ -2118,3 +2118,1329 @@ a {
     }
 
 }
+
+/* =========================================================
+   ORQUESTRA VOLPI
+   REFINAMENTO VISUAL / VERSÃO MAIS ELEGANTE
+   Cole este bloco NO FINAL do style.css
+========================================================= */
+
+
+/* =========================================================
+   PALETA E CONFIGURAÇÕES GERAIS
+========================================================= */
+
+:root {
+    --branco: #ffffff;
+    --off-white: #fffaf8;
+
+    --salmao: #ef9a85;
+    --salmao-claro: #fbe1d9;
+    --salmao-muito-claro: #fff3ef;
+
+    --magenta: #9d315e;
+    --magenta-escuro: #70203f;
+
+    --texto: #292529;
+    --texto-suave: #696169;
+
+    --borda: rgba(72, 45, 56, 0.12);
+
+    --sombra:
+        0 12px 35px rgba(68, 36, 50, 0.10);
+
+    --sombra-leve:
+        0 6px 22px rgba(68, 36, 50, 0.07);
+
+    --raio: 22px;
+}
+
+
+/* =========================================================
+   BASE
+========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    background: var(--branco);
+
+    color: var(--texto);
+
+    font-family:
+        "Manrope",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+    font-size: 17px;
+
+    line-height: 1.75;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+    width: min(1180px, 90%);
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   CABEÇALHO
+========================================================= */
+
+header,
+.topo {
+    background: rgba(255, 255, 255, 0.96);
+
+    border-bottom: 1px solid
+        rgba(112, 32, 63, 0.10);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    backdrop-filter: blur(12px);
+}
+
+
+.topo-conteudo {
+    width: min(1200px, 92%);
+
+    margin: 0 auto;
+
+    min-height: 92px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+    width: 105px;
+    height: auto;
+
+    flex-shrink: 0;
+}
+
+
+.marca {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.titulo-logo {
+    font-size: 1.45rem;
+
+    font-weight: 800;
+
+    letter-spacing: -0.035em;
+
+    color: var(--magenta-escuro);
+}
+
+
+/* =========================================================
+   MENU
+========================================================= */
+
+nav ul {
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 26px;
+}
+
+
+nav a {
+    color: var(--texto);
+
+    text-decoration: none;
+
+    font-size: 0.91rem;
+
+    font-weight: 650;
+
+    transition:
+        color 0.25s ease,
+        opacity 0.25s ease;
+}
+
+
+nav a:hover {
+    color: var(--magenta);
+}
+
+
+/* =========================================================
+   REDES SOCIAIS DO TOPO
+========================================================= */
+
+.redes,
+.redes-topo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.redes a,
+.redes-topo a {
+    color: var(--magenta);
+
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
+}
+
+
+.redes a:hover,
+.redes-topo a:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   HERO / APRESENTAÇÃO
+========================================================= */
+
+.apresentacao {
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #fffaf8 100%
+        );
+
+    padding:
+        clamp(75px, 9vw, 125px)
+        0
+        clamp(85px, 10vw, 135px);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.apresentacao::before {
+    content: "";
+
+    position: absolute;
+
+    width: 480px;
+    height: 480px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(239, 154, 133, 0.10);
+
+    top: -250px;
+    right: -170px;
+
+    filter: blur(10px);
+}
+
+
+.titulo-principal {
+    margin: 0;
+
+    color: var(--magenta-escuro);
+
+    font-size:
+        clamp(3rem, 7vw, 6.2rem);
+
+    line-height: 0.95;
+
+    font-weight: 850;
+
+    letter-spacing: -0.065em;
+}
+
+
+.destaque {
+    display: block;
+
+    margin-top: 18px;
+
+    color: var(--texto);
+
+    font-size:
+        clamp(1.15rem, 2.4vw, 1.75rem);
+
+    line-height: 1.3;
+
+    font-weight: 500;
+
+    letter-spacing: -0.02em;
+}
+
+
+/* =========================================================
+   SUBTÍTULO "VIOLA CAIPIRA · ..."
+========================================================= */
+
+.kicker,
+.etiqueta {
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    color: var(--magenta);
+
+    font-size: 0.82rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.13em;
+
+    text-transform: uppercase;
+}
+
+
+.kicker-claro {
+    color: rgba(255,255,255,0.88);
+}
+
+
+/* =========================================================
+   GRID DA APRESENTAÇÃO
+========================================================= */
+
+.apresentacao-grid {
+    margin-top: 65px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.2fr)
+        minmax(320px, 0.8fr);
+
+    gap: 52px;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   FOTO PRINCIPAL DA ORQUESTRA
+========================================================= */
+
+.foto-orquestra {
+    width: 100%;
+
+    border-radius: 28px;
+
+    box-shadow: var(--sombra);
+
+    object-fit: contain;
+
+    background: #f7f2f1;
+}
+
+
+/* =========================================================
+   CARD HISTÓRIA
+========================================================= */
+
+.card-historia {
+    background: var(--branco);
+
+    padding: clamp(28px, 4vw, 48px);
+
+    border-radius: var(--raio);
+
+    border: 1px solid var(--borda);
+
+    box-shadow: var(--sombra-leve);
+}
+
+
+.card-historia p {
+    margin-top: 0;
+
+    color: var(--texto-suave);
+
+    font-size: 1.02rem;
+}
+
+
+/* =========================================================
+   INFORMAÇÕES / BOLINHAS
+========================================================= */
+
+.informacoes {
+    margin-top: 45px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.info-item {
+    min-height: 175px;
+
+    background: var(--branco);
+
+    border: 1px solid var(--borda);
+
+    border-radius: 20px;
+
+    padding: 28px 22px;
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.info-item:hover {
+    transform: translateY(-5px);
+
+    box-shadow: var(--sombra-leve);
+}
+
+
+.info-icone {
+    width: 64px;
+    height: 64px;
+
+    object-fit: contain;
+
+    margin-bottom: 17px;
+}
+
+
+/* =========================================================
+   TÍTULOS DE SEÇÃO
+========================================================= */
+
+.titulo-secao,
+.titulo-shows,
+.titulo-trajetoria,
+.subtitulo-secao {
+    margin-top: 0;
+
+    margin-bottom: 45px;
+
+    font-size:
+        clamp(2.25rem, 5vw, 4rem);
+
+    line-height: 1.05;
+
+    font-weight: 820;
+
+    letter-spacing: -0.05em;
+}
+
+
+.titulo-secao-escuro {
+    color: var(--magenta-escuro);
+}
+
+
+/* =========================================================
+   MAESTRO
+========================================================= */
+
+.maestro {
+    padding:
+        clamp(90px, 11vw, 145px)
+        0;
+
+    background: var(--salmao-muito-claro);
+}
+
+
+.maestro-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(300px, 0.85fr)
+        minmax(0, 1.15fr);
+
+    gap: 65px;
+
+    align-items: center;
+}
+
+
+.foto-maestro {
+    width: 100%;
+
+    border-radius: 26px;
+
+    object-fit: cover;
+
+    box-shadow: var(--sombra);
+}
+
+
+.card-maestro {
+    background: transparent;
+
+    padding: 10px;
+}
+
+
+.card-maestro h2 {
+    margin-bottom: 8px;
+
+    font-size:
+        clamp(2.6rem, 5vw, 4.6rem);
+
+    color: var(--magenta-escuro);
+
+    letter-spacing: -0.05em;
+}
+
+
+.card-maestro .subtitulo {
+    margin-bottom: 28px;
+
+    color: var(--magenta);
+
+    font-size: 1.25rem;
+
+    font-weight: 700;
+}
+
+
+.card-maestro p {
+    color: #554d52;
+
+    font-size: 1.03rem;
+
+    line-height: 1.85;
+}
+
+
+/* =========================================================
+   MÚSICOS
+========================================================= */
+
+.musicos {
+    padding:
+        clamp(90px, 11vw, 145px)
+        0;
+
+    background: var(--branco);
+}
+
+
+.grade-musicos {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 28px;
+}
+
+
+.musico-card {
+    background: var(--branco);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--borda);
+
+    box-shadow: 0 5px 18px
+        rgba(76, 42, 56, 0.05);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.musico-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: var(--sombra-leve);
+}
+
+
+.musico-card img {
+    width: 100%;
+
+    aspect-ratio: 4 / 5;
+
+    object-fit: cover;
+
+    object-position: center;
+}
+
+
+.musico-card h3 {
+    padding: 17px 16px 20px;
+
+    margin: 0;
+
+    text-align: center;
+
+    font-size: 1.02rem;
+
+    color: var(--magenta-escuro);
+}
+
+
+/* =========================================================
+   TRAJETÓRIA / REGISTROS
+========================================================= */
+
+.trajetoria {
+    padding:
+        clamp(90px, 11vw, 145px)
+        0;
+
+    background: #faf8f7;
+}
+
+
+.trajetoria-conteudo {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.9fr)
+        minmax(0, 1.1fr);
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+
+.trajetoria-texto {
+    color: var(--texto-suave);
+
+    font-size: 1.05rem;
+}
+
+
+.trajetoria-video {
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    box-shadow: var(--sombra);
+}
+
+
+.trajetoria-video iframe,
+.trajetoria-video video {
+    width: 100%;
+
+    display: block;
+
+    border: 0;
+
+    aspect-ratio: 16 / 9;
+}
+
+
+/* =========================================================
+   SHOWS TEMÁTICOS
+========================================================= */
+
+.shows {
+    padding:
+        clamp(95px, 12vw, 155px)
+        0;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8b2853 0%,
+            #bd5572 45%,
+            #ed9a85 100%
+        );
+}
+
+
+.titulo-shows {
+    color: white;
+
+    text-align: center;
+
+    margin-bottom: 65px;
+}
+
+
+/* =========================================================
+   CARDS DOS SHOWS
+========================================================= */
+
+.show-card {
+    max-width: 1100px;
+
+    margin:
+        0 auto
+        46px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    background:
+        rgba(255,255,255,0.97);
+
+    color: var(--texto);
+
+    border-radius: 26px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 18px 55px
+        rgba(65, 20, 40, 0.20);
+}
+
+
+.show-invertido .show-foto {
+    order: 2;
+}
+
+
+.show-invertido .show-texto {
+    order: 1;
+}
+
+
+/* IMPORTANTE:
+   mantém Pare e Ouça, Bailão e Natal
+   com a MESMA proporção
+*/
+
+.show-foto {
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 430px;
+
+    object-fit: cover;
+
+    object-position: center;
+}
+
+
+.show-texto {
+    padding:
+        clamp(35px, 5vw, 65px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.show-texto h3 {
+    margin:
+        7px 0
+        20px;
+
+    color: var(--magenta-escuro);
+
+    font-size:
+        clamp(2rem, 4vw, 3.2rem);
+
+    line-height: 1.1;
+
+    letter-spacing: -0.045em;
+}
+
+
+.show-texto p {
+    color: var(--texto-suave);
+
+    font-size: 1.03rem;
+}
+
+
+.show-tipo {
+    color: var(--magenta);
+
+    font-size: 0.82rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   ÍCONES DOS SHOWS
+========================================================= */
+
+.show-texto img.icone-show,
+.icone-show {
+    width: 78px !important;
+
+    height: 78px !important;
+
+    object-fit: contain !important;
+
+    margin-bottom: 20px;
+
+    flex: none;
+}
+
+
+/* =========================================================
+   TÍTULOS INTERNOS DOS TEMÁTICOS
+========================================================= */
+
+.titulo-tematico {
+    text-align: center;
+
+    margin:
+        85px auto
+        45px;
+
+    max-width: 850px;
+}
+
+
+.titulo-tematico h2 {
+    color: white;
+
+    font-size:
+        clamp(2rem, 4vw, 3.2rem);
+
+    line-height: 1.1;
+
+    letter-spacing: -0.035em;
+
+    padding-bottom: 20px;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,0.35);
+}
+
+
+/* =========================================================
+   GALERIA
+========================================================= */
+
+.galeria {
+    padding:
+        clamp(90px, 11vw, 145px)
+        0;
+
+    background: var(--branco);
+}
+
+
+.galeria-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+.galeria-item,
+.galeria-video-card {
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    background: #f4efed;
+
+    box-shadow:
+        0 5px 20px
+        rgba(70, 40, 52, 0.07);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.galeria-item:hover,
+.galeria-video-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: var(--sombra-leve);
+}
+
+
+.galeria-item img {
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+
+    object-fit: cover;
+}
+
+
+.galeria-video-card video,
+.galeria-video-card iframe {
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    display: block;
+
+    border: 0;
+}
+
+
+/* =========================================================
+   CONTATO / CONTRATE
+========================================================= */
+
+.contato {
+    padding:
+        clamp(85px, 10vw, 125px)
+        0;
+
+    color: white;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--magenta-escuro),
+            var(--magenta)
+        );
+}
+
+
+.contato-conteudo {
+    max-width: 760px;
+
+    margin: 0 auto;
+}
+
+
+.contato h2 {
+    margin:
+        0 0
+        20px;
+
+    color: white;
+
+    font-size:
+        clamp(2.5rem, 5vw, 4.5rem);
+
+    line-height: 1.05;
+
+    letter-spacing: -0.05em;
+}
+
+
+.contato p {
+    margin:
+        0 auto
+        35px;
+
+    max-width: 650px;
+
+    color: rgba(255,255,255,0.86);
+
+    font-size: 1.06rem;
+}
+
+
+/* =========================================================
+   BOTÃO PRINCIPAL
+========================================================= */
+
+.botao-orcamento,
+.botao-principal {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 52px;
+
+    padding:
+        0 28px;
+
+    border-radius: 999px;
+
+    background: white;
+
+    color: var(--magenta-escuro);
+
+    text-decoration: none;
+
+    font-size: 0.95rem;
+
+    font-weight: 800;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.3);
+
+    box-shadow:
+        0 8px 24px
+        rgba(43, 12, 27, 0.16);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.botao-orcamento:hover,
+.botao-principal:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(43, 12, 27, 0.23);
+}
+
+
+/* =========================================================
+   RODAPÉ
+========================================================= */
+
+.rodape {
+    padding:
+        50px 0;
+
+    background: #261b21;
+
+    color:
+        rgba(255,255,255,0.72);
+}
+
+
+.rodape-conteudo {
+    width: min(1180px, 90%);
+
+    margin: 0 auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+
+.rodape a {
+    color: white;
+
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   ESPAÇAMENTO PADRÃO
+========================================================= */
+
+section {
+    scroll-margin-top: 100px;
+}
+
+
+/* =========================================================
+   RESPONSIVO - TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .topo-conteudo {
+        min-height: 82px;
+    }
+
+
+    nav ul {
+        gap: 15px;
+    }
+
+
+    .apresentacao-grid,
+    .maestro-grid,
+    .trajetoria-conteudo,
+    .show-card {
+        grid-template-columns: 1fr;
+    }
+
+
+    .show-invertido .show-foto,
+    .show-invertido .show-texto {
+        order: initial;
+    }
+
+
+    .show-foto {
+        height: auto;
+
+        min-height: 0;
+
+        aspect-ratio: 16 / 10;
+
+        object-fit: cover;
+    }
+
+
+    .grade-musicos {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .galeria-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .informacoes {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVO - CELULAR
+========================================================= */
+
+@media (max-width: 700px) {
+
+    body {
+        font-size: 16px;
+    }
+
+
+    .topo-conteudo {
+        flex-wrap: wrap;
+
+        padding:
+            12px 0;
+    }
+
+
+    .logo {
+        width: 88px;
+    }
+
+
+    nav {
+        width: 100%;
+
+        overflow-x: auto;
+    }
+
+
+    nav ul {
+        width: max-content;
+
+        gap: 20px;
+
+        padding-bottom: 8px;
+    }
+
+
+    nav a {
+        white-space: nowrap;
+
+        font-size: 0.86rem;
+    }
+
+
+    .apresentacao {
+        padding:
+            65px 0
+            85px;
+    }
+
+
+    .titulo-principal {
+        font-size:
+            clamp(3rem, 15vw, 4.5rem);
+    }
+
+
+    .destaque {
+        font-size: 1.25rem;
+    }
+
+
+    .apresentacao-grid {
+        margin-top: 45px;
+
+        gap: 30px;
+    }
+
+
+    .informacoes {
+        grid-template-columns: 1fr;
+    }
+
+
+    .info-item {
+        min-height: 145px;
+    }
+
+
+    .maestro,
+    .musicos,
+    .trajetoria,
+    .galeria,
+    .shows {
+        padding:
+            80px 0;
+    }
+
+
+    .maestro-grid,
+    .trajetoria-conteudo {
+        gap: 35px;
+    }
+
+
+    .grade-musicos {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 14px;
+    }
+
+
+    .musico-card h3 {
+        font-size: 0.91rem;
+    }
+
+
+    .show-card {
+        border-radius: 20px;
+
+        margin-bottom: 32px;
+    }
+
+
+    .show-foto {
+        aspect-ratio: 4 / 3;
+    }
+
+
+    .show-texto {
+        padding:
+            32px 25px
+            38px;
+    }
+
+
+    .icone-show {
+        width: 65px !important;
+
+        height: 65px !important;
+    }
+
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .rodape-conteudo {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+}
+
+
+/* =========================================================
+   CELULARES MUITO PEQUENOS
+========================================================= */
+
+@media (max-width: 440px) {
+
+    .grade-musicos {
+        grid-template-columns: 1fr;
+    }
+
+
+    .musico-card img {
+        aspect-ratio: 4 / 4.5;
+    }
+
+}
