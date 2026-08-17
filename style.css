@@ -2871,8 +2871,7 @@ body.lightbox-aberto {
 
 /* =========================================================
    APOIADORES — PADRÃO VISUAL ORQUESTRA VOLPI
-   Mesma tipografia, paleta, espaçamento, cards e responsividade
-   usados nas demais seções do site.
+   Logos centralizados e alinhados no mesmo eixo.
 ========================================================= */
 #apoiadores.apoiadores {
     position: relative;
@@ -2918,12 +2917,12 @@ body.lightbox-aberto {
 }
 
 #apoiadores .apoiadores-grid {
-    width: min(860px, 100%) !important;
+    width: min(900px, 100%) !important;
     margin: 0 auto !important;
 
     display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: var(--espaco-4) !important;
+    gap: 24px !important;
 }
 
 #apoiadores .apoiador-card {
@@ -2931,12 +2930,17 @@ body.lightbox-aberto {
     isolation: isolate;
     overflow: hidden;
 
-    min-height: 190px !important;
-    padding: clamp(28px, 4vw, 42px) !important;
+    min-width: 0;
+    min-height: 300px !important;
+    padding: 34px 28px 28px !important;
 
     display: flex !important;
+    flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
+    gap: 14px !important;
+
+    text-align: center;
 
     background: var(--branco) !important;
     border: var(--borda-suave) !important;
@@ -2949,13 +2953,13 @@ body.lightbox-aberto {
         border-color 220ms ease;
 }
 
-/* detalhe de cor discreto igual à identidade do site */
+/* detalhe de cor da identidade visual */
 #apoiadores .apoiador-card::before {
     content: "";
     position: absolute;
     inset: 0 0 auto 0;
     height: 4px;
-    z-index: -1;
+    z-index: 0;
 
     background:
         linear-gradient(
@@ -2966,36 +2970,106 @@ body.lightbox-aberto {
         );
 }
 
-#apoiadores .apoiador-card .apoiador-logo,
-#apoiadores .apoiador-card > img {
+/* Todos os logos ocupam uma área exatamente igual.
+   Isso impede Grote/EART de ficarem tortos ou em alturas diferentes. */
+#apoiadores .apoiador-logo-area {
+    width: 100%;
+    height: 132px;
+    min-height: 132px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: visible;
+}
+
+#apoiadores .apoiador-logo {
     display: block !important;
     width: auto !important;
     height: auto !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
     margin: 0 auto !important;
 
     object-fit: contain !important;
-    object-position: center !important;
+    object-position: center center !important;
 
     filter: none !important;
     opacity: 1 !important;
-    transform: none;
+    transform: none !important;
 
     transition: transform 220ms var(--ease);
 }
 
-#apoiadores .apoiador-logo-grote,
-#apoiadores img[src="grote-guitars.png"] {
-    width: min(270px, 92%) !important;
-    max-width: 270px !important;
+/* Grote: mais horizontal, mas sem encostar nas bordas */
+#apoiadores .apoiador-logo-grote {
+    width: min(225px, 82%) !important;
+    max-width: 225px !important;
+    max-height: 102px !important;
+}
+
+/* EART: centralizada no mesmo eixo visual da Grote */
+#apoiadores .apoiador-logo-eart {
+    width: min(175px, 68%) !important;
+    max-width: 175px !important;
+    max-height: 92px !important;
+}
+
+#apoiadores .apoiador-logo-ebom {
+    width: min(190px, 72%) !important;
+    max-width: 190px !important;
+    max-height: 105px !important;
+}
+
+#apoiadores .apoiador-logo-dombosco {
+    width: min(210px, 78%) !important;
+    max-width: 210px !important;
     max-height: 112px !important;
 }
 
-/* EART um pouco maior, como solicitado, sem ficar desproporcional */
-#apoiadores .apoiador-logo-eart,
-#apoiadores img[src="eart-brasil.png"] {
-    width: min(300px, 94%) !important;
-    max-width: 300px !important;
-    max-height: 126px !important;
+#apoiadores .apoiador-instagram {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    color: var(--neutro-800);
+    font-family: var(--fonte-texto);
+    font-size: 0.95rem;
+    font-weight: 750;
+    line-height: 1.25;
+    text-align: center;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+
+    transition:
+        color 180ms ease,
+        transform 180ms ease;
+}
+
+#apoiadores .apoiador-instagram:hover {
+    color: var(--magenta-800);
+}
+
+#apoiadores .apoiador-tipo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: -4px 0 -3px;
+    padding: 6px 11px;
+
+    color: var(--vinho-900);
+    background: rgba(203, 108, 230, 0.10);
+    border: 1px solid rgba(203, 108, 230, 0.18);
+    border-radius: 999px;
+
+    font-family: var(--fonte-texto);
+    font-size: 0.76rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 0.03em;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -3005,9 +3079,8 @@ body.lightbox-aberto {
         box-shadow: var(--sombra-md) !important;
     }
 
-    #apoiadores .apoiador-card:hover .apoiador-logo,
-    #apoiadores .apoiador-card:hover > img {
-        transform: scale(1.025);
+    #apoiadores .apoiador-card:hover .apoiador-logo {
+        transform: scale(1.025) !important;
     }
 }
 
@@ -3027,128 +3100,37 @@ body.lightbox-aberto {
     }
 
     #apoiadores .apoiador-card {
-        min-height: 150px !important;
-        padding: 26px !important;
+        min-height: 245px !important;
+        padding: 28px 22px 24px !important;
     }
 
-    #apoiadores .apoiador-logo-grote,
-    #apoiadores img[src="grote-guitars.png"] {
-        width: min(230px, 86%) !important;
-        max-width: 230px !important;
+    #apoiadores .apoiador-logo-area {
+        height: 112px;
+        min-height: 112px;
+    }
+
+    #apoiadores .apoiador-logo-grote {
+        width: min(205px, 78%) !important;
+        max-width: 205px !important;
+        max-height: 90px !important;
+    }
+
+    #apoiadores .apoiador-logo-eart {
+        width: min(160px, 64%) !important;
+        max-width: 160px !important;
+        max-height: 84px !important;
+    }
+
+    #apoiadores .apoiador-logo-ebom {
+        width: min(175px, 70%) !important;
+        max-width: 175px !important;
+        max-height: 92px !important;
+    }
+
+    #apoiadores .apoiador-logo-dombosco {
+        width: min(190px, 74%) !important;
+        max-width: 190px !important;
         max-height: 98px !important;
-    }
-
-    #apoiadores .apoiador-logo-eart,
-    #apoiadores img[src="eart-brasil.png"] {
-        width: min(250px, 88%) !important;
-        max-width: 250px !important;
-        max-height: 108px !important;
-    }
-}
-
-
-
-/* =========================================================
-   APOIADORES — PARCEIROS + INSTAGRAM / CACHE FIX
-========================================================= */
-#apoiadores .apoiadores-grid {
-    width: min(1120px, 100%) !important;
-    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-    align-items: stretch !important;
-}
-
-#apoiadores .apoiador-card {
-    min-height: 230px !important;
-    flex-direction: column !important;
-    gap: 20px !important;
-}
-
-#apoiadores .apoiador-logo-ebom,
-#apoiadores img[src="e-bom-produtos-naturais.png"] {
-    width: min(190px, 78%) !important;
-    max-width: 190px !important;
-    max-height: 150px !important;
-    border-radius: 50% !important;
-}
-
-
-
-/* Obra Social Dom Bosco: instituição parceira */
-#apoiadores .apoiador-logo-dombosco,
-#apoiadores img[src="obra-social-dom-bosco.png"] {
-    width: min(178px, 76%) !important;
-    max-width: 178px !important;
-    max-height: 154px !important;
-}
-
-#apoiadores .apoiador-card-institucional {
-    gap: 11px !important;
-}
-
-#apoiadores .apoiador-tipo {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 2px;
-    padding: 6px 10px;
-    border-radius: var(--raio-pill);
-    background: rgba(255, 117, 16, 0.08);
-    color: var(--laranja-700, #c95500);
-    font-family: var(--fonte-display);
-    font-size: 0.72rem;
-    font-weight: 800;
-    line-height: 1;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-}
-
-#apoiadores .apoiador-instagram {
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    color: var(--vinho-900) !important;
-    font-family: var(--fonte-display);
-    font-size: 0.9rem;
-    font-weight: 750;
-    line-height: 1.2;
-    text-decoration: none !important;
-    transition: color 180ms ease, transform 180ms var(--ease);
-}
-
-#apoiadores .apoiador-instagram:hover {
-    color: var(--magenta-800) !important;
-    transform: translateY(-1px);
-}
-
-@media (max-width: 1100px) {
-    #apoiadores .apoiadores-grid {
-        width: min(760px, 100%) !important;
-        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    }
-}
-
-@media (max-width: 700px) {
-    #apoiadores .apoiadores-grid {
-        width: min(430px, 100%) !important;
-        grid-template-columns: 1fr !important;
-    }
-
-    #apoiadores .apoiador-card {
-        min-height: 190px !important;
-    }
-
-    #apoiadores .apoiador-logo-ebom,
-    #apoiadores img[src="e-bom-produtos-naturais.png"] {
-        width: min(165px, 70%) !important;
-        max-width: 165px !important;
-        max-height: 132px !important;
-    }
-
-    #apoiadores .apoiador-logo-dombosco,
-    #apoiadores img[src="obra-social-dom-bosco.png"] {
-        width: min(158px, 68%) !important;
-        max-width: 158px !important;
-        max-height: 138px !important;
     }
 }
 
