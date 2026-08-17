@@ -2918,11 +2918,11 @@ body.lightbox-aberto {
 }
 
 #apoiadores .apoiadores-grid {
-    width: min(860px, 100%) !important;
+    width: min(1080px, 100%) !important;
     margin: 0 auto !important;
 
     display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
     gap: var(--espaco-4) !important;
 }
 
@@ -2935,8 +2935,10 @@ body.lightbox-aberto {
     padding: clamp(28px, 4vw, 42px) !important;
 
     display: flex !important;
+    flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
+    gap: 18px !important;
 
     background: var(--branco) !important;
     border: var(--borda-suave) !important;
@@ -2998,6 +3000,54 @@ body.lightbox-aberto {
     max-height: 126px !important;
 }
 
+/* É Bom Produtos Naturais: logo circular, menor para manter equilíbrio visual */
+#apoiadores .apoiador-logo-ebom,
+#apoiadores img[src="e-bom-produtos-naturais.png"] {
+    width: min(150px, 78%) !important;
+    max-width: 150px !important;
+    max-height: 150px !important;
+    aspect-ratio: 1 / 1;
+}
+
+/* @ do Instagram de cada apoiador */
+#apoiadores .apoiador-instagram {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 2px;
+    padding: 7px 12px;
+
+    color: var(--magenta-800);
+    background: rgba(203, 108, 230, 0.07);
+    border: 1px solid rgba(203, 108, 230, 0.16);
+    border-radius: var(--raio-pill);
+
+    font-family: var(--fonte-display);
+    font-size: 0.88rem;
+    font-weight: 750;
+    line-height: 1;
+    text-decoration: none;
+
+    transition:
+        color 180ms ease,
+        background 180ms ease,
+        border-color 180ms ease,
+        transform 180ms var(--ease);
+}
+
+#apoiadores .apoiador-instagram:hover {
+    color: var(--vinho-900);
+    background: rgba(255, 117, 16, 0.08);
+    border-color: rgba(255, 117, 16, 0.28);
+    transform: translateY(-1px);
+}
+
+#apoiadores .apoiador-instagram:focus-visible {
+    outline: 3px solid rgba(203, 108, 230, 0.28);
+    outline-offset: 3px;
+}
+
 @media (hover: hover) and (pointer: fine) {
     #apoiadores .apoiador-card:hover {
         transform: translateY(-5px);
@@ -3008,6 +3058,19 @@ body.lightbox-aberto {
     #apoiadores .apoiador-card:hover .apoiador-logo,
     #apoiadores .apoiador-card:hover > img {
         transform: scale(1.025);
+    }
+}
+
+@media (max-width: 980px) and (min-width: 701px) {
+    #apoiadores .apoiadores-grid {
+        width: min(760px, 100%) !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    #apoiadores .apoiador-card:last-child {
+        grid-column: 1 / -1;
+        width: min(360px, 100%) !important;
+        justify-self: center;
     }
 }
 
@@ -3043,6 +3106,13 @@ body.lightbox-aberto {
         width: min(250px, 88%) !important;
         max-width: 250px !important;
         max-height: 108px !important;
+    }
+
+    #apoiadores .apoiador-logo-ebom,
+    #apoiadores img[src="e-bom-produtos-naturais.png"] {
+        width: min(132px, 62%) !important;
+        max-width: 132px !important;
+        max-height: 132px !important;
     }
 }
 
