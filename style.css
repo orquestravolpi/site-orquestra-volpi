@@ -1842,90 +1842,6 @@ button:focus-visible {
 
 
 /* =========================================================
-   APOIADORES
-========================================================= */
-
-.apoiadores {
-    padding-block: var(--espaco-8);
-    background: var(--off-white);
-}
-
-.apoiadores-grid {
-    width: min(850px, 100%);
-    margin-inline: auto;
-
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: var(--espaco-4);
-}
-
-.apoiador-card {
-    min-height: 190px;
-
-    padding: 35px 45px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: var(--branco);
-
-    border: var(--borda-suave);
-    border-radius: var(--raio-md);
-
-    box-shadow: var(--sombra-sm);
-
-    text-decoration: none;
-
-    transition:
-        transform 220ms var(--ease),
-        box-shadow 220ms ease,
-        border-color 220ms ease;
-}
-
-.apoiador-card img {
-    width: 100%;
-    max-width: 250px;
-    max-height: 105px;
-
-    object-fit: contain;
-
-    transition: transform 220ms var(--ease);
-}
-
-@media (hover: hover) and (pointer: fine) {
-    .apoiador-card:hover {
-        transform: translateY(-5px);
-
-        border-color: rgba(255, 117, 16, 0.28);
-
-        box-shadow: var(--sombra-md);
-    }
-
-    .apoiador-card:hover img {
-        transform: scale(1.035);
-    }
-}
-
-@media (max-width: 700px) {
-    .apoiadores-grid {
-        grid-template-columns: 1fr;
-        max-width: 430px;
-    }
-
-    .apoiador-card {
-        min-height: 160px;
-        padding: 30px;
-    }
-
-    .apoiador-card img {
-        max-width: 220px;
-        max-height: 90px;
-    }
-}
-
-
-/* =========================================================
    CONTATO
 ========================================================= */
 
@@ -2953,413 +2869,180 @@ body.lightbox-aberto {
 
 }
 
-/* =================================
-   APOIADORES
-================================= */
+/* =========================================================
+   APOIADORES — PADRÃO VISUAL ORQUESTRA VOLPI
+   Mesma tipografia, paleta, espaçamento, cards e responsividade
+   usados nas demais seções do site.
+========================================================= */
+#apoiadores.apoiadores {
+    position: relative;
+    padding-block: var(--espaco-9) !important;
+    padding-inline: 0 !important;
+    overflow: hidden;
 
-.apoiadores {
-    padding: 70px 20px;
-    background: #fffaf8;
+    background:
+        linear-gradient(
+            180deg,
+            var(--neutro-100) 0%,
+            var(--off-white) 100%
+        ) !important;
 }
 
-.apoiadores-grid {
-    max-width: 900px;
-    margin: 45px auto 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 80px;
-    flex-wrap: wrap;
+#apoiadores .cabecalho-secao {
+    max-width: 780px;
+    margin: 0 auto var(--espaco-7);
+    text-align: center;
 }
 
-.apoiadores-grid img {
-    display: block;
-
-    width: auto !important;
-    height: auto !important;
-
-    max-width: 260px !important;
-    max-height: 120px !important;
-
-    object-fit: contain;
+#apoiadores .cabecalho-secao .eyebrow {
+    color: var(--magenta-800);
 }
 
-/* EART pode ser um pouco maior visualmente */
-.apoiadores-grid img:nth-child(2) {
-    max-width: 220px !important;
-    max-height: 100px !important;
+#apoiadores .cabecalho-secao h2 {
+    margin: 0;
+    color: var(--vinho-900);
+    font-family: var(--fonte-display);
+    font-size: var(--h2);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.04em;
 }
 
-/* CELULAR */
-@media (max-width: 700px) {
-
-    .apoiadores {
-        padding: 50px 20px;
-    }
-
-    .apoiadores-grid {
-        gap: 45px;
-        flex-direction: column;
-    }
-
-    .apoiadores-grid img {
-        max-width: 210px !important;
-        max-height: 90px !important;
-    }
+#apoiadores .cabecalho-secao p {
+    max-width: 58ch;
+    margin: var(--espaco-3) auto 0;
+    color: var(--neutro-650);
+    font-family: var(--fonte-texto);
+    font-size: var(--texto-lg);
+    line-height: 1.7;
 }
 
-/* =========================================
-   CORREÇÃO FINAL — APOIADORES
-========================================= */
+#apoiadores .apoiadores-grid {
+    width: min(860px, 100%) !important;
+    margin: 0 auto !important;
 
-#apoiadores,
-.apoiadores {
-    padding: 60px 0 !important;
-}
-
-#apoiadores .apoiadores-grid,
-.apoiadores .apoiadores-grid {
     display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 24px !important;
-    margin-top: 35px !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: var(--espaco-4) !important;
 }
 
-#apoiadores .apoiador-card,
-.apoiadores .apoiador-card {
-    min-height: 160px !important;
-    padding: 30px !important;
+#apoiadores .apoiador-card {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    min-height: 190px !important;
+    padding: clamp(28px, 4vw, 42px) !important;
 
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
 
-    background: #ffffff;
-    border-radius: 18px;
+    background: var(--branco) !important;
+    border: var(--borda-suave) !important;
+    border-radius: var(--raio-md) !important;
+    box-shadow: var(--sombra-sm) !important;
+
+    transition:
+        transform 220ms var(--ease),
+        box-shadow 220ms ease,
+        border-color 220ms ease;
 }
 
-/* FORÇA OS LOGOS A FICAREM PEQUENOS */
-#apoiadores img,
-.apoiadores img,
-.apoiador-card img {
-    width: auto !important;
-    height: auto !important;
-
-    max-width: 220px !important;
-    max-height: 90px !important;
-
-    object-fit: contain !important;
-
-    margin: 0 auto !important;
-    display: block !important;
-}
-
-/* CELULAR */
-@media (max-width: 700px) {
-
-    #apoiadores .apoiadores-grid,
-    .apoiadores .apoiadores-grid {
-        grid-template-columns: 1fr !important;
-    }
-
-    #apoiadores img,
-    .apoiadores img,
-    .apoiador-card img {
-        max-width: 180px !important;
-        max-height: 75px !important;
-    }
-}
-
-
-/* =========================================================
-   APOIADORES — PAINEL EDITORIAL
-   Visual inspirado na referência aprovada
-========================================================= */
-#apoiadores.apoiadores {
-    position: relative;
-    padding: 70px 20px !important;
-    background: #ffffff !important;
-    overflow: hidden;
-}
-
-#apoiadores .apoiadores-painel {
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
-
-    width: 100%;
-    min-height: 500px;
-    padding: clamp(56px, 6vw, 86px) clamp(34px, 6vw, 92px) clamp(48px, 5vw, 72px);
-
-    background:
-        linear-gradient(135deg, rgba(255, 117, 16, 0.025), transparent 45%),
-        #fffaf8;
-
-    border: 1px solid rgba(184, 126, 68, 0.24);
-    border-radius: 30px;
-    box-shadow: 0 22px 70px rgba(53, 36, 45, 0.055);
-}
-
-/* ondas discretas no canto direito */
-#apoiadores .apoiadores-painel::after {
+/* detalhe de cor discreto igual à identidade do site */
+#apoiadores .apoiador-card::before {
     content: "";
     position: absolute;
+    inset: 0 0 auto 0;
+    height: 4px;
     z-index: -1;
-    right: -160px;
-    bottom: -215px;
-
-    width: 760px;
-    height: 560px;
-
-    border-radius: 50%;
-    opacity: 0.44;
-    transform: rotate(-9deg);
 
     background:
-        repeating-radial-gradient(
-            ellipse at center,
-            transparent 0 16px,
-            rgba(255, 117, 16, 0.16) 17px 18px,
-            transparent 19px 32px
+        linear-gradient(
+            90deg,
+            var(--laranja-500),
+            #e97882 50%,
+            var(--magenta-800)
         );
-
-    pointer-events: none;
 }
 
-#apoiadores .apoiadores-ornamento {
-    position: absolute;
-    top: 62px;
-    left: 50%;
-    transform: translateX(-50%);
-
-    width: min(390px, 36vw);
-
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-    gap: 14px;
-
-    color: #c48a4b;
-}
-
-#apoiadores .apoiadores-ornamento span {
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(196, 138, 75, 0.55));
-}
-
-#apoiadores .apoiadores-ornamento span:last-child {
-    background: linear-gradient(90deg, rgba(196, 138, 75, 0.55), transparent);
-}
-
-#apoiadores .apoiadores-ornamento i {
-    width: 12px;
-    height: 12px;
-    display: block;
-    border: 2px solid #c48a4b;
-    transform: rotate(45deg);
-    opacity: 0.9;
-}
-
-#apoiadores .apoiadores-cabecalho {
-    position: relative;
-    z-index: 2;
-    max-width: 980px;
-}
-
-#apoiadores .apoiadores-eyebrow {
-    display: inline-block;
-    margin-bottom: 14px;
-
-    color: #9a6b3f;
-    font-family: var(--fonte-display, "Manrope", sans-serif);
-    font-size: clamp(0.84rem, 1vw, 1rem);
-    font-weight: 800;
-    letter-spacing: 0.30em;
-}
-
-#apoiadores .apoiadores-cabecalho h2 {
-    margin: 0;
-    color: #2e2025;
-
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(3.2rem, 6.3vw, 5.8rem);
-    font-weight: 500;
-    line-height: 0.96;
-    letter-spacing: -0.045em;
-}
-
-#apoiadores .apoiadores-traco {
-    display: block;
-    width: 88px;
-    height: 2px;
-    margin: 28px 0 22px;
-
-    background: linear-gradient(90deg, #c18443, #e0b273);
-    border-radius: 999px;
-}
-
-#apoiadores .apoiadores-cabecalho p {
-    max-width: 980px;
-    margin: 0;
-
-    color: #3a3436;
-    font-size: clamp(1rem, 1.55vw, 1.32rem);
-    line-height: 1.7;
-}
-
-#apoiadores .apoiadores-marcas {
-    position: relative;
-    z-index: 2;
-
-    width: min(770px, 100%);
-    margin: clamp(62px, 7vw, 94px) auto 0;
-
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 1px minmax(0, 1fr);
-    align-items: center;
-    justify-items: center;
-    gap: clamp(32px, 5vw, 60px);
-}
-
-#apoiadores .apoiador-logo {
-    width: 100%;
-    min-height: 125px;
-    padding: 12px 8px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-decoration: none;
-    background: transparent !important;
-    border: 0 !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-
-    transition: transform 220ms ease, opacity 220ms ease;
-}
-
-#apoiadores .apoiador-logo img {
+#apoiadores .apoiador-card .apoiador-logo,
+#apoiadores .apoiador-card > img {
     display: block !important;
     width: auto !important;
     height: auto !important;
-    object-fit: contain !important;
     margin: 0 auto !important;
+
+    object-fit: contain !important;
+    object-position: center !important;
+
+    filter: none !important;
+    opacity: 1 !important;
+    transform: none;
+
+    transition: transform 220ms var(--ease);
 }
 
-#apoiadores .apoiador-grote img,
+#apoiadores .apoiador-logo-grote,
 #apoiadores img[src="grote-guitars.png"] {
-    width: min(270px, 100%) !important;
+    width: min(270px, 92%) !important;
     max-width: 270px !important;
-    max-height: 122px !important;
+    max-height: 112px !important;
 }
 
-/* EART propositalmente maior para equilibrar visualmente os dois logos */
-#apoiadores .apoiador-eart img,
+/* EART um pouco maior, como solicitado, sem ficar desproporcional */
+#apoiadores .apoiador-logo-eart,
 #apoiadores img[src="eart-brasil.png"] {
-    width: min(300px, 100%) !important;
+    width: min(300px, 94%) !important;
     max-width: 300px !important;
-    max-height: 132px !important;
-}
-
-#apoiadores .apoiadores-divisor {
-    width: 1px;
-    height: 120px;
-    background: linear-gradient(
-        to bottom,
-        transparent,
-        rgba(185, 127, 66, 0.56) 18%,
-        rgba(185, 127, 66, 0.56) 82%,
-        transparent
-    );
+    max-height: 126px !important;
 }
 
 @media (hover: hover) and (pointer: fine) {
-    #apoiadores .apoiador-logo:hover {
-        transform: translateY(-3px) scale(1.02);
-        opacity: 0.88;
+    #apoiadores .apoiador-card:hover {
+        transform: translateY(-5px);
+        border-color: rgba(255, 117, 16, 0.28) !important;
+        box-shadow: var(--sombra-md) !important;
+    }
+
+    #apoiadores .apoiador-card:hover .apoiador-logo,
+    #apoiadores .apoiador-card:hover > img {
+        transform: scale(1.025);
     }
 }
 
-@media (max-width: 820px) {
+@media (max-width: 700px) {
     #apoiadores.apoiadores {
-        padding: 46px 16px !important;
+        padding-block: var(--espaco-7) !important;
     }
 
-    #apoiadores .apoiadores-painel {
-        min-height: auto;
-        padding: 64px 28px 46px;
-        border-radius: 24px;
+    #apoiadores .cabecalho-secao {
+        margin-bottom: var(--espaco-5);
     }
 
-    #apoiadores .apoiadores-ornamento {
-        top: 34px;
-        width: min(260px, 58vw);
+    #apoiadores .apoiadores-grid {
+        width: min(430px, 100%) !important;
+        grid-template-columns: 1fr !important;
+        gap: 18px !important;
     }
 
-    #apoiadores .apoiadores-cabecalho h2 {
-        font-size: clamp(2.8rem, 12vw, 4.2rem);
+    #apoiadores .apoiador-card {
+        min-height: 150px !important;
+        padding: 26px !important;
     }
 
-    #apoiadores .apoiadores-marcas {
-        width: min(420px, 100%);
-        margin-top: 54px;
-
-        grid-template-columns: 1fr;
-        gap: 22px;
-    }
-
-    #apoiadores .apoiadores-divisor {
-        width: min(220px, 72%);
-        height: 1px;
-        background: linear-gradient(
-            to right,
-            transparent,
-            rgba(185, 127, 66, 0.52) 18%,
-            rgba(185, 127, 66, 0.52) 82%,
-            transparent
-        );
-    }
-
-    #apoiadores .apoiador-logo {
-        min-height: 96px;
-        padding: 6px;
-    }
-
-    #apoiadores .apoiador-grote img,
+    #apoiadores .apoiador-logo-grote,
     #apoiadores img[src="grote-guitars.png"] {
-        width: min(235px, 88%) !important;
-        max-width: 235px !important;
-        max-height: 105px !important;
+        width: min(230px, 86%) !important;
+        max-width: 230px !important;
+        max-height: 98px !important;
     }
 
-    #apoiadores .apoiador-eart img,
+    #apoiadores .apoiador-logo-eart,
     #apoiadores img[src="eart-brasil.png"] {
-        width: min(255px, 94%) !important;
-        max-width: 255px !important;
-        max-height: 116px !important;
-    }
-
-    #apoiadores .apoiadores-painel::after {
-        right: -330px;
-        bottom: -260px;
-        opacity: 0.32;
-    }
-}
-
-@media (max-width: 480px) {
-    #apoiadores .apoiadores-painel {
-        padding-inline: 22px;
-    }
-
-    #apoiadores .apoiadores-eyebrow {
-        letter-spacing: 0.22em;
-    }
-
-    #apoiadores .apoiadores-cabecalho p {
-        font-size: 1rem;
-        line-height: 1.62;
+        width: min(250px, 88%) !important;
+        max-width: 250px !important;
+        max-height: 108px !important;
     }
 }
 
