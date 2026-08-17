@@ -3008,3 +3008,65 @@ body.lightbox-aberto {
         max-height: 90px !important;
     }
 }
+
+/* =========================================
+   CORREÇÃO FINAL — APOIADORES
+========================================= */
+
+#apoiadores,
+.apoiadores {
+    padding: 60px 0 !important;
+}
+
+#apoiadores .apoiadores-grid,
+.apoiadores .apoiadores-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+    margin-top: 35px !important;
+}
+
+#apoiadores .apoiador-card,
+.apoiadores .apoiador-card {
+    min-height: 160px !important;
+    padding: 30px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    background: #ffffff;
+    border-radius: 18px;
+}
+
+/* FORÇA OS LOGOS A FICAREM PEQUENOS */
+#apoiadores img,
+.apoiadores img,
+.apoiador-card img {
+    width: auto !important;
+    height: auto !important;
+
+    max-width: 220px !important;
+    max-height: 90px !important;
+
+    object-fit: contain !important;
+
+    margin: 0 auto !important;
+    display: block !important;
+}
+
+/* CELULAR */
+@media (max-width: 700px) {
+
+    #apoiadores .apoiadores-grid,
+    .apoiadores .apoiadores-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    #apoiadores img,
+    .apoiadores img,
+    .apoiador-card img {
+        max-width: 180px !important;
+        max-height: 75px !important;
+    }
+}
