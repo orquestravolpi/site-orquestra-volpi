@@ -3706,25 +3706,295 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 }
 
-/* APOIADORES — LOGOS MENORES */
-#apoiadores .apoiador-card img,
-.apoiadores .apoiador-card img,
-#apoiadores img {
-    width: auto !important;
-    height: auto !important;
-    max-width: 130px !important;
-    max-height: 58px !important;
-    object-fit: contain !important;
-    margin: 0 auto !important;
-    display: block !important;
+
+/* =========================================================
+   APOIADORES — PAINEL EDITORIAL
+   Visual inspirado na referência aprovada
+========================================================= */
+#apoiadores.apoiadores {
+    position: relative;
+    padding: 70px 20px !important;
+    background: #ffffff !important;
+    overflow: hidden;
 }
 
-@media (max-width: 700px) {
-    #apoiadores .apoiador-card img,
-    .apoiadores .apoiador-card img,
-    #apoiadores img {
-        max-width: 115px !important;
-        max-height: 50px !important;
+#apoiadores .apoiadores-painel {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    width: 100%;
+    min-height: 500px;
+    padding: clamp(56px, 6vw, 86px) clamp(34px, 6vw, 92px) clamp(48px, 5vw, 72px);
+
+    background:
+        linear-gradient(135deg, rgba(255, 117, 16, 0.025), transparent 45%),
+        #fffaf8;
+
+    border: 1px solid rgba(184, 126, 68, 0.24);
+    border-radius: 30px;
+    box-shadow: 0 22px 70px rgba(53, 36, 45, 0.055);
+}
+
+/* ondas discretas no canto direito */
+#apoiadores .apoiadores-painel::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    right: -160px;
+    bottom: -215px;
+
+    width: 760px;
+    height: 560px;
+
+    border-radius: 50%;
+    opacity: 0.44;
+    transform: rotate(-9deg);
+
+    background:
+        repeating-radial-gradient(
+            ellipse at center,
+            transparent 0 16px,
+            rgba(255, 117, 16, 0.16) 17px 18px,
+            transparent 19px 32px
+        );
+
+    pointer-events: none;
+}
+
+#apoiadores .apoiadores-ornamento {
+    position: absolute;
+    top: 62px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: min(390px, 36vw);
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 14px;
+
+    color: #c48a4b;
+}
+
+#apoiadores .apoiadores-ornamento span {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(196, 138, 75, 0.55));
+}
+
+#apoiadores .apoiadores-ornamento span:last-child {
+    background: linear-gradient(90deg, rgba(196, 138, 75, 0.55), transparent);
+}
+
+#apoiadores .apoiadores-ornamento i {
+    width: 12px;
+    height: 12px;
+    display: block;
+    border: 2px solid #c48a4b;
+    transform: rotate(45deg);
+    opacity: 0.9;
+}
+
+#apoiadores .apoiadores-cabecalho {
+    position: relative;
+    z-index: 2;
+    max-width: 980px;
+}
+
+#apoiadores .apoiadores-eyebrow {
+    display: inline-block;
+    margin-bottom: 14px;
+
+    color: #9a6b3f;
+    font-family: var(--fonte-display, "Manrope", sans-serif);
+    font-size: clamp(0.84rem, 1vw, 1rem);
+    font-weight: 800;
+    letter-spacing: 0.30em;
+}
+
+#apoiadores .apoiadores-cabecalho h2 {
+    margin: 0;
+    color: #2e2025;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(3.2rem, 6.3vw, 5.8rem);
+    font-weight: 500;
+    line-height: 0.96;
+    letter-spacing: -0.045em;
+}
+
+#apoiadores .apoiadores-traco {
+    display: block;
+    width: 88px;
+    height: 2px;
+    margin: 28px 0 22px;
+
+    background: linear-gradient(90deg, #c18443, #e0b273);
+    border-radius: 999px;
+}
+
+#apoiadores .apoiadores-cabecalho p {
+    max-width: 980px;
+    margin: 0;
+
+    color: #3a3436;
+    font-size: clamp(1rem, 1.55vw, 1.32rem);
+    line-height: 1.7;
+}
+
+#apoiadores .apoiadores-marcas {
+    position: relative;
+    z-index: 2;
+
+    width: min(770px, 100%);
+    margin: clamp(62px, 7vw, 94px) auto 0;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 1px minmax(0, 1fr);
+    align-items: center;
+    justify-items: center;
+    gap: clamp(32px, 5vw, 60px);
+}
+
+#apoiadores .apoiador-logo {
+    width: 100%;
+    min-height: 125px;
+    padding: 12px 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+
+    transition: transform 220ms ease, opacity 220ms ease;
+}
+
+#apoiadores .apoiador-logo img {
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+    margin: 0 auto !important;
+}
+
+#apoiadores .apoiador-grote img,
+#apoiadores img[src="grote-guitars.png"] {
+    width: min(270px, 100%) !important;
+    max-width: 270px !important;
+    max-height: 122px !important;
+}
+
+/* EART propositalmente maior para equilibrar visualmente os dois logos */
+#apoiadores .apoiador-eart img,
+#apoiadores img[src="eart-brasil.png"] {
+    width: min(300px, 100%) !important;
+    max-width: 300px !important;
+    max-height: 132px !important;
+}
+
+#apoiadores .apoiadores-divisor {
+    width: 1px;
+    height: 120px;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(185, 127, 66, 0.56) 18%,
+        rgba(185, 127, 66, 0.56) 82%,
+        transparent
+    );
+}
+
+@media (hover: hover) and (pointer: fine) {
+    #apoiadores .apoiador-logo:hover {
+        transform: translateY(-3px) scale(1.02);
+        opacity: 0.88;
+    }
+}
+
+@media (max-width: 820px) {
+    #apoiadores.apoiadores {
+        padding: 46px 16px !important;
+    }
+
+    #apoiadores .apoiadores-painel {
+        min-height: auto;
+        padding: 64px 28px 46px;
+        border-radius: 24px;
+    }
+
+    #apoiadores .apoiadores-ornamento {
+        top: 34px;
+        width: min(260px, 58vw);
+    }
+
+    #apoiadores .apoiadores-cabecalho h2 {
+        font-size: clamp(2.8rem, 12vw, 4.2rem);
+    }
+
+    #apoiadores .apoiadores-marcas {
+        width: min(420px, 100%);
+        margin-top: 54px;
+
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    #apoiadores .apoiadores-divisor {
+        width: min(220px, 72%);
+        height: 1px;
+        background: linear-gradient(
+            to right,
+            transparent,
+            rgba(185, 127, 66, 0.52) 18%,
+            rgba(185, 127, 66, 0.52) 82%,
+            transparent
+        );
+    }
+
+    #apoiadores .apoiador-logo {
+        min-height: 96px;
+        padding: 6px;
+    }
+
+    #apoiadores .apoiador-grote img,
+    #apoiadores img[src="grote-guitars.png"] {
+        width: min(235px, 88%) !important;
+        max-width: 235px !important;
+        max-height: 105px !important;
+    }
+
+    #apoiadores .apoiador-eart img,
+    #apoiadores img[src="eart-brasil.png"] {
+        width: min(255px, 94%) !important;
+        max-width: 255px !important;
+        max-height: 116px !important;
+    }
+
+    #apoiadores .apoiadores-painel::after {
+        right: -330px;
+        bottom: -260px;
+        opacity: 0.32;
+    }
+}
+
+@media (max-width: 480px) {
+    #apoiadores .apoiadores-painel {
+        padding-inline: 22px;
+    }
+
+    #apoiadores .apoiadores-eyebrow {
+        letter-spacing: 0.22em;
+    }
+
+    #apoiadores .apoiadores-cabecalho p {
+        font-size: 1rem;
+        line-height: 1.62;
     }
 }
 
@@ -4427,36 +4697,45 @@ document.addEventListener("DOMContentLoaded", () => {
 ================================= -->
 <section class="apoiadores" id="apoiadores">
     <div class="container">
+        <div class="apoiadores-painel">
 
-        <div class="titulo-secao">
-            <span>PARCERIAS</span>
-            <h2>Apoiadores</h2>
-            <p>
-                Marcas que apoiam e fortalecem o trabalho da
-                Orquestra Volpi de Viola Caipira.
-            </p>
+            <div class="apoiadores-ornamento" aria-hidden="true">
+                <span></span>
+                <i></i>
+                <span></span>
+            </div>
+
+            <div class="apoiadores-cabecalho">
+                <span class="apoiadores-eyebrow">PARCERIAS</span>
+                <h2>Apoiadores</h2>
+                <span class="apoiadores-traco" aria-hidden="true"></span>
+                <p>
+                    Marcas que apoiam e fortalecem o trabalho da
+                    Orquestra Volpi de Viola Caipira.
+                </p>
+            </div>
+
+            <div class="apoiadores-marcas" aria-label="Marcas apoiadoras">
+                <a href="#" class="apoiador-logo apoiador-grote" aria-label="Grote Guitar Brasil">
+                    <img
+                        src="grote-guitars.png"
+                        alt="Grote Guitar Brasil"
+                        loading="lazy"
+                    >
+                </a>
+
+                <span class="apoiadores-divisor" aria-hidden="true"></span>
+
+                <a href="#" class="apoiador-logo apoiador-eart" aria-label="EART Brasil">
+                    <img
+                        src="eart-brasil.png"
+                        alt="EART Brasil"
+                        loading="lazy"
+                    >
+                </a>
+            </div>
+
         </div>
-
-        <div class="apoiadores-grid">
-
-            <a href="#" class="apoiador-card" aria-label="Grote Guitars">
-                <img
-                    src="grote-guitars.png"
-                    alt="Grote Guitars"
-                    loading="lazy"
-                >
-            </a>
-
-            <a href="#" class="apoiador-card" aria-label="EART Brasil">
-                <img
-                    src="eart-brasil.png"
-                    alt="EART Brasil"
-                    loading="lazy"
-                >
-            </a>
-
-        </div>
-
     </div>
 </section>
 
