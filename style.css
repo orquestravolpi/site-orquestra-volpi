@@ -1842,6 +1842,90 @@ button:focus-visible {
 
 
 /* =========================================================
+   APOIADORES
+========================================================= */
+
+.apoiadores {
+    padding-block: var(--espaco-8);
+    background: var(--off-white);
+}
+
+.apoiadores-grid {
+    width: min(850px, 100%);
+    margin-inline: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--espaco-4);
+}
+
+.apoiador-card {
+    min-height: 190px;
+
+    padding: 35px 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--branco);
+
+    border: var(--borda-suave);
+    border-radius: var(--raio-md);
+
+    box-shadow: var(--sombra-sm);
+
+    text-decoration: none;
+
+    transition:
+        transform 220ms var(--ease),
+        box-shadow 220ms ease,
+        border-color 220ms ease;
+}
+
+.apoiador-card img {
+    width: 100%;
+    max-width: 250px;
+    max-height: 105px;
+
+    object-fit: contain;
+
+    transition: transform 220ms var(--ease);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .apoiador-card:hover {
+        transform: translateY(-5px);
+
+        border-color: rgba(255, 117, 16, 0.28);
+
+        box-shadow: var(--sombra-md);
+    }
+
+    .apoiador-card:hover img {
+        transform: scale(1.035);
+    }
+}
+
+@media (max-width: 700px) {
+    .apoiadores-grid {
+        grid-template-columns: 1fr;
+        max-width: 430px;
+    }
+
+    .apoiador-card {
+        min-height: 160px;
+        padding: 30px;
+    }
+
+    .apoiador-card img {
+        max-width: 220px;
+        max-height: 90px;
+    }
+}
+
+
+/* =========================================================
    CONTATO
 ========================================================= */
 
